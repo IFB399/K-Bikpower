@@ -22,6 +22,8 @@ namespace K_Bikpower.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
+            string docFolder = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
+            string libFolder = System.IO.Path.Combine(docFolder, "..", "Library", "database.sqlite");
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
 
