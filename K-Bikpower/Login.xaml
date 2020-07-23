@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="K_Bikpower.Login">
+    <ContentPage.Content>
+        <StackLayout Margin="10,10,10,10">
+            <!-- Place new controls here -->
+            <Label Text="Please login in" 
+               FontSize="Large"
+           HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand" />
+
+            <!--Logo-->
+            <Image Source="C:\Users\Brenton Reddish\Desktop\FlightSchool\FlightSchool\FlightSchool\download.png" VerticalOptions="CenterAndExpand" />
+
+            <!-- login -->
+            <Entry x:Name="Username" Placeholder="Enter Username"
+        VerticalOptions="EndAndExpand"
+        MaxLength="25"
+        IsSpellCheckEnabled="false"
+            IsTextPredictionEnabled="false"/>
+
+
+            <!-- paswword -->
+            <Entry Placeholder="Enter Password" 
+               x:Name="Password"
+        VerticalOptions="EndAndExpand"
+        MaxLength="25"
+        IsPassword="true"
+        IsSpellCheckEnabled="false"
+               IsTextPredictionEnabled="false"
+               BackgroundColor="#FFFFFF"/>
+
+            <Button Text="Submit" Clicked="Button_Clicked" VerticalOptions="EndAndExpand" 
+                CornerRadius="5"
+                BorderColor="Black"
+                BorderWidth="1"/>
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

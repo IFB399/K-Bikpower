@@ -1,16 +1,30 @@
 ﻿using System;
 using Xamarin.Forms;
+using System.IO;
 using Xamarin.Forms.Xaml;
 
 namespace K_Bikpower
 {
     public partial class App : Application
     {
+
+        static Database database;
+        public static Database Database
+        {
+            get
+            {
+                if (database == null)
+                {
+                    database = new Database(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "K-Bikpower.db3"));
+                }
+                return database;
+            }
+        }
         public App()
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new Login());
         }
 
         protected override void OnStart()
