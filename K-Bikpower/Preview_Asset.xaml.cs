@@ -16,7 +16,6 @@ namespace K_Bikpower
         public Preview_Asset(Assets details)
         {
             InitializeComponent();
-            InitializeComponent();
             if (details != null)
             {
                 assetdata = details;
