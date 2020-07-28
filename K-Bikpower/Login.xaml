@@ -8,7 +8,7 @@
     <ContentPage.Content>
         <StackLayout Margin="10,10,10,10">
             <!-- Place new controls here -->
-            <Label Text="Please login in" 
+            <Label Text="Please log in" 
                FontSize="Large"
            HorizontalOptions="Center"
            VerticalOptions="CenterAndExpand" />
