@@ -6,10 +6,31 @@
              mc:Ignorable="d"
              x:Class="K_Bikpower.Preview_Asset">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <ScrollView>
+            <StackLayout Spacing="10">
+                <Label x:Name="Substation_Code_label" TextColor="Black" />
+                <Label x:Name="Plant_Number_label" TextColor="Black" />
+                <Label x:Name="Asset_EQ_NO_label" TextColor="Black" />
+                <Label x:Name="EQ_Status_label" TextColor="Black" />
+                <Label x:Name="Serial_Number_label" TextColor="Black" />
+                <Label x:Name="Modifier_code_label" TextColor="Black" />
+                <Label x:Name="Location_Equipment_Number_label" TextColor="Black" />
+                <Label x:Name="Component_Code_label" TextColor="Black" />
+                <Label x:Name="WarrantyDate_label" TextColor="Black" />
+                <Label x:Name="Equipement_age_label" TextColor="Black" />
+                <Label x:Name="Stock_Code_label" TextColor="Black" />
+                <Label x:Name="PO_NO_label" TextColor="Black" />
+                <Label x:Name="Rated_Voltage_label" TextColor="Black" />
+                <Label x:Name="Nominal_Voltage_label" TextColor="Black" />
+                <Label x:Name="Manufacture_Name_label" TextColor="Black" />
+                <Label x:Name="Specifiaction_title_label" TextColor="Black" />
+                <Label x:Name="Specifiaction_NO_label" TextColor="Black" />
+                <Label x:Name="Specifiaction_item_NO_label" TextColor="Black" />
+                <Label x:Name="last_install_date_label" TextColor="Black" />
+                <Label x:Name="Equipment_class_label" TextColor="Black" />
+                <Label x:Name="Equipment_class_description_label" TextColor="Black" />
+                <Button Text="Edit student_label" Clicked="Button_Clicked"/>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
