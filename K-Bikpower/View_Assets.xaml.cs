@@ -19,7 +19,7 @@ namespace K_Bikpower
         protected override async void OnAppearing()
         {
             base.OnAppearing();
-            StudentsTable.ItemsSource = await App.Database.GetPeopleAsync();
+            AssetsTable.ItemsSource = await App.Database.GetPeopleAsync();
         }
         private void Button_Clicked(object sender, EventArgs e)
         {

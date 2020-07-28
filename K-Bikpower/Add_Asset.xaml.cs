@@ -24,5 +24,9 @@ namespace K_Bikpower
         {
 
         }
-    }
+        async void Button_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new View_Assets());
+        }
+        }
 }

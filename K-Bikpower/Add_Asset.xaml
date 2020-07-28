@@ -7,9 +7,8 @@
              x:Class="K_Bikpower.Add_Asset">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            
+            <Entry  x:Name="BirthPlaceCountry" ClearButtonVisibility="WhileEditing" VerticalOptions="EndAndExpand" MaxLength="25" IsSpellCheckEnabled="True" IsTextPredictionEnabled="false"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

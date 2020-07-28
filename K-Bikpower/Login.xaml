@@ -23,7 +23,6 @@
         IsSpellCheckEnabled="false"
             IsTextPredictionEnabled="false"/>
 
-
             <!-- paswword -->
             <Entry Placeholder="Enter Password" 
                x:Name="Password"

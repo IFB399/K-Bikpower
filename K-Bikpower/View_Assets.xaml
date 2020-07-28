@@ -9,7 +9,7 @@
         <StackLayout Margin="10,10,10,10">
             <Frame BackgroundColor="LightGray" BorderColor="#F0F0F0" Padding="5" Margin="0,0,0,5" HasShadow="False">
 
-                <ListView x:Name="StudentsTable" HasUnevenRows="True" ItemTapped="EditEmployee">
+                <ListView x:Name="AssetsTable" HasUnevenRows="false" ItemTapped="EditAsset">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>

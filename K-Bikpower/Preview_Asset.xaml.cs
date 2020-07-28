@@ -23,7 +23,7 @@ namespace K_Bikpower
                 PopulateDetails(assetdata);
             }
         }
-        private void PopulateDetails(Assets assetdata)
+        private void PopulateDetails(Assets details)
         {
             //needs code
         }
