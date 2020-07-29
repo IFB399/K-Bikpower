@@ -29,7 +29,7 @@ namespace K_Bikpower
 
         private void Scan_QRCode_Button(object sender, EventArgs e)
         {
-            // Navigation.PushAsync(new View_Assets()); //if its not the final page change to navigation page
+            Navigation.PushAsync(new ScanQR()); //if its not the final page change to navigation page
         }
 
         private void Commision_Clicked(object sender, EventArgs e)

@@ -9,6 +9,7 @@ using Android.OS;
 
 namespace K_Bikpower.Droid
 {
+    
     [Activity(Label = "K_Bikpower", Icon = "@drawable/icon", Theme = "@style/MainTheme", MainLauncher = false, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
@@ -18,6 +19,8 @@ namespace K_Bikpower.Droid
             ToolbarResource = Resource.Layout.Toolbar;
 
             base.OnCreate(savedInstanceState);
+
+            ZXing.Net.Mobile.Forms.Android.Platform.Init();
 
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
