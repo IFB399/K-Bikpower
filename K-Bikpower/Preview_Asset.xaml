@@ -29,7 +29,11 @@
                 <Label x:Name="last_install_date_label" TextColor="Black" />
                 <Label x:Name="Equipment_class_label" TextColor="Black" />
                 <Label x:Name="Equipment_class_description_label" TextColor="Black" />
-                <Button Text="Edit Asset" Clicked="Button_Clicked"/>
+                <StackLayout Orientation="Horizontal" >
+                    <Button Text="Edit Asset" Clicked="Button_Clicked"/>
+                    <Button Text="Generate QR Code" Clicked="Button_Clicked_1"/>
+                </StackLayout>
+                
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

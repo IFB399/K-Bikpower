@@ -15,6 +15,7 @@ namespace K_Bikpower
     {
         public ScanQR()
         {
+
             InitializeComponent();
         }
         public void Handle_OnScanResult(Result result)
@@ -22,6 +23,8 @@ namespace K_Bikpower
             Device.BeginInvokeOnMainThread(async () =>
             {
                 await DisplayAlert("Scanned result", result.Text, "OK");
+                string search = result.ToString();
+                //await App.Database.QueryValuations(search);
             });
         }
     }

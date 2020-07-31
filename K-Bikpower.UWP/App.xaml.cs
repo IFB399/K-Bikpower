@@ -28,6 +28,7 @@ namespace K_Bikpower.UWP
         /// </summary>
         public App()
         {
+            
             this.InitializeComponent();
             this.Suspending += OnSuspending;
         }
