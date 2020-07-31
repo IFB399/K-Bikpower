@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using ZXing;
+using ZXing.Net.Mobile.Forms;
+using ZXing.QrCode;
+using ZXing.QrCode.Internal;
 
 namespace K_Bikpower
 {
@@ -24,6 +28,7 @@ namespace K_Bikpower
         }
         private void PopulateDetails(Assets details)
         {
+            
             Substation_Code_label.Text = details.Substation_Code;
             Plant_Number_label.Text = details.Plant_Number;
             int AssentEQNO = details.Asset_EQ_NO;
@@ -56,9 +61,30 @@ namespace K_Bikpower
             Navigation.PushAsync(new Add_Asset(assetdata));
         }
 
-        private void Button_Clicked_1(object sender, EventArgs e)
+        private void GenQR(object sender, EventArgs e, Assets details)
         {
-
+            int QRId = details.Id;
+            string QRidcode = QRId.ToString(); 
+            GenerateQR(QRidcode);
+        }
+        ZXingBarcodeImageView GenerateQR(string codeValue)
+        {
+            var qrCode = new ZXingBarcodeImageView
+            {
+                BarcodeFormat = BarcodeFormat.QR_CODE,
+                BarcodeOptions = new QrCodeEncodingOptions
+                {
+                    Height = 350,
+                    Width = 350
+                },
+                BarcodeValue = codeValue,
+                VerticalOptions = LayoutOptions.CenterAndExpand,
+                HorizontalOptions = LayoutOptions.CenterAndExpand
+            };
+            // Workaround for iOS
+            qrCode.WidthRequest = 350;
+            qrCode.HeightRequest = 350;
+            return qrCode;
         }
     }
 }

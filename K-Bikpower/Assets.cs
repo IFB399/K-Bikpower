@@ -52,5 +52,5 @@ namespace K_Bikpower
 
         public string Equipment_class_description { get; set; }
 
-    }
+    }   
 }

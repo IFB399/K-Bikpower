@@ -31,8 +31,9 @@
                 <Label x:Name="Equipment_class_description_label" TextColor="Black" />
                 <StackLayout Orientation="Horizontal" >
                     <Button Text="Edit Asset" Clicked="Button_Clicked"/>
-                    <Button Text="Generate QR Code" Clicked="Button_Clicked_1"/>
+                    <Button Text="Generate QR Code" Clicked="GenQR"/>
                 </StackLayout>
+                <local:QRResult x:Name="qrResult"/>
                 
             </StackLayout>
         </ScrollView>
