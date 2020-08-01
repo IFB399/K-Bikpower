@@ -66,20 +66,11 @@ namespace K_Bikpower
             Navigation.PushAsync(new Add_Asset(assetdata));
         }
 
-        private void GenQR(object sender, EventArgs e, Assets details)
-        {
-            int QRId = details.Id;
-            string QRidcode = QRId.ToString();
-            // GenerateQR(QRidcode);
-            Gen.BarcodeValue = QRidcode;
-        }
-
         private void Button_Clicked_1(object sender, EventArgs e)
         {
             int QRId = assetdata.Id;
             string QRidcode = QRId.ToString();
-            // GenerateQR(QRidcode);
-            Gen.BarcodeValue = "Assets where Id = " + QRidcode;
+            Gen.BarcodeValue = QRidcode;
             Gen.IsVisible = true;
         }
     }

@@ -40,9 +40,9 @@ namespace K_Bikpower
             return _database.InsertOrReplaceAsync(Asset);
         }
 
-        public List<Assets> Scangen(string scan)
+        public List<Assets> Scangen(int scan)
         {
-            List<Assets> aset = conn.Table<Assets>().Where(a => a.Id == 1).ToList();
+            List<Assets> aset = conn.Table<Assets>().Where(a => a.Id == scan).ToList();
             return aset;
         }
     }
