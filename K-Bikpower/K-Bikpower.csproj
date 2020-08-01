@@ -19,22 +19,22 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Add_Asset.xaml">
+    <EmbeddedResource Update="XAML\Assets\Add_Asset.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Login.xaml">
+    <EmbeddedResource Update="XAML\Login.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Preview_Asset.xaml">
+    <EmbeddedResource Update="XAML\Assets\Preview_Asset.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="ScanQR.xaml">
+    <EmbeddedResource Update="XAML\ScanQR.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Substations.xaml">
+    <EmbeddedResource Update="XAML\Substations\Substations.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="View_Assets.xaml">
+    <EmbeddedResource Update="XAML\Assets\View_Assets.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
