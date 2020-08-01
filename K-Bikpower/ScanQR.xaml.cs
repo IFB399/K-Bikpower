@@ -27,8 +27,8 @@ namespace K_Bikpower
                  var test = App.Database.Scangen(search); //donest work fix later. 
 
                 Assets testing = test[0];
-                
-                
+                Console.WriteLine(testing);
+
 
 
                 await Navigation.PushAsync(new Preview_Asset(testing));

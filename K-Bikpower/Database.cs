@@ -8,19 +8,26 @@ namespace K_Bikpower
     public class Database
     {
         readonly SQLiteAsyncConnection _database;
+
         //private readonly SQLiteConnection datbaseQ;
 
-        SQLiteConnection conn;
+        readonly SQLiteConnection conn;
         public Database(string dbPath)
         {
+            conn = new SQLiteConnection(dbPath);
             _database = new SQLiteAsyncConnection(dbPath);
             _database.CreateTableAsync<Assets>().Wait();
-           // datbaseQ = new SQLiteConnection(dbPath);
+            _database.CreateTableAsync<Substation_Codes>().Wait();
         }
 
         public Task<List<Assets>> GetPeopleAsync()
         {
             return _database.Table<Assets>().ToListAsync();
+        }
+
+        public Task<List<Substation_Codes>> GetSubAsync()
+        {
+            return _database.Table<Substation_Codes>().ToListAsync();
         }
 
         public Task<int> SaveStudentAsync(Assets Asset)

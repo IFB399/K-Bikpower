@@ -26,6 +26,7 @@ namespace K_Bikpower
             if (details != null)
             {
                 assetdata = details;
+                Console.WriteLine(assetdata);
                 PopulateDetails(assetdata);
             }
         }
