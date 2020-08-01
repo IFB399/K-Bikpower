@@ -8,7 +8,6 @@
     <ContentPage.Content>
         <StackLayout>
             <zxing:ZXingScannerView x:Name="_scanView" OnScanResult="Handle_OnScanResult" IsScanning="true" />
-            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

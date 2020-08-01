@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 using SQLite;
 
 namespace K_Bikpower
@@ -51,6 +52,5 @@ namespace K_Bikpower
         public string Equipment_class { get; set; }
 
         public string Equipment_class_description { get; set; }
-
     }   
 }

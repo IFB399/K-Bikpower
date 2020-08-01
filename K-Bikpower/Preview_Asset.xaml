@@ -8,6 +8,7 @@
     <ContentPage.Content>
         <ScrollView>
             <StackLayout Spacing="10" Padding="50">
+                <Label Text="Preveiw" TextColor="Black"/>
                 <Label x:Name="Substation_Code_label" TextColor="Black" />
                 <Label x:Name="Plant_Number_label" TextColor="Black" />
                 <Label x:Name="Asset_EQ_NO_label" TextColor="Black" />

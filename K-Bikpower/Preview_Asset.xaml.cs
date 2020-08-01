@@ -17,7 +17,8 @@ namespace K_Bikpower
     public partial class Preview_Asset : ContentPage
     {
         Assets assetdata;
-        private Task<IEnumerable<Assets>> test;
+        
+
 
         public Preview_Asset(Assets details)
         {
@@ -27,11 +28,6 @@ namespace K_Bikpower
                 assetdata = details;
                 PopulateDetails(assetdata);
             }
-        }
-
-        public Preview_Asset(Task<IEnumerable<Assets>> test)
-        {
-            this.test = test;
         }
 
         private void PopulateDetails(Assets details)
@@ -85,24 +81,5 @@ namespace K_Bikpower
             Gen.BarcodeValue = "Assets where Id = " + QRidcode;
             Gen.IsVisible = true;
         }
-        /* ZXingBarcodeImageView GenerateQR(string codeValue)
-{
-    var qrCode = new ZXingBarcodeImageView
-    {
-        BarcodeFormat = BarcodeFormat.QR_CODE,
-        BarcodeOptions = new QrCodeEncodingOptions
-        {
-            Height = 350,
-            Width = 350
-        },
-        BarcodeValue = codeValue,
-        VerticalOptions = LayoutOptions.CenterAndExpand,
-        HorizontalOptions = LayoutOptions.CenterAndExpand
-    };
-    // Workaround for iOS
-    qrCode.WidthRequest = 350;
-    qrCode.HeightRequest = 350;
-    return qrCode;
-} */
     }
 }

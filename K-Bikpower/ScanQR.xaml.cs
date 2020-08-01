@@ -24,10 +24,18 @@ namespace K_Bikpower
             {
                 
                 string search = result.ToString();
-                var test = App.Database.QueryValuationsAsync(search);
-                await Navigation.PushAsync(new Preview_Asset(test));
-                //await DisplayAlert("Scanned result", search , "OK");
-            });
+                 var test = App.Database.Scangen(search); //donest work fix later. 
+
+                Assets testing = test[0];
+                
+                
+
+
+                await Navigation.PushAsync(new Preview_Asset(testing));
+        //await DisplayAlert("Scanned result", search , "OK");
+
+
+    });
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using SQLite;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace K_Bikpower
@@ -9,7 +10,7 @@ namespace K_Bikpower
         readonly SQLiteAsyncConnection _database;
         //private readonly SQLiteConnection datbaseQ;
 
-
+        SQLiteConnection conn;
         public Database(string dbPath)
         {
             _database = new SQLiteAsyncConnection(dbPath);
@@ -32,19 +33,10 @@ namespace K_Bikpower
             return _database.InsertOrReplaceAsync(Asset);
         }
 
-
-        public async Task<IEnumerable<Assets>> QueryValuationsAsync(string QRcode)
+        public List<Assets> Scangen(string scan)
         {
-           //var test = _database.QueryAsync<Assets>("select * from" + QRcode);
-           // var result = await query.ToListAsync();
-
-            var query = _database.Table<Assets>().Where(Assets.Id = "0");
-
-            var result2 = await query.ToListAsync();
-
-
-            return result2;
+            List<Assets> aset = conn.Table<Assets>().Where(a => a.Id == 1).ToList();
+            return aset;
         }
-
     }
 }
