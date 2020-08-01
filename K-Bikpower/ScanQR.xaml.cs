@@ -22,10 +22,15 @@ namespace K_Bikpower
         {
             Device.BeginInvokeOnMainThread(async () =>
             {
-                await DisplayAlert("Scanned result", result.Text, "OK");
+                
                 string search = result.ToString();
-                //await App.Database.QueryValuations(search);
+                var test = App.Database.QueryValuationsAsync(search);
+                await Navigation.PushAsync(new Preview_Asset(test));
+                //await DisplayAlert("Scanned result", search , "OK");
             });
         }
     }
 }
+
+
+//<zxing:ZXingDefaultOverlay x:Name="overlay" TopText="Hold your phone up to the barcode" BottomText="Scanning will happen automatically" ShowFlashButton="True" />

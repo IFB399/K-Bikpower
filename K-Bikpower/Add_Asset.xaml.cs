@@ -57,7 +57,7 @@ namespace K_Bikpower
         {
             //if (!string.IsNullOrWhiteSpace(entry.Text) && !string.IsNullOrWhiteSpace(entry.Text))
             // {
-            if (addassetbutton.Text == "Save")
+            if (addassetbutton.Text == "Add Asset")
             {
                 await App.Database.SaveStudentAsync(new Assets
                 {

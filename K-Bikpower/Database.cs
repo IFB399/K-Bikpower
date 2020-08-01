@@ -7,12 +7,14 @@ namespace K_Bikpower
     public class Database
     {
         readonly SQLiteAsyncConnection _database;
+        //private readonly SQLiteConnection datbaseQ;
 
 
         public Database(string dbPath)
         {
             _database = new SQLiteAsyncConnection(dbPath);
             _database.CreateTableAsync<Assets>().Wait();
+           // datbaseQ = new SQLiteConnection(dbPath);
         }
 
         public Task<List<Assets>> GetPeopleAsync()
@@ -27,16 +29,22 @@ namespace K_Bikpower
 
         public Task<int> UpdateStudentAsync(Assets Asset)
         {
-            System.Console.WriteLine("test");
             return _database.InsertOrReplaceAsync(Asset);
         }
 
 
-       // public IEnumerable<Assets> QueryValuations(Assets Asset)
-       // {
-        //    var test = _database.QueryAsync<Assets>("select * from Assets where Id = ?", Asset);
-        //    return test;
-       // }
+        public async Task<IEnumerable<Assets>> QueryValuationsAsync(string QRcode)
+        {
+           //var test = _database.QueryAsync<Assets>("select * from" + QRcode);
+           // var result = await query.ToListAsync();
+
+            var query = _database.Table<Assets>().Where(Assets.Id = "0");
+
+            var result2 = await query.ToListAsync();
+
+
+            return result2;
+        }
 
     }
 }
