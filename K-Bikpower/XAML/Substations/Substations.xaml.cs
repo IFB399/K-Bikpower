@@ -38,8 +38,8 @@ namespace K_Bikpower
             if (details != null)
             {
 
-               var Assets =  App.Database.GetSubAssetsAsync(details);
-                Navigation.PushAsync(new Sub_Assets(Assets));
+               //var Assets =  App.Database.GetSubAssetsAsync(details);
+                Navigation.PushAsync(new View_Assets(details));
             }
         }
     }

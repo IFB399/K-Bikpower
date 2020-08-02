@@ -19,7 +19,7 @@ namespace K_Bikpower
 
         private void assets_button_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new View_Assets()); //if its not the final page change to navigation page
+            Navigation.PushAsync(new View_Assets(null)); //if its not the final page change to navigation page
         }
 
         private void Substation_button_Clicked(object sender, EventArgs e)
@@ -44,7 +44,7 @@ namespace K_Bikpower
 
         private void View_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new View_Assets()); //if its not the final page change to navigation page
+            Navigation.PushAsync(new View_Assets(null)); //if its not the final page change to navigation page
         }
 
         private void Signed_OUT_Clicked(object sender, EventArgs e)

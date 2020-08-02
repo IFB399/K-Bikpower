@@ -113,7 +113,7 @@ namespace K_Bikpower
                 });
             }
                 // }
-                await Navigation.PushAsync(new View_Assets());
+                await Navigation.PushAsync(new View_Assets(null));
         }
         //else { await DisplayAlert("Incorrect", "Incorrect username or password", "Close");}
     }

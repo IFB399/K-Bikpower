@@ -12,14 +12,22 @@ namespace K_Bikpower
 	[XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class View_Assets : ContentPage
     {
-        public View_Assets()
+        public View_Assets(string asset_sub)
         {
             InitializeComponent();
+            string asset = asset_sub;
+            OnAppearing(asset);
         }
-        protected override async void OnAppearing()
+        protected async void OnAppearing(string asset)
         {
             base.OnAppearing();
-            AssetsTable.ItemsSource = await App.Database.GetPeopleAsync();
+            if(asset == null)
+            { AssetsTable.ItemsSource = await App.Database.GetPeopleAsync(); }
+            else
+            {
+                AssetsTable.ItemsSource = (System.Collections.IEnumerable)App.Database.GetSubAssetsAsync(asset);
+            }
+            
         }
         private void Button_Clicked(object sender, EventArgs e)
         {
