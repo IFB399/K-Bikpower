@@ -28,10 +28,7 @@ namespace K_Bikpower
         {
             Navigation.PushAsync(new Add_Sub());
         }
-        private void EditAsset(object sender, ItemTappedEventArgs e)
-        {
-            
-        }
+        
         private void ViewAssets(object sender, ItemTappedEventArgs e)
         {
             String details = (string)e.Item;

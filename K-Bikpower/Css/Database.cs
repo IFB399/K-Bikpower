@@ -40,7 +40,17 @@ namespace K_Bikpower
             return _database.InsertAsync(Asset);
         }
 
+        public Task<int> SaveSubAsync(Substation_Codes Asset)
+        {
+            return _database.InsertAsync(Asset);
+        }
+
         public Task<int> UpdateStudentAsync(Assets Asset)
+        {
+            return _database.InsertOrReplaceAsync(Asset);
+        }
+
+        public Task<int> UpdateSubAsync(Substation_Codes Asset)
         {
             return _database.InsertOrReplaceAsync(Asset);
         }

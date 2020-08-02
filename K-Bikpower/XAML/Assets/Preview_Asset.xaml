@@ -9,27 +9,50 @@
         <ScrollView>
             <StackLayout Spacing="10" Padding="50">
                 <Label Text="Preveiw" TextColor="Black"/>
+
+                <Label Text="" />
                 <Label x:Name="Substation_Code_label" TextColor="Black" />
+                
                 <Label x:Name="Plant_Number_label" TextColor="Black" />
+                
                 <Label x:Name="Asset_EQ_NO_label" TextColor="Black" />
+                
                 <Label x:Name="EQ_Status_label" TextColor="Black" />
+                
                 <Label x:Name="Serial_Number_label" TextColor="Black" />
+                
                 <Label x:Name="Modifier_code_label" TextColor="Black" />
+                
                 <Label x:Name="Location_Equipment_Number_label" TextColor="Black" />
+                
                 <Label x:Name="Component_Code_label" TextColor="Black" />
+                
                 <Label x:Name="WarrantyDate_label" TextColor="Black" />
+                
                 <Label x:Name="Equipement_age_label" TextColor="Black" />
+                
                 <Label x:Name="Stock_Code_label" TextColor="Black" />
+                
                 <Label x:Name="PO_NO_label" TextColor="Black" />
+                
                 <Label x:Name="Rated_Voltage_label" TextColor="Black" />
+                
                 <Label x:Name="Nominal_Voltage_label" TextColor="Black" />
+                
                 <Label x:Name="Manufacture_Name_label" TextColor="Black" />
+                
                 <Label x:Name="Specifiaction_title_label" TextColor="Black" />
+                
                 <Label x:Name="Specifiaction_NO_label" TextColor="Black" />
+                
                 <Label x:Name="Specifiaction_item_NO_label" TextColor="Black" />
+                
                 <Label x:Name="last_install_date_label" TextColor="Black" />
+                
                 <Label x:Name="Equipment_class_label" TextColor="Black" />
+                
                 <Label x:Name="Equipment_class_description_label" TextColor="Black" />
+                
                 <StackLayout Orientation="Horizontal" >
                     <Button Text="Edit Asset" Clicked="Button_Clicked"/>
                     <Button Text="Generate QR Code" Clicked="Button_Clicked_1"/>
