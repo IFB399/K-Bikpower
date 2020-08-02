@@ -1,5 +1,4 @@
-﻿using K_Bikpower.XAML.Substations;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -26,7 +25,7 @@ namespace K_Bikpower
         }
         private void Button_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new Add_Sub());
+            Navigation.PushAsync(new Add_Sub(null));
         }
         
         private void ViewAssets(object sender, ItemTappedEventArgs e)

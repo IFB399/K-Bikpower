@@ -10,7 +10,8 @@
             <StackLayout Spacing="10" Padding="50">
                 <Label Text="Preveiw" TextColor="Black"/>
 
-                <Label Text="" />
+                <Label Text="Substation Code" />
+
                 <Label x:Name="Substation_Code_label" TextColor="Black" />
                 
                 <Label x:Name="Plant_Number_label" TextColor="Black" />
