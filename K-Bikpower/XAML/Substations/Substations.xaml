@@ -9,13 +9,13 @@
         <StackLayout Margin="10,10,10,10">
             <Frame BackgroundColor="LightGray" BorderColor="#F0F0F0" Padding="5" Margin="0,0,0,5" HasShadow="False">
 
-                <ListView x:Name="AssetsTable" HasUnevenRows="false" >
+                <ListView x:Name="AssetsTable" HasUnevenRows="false" ItemTapped="ViewAssets" >
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
                                 <StackLayout Spacing="2">
                                     <Frame BackgroundColor="White" BorderColor="#F0F0F0" Padding="5" Margin="0,0,0,5" HasShadow="False">
-                                        <Label Text="{Binding Id,StringFormat='{0:F0}'}" FontSize="Small" FontAttributes="Bold"  Grid.Column="0" HorizontalOptions="Center"/>
+                                        <Label Text="{Binding Substation_Code,StringFormat='{0:F0}'}" FontSize="Small" FontAttributes="Bold"  Grid.Column="0" HorizontalOptions="Center"/>
                                     </Frame>
                                 </StackLayout>
                             </ViewCell>

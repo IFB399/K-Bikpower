@@ -30,6 +30,11 @@ namespace K_Bikpower
             return _database.Table<Substation_Codes>().ToListAsync();
         }
 
+        public Task<List<Substation_Codes>> GetSubAssetsAsync(string sub)
+        {
+            return _database.Table<Substation_Codes>().Where(a => a.Substation_Code == sub).ToListAsync();
+        }
+
         public Task<int> SaveStudentAsync(Assets Asset)
         {
             return _database.InsertAsync(Asset);

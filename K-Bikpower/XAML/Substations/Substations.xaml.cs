@@ -1,4 +1,5 @@
-﻿using System;
+﻿using K_Bikpower.XAML.Substations;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-//Test
+
 namespace K_Bikpower
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
@@ -25,11 +26,21 @@ namespace K_Bikpower
         }
         private void Button_Clicked(object sender, EventArgs e)
         {
-          //  Navigation.PushAsync(new Add_Asset(null));
+            Navigation.PushAsync(new Add_Sub());
         }
         private void EditAsset(object sender, ItemTappedEventArgs e)
         {
             
+        }
+        private void ViewAssets(object sender, ItemTappedEventArgs e)
+        {
+            String details = (string)e.Item;
+            if (details != null)
+            {
+
+               var Assets =  App.Database.GetSubAssetsAsync(details);
+                Navigation.PushAsync(new Sub_Assets(Assets));
+            }
         }
     }
 }
