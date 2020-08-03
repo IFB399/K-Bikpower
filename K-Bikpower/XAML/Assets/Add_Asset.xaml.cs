@@ -35,7 +35,7 @@ namespace K_Bikpower
             int Loceqnum = data.Location_Equipment_Number;
             Location_Equipment_Number_Entry.Text = Loceqnum.ToString();
             Component_Code_Entry.Text = data.Component_Code;
-            WarrantyDate_Entry.Text = data.WarrantyDate; //not gonna work
+            WarrantyDate_Picker.Date = data.WarrantyDate; //not gonna work
             int EQUage = data.Equipement_age;
             Equipement_age_Entry.Text = EQUage.ToString();
             Stock_Code_Entry.Text = data.Stock_Code;
@@ -69,7 +69,7 @@ namespace K_Bikpower
                     Modifier_code = Modifier_code_Entry.Text,
                     Location_Equipment_Number = Int32.Parse(Location_Equipment_Number_Entry.Text),
                     Component_Code = Component_Code_Entry.Text,
-                    WarrantyDate = WarrantyDate_Entry.Text, // change dumb dumb. 
+                    WarrantyDate = WarrantyDate_Picker.Date, // change dumb dumb. 
                     Equipement_age = Int32.Parse(Equipement_age_Entry.Text),
                     Stock_Code = Stock_Code_Entry.Text,
                     PO_NO = PO_NO_Entry.Text,
@@ -97,7 +97,7 @@ namespace K_Bikpower
                     Modifier_code = Modifier_code_Entry.Text,
                     Location_Equipment_Number = Int32.Parse(Location_Equipment_Number_Entry.Text),
                     Component_Code = Component_Code_Entry.Text,
-                    WarrantyDate = WarrantyDate_Entry.Text, // change dumb dumb. 
+                    WarrantyDate = WarrantyDate_Picker.Date, // change dumb dumb. 
                     Equipement_age = Int32.Parse(Equipement_age_Entry.Text),
                     Stock_Code = Stock_Code_Entry.Text,
                     PO_NO = PO_NO_Entry.Text,

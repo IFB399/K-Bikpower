@@ -15,14 +15,25 @@ namespace K_Bikpower
         public Login()
         {
             InitializeComponent();
+
+
         }
 
-        private void Button_Clicked(object sender, EventArgs e)
+        async void Button_Clicked(object sender, EventArgs e)
         {
-            var username = Username.Text;
-            var password = Password.Text;
-            if (username == "Test" && password == "1234") { Navigation.PushAsync(new MainPage()); }
-            else { DisplayAlert("Incorrect", "Incorrect username or password", "Close"); }
+            string username = Username.Text;
+            string password = Password.Text;
+            if (username == "Test" && password == "1234")
+            {
+               /* await App.Database.SaveUserAsync(new User
+                {
+                    UserName = Username.Text,
+                    Password = Password.Text,
+                }); */
+                await Navigation.PushAsync(new MainPage()); 
+            }
+            
+            else { await DisplayAlert("Incorrect", "Incorrect username or password", "Close"); }
         }
     }
 }

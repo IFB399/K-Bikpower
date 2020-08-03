@@ -18,11 +18,18 @@ namespace K_Bikpower
             _database = new SQLiteAsyncConnection(dbPath);
             _database.CreateTableAsync<Assets>().Wait();
             _database.CreateTableAsync<Substation_Codes>().Wait();
+            _database.CreateTableAsync<User>().Wait();
         }
 
         public Task<List<Assets>> GetPeopleAsync()
         {
             return _database.Table<Assets>().ToListAsync();
+        }
+
+        public List<User> GetUserAsync()
+        {
+            return conn.Table<User>().ToList();
+
         }
 
         public Task<List<Substation_Codes>> GetSubAsync()
@@ -38,6 +45,11 @@ namespace K_Bikpower
         public Task<int> SaveStudentAsync(Assets Asset)
         {
             return _database.InsertAsync(Asset);
+        }
+
+        public Task<int> SaveUserAsync(User user)
+        {
+            return _database.InsertAsync(user);
         }
 
         public Task<int> SaveSubAsync(Substation_Codes Asset)

@@ -4,68 +4,138 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:zxing="clr-namespace:ZXing.Net.Mobile.Forms;assembly=ZXing.Net.Mobile.Forms" xmlns:zxcm="clr-namespace:ZXing.Common;assembly=zxing.portable"
              mc:Ignorable="d"
-             x:Class="K_Bikpower.Preview_Asset">
+             x:Class="K_Bikpower.Preview_Asset"
+             BackgroundColor="#63d9ff">
     <ContentPage.Content>
-        <ScrollView>
-            <StackLayout Spacing="10" Padding="50">
-                <Label Text="Preveiw" TextColor="Black"/>
+        
+        <ScrollView Padding="50" >
+            <Frame CornerRadius="10" BackgroundColor="AliceBlue" HasShadow ="True">
+                <StackLayout Spacing="10" Padding="50">
+                    <Label Text="Preveiw" TextColor="Black" FontSize="Large"/>
 
-                <Label Text="Substation Code" />
+                    <Label Text="Substation Code" FontSize="Title" />
+                    <Frame CornerRadius="10" BorderColor="Black" HasShadow="True" >
+                        <Label x:Name="Substation_Code_label" TextColor="Black" />
+                    </Frame>
+                    <Label Text="Plant Number" />
 
-                <Label x:Name="Substation_Code_label" TextColor="Black" />
-                
-                <Label x:Name="Plant_Number_label" TextColor="Black" />
-                
-                <Label x:Name="Asset_EQ_NO_label" TextColor="Black" />
-                
-                <Label x:Name="EQ_Status_label" TextColor="Black" />
-                
-                <Label x:Name="Serial_Number_label" TextColor="Black" />
-                
-                <Label x:Name="Modifier_code_label" TextColor="Black" />
-                
-                <Label x:Name="Location_Equipment_Number_label" TextColor="Black" />
-                
-                <Label x:Name="Component_Code_label" TextColor="Black" />
-                
-                <Label x:Name="WarrantyDate_label" TextColor="Black" />
-                
-                <Label x:Name="Equipement_age_label" TextColor="Black" />
-                
-                <Label x:Name="Stock_Code_label" TextColor="Black" />
-                
-                <Label x:Name="PO_NO_label" TextColor="Black" />
-                
-                <Label x:Name="Rated_Voltage_label" TextColor="Black" />
-                
-                <Label x:Name="Nominal_Voltage_label" TextColor="Black" />
-                
-                <Label x:Name="Manufacture_Name_label" TextColor="Black" />
-                
-                <Label x:Name="Specifiaction_title_label" TextColor="Black" />
-                
-                <Label x:Name="Specifiaction_NO_label" TextColor="Black" />
-                
-                <Label x:Name="Specifiaction_item_NO_label" TextColor="Black" />
-                
-                <Label x:Name="last_install_date_label" TextColor="Black" />
-                
-                <Label x:Name="Equipment_class_label" TextColor="Black" />
-                
-                <Label x:Name="Equipment_class_description_label" TextColor="Black" />
-                
-                <StackLayout Orientation="Horizontal" >
-                    <Button Text="Edit Asset" Clicked="Button_Clicked"/>
-                    <Button Text="Generate QR Code" Clicked="Button_Clicked_1"/>
+                    <Frame CornerRadius="10" BorderColor="Black" HasShadow="True" >
+                        <Label x:Name="Plant_Number_label" TextColor="Black" />
+                    </Frame>
+
+                    <Label Text=" Asset Equipment Number" />
+
+                    <Frame CornerRadius="10" BorderColor="Black" HasShadow="True" >
+                        <Label x:Name="Asset_EQ_NO_label" TextColor="Black" />
+                    </Frame>
+                    
+                    <Label Text="Equipment Status" />
+                    <Frame CornerRadius="10" BorderColor="Black" HasShadow="True" >
+                        <Label x:Name="EQ_Status_label" TextColor="Black" />
+                    </Frame>
+                   
+                    <Label Text="Serial Number" />
+                    <Frame CornerRadius="10" BorderColor="Black" HasShadow="True" >
+                        <Label x:Name="Serial_Number_label" TextColor="Black" />
+                    </Frame>
+
+                    <Label Text="Modifier Code" />
+                    <Frame CornerRadius="10" BorderColor="Black" HasShadow="True" >
+                        <Label x:Name="Modifier_code_label" TextColor="Black" />
+                    </Frame>
+                    
+                    
+                    <Label Text="Location Equipment Number" />
+                    <Frame CornerRadius="10" BorderColor="Black" HasShadow="True" >
+                        <Label x:Name="Location_Equipment_Number_label" TextColor="Black" />
+                    </Frame>
+                    
+                    
+                    <Label Text="Component Code" />
+                    <Frame CornerRadius="10" BorderColor="Black" HasShadow="True" >
+                        <Label x:Name="Component_Code_label" TextColor="Black" />
+                    </Frame>
+                    
+                    <Label Text="Equipment Warranty Date" />
+                    <Frame CornerRadius="10" BorderColor="Black" HasShadow="True" >
+                        <Label x:Name="WarrantyDate_label" TextColor="Black" />
+                    </Frame>
+                    <DatePicker x:Name="WarrantyDate_Picker" IsEnabled="False"/>
+
+                    <Label Text="Equipment Age" />
+                    <Frame CornerRadius="10" BorderColor="Black" HasShadow="True" >
+                        <Label x:Name="Equipement_age_label" TextColor="Black" />
+                    </Frame>
+                    
+                    <Label Text="Stock Code" />
+                    <Frame CornerRadius="10" BorderColor="Black" HasShadow="True" >
+                        <Label x:Name="Stock_Code_label" TextColor="Black" />
+                    </Frame>
+                    
+                    <Label Text="Purchase Order Number" />
+                    <Frame CornerRadius="10" BorderColor="Black" HasShadow="True" >
+                        <Label x:Name="PO_NO_label" TextColor="Black" />
+                    </Frame>
+                    
+                    <Label Text="Rated Voltage" />
+                    <Frame CornerRadius="10" BorderColor="Black" HasShadow="True" >
+                        <Label x:Name="Rated_Voltage_label" TextColor="Black" />
+                    </Frame>
+
+                    <Label Text="Nominal Voltage" />
+                    <Frame CornerRadius="10" BorderColor="Black" HasShadow="True" >
+                        <Label x:Name="Nominal_Voltage_label" TextColor="Black" />
+                    </Frame>
+
+                    <Label Text="Manufacturer Name" />
+                    <Frame CornerRadius="10" BorderColor="Black" HasShadow="True" >
+                        <Label x:Name="Manufacture_Name_label" TextColor="Black" />
+                    </Frame>
+
+                    <Label Text="Manufacturer Type" />
+                    <Frame CornerRadius="10" BorderColor="Black" HasShadow="True" >
+                        <Label x:Name="Specifiaction_title_label" TextColor="Black" />
+                    </Frame>
+
+
+                    <Label Text="Specification Title" />
+                    <Frame CornerRadius="10" BorderColor="Black" HasShadow="True" >
+                        <Label x:Name="Specifiaction_NO_label" TextColor="Black" />
+                    </Frame>
+
+                    <Label Text="Specification Number" />
+                    <Frame CornerRadius="10" BorderColor="Black" HasShadow="True" >
+                        <Label x:Name="Specifiaction_item_NO_label" TextColor="Black" />
+                    </Frame>
+
+                    <Label Text="Last Installation Date" />
+                    <Frame CornerRadius="10" BorderColor="Black" HasShadow="True" >
+                        <Label x:Name="last_install_date_label" TextColor="Black" />
+                    </Frame>
+
+                    <Label Text="Equipment Class" />
+                    <Frame CornerRadius="10" BorderColor="Black" HasShadow="True" >
+                        <Label x:Name="Equipment_class_label" TextColor="Black" />
+                    </Frame>
+
+                    <Label Text="Equipment Class Description" />
+                    <Frame CornerRadius="10" BorderColor="Black" HasShadow="True" >
+                        <Label x:Name="Equipment_class_description_label" TextColor="Black" />
+                    </Frame>
+
+                    <StackLayout Orientation="Horizontal" >
+                        <Button Text="Edit Asset" Clicked="Button_Clicked"/>
+                        <Button Text="Generate QR Code" Clicked="Button_Clicked_1"/>
+                    </StackLayout>
+                    <zxing:ZXingBarcodeImageView BarcodeFormat="QR_CODE" x:Name="Gen" IsVisible="false" BarcodeValue="1" HeightRequest="300" WidthRequest="300">
+                        <zxing:ZXingBarcodeImageView.BarcodeOptions>
+                            <zxcm:EncodingOptions Width="300" Height="300" />
+                        </zxing:ZXingBarcodeImageView.BarcodeOptions>
+                    </zxing:ZXingBarcodeImageView>
+
+
                 </StackLayout>
-                <zxing:ZXingBarcodeImageView BarcodeFormat="QR_CODE" x:Name="Gen" IsVisible="false" BarcodeValue="1" HeightRequest="300" WidthRequest="300">
-                    <zxing:ZXingBarcodeImageView.BarcodeOptions>
-                    <zxcm:EncodingOptions Width="300" Height="300" />
-                    </zxing:ZXingBarcodeImageView.BarcodeOptions>
-                </zxing:ZXingBarcodeImageView>
-
-
-            </StackLayout>
+            </Frame>
         </ScrollView>
     </ContentPage.Content>
 </ContentPage>

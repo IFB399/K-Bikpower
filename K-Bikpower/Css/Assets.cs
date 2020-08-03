@@ -27,7 +27,7 @@ namespace K_Bikpower
 
         public string Component_Code { get; set; }
 
-        public string WarrantyDate { get; set; }
+        public DateTime WarrantyDate { get; set; }
 
         public int Equipement_age { get; set; }// needs auto timer
 

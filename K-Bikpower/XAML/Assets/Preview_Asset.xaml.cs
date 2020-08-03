@@ -44,7 +44,8 @@ namespace K_Bikpower
             int Loceqnum = details.Location_Equipment_Number;
             Location_Equipment_Number_label.Text = Loceqnum.ToString();
             Component_Code_label.Text = details.Component_Code;
-            WarrantyDate_label.Text = details.WarrantyDate; //gonna break
+            WarrantyDate_Picker.Date = details.WarrantyDate;
+            //WarrantyDate_label.Text = details.WarrantyDate; //gonna break
             int EQUage = details.Equipement_age;
             Equipement_age_label.Text = EQUage.ToString();
             Stock_Code_label.Text = details.Stock_Code;
