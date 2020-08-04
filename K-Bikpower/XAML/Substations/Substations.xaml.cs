@@ -10,27 +10,32 @@ using Xamarin.Forms.Xaml;
 namespace K_Bikpower
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class View_Assets : ContentPage
+    public partial class Substations : ContentPage
     {
-        public View_Assets()
+        public Substations()
         {
             InitializeComponent();
         }
+
+
         protected override async void OnAppearing()
         {
             base.OnAppearing();
-            StudentsTable.ItemsSource = await App.Database.GetPeopleAsync();
+            AssetsTable.ItemsSource = await App.Database.GetSubAsync();
         }
         private void Button_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new Add_Asset(null));
+            Navigation.PushAsync(new Add_Sub(null));
         }
-        private void EditAsset(object sender, ItemTappedEventArgs e)
+        
+        private void ViewAssets(object sender, ItemTappedEventArgs e)
         {
-            Assets details = e.Item as Assets;
+            String details = (string)e.Item;
             if (details != null)
             {
-                Navigation.PushAsync(new Preview_Asset(details));
+
+               //var Assets =  App.Database.GetSubAssetsAsync(details);
+                Navigation.PushAsync(new View_Assets(details));
             }
         }
     }

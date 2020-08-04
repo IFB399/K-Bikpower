@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 using SQLite;
 
 namespace K_Bikpower
@@ -10,7 +11,7 @@ namespace K_Bikpower
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
 
-        public string Substation_Code{ get; set; }
+        public string Substation_Code { get; set; }
 
         public string Plant_Number { get; set; }
 
@@ -51,6 +52,5 @@ namespace K_Bikpower
         public string Equipment_class { get; set; }
 
         public string Equipment_class_description { get; set; }
-
-    }
+    }   
 }

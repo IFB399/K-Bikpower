@@ -20,7 +20,8 @@ namespace K_Bikpower.UWP
         public MainPage()
         {
             this.InitializeComponent();
-
+            ZXing.Net.Mobile.Forms.WindowsUniversal.ZXingScannerViewRenderer.Init();
+            ZXing.Net.Mobile.Forms.WindowsUniversal.ZXingBarcodeImageViewRenderer.Init();
             LoadApplication(new K_Bikpower.App());
         }
     }
