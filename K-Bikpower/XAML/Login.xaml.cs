@@ -25,11 +25,11 @@ namespace K_Bikpower
             string password = Password.Text;
             if (username == "Test" && password == "1234")
             {
-               /* await App.Database.SaveUserAsync(new User
+                await App.Database.SaveUserAsync(new User
                 {
                     UserName = Username.Text,
                     Password = Password.Text,
-                }); */
+                }); 
                 await Navigation.PushAsync(new MainPage()); 
             }
             

@@ -13,8 +13,8 @@
            HorizontalOptions="Center"
            VerticalOptions="CenterAndExpand" />
 
-            <!--Logo-->
-            <Image Source="C:\Users\Brenton Reddish\Desktop\FlightSchool\FlightSchool\FlightSchool\download.png" VerticalOptions="CenterAndExpand" />
+            <!--need Logo-->
+            
             <Frame CornerRadius="10" BackgroundColor="#7fe0ff">
                 <StackLayout Margin="20,20,20,20" Padding="10,10,10,10" Spacing="50">
                     <!-- login -->

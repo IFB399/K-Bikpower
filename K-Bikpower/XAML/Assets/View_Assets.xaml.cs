@@ -25,7 +25,7 @@ namespace K_Bikpower
             { AssetsTable.ItemsSource = await App.Database.GetPeopleAsync(); }
             else
             {
-                AssetsTable.ItemsSource = (System.Collections.IEnumerable)App.Database.GetSubAssetsAsync(asset);
+                AssetsTable.ItemsSource = await App.Database.GetSubAssetsAsync(asset);
             }
             
         }
