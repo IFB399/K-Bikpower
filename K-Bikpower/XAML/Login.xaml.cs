@@ -15,7 +15,10 @@ namespace K_Bikpower
         public Login()
         {
             InitializeComponent();
-
+            var details = App.Database.GetUserAsync();
+            string  username = details[0].UserName;
+            string password = details[0].Password;
+            // if (username.IsNullOrEmpty())
 
         }
 

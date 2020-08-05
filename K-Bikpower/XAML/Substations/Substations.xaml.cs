@@ -30,8 +30,8 @@ namespace K_Bikpower
         
         private void ViewAssets(object sender, ItemTappedEventArgs e)
         {
-            var detail = e.Item as Substation_Codes; //doesnt work error
-            string details = detail.Substation_Code; //null
+            var detail = e.Item as Substation_Codes; 
+            string details = detail.Substation_Code;
             if (details != null)
             {
 
