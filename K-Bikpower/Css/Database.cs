@@ -26,9 +26,9 @@ namespace K_Bikpower
             return _database.Table<Assets>().ToListAsync();
         }
 
-        public List<User> GetUserAsync()
+        public User GetUserAsync()
         {
-            return conn.Table<User>().ToList();
+            return conn.Table<User>().FirstOrDefault();
 
         }
 

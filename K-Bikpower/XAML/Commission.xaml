@@ -4,7 +4,8 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="K_Bikpower.Commission">
+             x:Class="K_Bikpower.Commission"
+             BackgroundColor="#63d9ff">
     <ScrollView>
         <Grid Margin="10" RowSpacing="50">
             <Grid.ColumnDefinitions>

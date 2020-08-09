@@ -16,18 +16,18 @@ namespace K_Bikpower
         {
             InitializeComponent();
             var details = App.Database.GetUserAsync();
-            string  username = details[0].UserName;
-            string password = details[0].Password;
-            DateTime lastlogin = details[0].LastLogin;
+            DateTime lastlogin = details.LastLogin;
             if (lastlogin.AddHours(24) > DateTime.UtcNow)
             {
+                string username = details.UserName;
+                string password = details.Password;
                 if (username == "Test" && password == "1234")
                 {
                     Navigation.PushAsync(new MainPage());
                 }
             }
             else { App.Database.DeleteUser(); };
-
+            
         }
 
         async void Button_Clicked(object sender, EventArgs e)
