@@ -34,7 +34,7 @@ namespace K_Bikpower
         private void PopulateDetails(Assets details)
         {
             
-            Substation_Code_label.Text = details.Substation_Code;
+            Substation_Code_label.Text = details.Substation_Code_selected;
             Plant_Number_label.Text = details.Plant_Number;
             int AssentEQNO = details.Asset_EQ_NO;
             Asset_EQ_NO_label.Text = AssentEQNO.ToString();

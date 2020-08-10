@@ -11,7 +11,7 @@ namespace K_Bikpower
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
 
-        public string Substation_Code { get; set; }
+        public string Substation_Code_selected { get; set; }
 
         public string Plant_Number { get; set; }
 

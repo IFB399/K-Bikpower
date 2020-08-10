@@ -4,12 +4,16 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="K_Bikpower.Substations">
+             x:Class="K_Bikpower.Substations"
+              BackgroundColor="#63d9ff">
     <ContentPage.Content>
-        <StackLayout Margin="10,10,10,10">
-            <Frame BackgroundColor="LightGray" BorderColor="#F0F0F0" Padding="5" Margin="0,0,0,5" HasShadow="False">
+        <StackLayout Margin="50,10,50,10">
+            <Frame CornerRadius="10" BackgroundColor="AliceBlue" HasShadow ="True">
 
                 <ListView x:Name="AssetsTable" HasUnevenRows="false" ItemTapped="ViewAssets" >
+                    <ListView.Header >
+                        <Label Text="Substation Code" HorizontalOptions="CenterAndExpand" FontSize="Medium"/>
+                    </ListView.Header>
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>

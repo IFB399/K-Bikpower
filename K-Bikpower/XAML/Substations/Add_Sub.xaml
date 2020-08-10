@@ -4,12 +4,20 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="K_Bikpower.Add_Sub">
+             x:Class="K_Bikpower.Add_Sub"
+             BackgroundColor="#63d9ff">
     <ContentPage.Content>
-        <StackLayout>
-            <Entry  x:Name="Substation_Code_Entry" ClearButtonVisibility="WhileEditing" VerticalOptions="EndAndExpand" MaxLength="25" IsSpellCheckEnabled="True" IsTextPredictionEnabled="false"/>
-            <Entry  x:Name="Substation_Name_Entry" ClearButtonVisibility="WhileEditing" VerticalOptions="EndAndExpand" MaxLength="25" IsSpellCheckEnabled="True" IsTextPredictionEnabled="false"/>
-            <Button Text="Add Substation" Clicked="Button_Clicked" VerticalOptions="EndAndExpand" x:Name = "addsubbutton" CornerRadius="5" BorderColor="Black" BorderWidth="1"/>
+        
+        <StackLayout Orientation="Vertical" Margin="50" VerticalOptions="Center">
+            <Frame CornerRadius="10" BackgroundColor="AliceBlue" HasShadow ="True">
+                <StackLayout VerticalOptions="Center">
+                    <Label Text="Substation Code" TextColor="Black" FontSize="Title"/>
+                    <Entry  x:Name="Substation_Code_Entry" ClearButtonVisibility="WhileEditing" VerticalOptions="EndAndExpand" MaxLength="25" IsSpellCheckEnabled="True" IsTextPredictionEnabled="false"/>
+                    <Label Text="Substation Name" TextColor="Black" FontSize="Title"/>
+                    <Entry  x:Name="Substation_Name_Entry" ClearButtonVisibility="WhileEditing" VerticalOptions="EndAndExpand" MaxLength="25" IsSpellCheckEnabled="True" IsTextPredictionEnabled="false"/>
+                    <Button Text="Add Substation" Clicked="Button_Clicked" VerticalOptions="EndAndExpand" x:Name = "addsubbutton" CornerRadius="5" BorderColor="Black" BorderWidth="1"/>
+                </StackLayout>
+            </Frame>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

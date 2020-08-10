@@ -39,7 +39,7 @@ namespace K_Bikpower
 
         public Task<List<Assets>> GetSubAssetsAsync(string sub)
         {
-            return _database.Table<Assets>().Where(a => a.Substation_Code == sub).ToListAsync();
+            return _database.Table<Assets>().Where(a => a.Substation_Code_selected == sub).ToListAsync();
         }
 
         public Task<int> SaveStudentAsync(Assets Asset)
@@ -71,6 +71,11 @@ namespace K_Bikpower
         {
             List<Assets> aset = conn.Table<Assets>().Where(a => a.Id == scan).ToList();
             return aset;
+        }
+
+        public Task<int> DeleteUser()
+        {
+            return _database.ExecuteAsync("DELETE FROM User");
         }
     }
 }

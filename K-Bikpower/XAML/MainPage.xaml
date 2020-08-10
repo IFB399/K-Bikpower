@@ -9,9 +9,6 @@
     <ScrollView>
         <StackLayout Orientation="Vertical">
             <StackLayout Orientation="Horizontal" Padding="10,10,10,10" Spacing="50">
-                <Frame CornerRadius="10" BackgroundColor="White">
-                    <SearchBar x:Name="Search_BAR" Placeholder="Search Assets" HorizontalTextAlignment="Center"  FontSize ="Large" FontAttributes ="Italic" HorizontalOptions="CenterAndExpand" />
-                </Frame>
             </StackLayout>
             <StackLayout Orientation="Horizontal" Padding="10,10,40,10" Spacing="0">
                 <Button x:Name="Home" Text="Home" FontSize="Title" BackgroundColor="#d7d7d7" CornerRadius="5" Clicked="assets_button_Clicked" WidthRequest="150" HorizontalOptions="EndAndExpand" HeightRequest="75" BorderColor="DimGray" BorderWidth="2"/>

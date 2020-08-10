@@ -46,7 +46,7 @@ namespace K_Bikpower
                     Substation_Name = Substation_Name_Entry.Text
                 });
             }
-            Navigation.PushAsync(new Substations());
+            await Navigation.PushAsync(new Substations());
 
         }
     }

@@ -18,7 +18,15 @@ namespace K_Bikpower
             var details = App.Database.GetUserAsync();
             string  username = details[0].UserName;
             string password = details[0].Password;
-            // if (username.IsNullOrEmpty())
+            DateTime lastlogin = details[0].LastLogin;
+            if (lastlogin.AddHours(24) > DateTime.UtcNow)
+            {
+                if (username == "Test" && password == "1234")
+                {
+                    Navigation.PushAsync(new MainPage());
+                }
+            }
+            else { App.Database.DeleteUser(); };
 
         }
 
@@ -32,6 +40,7 @@ namespace K_Bikpower
                 {
                     UserName = Username.Text,
                     Password = Password.Text,
+                    LastLogin = DateTime.UtcNow,
                 }); 
                 await Navigation.PushAsync(new MainPage()); 
             }

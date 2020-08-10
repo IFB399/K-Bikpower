@@ -14,6 +14,7 @@ namespace K_Bikpower
     public partial class Add_Asset : ContentPage
     {
         Assets AssetData;
+        int Ids;
         public Add_Asset(Assets data)
         {
             InitializeComponent();
@@ -21,11 +22,22 @@ namespace K_Bikpower
             {
                 AssetData = data;
                 PopulateDetails(AssetData);
+                Ids = data.Id;
+                
             }
+        }
+
+        protected override async void OnAppearing()
+        {
+            base.OnAppearing();
+            //SubPicker.ItemsSource = await App.Database.GetSubAsync();
+            SubPicker.ItemsSource = await App.Database.GetSubAsync();
+            
         }
         private void PopulateDetails(Assets data)
         {
-            Substation_Code_Entry.Text = data.Substation_Code;
+            
+            SubPicker.SelectedItem = data;//check 
             Plant_Number_Entry.Text = data.Plant_Number;
             int AssentEQNO = data.Asset_EQ_NO;
             Asset_EQ_NO_Entry.Text = AssentEQNO.ToString();
@@ -61,7 +73,7 @@ namespace K_Bikpower
             {
                 await App.Database.SaveStudentAsync(new Assets
                 {
-                    Substation_Code = Substation_Code_Entry.Text,
+                    Substation_Code_selected = SubPicker.Items[SubPicker.SelectedIndex],
                     Plant_Number = Plant_Number_Entry.Text,
                     Asset_EQ_NO = Int32.Parse(Asset_EQ_NO_Entry.Text),
                     EQ_Status = EQ_Status_Entry.Text,
@@ -89,7 +101,9 @@ namespace K_Bikpower
             {
                 await App.Database.UpdateStudentAsync(new Assets
                 {
-                    Substation_Code = Substation_Code_Entry.Text,
+
+                    Id = Ids,
+                    Substation_Code_selected = SubPicker.Items[SubPicker.SelectedIndex],
                     Plant_Number = Plant_Number_Entry.Text,
                     Asset_EQ_NO = Int32.Parse(Asset_EQ_NO_Entry.Text),
                     EQ_Status = EQ_Status_Entry.Text,
@@ -110,7 +124,7 @@ namespace K_Bikpower
                     last_install_date = last_install_date_Entry.Text,
                     Equipment_class = Equipment_class_Entry.Text,
                     Equipment_class_description = Equipment_class_description_Entry.Text,
-                });
+                }) ;
             }
                 // }
                 await Navigation.PushAsync(new View_Assets(null));
