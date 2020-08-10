@@ -34,12 +34,12 @@ namespace K_Bikpower
 
         private void Commision_Clicked(object sender, EventArgs e)
         {
-            //Navigation.PushAsync(new View_Assets()); //if its not the final page change to navigation page
+            Navigation.PushAsync((new Commission())); //if its not the final page change to navigation page
         }
 
         private void Decommission_Clicked(object sender, EventArgs e)
         {
-           // Navigation.PushAsync(new View_Assets()); //if its not the final page change to navigation page
+            Navigation.PushAsync((new Decommission())); //if its not the final page change to navigation page
         }
 
         private void View_Clicked(object sender, EventArgs e)

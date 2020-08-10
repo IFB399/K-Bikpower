@@ -22,6 +22,8 @@ namespace K_Bikpower
         }
         public App()
         {
+
+            Device.SetFlags(new string[] { "Expander_Experimental", "RadioButton_Experimental" });
             InitializeComponent();
 
             MainPage = new NavigationPage(new Login());
