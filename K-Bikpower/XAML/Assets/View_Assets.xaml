@@ -20,10 +20,10 @@
                                     <ColumnDefinition Width="*"/>
                                 </Grid.ColumnDefinitions>
                                 <Label Text= "ID" FontSize="Small" FontAttributes="Bold"  Grid.Column="0" HorizontalOptions="Center"/>
-                                <Label Text= "SubstationCode" FontSize="Small" FontAttributes="Bold"  Grid.Column="1" HorizontalOptions="Center"/>
-                                <Label Text= "Specifiaction title" FontSize="Small" FontAttributes="Bold"  Grid.Column="2" HorizontalOptions="Center"/>
+                                <Label Text= "Substation Code" FontSize="Small" FontAttributes="Bold"  Grid.Column="1" HorizontalOptions="Center"/>
+                                <Label Text= "Specification Title" FontSize="Small" FontAttributes="Bold"  Grid.Column="2" HorizontalOptions="Center"/>
                                 <Label Text= "Serial Number" FontSize="Small" FontAttributes="Bold"  Grid.Column="3" HorizontalOptions="Center"/>
-                                <Label Text= "Specifaction Number" FontSize="Small" FontAttributes="Bold"  Grid.Column="4" HorizontalOptions="Center"/>
+                                <Label Text= "Specification Number" FontSize="Small" FontAttributes="Bold"  Grid.Column="4" HorizontalOptions="Center"/>
                             </Grid>
                         </ListView.Header>
                         <ListView.ItemTemplate>
@@ -51,7 +51,7 @@
                 </StackLayout>
             </Frame>
             <StackLayout>
-                <Button Text="Add Asset" Clicked="Button_Clicked" BackgroundColor="White" CornerRadius="10" FontSize="Medium" TextColor="Black"/>
+                <Button Text="Add Asset" Clicked="Add_Asset_Clicked" BackgroundColor="White" CornerRadius="10" FontSize="Medium" TextColor="Black"/>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

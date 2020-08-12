@@ -28,7 +28,7 @@
                 </ListView>
 
             </Frame>
-            <Button Text="Add Asset" Clicked="Button_Clicked"/>
+            <Button Text="Add Substation" Clicked="Add_Substation_Clicked"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

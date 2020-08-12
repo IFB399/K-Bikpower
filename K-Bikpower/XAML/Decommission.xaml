@@ -38,11 +38,11 @@
                     <StackLayout Orientation="Horizontal" Grid.Row="0" HorizontalOptions="Center">
                         <Entry x:Name="AssetEntry"  Placeholder="Asset ID" WidthRequest="200"/>
                         <Button Text="Scan"/>
-                        <Button x:Name="addAsset" Text="Add" Clicked="addAsset_Clicked"/>
-                        <Button x:Name="removeAsset" Text="Remove" Clicked="removeAsset_Clicked" IsEnabled="False"/>
+                        <Button x:Name="addAsset" Text="Add" Clicked="Add_Asset_Clicked"/>
+                        <Button x:Name="removeAsset" Text="Remove" Clicked="Remove_Asset_Clicked" IsEnabled="False"/>
                     </StackLayout>
 
-                    <ListView x:Name="assetList" Grid.Row="1" ItemsSource="{Binding Assets}" ItemSelected="selectedAsset" HeightRequest="40">
+                    <ListView x:Name="assetList" Grid.Row="1" ItemsSource="{Binding Assets}" ItemSelected="Selected_Asset" HeightRequest="40">
                         <ListView.Header>
                             <Grid>
                                 <Label Grid.Column="0"  Text="Asset ID" HorizontalOptions="Center" FontAttributes="Bold"/>

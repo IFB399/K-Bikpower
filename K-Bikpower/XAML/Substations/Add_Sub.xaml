@@ -15,7 +15,7 @@
                     <Entry  x:Name="Substation_Code_Entry" ClearButtonVisibility="WhileEditing" VerticalOptions="EndAndExpand" MaxLength="25" IsSpellCheckEnabled="True" IsTextPredictionEnabled="false"/>
                     <Label Text="Substation Name" TextColor="Black" FontSize="Title"/>
                     <Entry  x:Name="Substation_Name_Entry" ClearButtonVisibility="WhileEditing" VerticalOptions="EndAndExpand" MaxLength="25" IsSpellCheckEnabled="True" IsTextPredictionEnabled="false"/>
-                    <Button Text="Add Substation" Clicked="Button_Clicked" VerticalOptions="EndAndExpand" x:Name = "addsubbutton" CornerRadius="5" BorderColor="Black" BorderWidth="1"/>
+                    <Button Text="Add Substation" Clicked="Add_Substation_Clicked" VerticalOptions="EndAndExpand" x:Name = "addsubbutton" CornerRadius="5" BorderColor="Black" BorderWidth="1"/>
                 </StackLayout>
             </Frame>
         </StackLayout>

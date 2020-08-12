@@ -28,7 +28,7 @@ namespace K_Bikpower
             Substation_Code_Entry.Text = data.Substation_Code;
             Substation_Name_Entry.Text = data.Substation_Name;
         }
-        async void Button_Clicked(object sender, EventArgs e)
+        async void Add_Substation_Clicked(object sender, EventArgs e)
         {
             if (addsubbutton.Text == "Add Asset")
             {

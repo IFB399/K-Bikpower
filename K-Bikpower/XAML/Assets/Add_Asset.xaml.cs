@@ -65,7 +65,7 @@ namespace K_Bikpower
             Equipment_class_description_Entry.Text = data.Equipment_class_description;
             addassetbutton.Text = "Update";
         }
-        async void Button_Clicked(object sender, EventArgs e)
+        async void Add_Asset_Clicked(object sender, EventArgs e)
         {
             //if (!string.IsNullOrWhiteSpace(entry.Text) && !string.IsNullOrWhiteSpace(entry.Text))
             // {

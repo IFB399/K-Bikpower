@@ -19,7 +19,7 @@
                     <Entry  x:Name="Plant_Number_Entry" ClearButtonVisibility="WhileEditing" VerticalOptions="EndAndExpand" MaxLength="25" IsSpellCheckEnabled="True" IsTextPredictionEnabled="false"/>
                     
 
-                    <Label Text=" Asset Equipment Number" FontSize="Title" TextColor="Black"/>
+                    <Label Text="Asset Equipment Number" FontSize="Title" TextColor="Black"/>
                     <Entry  x:Name="Asset_EQ_NO_Entry" ClearButtonVisibility="WhileEditing" VerticalOptions="EndAndExpand" MaxLength="25" IsSpellCheckEnabled="True" IsTextPredictionEnabled="false"/>
 
                     <Label Text="Equipment Status" FontSize="Title" TextColor="Black"/>
@@ -78,7 +78,7 @@
                     <Entry  x:Name="Equipment_class_description_Entry" ClearButtonVisibility="WhileEditing" VerticalOptions="EndAndExpand" MaxLength="25" IsSpellCheckEnabled="True" IsTextPredictionEnabled="false"/>
 
 
-                    <Button Text="Add Asset" Clicked="Button_Clicked" VerticalOptions="EndAndExpand" x:Name = "addassetbutton" CornerRadius="5" BorderColor="Black" BorderWidth="1"/>
+                    <Button Text="Add Asset" Clicked="Add_Asset_Clicked" VerticalOptions="EndAndExpand" x:Name = "addassetbutton" CornerRadius="5" BorderColor="Black" BorderWidth="1"/>
                 </StackLayout>
             </Frame>
         </ScrollView>

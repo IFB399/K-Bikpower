@@ -29,7 +29,7 @@ namespace K_Bikpower
             }
             
         }
-        private void Button_Clicked(object sender, EventArgs e)
+        private void Add_Asset_Clicked(object sender, EventArgs e)
         {
             Navigation.PushAsync(new Add_Asset(null));
         }

@@ -24,7 +24,7 @@ namespace K_Bikpower
             assets.Add(new Assets() { Id = 329474, Substation_Code_selected = "ALB", Manufacture_Name = "RH" }); //just for display purposes for now
             dateLabel.Text = DateTime.UtcNow.ToString("d");
         }
-        private void addAsset_Clicked(object sender, EventArgs e)
+        private void Add_Asset_Clicked(object sender, EventArgs e)
         {
             //code breaks when something other than a number is entered
             if (!string.IsNullOrWhiteSpace(AssetEntry.Text))
@@ -35,14 +35,14 @@ namespace K_Bikpower
             }
 
         }
-        private void removeAsset_Clicked(object sender, EventArgs e)
+        private void Remove_Asset_Clicked(object sender, EventArgs e)
         {
             assets.Remove((Assets)assetList.SelectedItem);
             assetList.HeightRequest -= 50;
             AssetExpander.ForceUpdateSize();
             removeAsset.IsEnabled = false;
         }
-        private void selectedAsset(object sender, EventArgs e)
+        private void Selected_Asset(object sender, EventArgs e)
         {
             removeAsset.IsEnabled = true;
         }

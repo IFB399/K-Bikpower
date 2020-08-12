@@ -23,7 +23,7 @@ namespace K_Bikpower
             base.OnAppearing();
             AssetsTable.ItemsSource = await App.Database.GetSubAsync();
         }
-        private void Button_Clicked(object sender, EventArgs e)
+        private void Add_Substation_Clicked(object sender, EventArgs e)
         {
             Navigation.PushAsync(new Add_Sub(null));
         }

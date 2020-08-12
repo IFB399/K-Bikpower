@@ -17,37 +17,32 @@ namespace K_Bikpower
             InitializeComponent();
         }
 
-        private void assets_button_Clicked(object sender, EventArgs e)
+        private void View_Assets_Clicked(object sender, EventArgs e)
         {
             Navigation.PushAsync(new View_Assets(null)); //if its not the final page change to navigation page
         }
 
-        private void Substation_button_Clicked(object sender, EventArgs e)
+        private void View_Substations_Clicked(object sender, EventArgs e)
         {
             Navigation.PushAsync(new Substations()); //if its not the final page change to navigation page
         }
 
-        private void Scan_QRCode_Button(object sender, EventArgs e)
+        private void Scan_QRCode_Clicked(object sender, EventArgs e)
         {
             Navigation.PushAsync((new ScanQR())); //if its not the final page change to navigation page
         }
 
-        private void Commision_Clicked(object sender, EventArgs e)
+        private void View_Documents_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync((new Commission())); //if its not the final page change to navigation page
+            Navigation.PushAsync(new Documents()); //if its not the final page change to navigation page
         }
 
-        private void Decommission_Clicked(object sender, EventArgs e)
+        private void Manage_Account_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync((new Decommission())); //if its not the final page change to navigation page
+            Navigation.PushAsync(new AccountPage()); //if its not the final page change to navigation page
         }
 
-        private void View_Clicked(object sender, EventArgs e)
-        {
-            Navigation.PushAsync(new View_Assets(null)); //if its not the final page change to navigation page
-        }
-
-        private void Signed_OUT_Clicked(object sender, EventArgs e)
+        private void Sign_Out_Clicked(object sender, EventArgs e)
         {
             App.Database.DeleteUser();
             Navigation.PushAsync(new Login()); //if its not the final page change to navigation page
