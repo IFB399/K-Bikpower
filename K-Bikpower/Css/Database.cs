@@ -39,7 +39,7 @@ namespace K_Bikpower
 
         public Task<List<Assets>> GetSubAssetsAsync(string sub)
         {
-            return _database.Table<Assets>().Where(a => a.Substation_Code_selected == sub).ToListAsync();
+            return _database.Table<Assets>().Where(a => a.Substation_Code == sub).ToListAsync();
         }
 
         public Task<int> SaveStudentAsync(Assets Asset)

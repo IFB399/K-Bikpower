@@ -47,7 +47,7 @@ namespace K_Bikpower
             int Loceqnum = data.Location_Equipment_Number;
             Location_Equipment_Number_Entry.Text = Loceqnum.ToString();
             Component_Code_Entry.Text = data.Component_Code;
-            WarrantyDate_Picker.Date = data.WarrantyDate; //not gonna work
+            //WarrantyDate_Picker.Date = data.WarrantyDate; //not gonna work
             int EQUage = data.Equipement_age;
             Equipement_age_Entry.Text = EQUage.ToString();
             Stock_Code_Entry.Text = data.Stock_Code;
@@ -73,7 +73,7 @@ namespace K_Bikpower
             {
                 await App.Database.SaveStudentAsync(new Assets
                 {
-                    Substation_Code_selected = SubPicker.Items[SubPicker.SelectedIndex],
+                    Substation_Code = SubPicker.Items[SubPicker.SelectedIndex],
                     Plant_Number = Plant_Number_Entry.Text,
                     Asset_EQ_NO = Int32.Parse(Asset_EQ_NO_Entry.Text),
                     EQ_Status = EQ_Status_Entry.Text,
@@ -81,7 +81,7 @@ namespace K_Bikpower
                     Modifier_code = Modifier_code_Entry.Text,
                     Location_Equipment_Number = Int32.Parse(Location_Equipment_Number_Entry.Text),
                     Component_Code = Component_Code_Entry.Text,
-                    WarrantyDate = WarrantyDate_Picker.Date, // change dumb dumb. 
+                    //WarrantyDate = WarrantyDate_Picker.Date, // change dumb dumb. 
                     Equipement_age = Int32.Parse(Equipement_age_Entry.Text),
                     Stock_Code = Stock_Code_Entry.Text,
                     PO_NO = PO_NO_Entry.Text,
@@ -103,7 +103,7 @@ namespace K_Bikpower
                 {
 
                     Id = Ids,
-                    Substation_Code_selected = SubPicker.Items[SubPicker.SelectedIndex],
+                    Substation_Code = SubPicker.Items[SubPicker.SelectedIndex],
                     Plant_Number = Plant_Number_Entry.Text,
                     Asset_EQ_NO = Int32.Parse(Asset_EQ_NO_Entry.Text),
                     EQ_Status = EQ_Status_Entry.Text,
@@ -111,7 +111,7 @@ namespace K_Bikpower
                     Modifier_code = Modifier_code_Entry.Text,
                     Location_Equipment_Number = Int32.Parse(Location_Equipment_Number_Entry.Text),
                     Component_Code = Component_Code_Entry.Text,
-                    WarrantyDate = WarrantyDate_Picker.Date, // change dumb dumb. 
+                   // WarrantyDate = WarrantyDate_Picker.Date, // change dumb dumb. 
                     Equipement_age = Int32.Parse(Equipement_age_Entry.Text),
                     Stock_Code = Stock_Code_Entry.Text,
                     PO_NO = PO_NO_Entry.Text,

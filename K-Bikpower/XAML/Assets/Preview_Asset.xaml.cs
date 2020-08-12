@@ -34,7 +34,7 @@ namespace K_Bikpower
         private void PopulateDetails(Assets details)
         {
             
-            Substation_Code_label.Text = details.Substation_Code_selected;
+            Substation_Code_label.Text = details.Substation_Code;
             Plant_Number_label.Text = details.Plant_Number;
             int AssentEQNO = details.Asset_EQ_NO;
             Asset_EQ_NO_label.Text = AssentEQNO.ToString();
@@ -44,8 +44,7 @@ namespace K_Bikpower
             int Loceqnum = details.Location_Equipment_Number;
             Location_Equipment_Number_label.Text = Loceqnum.ToString();
             Component_Code_label.Text = details.Component_Code;
-            WarrantyDate_Picker.Date = details.WarrantyDate;
-            //WarrantyDate_label.Text = details.WarrantyDate; //gonna break
+           // WarrantyDate_Picker.Date = details.WarrantyDate;
             int EQUage = details.Equipement_age;
             Equipement_age_label.Text = EQUage.ToString();
             Stock_Code_label.Text = details.Stock_Code;
