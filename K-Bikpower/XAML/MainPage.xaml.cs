@@ -49,7 +49,7 @@ namespace K_Bikpower
 
         private void Signed_OUT_Clicked(object sender, EventArgs e)
         {
-            App.Database.DeleteUser();
+
             Navigation.PushAsync(new Login()); //if its not the final page change to navigation page
         }
     }

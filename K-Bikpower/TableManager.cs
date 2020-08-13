@@ -28,9 +28,10 @@ namespace K_Bikpower
             IMobileServiceTable<Assets> todoTable;
 #endif
 
-            const string offlineDbPath = @"localstore.db";
+            const string offlineDbPath = @"localstore.db"; //maybe K-Bikpower.db3
 
-            private TableManager()
+        
+        private TableManager()
             {
                 this.client = new MobileServiceClient(Constants.ApplicationURL);
 
@@ -47,7 +48,9 @@ namespace K_Bikpower
 #endif
             }
 
-            public static TableManager DefaultManager
+
+
+        public static TableManager DefaultManager
             {
                 get
                 {
@@ -114,6 +117,8 @@ namespace K_Bikpower
                     Debug.WriteLine("Save error: {0}", new[] { e.Message });
                 }
             }
+
+            
 
 #if OFFLINE_SYNC_ENABLED
         public async Task SyncAsync()

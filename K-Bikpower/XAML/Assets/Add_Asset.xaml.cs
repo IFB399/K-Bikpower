@@ -11,8 +11,10 @@ using Xamarin.Forms.Xaml;
 namespace K_Bikpower
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
+    
     public partial class Add_Asset : ContentPage
     {
+        TableManager manager;
         Assets AssetData;
         int Ids;
         public Add_Asset(Assets data)
@@ -34,6 +36,12 @@ namespace K_Bikpower
             SubPicker.ItemsSource = await App.Database.GetSubAsync();
             
         }
+
+        async Task AddItem(Assets item)
+        {
+            await manager.SaveTaskAsync(item);
+        }
+
         private void PopulateDetails(Assets data)
         {
             
@@ -65,13 +73,14 @@ namespace K_Bikpower
             Equipment_class_description_Entry.Text = data.Equipment_class_description;
             addassetbutton.Text = "Update";
         }
+
         async void Button_Clicked(object sender, EventArgs e)
         {
             //if (!string.IsNullOrWhiteSpace(entry.Text) && !string.IsNullOrWhiteSpace(entry.Text))
             // {
             if (addassetbutton.Text == "Add Asset")
             {
-                await App.Database.SaveStudentAsync(new Assets
+                var  asset = new Assets
                 {
                     Substation_Code = SubPicker.Items[SubPicker.SelectedIndex],
                     Plant_Number = Plant_Number_Entry.Text,
@@ -94,12 +103,13 @@ namespace K_Bikpower
                     last_install_date = last_install_date_Entry.Text,
                     Equipment_class = Equipment_class_Entry.Text,
                     Equipment_class_description = Equipment_class_description_Entry.Text,
-                });
+                };
+                await AddItem(asset);
 
             }
             else
             {
-                await App.Database.UpdateStudentAsync(new Assets
+                var asset = new Assets
                 {
 
                     Id = Ids,
@@ -124,7 +134,8 @@ namespace K_Bikpower
                     last_install_date = last_install_date_Entry.Text,
                     Equipment_class = Equipment_class_Entry.Text,
                     Equipment_class_description = Equipment_class_description_Entry.Text,
-                }) ;
+                };
+                await AddItem(asset);
             }
                 // }
                 await Navigation.PushAsync(new View_Assets(null));

@@ -10,7 +10,7 @@
         <StackLayout Margin="50,50,50,30">
             <Frame CornerRadius="10" BackgroundColor="AliceBlue" HasShadow ="True">
                 <StackLayout>
-                    <ListView x:Name="AssetsTable" HasUnevenRows="false" ItemTapped="EditAsset">
+                    <ListView x:Name="AssetsTable" HasUnevenRows="false" ItemTapped="EditAsset" IsPullToRefreshEnabled="true" Refreshing="OnRefresh">
                         <ListView.Header>
                             <Grid Margin="0,0,0,10">
                                 <Grid.ColumnDefinitions>
@@ -24,6 +24,7 @@
                                 <Label Text= "Specifiaction title" FontSize="Small" FontAttributes="Bold"  Grid.Column="2" HorizontalOptions="Center"/>
                                 <Label Text= "Serial Number" FontSize="Small" FontAttributes="Bold"  Grid.Column="3" HorizontalOptions="Center"/>
                                 <Label Text= "Specifaction Number" FontSize="Small" FontAttributes="Bold"  Grid.Column="4" HorizontalOptions="Center"/>
+                                <ActivityIndicator Grid.RowSpan="2" HorizontalOptions="Center" VerticalOptions="Center" IsVisible="False" IsEnabled="True" x:Name="syncIndicator"/>
                             </Grid>
                         </ListView.Header>
                         <ListView.ItemTemplate>

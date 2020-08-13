@@ -36,12 +36,7 @@ namespace K_Bikpower
             string password = Password.Text;
             if (username == "Test" && password == "1234")
             {
-                await App.Database.SaveUserAsync(new User
-                {
-                    UserName = Username.Text,
-                    Password = Password.Text,
-                    LastLogin = DateTime.UtcNow,
-                }); 
+                
                 await Navigation.PushAsync(new MainPage()); 
             }
             
