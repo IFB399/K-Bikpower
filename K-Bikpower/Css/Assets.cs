@@ -41,30 +41,40 @@ namespace K_Bikpower
             set { id = value; }
         }
 
+
+        [JsonProperty(PropertyName = "substation_code")]
         public string Substation_Code
         {
             get { return substation_code; }
             set { substation_code = value; }
         }
 
+
+        [JsonProperty(PropertyName = "plant_number")]
         public string Plant_Number
         {
             get { return plant_Number; }
             set { plant_Number = value; }
         }
 
+
+        [JsonProperty(PropertyName = "id")]
         public int Asset_EQ_NO
         {
             get { return asset_EQ_NO; }
             set { asset_EQ_NO = value; }
         }
 
+
+        [JsonProperty(PropertyName = "id")]
         public string EQ_Status
         {
             get { return eQ_status; }
             set { eQ_status = value; }
         }
 
+
+        [JsonProperty(PropertyName = "id")]
         public string Serial_Number
         {
             get { return serial_number; }
@@ -72,91 +82,124 @@ namespace K_Bikpower
         }
 
 
+        [JsonProperty(PropertyName = "id")]
         public string Modifier_code
         {
             get { return modifier_code ; }
             set { modifier_code = value; }
         }
 
+
+        [JsonProperty(PropertyName = "id")]
         public int Location_Equipment_Number
         {
             get { return location_equipment_number; }
             set { location_equipment_number = value; }
         }
 
+
+        [JsonProperty(PropertyName = "id")]
         public string Component_Code
         {
             get { return component_code; }
             set { component_code = value; }
         }
 
+
+        [JsonProperty(PropertyName = "id")]
         public string WarrantyDate
         {
             get { return warrantydate; }
             set { warrantydate = value; }
         }
 
+
+        [JsonProperty(PropertyName = "id")]
         public int Equipement_age
         {
             get { return equipement_age; }
             set { equipement_age = value; }
         }
 
+
+        [JsonProperty(PropertyName = "id")]
         public string Stock_Code
         {
             get { return stock_code; }
             set { stock_code = value; }
         }
+
+        [JsonProperty(PropertyName = "id")]
         public string PO_NO
         {
             get { return pO_nO; }
             set { pO_nO = value; }
         }
+
+        [JsonProperty(PropertyName = "id")]
         public int Rated_Voltage
         {
             get { return rated_Voltage; }
             set { rated_Voltage = value; }
         }
+
+        [JsonProperty(PropertyName = "id")]
         public int Nominal_Voltage
         {
             get { return nominal_Voltage; }
             set { nominal_Voltage = value; }
         }
+
+        [JsonProperty(PropertyName = "id")]
         public string Manufacture_Name
         {
             get { return manufacture_Name; }
             set { manufacture_Name = value; }
         }
+
+        [JsonProperty(PropertyName = "id")]
         public string Specifiaction_title
         {
             get { return specifiaction_title; }
             set { specifiaction_title = value; }
         }
+
+        [JsonProperty(PropertyName = "id")]
         public string Specifiaction_NO
         {
             get { return specifiaction_NO; }
             set { specifiaction_NO = value; }
         }
+
+        [JsonProperty(PropertyName = "id")]
         public string Specifiaction_item_NO
         {
             get { return specifiaction_item_NO; }
             set { specifiaction_item_NO = value; }
         }
+
+        [JsonProperty(PropertyName = "id")]
         public string last_install_date
         {
             get { return Last_install_date; }
             set { Last_install_date = value; }
         }
+
+        [JsonProperty(PropertyName = "id")]
         public string Equipment_class
         {
             get { return equipment_class; }
             set { equipment_class = value; }
         }
+
+        [JsonProperty(PropertyName = "id")]
         public string Equipment_class_description
         {
             get { return equipment_class_description; }
             set { equipment_class_description = value; }
         }
+
+        [JsonProperty(PropertyName = "done")]
         public bool Done
         {
             get { return done; }

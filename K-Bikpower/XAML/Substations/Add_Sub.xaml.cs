@@ -13,6 +13,7 @@ namespace K_Bikpower
     public partial class Add_Sub : ContentPage
     {
         Substation_Codes SubData;
+        TableManagerSub subtable;
         public Add_Sub(Substation_Codes data)
         {
             InitializeComponent();
@@ -28,23 +29,31 @@ namespace K_Bikpower
             Substation_Code_Entry.Text = data.Substation_Code;
             Substation_Name_Entry.Text = data.Substation_Name;
         }
+
+        async Task AddItem(Substation_Codes item)
+        {
+            await subtable.SaveTaskAsync(item);
+        }
         async void Button_Clicked(object sender, EventArgs e)
         {
             if (addsubbutton.Text == "Add Asset")
             {
-                await App.Database.SaveSubAsync(new Substation_Codes
+                var sub = new Substation_Codes
                 {
                     Substation_Code = Substation_Code_Entry.Text,
                     Substation_Name = Substation_Name_Entry.Text
-                });
+                };
+                await AddItem(sub);
+
             }
             else 
             {
-                await App.Database.UpdateSubAsync(new Substation_Codes
+                var sub = new Substation_Codes
                 {
                     Substation_Code = Substation_Code_Entry.Text,
                     Substation_Name = Substation_Name_Entry.Text
-                });
+                };
+                await AddItem(sub);
             }
             await Navigation.PushAsync(new Substations());
 

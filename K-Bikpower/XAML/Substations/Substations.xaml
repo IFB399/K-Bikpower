@@ -12,7 +12,10 @@
 
                 <ListView x:Name="AssetsTable" HasUnevenRows="false" ItemTapped="ViewAssets" >
                     <ListView.Header >
+                        <StackLayout Orientation="Horizontal" >
                         <Label Text="Substation Code" HorizontalOptions="CenterAndExpand" FontSize="Medium"/>
+                        <ActivityIndicator  HorizontalOptions="Center" VerticalOptions="Center" IsVisible="False" IsEnabled="True" x:Name="syncIndicator"/>
+                        </StackLayout>
                     </ListView.Header>
                     <ListView.ItemTemplate>
                         <DataTemplate>

@@ -10,7 +10,7 @@
         <StackLayout Margin="50,50,50,30">
             <Frame CornerRadius="10" BackgroundColor="AliceBlue" HasShadow ="True">
                 <StackLayout>
-                    <ListView x:Name="AssetsTable" HasUnevenRows="false" ItemTapped="EditAsset" IsPullToRefreshEnabled="true" Refreshing="OnRefresh">
+                    <ListView x:Name="AssetsTable" HasUnevenRows="false" ItemTapped="EditAsset" IsPullToRefreshEnabled="true" >
                         <ListView.Header>
                             <Grid Margin="0,0,0,10">
                                 <Grid.ColumnDefinitions>

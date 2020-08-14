@@ -14,6 +14,7 @@ namespace K_Bikpower
     
     public partial class Add_Asset : ContentPage
     {
+        TableManagerSub subs;
         TableManager manager;
         Assets AssetData;
         int Ids;
@@ -33,8 +34,8 @@ namespace K_Bikpower
         {
             base.OnAppearing();
             //SubPicker.ItemsSource = await App.Database.GetSubAsync();
-            SubPicker.ItemsSource = await App.Database.GetSubAsync();
-            
+            SubPicker.ItemsSource = await subs.GetTodoItemsAsync(true); //might work dont know
+
         }
 
         async Task AddItem(Assets item)
