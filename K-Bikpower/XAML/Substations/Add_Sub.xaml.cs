@@ -26,27 +26,43 @@ namespace K_Bikpower
         private void PopulateDetails(Substation_Codes data)
         {
             Substation_Code_Entry.Text = data.Substation_Code;
-            Substation_Name_Entry.Text = data.Substation_Name;
+            Substation_Name_Entry.Text = data.SubstationName;
         }
         async void Add_Substation_Clicked(object sender, EventArgs e)
         {
-            if (addsubbutton.Text == "Add Asset")
+            if (addsubbutton.Text == "Add Substation")
             {
-                await App.Database.SaveSubAsync(new Substation_Codes
+                if (string.IsNullOrEmpty(Substation_Code_Entry.Text) || string.IsNullOrEmpty(Substation_Name_Entry.Text))
                 {
-                    Substation_Code = Substation_Code_Entry.Text,
-                    Substation_Name = Substation_Name_Entry.Text
-                });
+                    await DisplayAlert("Alert", "Please ensure all fields are complete", "OK");
+                }
+                else
+                {
+                    await App.Database.SaveSubAsync(new Substation_Codes
+                    {
+                        Substation_Code = Substation_Code_Entry.Text,
+                        SubstationName = Substation_Name_Entry.Text
+                    });
+                    await Navigation.PushAsync(new Substations());
+                }
             }
-            else 
+            else //update?
             {
-                await App.Database.UpdateSubAsync(new Substation_Codes
+                if (string.IsNullOrEmpty(Substation_Code_Entry.Text) || string.IsNullOrEmpty(Substation_Name_Entry.Text))
                 {
-                    Substation_Code = Substation_Code_Entry.Text,
-                    Substation_Name = Substation_Name_Entry.Text
-                });
+                    await DisplayAlert("Alert", "Please ensure all fields are complete", "OK");
+                }
+                else
+                {
+                    await App.Database.UpdateSubAsync(new Substation_Codes
+                    {
+                        Substation_Code = Substation_Code_Entry.Text,
+                        SubstationName = Substation_Name_Entry.Text
+                    });
+                    await Navigation.PushAsync(new Substations());
+                }
             }
-            await Navigation.PushAsync(new Substations());
+            
 
         }
     }

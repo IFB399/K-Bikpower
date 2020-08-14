@@ -39,25 +39,25 @@ namespace K_Bikpower
 
         public Task<List<Assets>> GetSubAssetsAsync(string sub)
         {
-            return _database.Table<Assets>().Where(a => a.Substation_Code_selected == sub).ToListAsync();
+            return _database.Table<Assets>().Where(a => a.SubstationCode == sub).ToListAsync();
         }
 
-        public Task<int> SaveStudentAsync(Assets Asset)
+        public Task<int> SaveStudentAsync(Assets Asset) //insert asset?
         {
             return _database.InsertAsync(Asset);
         }
 
-        public Task<int> SaveUserAsync(User user)
+        public Task<int> SaveUserAsync(User user) //update or add user?
         {
             return _database.InsertOrReplaceAsync(user);
         }
 
-        public Task<int> SaveSubAsync(Substation_Codes Asset)
+        public Task<int> SaveSubAsync(Substation_Codes Asset) 
         {
             return _database.InsertAsync(Asset);
         }
 
-        public Task<int> UpdateStudentAsync(Assets Asset)
+        public Task<int> UpdateStudentAsync(Assets Asset) //update asset?
         {
             return _database.InsertOrReplaceAsync(Asset);
         }

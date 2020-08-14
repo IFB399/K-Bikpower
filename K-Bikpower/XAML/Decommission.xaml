@@ -55,8 +55,8 @@
                                 <ViewCell>
                                     <Grid>
                                         <Label Grid.Column="0" Text="{Binding Id}" HorizontalOptions="Center"/>
-                                        <Label Grid.Column="1" Text="{Binding Substation_Code}" HorizontalOptions="Center"/>
-                                        <Label Grid.Column="2" Text="{Binding Manufacture_Name}" HorizontalOptions="Center"/>
+                                        <Label Grid.Column="1" Text="{Binding SubstationCode}" HorizontalOptions="Center"/>
+                                        <Label Grid.Column="2" Text="{Binding ManufacturerName}" HorizontalOptions="Center"/>
                                     </Grid>
                                 </ViewCell>
                             </DataTemplate>

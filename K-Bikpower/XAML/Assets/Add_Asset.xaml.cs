@@ -10,6 +10,7 @@ using Xamarin.Forms.Xaml;
 
 namespace K_Bikpower
 {
+    //variables and event handlers declared in xaml have underscores and data attributes don't
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Add_Asset : ContentPage
     {
@@ -31,38 +32,39 @@ namespace K_Bikpower
         {
             base.OnAppearing();
             //SubPicker.ItemsSource = await App.Database.GetSubAsync();
-            SubPicker.ItemsSource = await App.Database.GetSubAsync();
+            Substation_Picker.ItemsSource = await App.Database.GetSubAsync();
             
         }
         private void PopulateDetails(Assets data)
         {
             
-            SubPicker.SelectedItem = data;//check 
-            Plant_Number_Entry.Text = data.Plant_Number;
-            int AssentEQNO = data.Asset_EQ_NO;
-            Asset_EQ_NO_Entry.Text = AssentEQNO.ToString();
-            EQ_Status_Entry.Text = data.EQ_Status;
-            Serial_Number_Entry.Text = data.Serial_Number;
-            Modifier_code_Entry.Text = data.Modifier_code;
-            int Loceqnum = data.Location_Equipment_Number;
-            Location_Equipment_Number_Entry.Text = Loceqnum.ToString();
-            Component_Code_Entry.Text = data.Component_Code;
+            Substation_Picker.SelectedItem = data;//check 
+            Plant_Number_Entry.Text = data.PlantNumber;
+            int AssetEQNO = data.AssetEquipmentNumber;
+            Asset_Equipment_Number_Entry.Text = AssetEQNO.ToString();
+            Equipment_Status_Entry.Text = data.EquipmentStatus;
+            Serial_Number_Entry.Text = data.SerialNumber;
+            Modifier_Code_Entry.Text = data.ModifierCode;
+            int LocationNumber = data.LocationEquipmentNumber;
+            Location_Equipment_Number_Entry.Text = LocationNumber.ToString();
+            Component_Code_Entry.Text = data.ComponentCode;
             WarrantyDate_Picker.Date = data.WarrantyDate; //not gonna work
-            int EQUage = data.Equipement_age;
-            Equipement_age_Entry.Text = EQUage.ToString();
-            Stock_Code_Entry.Text = data.Stock_Code;
-            PO_NO_Entry.Text = data.PO_NO;
-            int RatedVolts = data.Rated_Voltage;
+            int EquipmentAge = data.EquipmentAge;
+            Equipment_Age_Entry.Text = EquipmentAge.ToString();
+            Stock_Code_Entry.Text = data.StockCode;
+            Purchase_Order_Number_Entry.Text = data.PurchaseOrderNumber;
+            int RatedVolts = data.RatedVoltage;
             Rated_Voltage_Entry.Text = RatedVolts.ToString();
-            int NomVolts = data.Nominal_Voltage;
+            int NomVolts = data.NominalVoltage;
             Nominal_Voltage_Entry.Text = NomVolts.ToString();
-            Manufacture_Name_Entry.Text = data.Manufacture_Name;
-            Specifiaction_title_Entry.Text = data.Specifiaction_title;
-            Specifiaction_NO_Entry.Text = data.Specifiaction_NO;
-            Specifiaction_item_NO_Entry.Text = data.Specifiaction_item_NO;
-            last_install_date_Entry.Text = data.last_install_date;
-            Equipment_class_Entry.Text = data.Equipment_class;
-            Equipment_class_description_Entry.Text = data.Equipment_class_description;
+            Manufacturer_Name_Entry.Text = data.ManufacturerName;
+            Manufacturer_Type_Entry.Text = data.ManufacturerType;
+            Specification_Title_Entry.Text = data.SpecificationTitle;
+            Specification_Number_Entry.Text = data.SpecificationNumber;
+            Specification_Item_Number_Entry.Text = data.SpecificationItemNumber;
+            Last_Install_Date_Entry.Text = data.LastInstallDate;
+            Equipment_Class_Entry.Text = data.EquipmentClass;
+            Equipment_Class_Description_Entry.Text = data.EquipmentClassDescription;
             addassetbutton.Text = "Update";
         }
         async void Add_Asset_Clicked(object sender, EventArgs e)
@@ -71,64 +73,100 @@ namespace K_Bikpower
             // {
             if (addassetbutton.Text == "Add Asset")
             {
-                await App.Database.SaveStudentAsync(new Assets
+                Boolean x = IsComplete();
+                if (x == true)
                 {
-                    Substation_Code_selected = SubPicker.Items[SubPicker.SelectedIndex],
-                    Plant_Number = Plant_Number_Entry.Text,
-                    Asset_EQ_NO = Int32.Parse(Asset_EQ_NO_Entry.Text),
-                    EQ_Status = EQ_Status_Entry.Text,
-                    Serial_Number = Serial_Number_Entry.Text,
-                    Modifier_code = Modifier_code_Entry.Text,
-                    Location_Equipment_Number = Int32.Parse(Location_Equipment_Number_Entry.Text),
-                    Component_Code = Component_Code_Entry.Text,
-                    WarrantyDate = WarrantyDate_Picker.Date, // change dumb dumb. 
-                    Equipement_age = Int32.Parse(Equipement_age_Entry.Text),
-                    Stock_Code = Stock_Code_Entry.Text,
-                    PO_NO = PO_NO_Entry.Text,
-                    Rated_Voltage = Int32.Parse(Rated_Voltage_Entry.Text),
-                    Nominal_Voltage = Int32.Parse(Nominal_Voltage_Entry.Text),
-                    Manufacture_Name = Manufacture_Name_Entry.Text,
-                    Specifiaction_title = Specifiaction_title_Entry.Text,
-                    Specifiaction_NO = Specifiaction_NO_Entry.Text,
-                    Specifiaction_item_NO = Specifiaction_item_NO_Entry.Text,
-                    last_install_date = last_install_date_Entry.Text,
-                    Equipment_class = Equipment_class_Entry.Text,
-                    Equipment_class_description = Equipment_class_description_Entry.Text,
-                });
+                    await App.Database.SaveStudentAsync(new Assets
+                    {
+                        SubstationCode = Substation_Picker.Items[Substation_Picker.SelectedIndex],
+                        PlantNumber = Plant_Number_Entry.Text,
+                        AssetEquipmentNumber = Int32.Parse(Asset_Equipment_Number_Entry.Text),
+                        EquipmentStatus = Equipment_Status_Entry.Text,
+                        SerialNumber = Serial_Number_Entry.Text,
+                        ModifierCode = Modifier_Code_Entry.Text,
+                        LocationEquipmentNumber = Int32.Parse(Location_Equipment_Number_Entry.Text),
+                        ComponentCode = Component_Code_Entry.Text,
+                        WarrantyDate = WarrantyDate_Picker.Date, // change dumb dumb. 
+                        EquipmentAge = Int32.Parse(Equipment_Age_Entry.Text),
+                        StockCode = Stock_Code_Entry.Text,
+                        PurchaseOrderNumber = Purchase_Order_Number_Entry.Text,
+                        RatedVoltage = Int32.Parse(Rated_Voltage_Entry.Text),
+                        NominalVoltage = Int32.Parse(Nominal_Voltage_Entry.Text),
+                        ManufacturerName = Manufacturer_Name_Entry.Text,
+                        ManufacturerType = Manufacturer_Type_Entry.Text,
+                        SpecificationTitle = Specification_Title_Entry.Text,
+                        SpecificationNumber = Specification_Number_Entry.Text,
+                        SpecificationItemNumber = Specification_Item_Number_Entry.Text,
+                        LastInstallDate = Last_Install_Date_Entry.Text,
+                        EquipmentClass = Equipment_Class_Entry.Text,
+                        EquipmentClassDescription = Equipment_Class_Description_Entry.Text,
+                    });
+                    await Navigation.PushAsync(new View_Assets(null));
+                }
+                else
+                {
+                   await DisplayAlert("Alert", "Please ensure all fields are complete", "OK");
+                }
+                
 
             }
             else
             {
-                await App.Database.UpdateStudentAsync(new Assets
+                await App.Database.UpdateStudentAsync(new Assets //update asset (essentially the same?)
                 {
 
                     Id = Ids,
-                    Substation_Code_selected = SubPicker.Items[SubPicker.SelectedIndex],
-                    Plant_Number = Plant_Number_Entry.Text,
-                    Asset_EQ_NO = Int32.Parse(Asset_EQ_NO_Entry.Text),
-                    EQ_Status = EQ_Status_Entry.Text,
-                    Serial_Number = Serial_Number_Entry.Text,
-                    Modifier_code = Modifier_code_Entry.Text,
-                    Location_Equipment_Number = Int32.Parse(Location_Equipment_Number_Entry.Text),
-                    Component_Code = Component_Code_Entry.Text,
+                    SubstationCode = Substation_Picker.Items[Substation_Picker.SelectedIndex], //is empty when going to update :(
+                    PlantNumber = Plant_Number_Entry.Text,
+                    AssetEquipmentNumber = Int32.Parse(Asset_Equipment_Number_Entry.Text),
+                    EquipmentStatus = Equipment_Status_Entry.Text,
+                    SerialNumber = Serial_Number_Entry.Text,
+                    ModifierCode = Modifier_Code_Entry.Text,
+                    LocationEquipmentNumber = Int32.Parse(Location_Equipment_Number_Entry.Text),
+                    ComponentCode = Component_Code_Entry.Text,
                     WarrantyDate = WarrantyDate_Picker.Date, // change dumb dumb. 
-                    Equipement_age = Int32.Parse(Equipement_age_Entry.Text),
-                    Stock_Code = Stock_Code_Entry.Text,
-                    PO_NO = PO_NO_Entry.Text,
-                    Rated_Voltage = Int32.Parse(Rated_Voltage_Entry.Text),
-                    Nominal_Voltage = Int32.Parse(Nominal_Voltage_Entry.Text),
-                    Manufacture_Name = Manufacture_Name_Entry.Text,
-                    Specifiaction_title = Specifiaction_title_Entry.Text,
-                    Specifiaction_NO = Specifiaction_NO_Entry.Text,
-                    Specifiaction_item_NO = Specifiaction_item_NO_Entry.Text,
-                    last_install_date = last_install_date_Entry.Text,
-                    Equipment_class = Equipment_class_Entry.Text,
-                    Equipment_class_description = Equipment_class_description_Entry.Text,
+                    EquipmentAge = Int32.Parse(Equipment_Age_Entry.Text),
+                    StockCode = Stock_Code_Entry.Text,
+                    PurchaseOrderNumber = Purchase_Order_Number_Entry.Text,
+                    RatedVoltage = Int32.Parse(Rated_Voltage_Entry.Text),
+                    NominalVoltage = Int32.Parse(Nominal_Voltage_Entry.Text),
+                    ManufacturerName = Manufacturer_Name_Entry.Text,
+                    ManufacturerType = Manufacturer_Type_Entry.Text,
+                    SpecificationTitle = Specification_Title_Entry.Text,
+                    SpecificationNumber = Specification_Number_Entry.Text,
+                    SpecificationItemNumber = Specification_Item_Number_Entry.Text,
+                    LastInstallDate = Last_Install_Date_Entry.Text,
+                    EquipmentClass = Equipment_Class_Entry.Text,
+                    EquipmentClassDescription = Equipment_Class_Description_Entry.Text,
                 }) ;
+                await Navigation.PushAsync(new View_Assets(null));
             }
                 // }
-                await Navigation.PushAsync(new View_Assets(null));
+                
         }
         //else { await DisplayAlert("Incorrect", "Incorrect username or password", "Close");}
+
+        private Boolean IsComplete()
+            //ignoring datepicker check atm. Make sure they don't accidentally always enter the current date?
+        {
+            if (string.IsNullOrWhiteSpace(Plant_Number_Entry.Text) || string.IsNullOrWhiteSpace(Asset_Equipment_Number_Entry.Text)
+                || string.IsNullOrWhiteSpace(Equipment_Status_Entry.Text) || string.IsNullOrWhiteSpace(Serial_Number_Entry.Text)
+                || string.IsNullOrWhiteSpace(Modifier_Code_Entry.Text) || string.IsNullOrWhiteSpace(Location_Equipment_Number_Entry.Text)
+                || string.IsNullOrWhiteSpace(Component_Code_Entry.Text) || string.IsNullOrWhiteSpace(Equipment_Age_Entry.Text)
+                || string.IsNullOrWhiteSpace(Stock_Code_Entry.Text) || string.IsNullOrWhiteSpace(Purchase_Order_Number_Entry.Text)
+                || string.IsNullOrWhiteSpace(Rated_Voltage_Entry.Text) || string.IsNullOrWhiteSpace(Nominal_Voltage_Entry.Text)
+                || string.IsNullOrWhiteSpace(Manufacturer_Name_Entry.Text) || string.IsNullOrWhiteSpace(Manufacturer_Type_Entry.Text)
+                || string.IsNullOrWhiteSpace(Specification_Title_Entry.Text) || string.IsNullOrWhiteSpace(Specification_Number_Entry.Text)
+                || string.IsNullOrWhiteSpace(Specification_Item_Number_Entry.Text) || string.IsNullOrWhiteSpace(Last_Install_Date_Entry.Text)
+                || string.IsNullOrWhiteSpace(Equipment_Class_Entry.Text) || string.IsNullOrWhiteSpace(Equipment_Class_Description_Entry.Text)
+                || Substation_Picker.SelectedIndex == -1)
+            {
+                return false; //a field has not been filled out
+            }
+            else
+            {
+                return true;
+            }
+        }
     }
 }

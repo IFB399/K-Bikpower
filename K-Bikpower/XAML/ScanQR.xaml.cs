@@ -25,11 +25,18 @@ namespace K_Bikpower
                 
                 string search = result.ToString();
                 int qrscan = Int32.Parse(search);
-                 var test = App.Database.Scangen(qrscan);
-                Assets testing = test[0];
-                Console.WriteLine(testing);
-                await Navigation.PushAsync(new Preview_Asset(testing));
-
+                var test = App.Database.Scangen(qrscan);
+                
+                if (test.Count == 0)
+                {
+                    await DisplayAlert("Alert", "Asset could not be found in the database", "OK");
+                }
+                else
+                {
+                    Assets testing = test[0];
+                    Console.WriteLine(testing);
+                    await Navigation.PushAsync(new Preview_Asset(testing));
+                }
 
     });
         }

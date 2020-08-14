@@ -38,10 +38,10 @@
                                                 <ColumnDefinition Width="*"/>
                                             </Grid.ColumnDefinitions>
                                             <Label Text="{Binding Id,StringFormat='{0:F0}'}" FontSize="Small" FontAttributes="Bold"  Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center"/>
-                                            <Label Text="{Binding Substation_Code_selected,StringFormat='{0:F0}'}" FontSize="Small" FontAttributes="Bold"  Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center"/>
-                                            <Label Text="{Binding Specifiaction_title,StringFormat='{0:F0}'}" FontSize="Small" FontAttributes="None"  Grid.Column="2" HorizontalOptions="Center" VerticalOptions="Center"/>
-                                            <Label Text="{Binding Serial_Number,StringFormat='{0:F0}'}" FontSize="Small" FontAttributes="None"  Grid.Column="3" HorizontalOptions="Center" VerticalOptions="Center"/>
-                                            <Label Text="{Binding Specifiaction_NO,StringFormat='{0:F0}'}" FontSize="Small" FontAttributes="None"  Grid.Column="4" HorizontalOptions="Center" VerticalOptions="Center"/>
+                                            <Label Text="{Binding SubstationCode,StringFormat='{0:F0}'}" FontSize="Small" FontAttributes="Bold"  Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center"/>
+                                            <Label Text="{Binding SpecificationTitle,StringFormat='{0:F0}'}" FontSize="Small" FontAttributes="None"  Grid.Column="2" HorizontalOptions="Center" VerticalOptions="Center"/>
+                                            <Label Text="{Binding SerialNumber,StringFormat='{0:F0}'}" FontSize="Small" FontAttributes="None"  Grid.Column="3" HorizontalOptions="Center" VerticalOptions="Center"/>
+                                            <Label Text="{Binding SpecificationNumber,StringFormat='{0:F0}'}" FontSize="Small" FontAttributes="None"  Grid.Column="4" HorizontalOptions="Center" VerticalOptions="Center"/>
                                         </Grid>
                                     </Frame>
                                 </ViewCell>

@@ -11,46 +11,48 @@ namespace K_Bikpower
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
 
-        public string Substation_Code_selected { get; set; }
+        public string SubstationCode { get; set; }
 
-        public string Plant_Number { get; set; }
+        public string PlantNumber { get; set; }
 
-        public int Asset_EQ_NO { get; set; }
+        public int AssetEquipmentNumber { get; set; }
 
-        public string EQ_Status { get; set; }
+        public string EquipmentStatus { get; set; }
 
-        public string Serial_Number { get; set; }
+        public string SerialNumber { get; set; }
 
-        public string Modifier_code { get; set; }
+        public string ModifierCode { get; set; }
 
-        public int Location_Equipment_Number { get; set; }
+        public int LocationEquipmentNumber { get; set; }
 
-        public string Component_Code { get; set; }
+        public string ComponentCode { get; set; }
 
         public DateTime WarrantyDate { get; set; }
 
-        public int Equipement_age { get; set; }// needs auto timer
+        public int EquipmentAge { get; set; }// needs auto timer
 
-        public string Stock_Code { get; set; }
+        public string StockCode { get; set; }
 
-        public string PO_NO { get; set; }
+        public string PurchaseOrderNumber { get; set; }
 
-        public int Rated_Voltage { get; set; }
+        public int RatedVoltage { get; set; }
 
-        public int Nominal_Voltage { get; set; }
+        public int NominalVoltage { get; set; }
 
-        public string Manufacture_Name { get; set; }
+        public string ManufacturerName { get; set; }
 
-        public string Specifiaction_title { get; set; }
+        public string ManufacturerType { get; set; }
 
-        public string Specifiaction_NO { get; set; }
+        public string SpecificationTitle { get; set; }
 
-        public string Specifiaction_item_NO { get; set; }
+        public string SpecificationNumber { get; set; }
 
-        public string last_install_date { get; set; }
+        public string SpecificationItemNumber { get; set; }
 
-        public string Equipment_class { get; set; }
+        public string LastInstallDate { get; set; }
 
-        public string Equipment_class_description { get; set; }
+        public string EquipmentClass { get; set; }
+
+        public string EquipmentClassDescription { get; set; }
     }   
 }
