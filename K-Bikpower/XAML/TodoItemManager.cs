@@ -1,4 +1,11 @@
-﻿#define OFFLINE_SYNC_ENABLED
+/*
+ * To add Offline Sync Support:
+ *  1) Add the NuGet package Microsoft.Azure.Mobile.Client.SQLiteStore (and dependencies) to all client projects
+ *  2) Uncomment the #define OFFLINE_SYNC_ENABLED
+ *
+ * For more information, see: http://go.microsoft.com/fwlink/?LinkId=620342
+ */
+#define OFFLINE_SYNC_ENABLED
 
 using System;
 using System.Collections.Generic;
@@ -16,109 +23,103 @@ using Microsoft.WindowsAzure.MobileServices.Sync;
 
 namespace K_Bikpower
 {
-
-        public partial class TableManager
-        {
-            static TableManager defaultInstance = new TableManager();
-            MobileServiceClient client;
+    public partial class TodoItemManager
+    {
+        static TodoItemManager defaultInstance = new TodoItemManager();
+        MobileServiceClient client;
 
 #if OFFLINE_SYNC_ENABLED
-        IMobileServiceSyncTable<Assets> AssetTable;
+        IMobileServiceSyncTable<TodoItem> todoTable;
 #else
-            IMobileServiceTable<Assets> todoTable;
+        IMobileServiceTable<TodoItem> todoTable;
 #endif
 
-            const string offlineDbPath = @"localstore.db";
+        const string offlineDbPath = @"localstore.db";
 
-        
-        private TableManager()
-            {
-                this.client = new MobileServiceClient(Constants.ApplicationURL);
+        private TodoItemManager()
+        {
+            this.client = new MobileServiceClient(Constants.ApplicationURL);
 
 #if OFFLINE_SYNC_ENABLED
             var store = new MobileServiceSQLiteStore(offlineDbPath);
-            store.DefineTable<Assets>();
+            store.DefineTable<TodoItem>();
 
             //Initializes the SyncContext using the default IMobileServiceSyncHandler.
             this.client.SyncContext.InitializeAsync(store);
 
-            this.AssetTable = client.GetSyncTable<Assets>();
+            this.todoTable = client.GetSyncTable<TodoItem>();
 #else
-                this.todoTable = client.GetTable<Assets>();
+            this.todoTable = client.GetTable<TodoItem>();
 #endif
-            }
+        }
 
-
-
-        public static TableManager DefaultManager
+        public static TodoItemManager DefaultManager
+        {
+            get
             {
-                get
-                {
-                    return defaultInstance;
-                }
-                private set
-                {
-                    defaultInstance = value;
-                }
+                return defaultInstance;
             }
-
-            public MobileServiceClient CurrentClient
+            private set
             {
-                get { return client; }
+                defaultInstance = value;
             }
+        }
 
-            public bool IsOfflineEnabled
-            {
-                get { return AssetTable is Microsoft.WindowsAzure.MobileServices.Sync.IMobileServiceSyncTable<Assets>; }
-            }
+        public MobileServiceClient CurrentClient
+        {
+            get { return client; }
+        }
 
-            public async Task<ObservableCollection<Assets>> GetTodoItemsAsync(bool syncItems = false)
+        public bool IsOfflineEnabled
+        {
+            get { return todoTable is Microsoft.WindowsAzure.MobileServices.Sync.IMobileServiceSyncTable<TodoItem>; }
+        }
+
+        public async Task<ObservableCollection<TodoItem>> GetTodoItemsAsync(bool syncItems = false)
+        {
+            try
             {
-                try
-                {
 #if OFFLINE_SYNC_ENABLED
                 if (syncItems)
                 {
                     await this.SyncAsync();
                 }
 #endif
-                    IEnumerable<Assets> items = await AssetTable
-                        .Where(Assets => !Assets.Done)
-                        .ToEnumerableAsync();
+                IEnumerable<TodoItem> items = await todoTable
+                    .Where(todoItem => !todoItem.Done)
+                    .ToEnumerableAsync();
 
-                    return new ObservableCollection<Assets>(items);
-                }
-                catch (MobileServiceInvalidOperationException msioe)
-                {
-                    Debug.WriteLine("Invalid sync operation: {0}", new[] { msioe.Message });
-                }
-                catch (Exception e)
-                {
-                    Debug.WriteLine("Sync error: {0}", new[] { e.Message });
-                }
-                return null;
+                return new ObservableCollection<TodoItem>(items);
             }
-
-            public async Task SaveTaskAsync(Assets item)
+            catch (MobileServiceInvalidOperationException msioe)
             {
-                try
+                Debug.WriteLine("Invalid sync operation: {0}", new[] { msioe.Message });
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine("Sync error: {0}", new[] { e.Message });
+            }
+            return null;
+        }
+
+        public async Task SaveTaskAsync(TodoItem item)
+        {
+            try
+            {
+                if (item.Id == null)
                 {
-                    if (item.Id == null)
-                    {
-                        await AssetTable.InsertAsync(item);
-                    }
-                    else
-                    {
-                        await AssetTable.UpdateAsync(item);
-                    }
+                    await todoTable.InsertAsync(item);
                 }
-                catch (Exception e)
+                else
                 {
-                    Debug.WriteLine("Save error: {0}", new[] { e.Message });
+                    await todoTable.UpdateAsync(item);
                 }
             }
-
-            
+            catch (Exception e)
+            {
+                Debug.WriteLine("Save error: {0}", new[] { e.Message });
+            }
+        }
 
 #if OFFLINE_SYNC_ENABLED
         public async Task SyncAsync()
@@ -129,11 +130,11 @@ namespace K_Bikpower
             {
                 await this.client.SyncContext.PushAsync();
 
-                await this.AssetTable.PullAsync(
+                await this.todoTable.PullAsync(
                     //The first parameter is a query name that is used internally by the client SDK to implement incremental sync.
                     //Use a different query name for each unique query in your program
                     "allTodoItems",
-                    this.AssetTable.CreateQuery());
+                    this.todoTable.CreateQuery());
             }
             catch (MobileServicePushFailedException exc)
             {
@@ -165,6 +166,5 @@ namespace K_Bikpower
             }
         }
 #endif
-        }
     }
-
+}

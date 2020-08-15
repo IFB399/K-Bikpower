@@ -68,7 +68,7 @@ namespace K_Bikpower
 
         private void Button_Clicked_1(object sender, EventArgs e)
         {
-            int QRId = assetdata.Id;
+            string QRId = assetdata.Id;
             string QRidcode = QRId.ToString();
             Gen.BarcodeValue = QRidcode;
             Gen.IsVisible = true;

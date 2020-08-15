@@ -21,7 +21,7 @@ namespace K_Bikpower
 
 
             assetList.ItemsSource = assets;
-            assets.Add(new Assets() { Id = 329474, Substation_Code = "ALB", Manufacture_Name = "RH" }); //just for display purposes for now
+            assets.Add(new Assets() { Id = "329474", Substation_Code = "ALB", Manufacture_Name = "RH" }); //just for display purposes for now
             dateLabel.Text = DateTime.UtcNow.ToString("d");
         }
         private void addAsset_Clicked(object sender, EventArgs e)
@@ -29,7 +29,7 @@ namespace K_Bikpower
             //code breaks when something other than a number is entered
             if (!string.IsNullOrWhiteSpace(AssetEntry.Text))
             {
-                assets.Add(new Assets() { Id = Int32.Parse(AssetEntry.Text), Substation_Code = "BEL", Manufacture_Name = "ELIN" });
+                assets.Add(new Assets() { Id = AssetEntry.Text, Substation_Code = "BEL", Manufacture_Name = "ELIN" });
                 assetList.HeightRequest += 50; //chose a random number for now, differs between devices
                 AssetExpander.ForceUpdateSize();
             }

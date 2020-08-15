@@ -17,10 +17,12 @@ namespace K_Bikpower
         TableManagerSub subs;
         TableManager manager;
         Assets AssetData;
-        int Ids;
+        string Ids;
         public Add_Asset(Assets data)
         {
             InitializeComponent();
+            manager = TableManager.DefaultManager;
+            //subs = TableManagerSub.DefaultManager;
             if (data != null)
             {
                 AssetData = data;
@@ -30,13 +32,13 @@ namespace K_Bikpower
             }
         }
 
-        protected override async void OnAppearing()
-        {
-            base.OnAppearing();
+       // protected override async void OnAppearing()
+       // {
+            //base.OnAppearing();
             //SubPicker.ItemsSource = await App.Database.GetSubAsync();
-            SubPicker.ItemsSource = await subs.GetTodoItemsAsync(true); //might work dont know
+            //SubPicker.ItemsSource = await subs.GetTodoItemsAsync(true); //might work dont know
 
-        }
+      //  }
 
         async Task AddItem(Assets item)
         {
@@ -83,7 +85,7 @@ namespace K_Bikpower
             {
                 var  asset = new Assets
                 {
-                    Substation_Code = SubPicker.Items[SubPicker.SelectedIndex],
+                    //Substation_Code = SubPicker.Items[SubPicker.SelectedIndex],
                     Plant_Number = Plant_Number_Entry.Text,
                     Asset_EQ_NO = Int32.Parse(Asset_EQ_NO_Entry.Text),
                     EQ_Status = EQ_Status_Entry.Text,
