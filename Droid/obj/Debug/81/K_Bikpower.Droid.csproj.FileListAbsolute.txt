@@ -1,0 +1,3 @@
+C:\Users\Brenton Reddish\source\repos\azure-mobile-apps-quickstarts\client\xamarin.forms\Droid\obj\Debug\81\MonoAndroid,Version=v8.1.AssemblyAttributes.cs
+C:\Users\Brenton Reddish\source\repos\azure-mobile-apps-quickstarts\client\xamarin.forms\Droid\obj\Debug\81\build.props
+C:\Users\Brenton Reddish\source\repos\azure-mobile-apps-quickstarts\client\xamarin.forms\Droid\obj\Debug\81\adb.props

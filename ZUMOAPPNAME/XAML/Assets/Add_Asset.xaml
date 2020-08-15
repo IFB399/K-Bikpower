@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="K_Bikpower.Add_Asset"
+             BackgroundColor="#63d9ff">
+    <ContentPage.Content>
+        <ScrollView Padding="50">
+            <Frame CornerRadius="10" BackgroundColor="AliceBlue" HasShadow ="True">
+                <StackLayout Padding="50">
+
+                    <Label Text="Substation Code" FontSize="Title" TextColor="Black"/>
+                    <Picker x:Name="SubPicker" ItemDisplayBinding="{Binding Substation_Code, Mode=TwoWay}" SelectedItem="{Binding Substation_Code, Mode=TwoWay}"/>
+
+                    <!--drop down-->
+                    <Label Text="Plant Number" FontSize="Title" TextColor="Black"/>
+                    <Entry  x:Name="Plant_Number_Entry" ClearButtonVisibility="WhileEditing" VerticalOptions="EndAndExpand" MaxLength="25" IsSpellCheckEnabled="True" IsTextPredictionEnabled="false"/>
+                    
+
+                    <Label Text=" Asset Equipment Number" FontSize="Title" TextColor="Black"/>
+                    <Entry  x:Name="Asset_EQ_NO_Entry" ClearButtonVisibility="WhileEditing" VerticalOptions="EndAndExpand" MaxLength="25" IsSpellCheckEnabled="True" IsTextPredictionEnabled="false"/>
+
+                    <Label Text="Equipment Status" FontSize="Title" TextColor="Black"/>
+                    <Entry  x:Name="EQ_Status_Entry" ClearButtonVisibility="WhileEditing" VerticalOptions="EndAndExpand" MaxLength="25" IsSpellCheckEnabled="True" IsTextPredictionEnabled="false"/>
+
+                    <Label Text="Serial Number" FontSize="Title" TextColor="Black"/>
+                    <Entry  x:Name="Serial_Number_Entry" ClearButtonVisibility="WhileEditing" VerticalOptions="EndAndExpand" MaxLength="25" IsSpellCheckEnabled="True" IsTextPredictionEnabled="false"/>
+
+                    <Label Text="Modifier Code" FontSize="Title" TextColor="Black"/>
+                    <Entry  x:Name="Modifier_code_Entry" ClearButtonVisibility="WhileEditing" VerticalOptions="EndAndExpand" MaxLength="25" IsSpellCheckEnabled="True" IsTextPredictionEnabled="false"/>
+
+                    <Label Text="Location Equipment Number" FontSize="Title" TextColor="Black"/>
+                    <Entry  x:Name="Location_Equipment_Number_Entry" ClearButtonVisibility="WhileEditing" VerticalOptions="EndAndExpand" MaxLength="25" IsSpellCheckEnabled="True" IsTextPredictionEnabled="false"/>
+
+                    <Label Text="Component Code" FontSize="Title" TextColor="Black"/>
+                    <Entry  x:Name="Component_Code_Entry" ClearButtonVisibility="WhileEditing" VerticalOptions="EndAndExpand" MaxLength="25" IsSpellCheckEnabled="True" IsTextPredictionEnabled="false"/>
+
+                    <Label Text="Equipment Warranty Date" FontSize="Title" TextColor="Black"/>
+                    <DatePicker x:Name="WarrantyDate_Picker" IsEnabled="True"/>
+                    <!-- change to datepicker -->
+
+                    <Label Text="Equipment Age" FontSize="Title" TextColor="Black"/>
+                    <Entry  x:Name="Equipement_age_Entry" ClearButtonVisibility="WhileEditing" VerticalOptions="EndAndExpand" MaxLength="25" IsSpellCheckEnabled="True" IsTextPredictionEnabled="false"/>
+
+                    <Label Text="Stock Code" FontSize="Title" TextColor="Black"/>
+                    <Entry  x:Name="Stock_Code_Entry" ClearButtonVisibility="WhileEditing" VerticalOptions="EndAndExpand" MaxLength="25" IsSpellCheckEnabled="True" IsTextPredictionEnabled="false"/>
+
+                    <Label Text="Purchase Order Number" FontSize="Title" TextColor="Black"/>
+                    <Entry  x:Name="PO_NO_Entry" ClearButtonVisibility="WhileEditing" VerticalOptions="EndAndExpand" MaxLength="25" IsSpellCheckEnabled="True" IsTextPredictionEnabled="false"/>
+
+                    <Label Text="Rated Voltage" FontSize="Title" TextColor="Black"/>
+                    <Entry  x:Name="Rated_Voltage_Entry" ClearButtonVisibility="WhileEditing" VerticalOptions="EndAndExpand" MaxLength="25" IsSpellCheckEnabled="True" IsTextPredictionEnabled="false"/>
+
+                    <Label Text="Nominal Voltage" FontSize="Title" TextColor="Black"/>
+                    <Entry  x:Name="Nominal_Voltage_Entry" ClearButtonVisibility="WhileEditing" VerticalOptions="EndAndExpand" MaxLength="25" IsSpellCheckEnabled="True" IsTextPredictionEnabled="false"/>
+
+                    <Label Text="Manufacturer Name" FontSize="Title" TextColor="Black"/>
+                    <Entry  x:Name="Manufacture_Name_Entry" ClearButtonVisibility="WhileEditing" VerticalOptions="EndAndExpand" MaxLength="25" IsSpellCheckEnabled="True" IsTextPredictionEnabled="false"/>
+
+                    <Label Text="Manufacturer Type" FontSize="Title" TextColor="Black" />
+                    <Entry  x:Name="Specifiaction_title_Entry" ClearButtonVisibility="WhileEditing" VerticalOptions="EndAndExpand" MaxLength="25" IsSpellCheckEnabled="True" IsTextPredictionEnabled="false"/>
+
+                    <Label Text="Specification Title" FontSize="Title" TextColor="Black"/>
+                    <Entry  x:Name="Specifiaction_NO_Entry" ClearButtonVisibility="WhileEditing" VerticalOptions="EndAndExpand" MaxLength="25" IsSpellCheckEnabled="True" IsTextPredictionEnabled="false"/>
+
+                    <Label Text="Specification Number" FontSize="Title" TextColor="Black"/>
+                    <Entry  x:Name="Specifiaction_item_NO_Entry" ClearButtonVisibility="WhileEditing" VerticalOptions="EndAndExpand" MaxLength="25" IsSpellCheckEnabled="True" IsTextPredictionEnabled="false"/>
+
+                    <Label Text="Last Installation Date" FontSize="Title" TextColor="Black"/>
+                    <Entry  x:Name="last_install_date_Entry" ClearButtonVisibility="WhileEditing" VerticalOptions="EndAndExpand" MaxLength="25" IsSpellCheckEnabled="True" IsTextPredictionEnabled="false"/>
+
+                    <Label Text="Equipment Class" FontSize="Title" TextColor="Black"/>
+                    <Entry  x:Name="Equipment_class_Entry" ClearButtonVisibility="WhileEditing" VerticalOptions="EndAndExpand" MaxLength="25" IsSpellCheckEnabled="True" IsTextPredictionEnabled="false"/>
+
+                    <Label Text="Equipment Class Description" FontSize="Title" TextColor="Black"/>
+                    <Entry  x:Name="Equipment_class_description_Entry" ClearButtonVisibility="WhileEditing" VerticalOptions="EndAndExpand" MaxLength="25" IsSpellCheckEnabled="True" IsTextPredictionEnabled="false"/>
+
+
+                    <Button Text="Add Asset" Clicked="Button_Clicked" VerticalOptions="EndAndExpand" x:Name = "addassetbutton" CornerRadius="5" BorderColor="Black" BorderWidth="1"/>
+                </StackLayout>
+            </Frame>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

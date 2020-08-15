@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="K_Bikpower.View_Assets"
+             BackgroundColor="#63d9ff">
+    <ContentPage.Content>
+        <StackLayout Margin="50,50,50,30">
+            <Frame CornerRadius="10" BackgroundColor="AliceBlue" HasShadow ="True">
+                <StackLayout>
+                    <ListView x:Name="AssetsTable" HasUnevenRows="false" ItemTapped="EditAsset" IsPullToRefreshEnabled="true" >
+                        <ListView.Header>
+                            <Grid Margin="0,0,0,10">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Text= "ID" FontSize="Small" FontAttributes="Bold"  Grid.Column="0" HorizontalOptions="Center"/>
+                                <Label Text= "SubstationCode" FontSize="Small" FontAttributes="Bold"  Grid.Column="1" HorizontalOptions="Center"/>
+                                <Label Text= "Specifiaction title" FontSize="Small" FontAttributes="Bold"  Grid.Column="2" HorizontalOptions="Center"/>
+                                <Label Text= "Serial Number" FontSize="Small" FontAttributes="Bold"  Grid.Column="3" HorizontalOptions="Center"/>
+                                <Label Text= "Specifaction Number" FontSize="Small" FontAttributes="Bold"  Grid.Column="4" HorizontalOptions="Center"/>
+                                <ActivityIndicator Grid.RowSpan="2" HorizontalOptions="Center" VerticalOptions="Center" IsVisible="False" IsEnabled="True" x:Name="syncIndicator"/>
+                            </Grid>
+                        </ListView.Header>
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <Frame BackgroundColor="White" BorderColor="Gray" Padding="5"  HasShadow="False">
+                                        <Grid HeightRequest="50" HorizontalOptions="FillAndExpand" VerticalOptions="Start">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
+                                            <Label Text="{Binding Id,StringFormat='{0:F0}'}" FontSize="Small" FontAttributes="Bold"  Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center"/>
+                                            <Label Text="{Binding Substation_Code,StringFormat='{0:F0}'}" FontSize="Small" FontAttributes="Bold"  Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center"/>
+                                            <Label Text="{Binding Specifiaction_title,StringFormat='{0:F0}'}" FontSize="Small" FontAttributes="None"  Grid.Column="2" HorizontalOptions="Center" VerticalOptions="Center"/>
+                                            <Label Text="{Binding Serial_Number,StringFormat='{0:F0}'}" FontSize="Small" FontAttributes="None"  Grid.Column="3" HorizontalOptions="Center" VerticalOptions="Center"/>
+                                            <Label Text="{Binding Specifiaction_NO,StringFormat='{0:F0}'}" FontSize="Small" FontAttributes="None"  Grid.Column="4" HorizontalOptions="Center" VerticalOptions="Center"/>
+                                        </Grid>
+                                    </Frame>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
+            </Frame>
+            <StackLayout>
+                <Button Text="Add Asset" Clicked="Button_Clicked" BackgroundColor="White" CornerRadius="10" FontSize="Medium" TextColor="Black"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
