@@ -19,3 +19,24 @@ C:\Users\Brenton Reddish\source\repos\azure-mobile-apps-quickstarts\client\xamar
 C:\Users\Brenton Reddish\source\repos\azure-mobile-apps-quickstarts\client\xamarin.forms\ZUMOAPPNAME\obj\Debug\netstandard2.0\XAML\Substations\Add_Sub.xaml.g.cs
 C:\Users\Brenton Reddish\source\repos\azure-mobile-apps-quickstarts\client\xamarin.forms\ZUMOAPPNAME\obj\Debug\netstandard2.0\XAML\Substations\Substations.xaml.g.cs
 C:\Users\Brenton Reddish\source\repos\azure-mobile-apps-quickstarts\client\xamarin.forms\ZUMOAPPNAME\obj\Debug\netstandard2.0\XAML\TodoList.xaml.g.cs
+C:\Users\brent\source\repos\K-Bikpower\ZUMOAPPNAME\bin\Debug\netstandard2.0\K_Bikpower.deps.json
+C:\Users\brent\source\repos\K-Bikpower\ZUMOAPPNAME\bin\Debug\netstandard2.0\K_Bikpower.dll
+C:\Users\brent\source\repos\K-Bikpower\ZUMOAPPNAME\bin\Debug\netstandard2.0\K_Bikpower.pdb
+C:\Users\brent\source\repos\K-Bikpower\ZUMOAPPNAME\obj\Debug\netstandard2.0\K_Bikpower.csprojAssemblyReference.cache
+C:\Users\brent\source\repos\K-Bikpower\ZUMOAPPNAME\obj\Debug\netstandard2.0\XAML\Assets\Add_Asset.xaml.g.cs
+C:\Users\brent\source\repos\K-Bikpower\ZUMOAPPNAME\obj\Debug\netstandard2.0\XAML\Assets\Preview_Asset.xaml.g.cs
+C:\Users\brent\source\repos\K-Bikpower\ZUMOAPPNAME\obj\Debug\netstandard2.0\XAML\Assets\View_Assets.xaml.g.cs
+C:\Users\brent\source\repos\K-Bikpower\ZUMOAPPNAME\obj\Debug\netstandard2.0\XAML\Commission.xaml.g.cs
+C:\Users\brent\source\repos\K-Bikpower\ZUMOAPPNAME\obj\Debug\netstandard2.0\XAML\Decommission.xaml.g.cs
+C:\Users\brent\source\repos\K-Bikpower\ZUMOAPPNAME\obj\Debug\netstandard2.0\XAML\Login.xaml.g.cs
+C:\Users\brent\source\repos\K-Bikpower\ZUMOAPPNAME\obj\Debug\netstandard2.0\XAML\MainPage.xaml.g.cs
+C:\Users\brent\source\repos\K-Bikpower\ZUMOAPPNAME\obj\Debug\netstandard2.0\XAML\ScanQR.xaml.g.cs
+C:\Users\brent\source\repos\K-Bikpower\ZUMOAPPNAME\obj\Debug\netstandard2.0\XAML\Substations\Add_Sub.xaml.g.cs
+C:\Users\brent\source\repos\K-Bikpower\ZUMOAPPNAME\obj\Debug\netstandard2.0\XAML\Substations\Substations.xaml.g.cs
+C:\Users\brent\source\repos\K-Bikpower\ZUMOAPPNAME\obj\Debug\netstandard2.0\XAML\TodoList.xaml.g.cs
+C:\Users\brent\source\repos\K-Bikpower\ZUMOAPPNAME\obj\Debug\netstandard2.0\K_Bikpower.AssemblyInfoInputs.cache
+C:\Users\brent\source\repos\K-Bikpower\ZUMOAPPNAME\obj\Debug\netstandard2.0\K_Bikpower.AssemblyInfo.cs
+C:\Users\brent\source\repos\K-Bikpower\ZUMOAPPNAME\obj\Debug\netstandard2.0\K_Bikpower.csproj.CoreCompileInputs.cache
+C:\Users\brent\source\repos\K-Bikpower\ZUMOAPPNAME\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\brent\source\repos\K-Bikpower\ZUMOAPPNAME\obj\Debug\netstandard2.0\K_Bikpower.dll
+C:\Users\brent\source\repos\K-Bikpower\ZUMOAPPNAME\obj\Debug\netstandard2.0\K_Bikpower.pdb
