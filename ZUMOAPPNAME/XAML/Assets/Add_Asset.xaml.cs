@@ -141,7 +141,7 @@ namespace K_Bikpower
                 await AddItem(asset);
             }
                 // }
-                await Navigation.PushAsync(new TodoList());
+                await Navigation.PushAsync(new View_Assets(null));
         }
         //else { await DisplayAlert("Incorrect", "Incorrect username or password", "Close");}
     }

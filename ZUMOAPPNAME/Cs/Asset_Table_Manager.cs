@@ -49,7 +49,7 @@ namespace K_Bikpower
 
             this.todoTable = client.GetSyncTable<Assets>();
 #else
-            this.todoTable = client.GetTable<TodoItem>();
+            this.todoTable = client.GetTable<Assets>();
 #endif
         }
 
@@ -86,7 +86,7 @@ namespace K_Bikpower
                 }
 #endif
                 IEnumerable<Assets> items = await todoTable
-                    .Where(todoItem => !todoItem.Done)
+                    .Where(todoItem => !todoItem.Done) //this is the problem 
                     .ToEnumerableAsync();
 
                 return new ObservableCollection<Assets>(items);

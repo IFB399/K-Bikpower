@@ -28,7 +28,6 @@ namespace K_Bikpower
         string Last_install_date;
         string equipment_class;
         string equipment_class_description;
-        bool done;
         string name;
 
 
@@ -203,12 +202,6 @@ namespace K_Bikpower
             set { equipment_class_description = value; }
         }
 
-        [JsonProperty(PropertyName = "complete")]
-        public bool Done
-        {
-            get { return done; }
-            set { done = value; }
-        }
         [Version]
         public string Version { get; set; }
     }
