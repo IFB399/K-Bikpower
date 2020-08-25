@@ -197,7 +197,7 @@ namespace K_Bikpower
             get { return equipmentClassDescription; }
             set { equipmentClassDescription = value; }
         }
-
+        
         [Version]
         public string Version { get; set; }
 	}
