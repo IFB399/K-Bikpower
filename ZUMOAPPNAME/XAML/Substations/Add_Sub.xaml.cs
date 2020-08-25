@@ -13,7 +13,7 @@ namespace K_Bikpower
     public partial class Add_Sub : ContentPage
     {
         Substation_Codes SubData;
-        TableManagerSub subtable;
+      //  TableManagerSub subtable;
         public Add_Sub(Substation_Codes data)
         {
             InitializeComponent();
@@ -32,7 +32,7 @@ namespace K_Bikpower
 
         async Task AddItem(Substation_Codes item)
         {
-            await subtable.SaveTaskAsync(item);
+            //await subtable.SaveTaskAsync(item);
         }
         async void Button_Clicked(object sender, EventArgs e)
         {

@@ -16,11 +16,11 @@ namespace K_Bikpower
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Preview_Asset : ContentPage
     {
-        Assets assetdata;
+        Asset assetdata;
         
 
 
-        public Preview_Asset(Assets details)
+        public Preview_Asset(Asset details)
         {
             InitializeComponent();
             if (details != null)
@@ -31,47 +31,47 @@ namespace K_Bikpower
             }
         }
 
-        private void PopulateDetails(Assets details)
+        private void PopulateDetails(Asset details)
         {
             
-            Substation_Code_label.Text = details.Substation_Code;
-            Plant_Number_label.Text = details.Plant_Number;
-            int AssentEQNO = details.Asset_EQ_NO;
+            Substation_Code_label.Text = details.SubstationCode;
+            Plant_Number_label.Text = details.PlantNumber;
+            int AssentEQNO = details.AssetEQNO;
             Asset_EQ_NO_label.Text = AssentEQNO.ToString();
-            EQ_Status_label.Text = details.EQ_Status;
-            Serial_Number_label.Text = details.Serial_Number;
-            Modifier_code_label.Text = details.Modifier_code;
-            int Loceqnum = details.Location_Equipment_Number;
+            EQ_Status_label.Text = details.EQStatus;
+            Serial_Number_label.Text = details.SerialNumber;
+            Modifier_code_label.Text = details.ModifierCode;
+            int Loceqnum = details.LocationEquipmentNumber;
             Location_Equipment_Number_label.Text = Loceqnum.ToString();
-            Component_Code_label.Text = details.Component_Code;
+            Component_Code_label.Text = details.ComponentCode;
            // WarrantyDate_Picker.Date = details.WarrantyDate;
-            int EQUage = details.Equipement_age;
+            int EQUage = details.EquipmentAge;
             Equipement_age_label.Text = EQUage.ToString();
-            Stock_Code_label.Text = details.Stock_Code;
-            PO_NO_label.Text = details.PO_NO;
-            int RatedVolts = details.Rated_Voltage;
+            Stock_Code_label.Text = details.StockCode;
+            PO_NO_label.Text = details.PurchaseOrderNO;
+            int RatedVolts = details.RatedVoltage;
             Rated_Voltage_label.Text = RatedVolts.ToString();
-            int NomVolts = details.Nominal_Voltage;
+            int NomVolts = details.NominalVoltage;
             Nominal_Voltage_label.Text = NomVolts.ToString();
-            Manufacture_Name_label.Text = details.Manufacture_Name;
-            Specifiaction_title_label.Text = details.Specifiaction_title;
-            Specifiaction_NO_label.Text = details.Specifiaction_NO;
-            Specifiaction_item_NO_label.Text = details.Specifiaction_item_NO;
-            last_install_date_label.Text = details.last_install_date;
-            Equipment_class_label.Text = details.Equipment_class;
-            Equipment_class_description_label.Text = details.Equipment_class_description;
+            Manufacture_Name_label.Text = details.ManufacturerName;
+            Specifiaction_title_label.Text = details.SpecificationTitle;
+            Specifiaction_NO_label.Text = details.SpecificationNO;
+            Specifiaction_item_NO_label.Text = details.SpecificationItemNO;
+            last_install_date_label.Text = details.LastInstallDate;
+            Equipment_class_label.Text = details.EquipmentClass;
+            Equipment_class_description_label.Text = details.EquipmentClassDescription;
         }
         private void Button_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new Add_Asset(assetdata));
+            Navigation.PushAsync(new AddAsset());
         }
 
         private void Button_Clicked_1(object sender, EventArgs e)
         {
-            string QRId = assetdata.Id;
-            string QRidcode = QRId.ToString();
-            Gen.BarcodeValue = QRidcode;
-            Gen.IsVisible = true;
+           // string QRId = assetdata.id;
+           // string QRidcode = QRId.ToString();
+           // Gen.BarcodeValue = QRidcode;
+            //Gen.IsVisible = true;
         }
     }
 }

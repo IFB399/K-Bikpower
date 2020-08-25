@@ -9,7 +9,7 @@
     <SolutionConfiguration>Debug|x86</SolutionConfiguration>
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>160b6a80-7a3b-4992-86ea-4e482f867b0a</PackageIdentityName>
-    <PackageIdentityPublisher>CN=azuremobileapps</PackageIdentityPublisher>
+    <PackageIdentityPublisher>CN=Brenton Reddish</PackageIdentityPublisher>
     <IntermediateOutputPath>C:\Users\Brenton Reddish\Desktop\IFB398\azure\UWP\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType>
     </RemoteDeploymentType>
@@ -19,24 +19,24 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
     <LayoutDir>C:\Users\Brenton Reddish\Desktop\IFB398\azure\UWP\bin\x86\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>F43B5491418F80D8534280BA136CD2C8C9C72C626D8919F4F736A27C252588AF</RegisteredManifestChecksum>
-    <RegisteredPackageMoniker>43e3c925-1cf2-4e0e-92ff-74d3a13fcfa3_1.2.0.0_x86__x8vptb0jjantw</RegisteredPackageMoniker>
-    <RegisteredUserModeAppID>43e3c925-1cf2-4e0e-92ff-74d3a13fcfa3_x8vptb0jjantw!App</RegisteredUserModeAppID>
+    <RegisteredManifestChecksum>527318D89F0EE164DB51E9AE5D973B337A4B1BD6CC0A2A2E77109FE97F8745CA</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>43e3c925-1cf2-4e0e-92ff-74d3a13fcfa3_1.2.0.0_x86__91k9588wthxrg</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>43e3c925-1cf2-4e0e-92ff-74d3a13fcfa3_91k9588wthxrg!App</RegisteredUserModeAppID>
     <RegisteredPackageID>43e3c925-1cf2-4e0e-92ff-74d3a13fcfa3</RegisteredPackageID>
-    <RegisteredPackagePublisher>CN=azuremobileapps</RegisteredPackagePublisher>
+    <RegisteredPackagePublisher>CN=Brenton Reddish</RegisteredPackagePublisher>
     <RegisteredVersion>1.2.0.0</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
     <AppXManifest Include="C:\Users\Brenton Reddish\Desktop\IFB398\azure\UWP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-08-22T13:01:56.567</Modified>
+      <Modified>2020-08-25T07:11:29.535</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Brenton Reddish\Desktop\IFB398\azure\UWP\bin\x86\Debug\UWP.exe">
       <PackagePath>entrypoint\UWP.exe</PackagePath>
-      <Modified>2020-08-22T13:01:55.162</Modified>
+      <Modified>2020-08-25T07:11:28.234</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Brenton Reddish\.nuget\packages\microsoft.azure.mobile.client\4.1.2\lib\uap10.0\Microsoft.Azure.Mobile.Client.dll">
       <PackagePath>Microsoft.Azure.Mobile.Client.dll</PackagePath>
@@ -120,7 +120,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Brenton Reddish\Desktop\IFB398\azure\ZUMOAPPNAME\bin\Debug\netstandard2.0\K_Bikpower.dll">
       <PackagePath>K_Bikpower.dll</PackagePath>
-      <Modified>2020-08-22T13:01:49.426</Modified>
+      <Modified>2020-08-25T07:11:22.770</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Brenton Reddish\.nuget\packages\win2d.uwp\1.20.0\lib\uap10.0\Microsoft.Graphics.Canvas.winmd">
       <PackagePath>Microsoft.Graphics.Canvas.winmd</PackagePath>
@@ -178,15 +178,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Brenton Reddish\Desktop\IFB398\azure\UWP\bin\x86\Debug\UWP.xr.xml">
       <PackagePath>UWP.xr.xml</PackagePath>
-      <Modified>2020-08-22T02:21:54.413</Modified>
+      <Modified>2020-08-25T07:02:10.833</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Brenton Reddish\Desktop\IFB398\azure\UWP\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2020-08-22T13:01:55.025</Modified>
+      <Modified>2020-08-25T07:11:28.108</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Brenton Reddish\Desktop\IFB398\azure\UWP\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2020-08-22T13:01:55.025</Modified>
+      <Modified>2020-08-25T07:11:28.108</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.18362.0\\redist\Debug\x86\ucrtbased.dll">
       <PackagePath>ucrtbased.dll</PackagePath>
@@ -202,11 +202,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Brenton Reddish\Desktop\IFB398\azure\UWP\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2020-08-22T12:59:56.188</Modified>
+      <Modified>2020-08-25T07:02:11.941</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Brenton Reddish\Desktop\IFB398\azure\UWP\bin\x86\Debug\Core\UWP.exe">
       <PackagePath>UWP.exe</PackagePath>
-      <Modified>2020-08-22T13:01:56.563</Modified>
+      <Modified>2020-08-25T07:11:29.530</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
