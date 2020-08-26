@@ -7,16 +7,16 @@ using Newtonsoft.Json;
 
 namespace K_Bikpower
 {
-   public class Substation_Codes
+   public class Substations
     {
         string substation_code;
         string substation_name;
         string area;
         bool done;
-        int id;
+        string id;
 
         [JsonProperty(PropertyName = "id")]
-        public int Id
+        public string Id
         {
             get { return id; }
             set { id = value; }

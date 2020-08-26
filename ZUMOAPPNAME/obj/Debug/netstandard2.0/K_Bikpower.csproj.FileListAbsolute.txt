@@ -51,7 +51,6 @@ C:\Users\Brenton Reddish\Desktop\IFB398\azure\ZUMOAPPNAME\obj\Debug\netstandard2
 C:\Users\Brenton Reddish\Desktop\IFB398\azure\ZUMOAPPNAME\obj\Debug\netstandard2.0\XAML\MainPage.xaml.g.cs
 C:\Users\Brenton Reddish\Desktop\IFB398\azure\ZUMOAPPNAME\obj\Debug\netstandard2.0\XAML\ScanQR.xaml.g.cs
 C:\Users\Brenton Reddish\Desktop\IFB398\azure\ZUMOAPPNAME\obj\Debug\netstandard2.0\XAML\Substations\Add_Sub.xaml.g.cs
-C:\Users\Brenton Reddish\Desktop\IFB398\azure\ZUMOAPPNAME\obj\Debug\netstandard2.0\XAML\Substations\Substations.xaml.g.cs
 C:\Users\Brenton Reddish\Desktop\IFB398\azure\ZUMOAPPNAME\obj\Debug\netstandard2.0\K_Bikpower.AssemblyInfoInputs.cache
 C:\Users\Brenton Reddish\Desktop\IFB398\azure\ZUMOAPPNAME\obj\Debug\netstandard2.0\K_Bikpower.AssemblyInfo.cs
 C:\Users\Brenton Reddish\Desktop\IFB398\azure\ZUMOAPPNAME\obj\Debug\netstandard2.0\K_Bikpower.csproj.CoreCompileInputs.cache
@@ -60,3 +59,4 @@ C:\Users\Brenton Reddish\Desktop\IFB398\azure\ZUMOAPPNAME\obj\Debug\netstandard2
 C:\Users\Brenton Reddish\Desktop\IFB398\azure\ZUMOAPPNAME\obj\Debug\netstandard2.0\K_Bikpower.pdb
 C:\Users\Brenton Reddish\Desktop\IFB398\azure\ZUMOAPPNAME\obj\Debug\netstandard2.0\XAML\Assets\AddAsset.xaml.g.cs
 C:\Users\Brenton Reddish\Desktop\IFB398\azure\ZUMOAPPNAME\obj\Debug\netstandard2.0\XAML\Assets\ViewAssets.xaml.g.cs
+C:\Users\Brenton Reddish\Desktop\IFB398\azure\ZUMOAPPNAME\obj\Debug\netstandard2.0\XAML\Substations\ViewSubstations.xaml.g.cs

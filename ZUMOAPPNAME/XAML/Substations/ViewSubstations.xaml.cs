@@ -10,12 +10,33 @@ using Xamarin.Forms.Xaml;
 namespace K_Bikpower
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Substations : ContentPage
+    public partial class ViewSubstations : ContentPage
     {
-        //TableManagerSub Subs;
-        public Substations()
+        SubstationManager Subs;
+        public ViewSubstations()
         {
             InitializeComponent();
+            Subs = SubstationManager.DefaultManager;
+            if (Device.RuntimePlatform == Device.UWP)
+            {
+                var refreshButton = new Button
+                {
+                    Text = "Refresh",
+                    HeightRequest = 30
+                };
+                refreshButton.Clicked += OnRefreshItems;
+                buttonsPanel.Children.Add(refreshButton);
+                if (Subs.IsOfflineEnabled)
+                {
+                    var syncButton = new Button
+                    {
+                        Text = "Sync items",
+                        HeightRequest = 30
+                    };
+                    syncButton.Clicked += OnSyncItems;
+                    buttonsPanel.Children.Add(syncButton);
+                }
+            }
         }
 
 
@@ -24,6 +45,39 @@ namespace K_Bikpower
             base.OnAppearing();
             await RefreshItems(true, syncItems: true);
         }
+
+        public async void OnRefresh(object sender, EventArgs e)
+        {
+            var list = (ListView)sender;
+            Exception error = null;
+            try
+            {
+                await RefreshItems(false, true);
+            }
+            catch (Exception ex)
+            {
+                error = ex;
+            }
+            finally
+            {
+                list.EndRefresh();
+            }
+
+            if (error != null)
+            {
+                await DisplayAlert("Refresh Error", "Couldn't refresh data (" + error.Message + ")", "OK");
+            }
+        }
+
+        public async void OnSyncItems(object sender, EventArgs e)
+        {
+            await RefreshItems(true, true);
+        }
+
+        public async void OnRefreshItems(object sender, EventArgs e)
+        {
+            await RefreshItems(true, false);
+        }
         private void Button_Clicked(object sender, EventArgs e)
         {
             Navigation.PushAsync(new Add_Sub(null));
@@ -31,7 +85,7 @@ namespace K_Bikpower
 
         private void ViewAssets(object sender, ItemTappedEventArgs e)
         {
-            var detail = e.Item as Substation_Codes;
+            var detail = e.Item as Substations;
             string details = detail.Substation_Code;
             if (details != null)
             {
@@ -44,7 +98,7 @@ namespace K_Bikpower
         {
             using (var scope = new ActivityIndicatorScope(syncIndicator, showActivityIndicator))
             {
-               // AssetsTable.ItemsSource = await Subs.GetTodoItemsAsync(syncItems);
+                AssetsTable.ItemsSource = await Subs.GetTodoItemsAsync(syncItems);
             }
         }
         private class ActivityIndicatorScope : IDisposable

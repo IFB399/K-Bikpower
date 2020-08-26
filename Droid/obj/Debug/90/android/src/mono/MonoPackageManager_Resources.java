@@ -1,8 +1,8 @@
 package mono;
 public class MonoPackageManager_Resources {
 	public static String[] Assemblies = new String[]{
-		/* We need to ensure that "ZUMOAPPNAME.Droid.dll" comes first in this list. */
-		"ZUMOAPPNAME.Droid.dll",
+		/* We need to ensure that "K_Bikpower.Droid.dll" comes first in this list. */
+		"K_Bikpower.Droid.dll",
 		"FastAndroidCamera.dll",
 		"FormsViewGroup.dll",
 		"K_Bikpower.dll",

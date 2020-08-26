@@ -29,7 +29,7 @@ namespace K_Bikpower
         MobileServiceClient client;
 
 #if OFFLINE_SYNC_ENABLED
-        IMobileServiceSyncTable<Substation_Codes> SubTable;
+        IMobileServiceSyncTable<Substations> SubTable;
 #else
         IMobileServiceTable<Substation_Codes> SubTable;
 #endif
@@ -42,12 +42,12 @@ namespace K_Bikpower
 
 #if OFFLINE_SYNC_ENABLED
             var store = new MobileServiceSQLiteStore(offlineDbPath);
-            store.DefineTable<Substation_Codes>();
+            store.DefineTable<Substations>();
 
             //Initializes the SyncContext using the default IMobileServiceSyncHandler.
             this.client.SyncContext.InitializeAsync(store);
 
-            this.SubTable = client.GetSyncTable<Substation_Codes>();
+            this.SubTable = client.GetSyncTable<Substations>();
 #else
             this.todoTable = client.GetTable<Substation_Codes>();
 #endif
@@ -72,10 +72,10 @@ namespace K_Bikpower
 
         public bool IsOfflineEnabled
         {
-            get { return SubTable is Microsoft.WindowsAzure.MobileServices.Sync.IMobileServiceSyncTable<Substation_Codes>; }
+            get { return SubTable is Microsoft.WindowsAzure.MobileServices.Sync.IMobileServiceSyncTable<Substations>; }
         }
 
-        public async Task<ObservableCollection<Substation_Codes>> GetTodoItemsAsync(bool syncItems = false)
+        public async Task<ObservableCollection<Substations>> GetTodoItemsAsync(bool syncItems = false)
         {
             try
             {
@@ -85,10 +85,10 @@ namespace K_Bikpower
                     await this.SyncAsync();
                 }
 #endif
-                IEnumerable<Substation_Codes> items = await SubTable
+                IEnumerable<Substations> items = await SubTable
                     .ToEnumerableAsync();
 
-                return new ObservableCollection<Substation_Codes>(items);
+                return new ObservableCollection<Substations>(items);
             }
             catch (MobileServiceInvalidOperationException msioe)
             {
@@ -101,7 +101,7 @@ namespace K_Bikpower
             return null;
         }
 
-        public async Task SaveTaskAsync(Substation_Codes item)
+        public async Task SaveTaskAsync(Substations item)
         {
             try
             {

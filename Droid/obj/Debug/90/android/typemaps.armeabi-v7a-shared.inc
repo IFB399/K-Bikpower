@@ -28664,122 +28664,122 @@
 	.section	.rodata.java_type_name.4777,"aMS",%progbits,1
 	.type	.L.java_type_name.4777, %object
 .L.java_type_name.4777:
-	.asciz	"crc6467362fe1006552e3/MainActivity"
-	.size	.L.java_type_name.4777, 35
+	.asciz	"crc64720bb2db43a66fe9/ButtonRenderer"
+	.size	.L.java_type_name.4777, 37
 
 	.section	.rodata.java_type_name.4778,"aMS",%progbits,1
 	.type	.L.java_type_name.4778, %object
 .L.java_type_name.4778:
-	.asciz	"crc64720bb2db43a66fe9/ButtonRenderer"
-	.size	.L.java_type_name.4778, 37
+	.asciz	"crc64720bb2db43a66fe9/CarouselPageRenderer"
+	.size	.L.java_type_name.4778, 43
 
 	.section	.rodata.java_type_name.4779,"aMS",%progbits,1
 	.type	.L.java_type_name.4779, %object
 .L.java_type_name.4779:
-	.asciz	"crc64720bb2db43a66fe9/CarouselPageRenderer"
-	.size	.L.java_type_name.4779, 43
+	.asciz	"crc64720bb2db43a66fe9/FormsFragmentPagerAdapter_1"
+	.size	.L.java_type_name.4779, 50
 
 	.section	.rodata.java_type_name.4780,"aMS",%progbits,1
 	.type	.L.java_type_name.4780, %object
 .L.java_type_name.4780:
-	.asciz	"crc64720bb2db43a66fe9/FormsFragmentPagerAdapter_1"
-	.size	.L.java_type_name.4780, 50
+	.asciz	"crc64720bb2db43a66fe9/FormsViewPager"
+	.size	.L.java_type_name.4780, 37
 
 	.section	.rodata.java_type_name.4781,"aMS",%progbits,1
 	.type	.L.java_type_name.4781, %object
 .L.java_type_name.4781:
-	.asciz	"crc64720bb2db43a66fe9/FormsViewPager"
-	.size	.L.java_type_name.4781, 37
+	.asciz	"crc64720bb2db43a66fe9/FragmentContainer"
+	.size	.L.java_type_name.4781, 40
 
 	.section	.rodata.java_type_name.4782,"aMS",%progbits,1
 	.type	.L.java_type_name.4782, %object
 .L.java_type_name.4782:
-	.asciz	"crc64720bb2db43a66fe9/FragmentContainer"
-	.size	.L.java_type_name.4782, 40
+	.asciz	"crc64720bb2db43a66fe9/FrameRenderer"
+	.size	.L.java_type_name.4782, 36
 
 	.section	.rodata.java_type_name.4783,"aMS",%progbits,1
 	.type	.L.java_type_name.4783, %object
 .L.java_type_name.4783:
-	.asciz	"crc64720bb2db43a66fe9/FrameRenderer"
-	.size	.L.java_type_name.4783, 36
+	.asciz	"crc64720bb2db43a66fe9/MasterDetailContainer"
+	.size	.L.java_type_name.4783, 44
 
 	.section	.rodata.java_type_name.4784,"aMS",%progbits,1
 	.type	.L.java_type_name.4784, %object
 .L.java_type_name.4784:
-	.asciz	"crc64720bb2db43a66fe9/MasterDetailContainer"
-	.size	.L.java_type_name.4784, 44
+	.asciz	"crc64720bb2db43a66fe9/MasterDetailPageRenderer"
+	.size	.L.java_type_name.4784, 47
 
 	.section	.rodata.java_type_name.4785,"aMS",%progbits,1
 	.type	.L.java_type_name.4785, %object
 .L.java_type_name.4785:
-	.asciz	"crc64720bb2db43a66fe9/MasterDetailPageRenderer"
-	.size	.L.java_type_name.4785, 47
+	.asciz	"crc64720bb2db43a66fe9/NavigationPageRenderer"
+	.size	.L.java_type_name.4785, 45
 
 	.section	.rodata.java_type_name.4786,"aMS",%progbits,1
 	.type	.L.java_type_name.4786, %object
 .L.java_type_name.4786:
-	.asciz	"crc64720bb2db43a66fe9/NavigationPageRenderer"
-	.size	.L.java_type_name.4786, 45
+	.asciz	"crc64720bb2db43a66fe9/NavigationPageRenderer_ClickListener"
+	.size	.L.java_type_name.4786, 59
 
 	.section	.rodata.java_type_name.4787,"aMS",%progbits,1
 	.type	.L.java_type_name.4787, %object
 .L.java_type_name.4787:
-	.asciz	"crc64720bb2db43a66fe9/NavigationPageRenderer_ClickListener"
-	.size	.L.java_type_name.4787, 59
+	.asciz	"crc64720bb2db43a66fe9/NavigationPageRenderer_Container"
+	.size	.L.java_type_name.4787, 55
 
 	.section	.rodata.java_type_name.4788,"aMS",%progbits,1
 	.type	.L.java_type_name.4788, %object
 .L.java_type_name.4788:
-	.asciz	"crc64720bb2db43a66fe9/NavigationPageRenderer_Container"
-	.size	.L.java_type_name.4788, 55
+	.asciz	"crc64720bb2db43a66fe9/NavigationPageRenderer_DrawerMultiplexedListener"
+	.size	.L.java_type_name.4788, 71
 
 	.section	.rodata.java_type_name.4789,"aMS",%progbits,1
 	.type	.L.java_type_name.4789, %object
 .L.java_type_name.4789:
-	.asciz	"crc64720bb2db43a66fe9/NavigationPageRenderer_DrawerMultiplexedListener"
-	.size	.L.java_type_name.4789, 71
+	.asciz	"crc64720bb2db43a66fe9/PickerRenderer"
+	.size	.L.java_type_name.4789, 37
 
 	.section	.rodata.java_type_name.4790,"aMS",%progbits,1
 	.type	.L.java_type_name.4790, %object
 .L.java_type_name.4790:
-	.asciz	"crc64720bb2db43a66fe9/PickerRenderer"
-	.size	.L.java_type_name.4790, 37
+	.asciz	"crc64720bb2db43a66fe9/PickerRendererBase_1"
+	.size	.L.java_type_name.4790, 43
 
 	.section	.rodata.java_type_name.4791,"aMS",%progbits,1
 	.type	.L.java_type_name.4791, %object
 .L.java_type_name.4791:
-	.asciz	"crc64720bb2db43a66fe9/PickerRendererBase_1"
-	.size	.L.java_type_name.4791, 43
+	.asciz	"crc64720bb2db43a66fe9/Platform_ModalContainer"
+	.size	.L.java_type_name.4791, 46
 
 	.section	.rodata.java_type_name.4792,"aMS",%progbits,1
 	.type	.L.java_type_name.4792, %object
 .L.java_type_name.4792:
-	.asciz	"crc64720bb2db43a66fe9/Platform_ModalContainer"
-	.size	.L.java_type_name.4792, 46
+	.asciz	"crc64720bb2db43a66fe9/ShellFragmentContainer"
+	.size	.L.java_type_name.4792, 45
 
 	.section	.rodata.java_type_name.4793,"aMS",%progbits,1
 	.type	.L.java_type_name.4793, %object
 .L.java_type_name.4793:
-	.asciz	"crc64720bb2db43a66fe9/ShellFragmentContainer"
-	.size	.L.java_type_name.4793, 45
+	.asciz	"crc64720bb2db43a66fe9/SwitchRenderer"
+	.size	.L.java_type_name.4793, 37
 
 	.section	.rodata.java_type_name.4794,"aMS",%progbits,1
 	.type	.L.java_type_name.4794, %object
 .L.java_type_name.4794:
-	.asciz	"crc64720bb2db43a66fe9/SwitchRenderer"
-	.size	.L.java_type_name.4794, 37
+	.asciz	"crc64720bb2db43a66fe9/TabbedPageRenderer"
+	.size	.L.java_type_name.4794, 41
 
 	.section	.rodata.java_type_name.4795,"aMS",%progbits,1
 	.type	.L.java_type_name.4795, %object
 .L.java_type_name.4795:
-	.asciz	"crc64720bb2db43a66fe9/TabbedPageRenderer"
-	.size	.L.java_type_name.4795, 41
+	.asciz	"crc64720bb2db43a66fe9/ViewRenderer_2"
+	.size	.L.java_type_name.4795, 37
 
 	.section	.rodata.java_type_name.4796,"aMS",%progbits,1
 	.type	.L.java_type_name.4796, %object
 .L.java_type_name.4796:
-	.asciz	"crc64720bb2db43a66fe9/ViewRenderer_2"
-	.size	.L.java_type_name.4796, 37
+	.asciz	"crc64772ed7bc9e555b3b/MainActivity"
+	.size	.L.java_type_name.4796, 35
 
 	.section	.rodata.java_type_name.4797,"aMS",%progbits,1
 	.type	.L.java_type_name.4797, %object
@@ -75642,8 +75642,8 @@
 	.section	.rodata.managed_type_name.6467,"aMS",%progbits,1
 	.type	.L.managed_type_name.6467, %object
 .L.managed_type_name.6467:
-	.asciz	"K_Bikpower.Droid.MainActivity, ZUMOAPPNAME.Droid"
-	.size	.L.managed_type_name.6467, 49
+	.asciz	"K_Bikpower.Droid.MainActivity, K_Bikpower.Droid"
+	.size	.L.managed_type_name.6467, 48
 	.section	.rodata.managed_type_name.6468,"aMS",%progbits,1
 	.type	.L.managed_type_name.6468, %object
 .L.managed_type_name.6468:

@@ -8,13 +8,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("K_Bikpower.XAML.Substations.Substations.xaml", "XAML/Substations/Substations.xaml", typeof(global::K_Bikpower.Substations))]
+[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("K_Bikpower.XAML.Substations.ViewSubstations.xaml", "XAML/Substations/ViewSubstations.xaml", typeof(global::K_Bikpower.ViewSubstations))]
 
 namespace K_Bikpower {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("XAML\\Substations\\Substations.xaml")]
-    public partial class Substations : global::Xamarin.Forms.ContentPage {
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("XAML\\Substations\\ViewSubstations.xaml")]
+    public partial class ViewSubstations : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private global::Xamarin.Forms.ListView AssetsTable;
@@ -23,10 +23,14 @@ namespace K_Bikpower {
         private global::Xamarin.Forms.ActivityIndicator syncIndicator;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::Xamarin.Forms.StackLayout buttonsPanel;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
-            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(Substations));
+            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(ViewSubstations));
             AssetsTable = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.ListView>(this, "AssetsTable");
             syncIndicator = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.ActivityIndicator>(this, "syncIndicator");
+            buttonsPanel = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.StackLayout>(this, "buttonsPanel");
         }
     }
 }

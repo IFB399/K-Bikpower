@@ -4,7 +4,7 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="K_Bikpower.Substations"
+             x:Class="K_Bikpower.ViewSubstations"
               BackgroundColor="#63d9ff">
     <ContentPage.Content>
         <StackLayout Margin="50,10,50,10">
@@ -16,6 +16,7 @@
                         <Label Text="Substation Code" HorizontalOptions="CenterAndExpand" FontSize="Medium"/>
                         <ActivityIndicator  HorizontalOptions="Center" VerticalOptions="Center" IsVisible="False" IsEnabled="True" x:Name="syncIndicator"/>
                         </StackLayout>
+                        
                     </ListView.Header>
                     <ListView.ItemTemplate>
                         <DataTemplate>
@@ -32,6 +33,9 @@
 
             </Frame>
             <Button Text="Add Asset" Clicked="Button_Clicked"/>
+            <StackLayout x:Name="buttonsPanel" Orientation="Horizontal">
+                
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

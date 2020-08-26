@@ -24,7 +24,7 @@ namespace K_Bikpower
 
         private void Substation_button_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new Substations()); //if its not the final page change to navigation page
+            Navigation.PushAsync(new ViewSubstations()); //if its not the final page change to navigation page
         }
 
         private void Scan_QRCode_Button(object sender, EventArgs e)

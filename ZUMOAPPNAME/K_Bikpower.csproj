@@ -12,6 +12,11 @@
         <PackageReference Include="ZXing.Net.Mobile.Forms" Version="2.4.1" />
     </ItemGroup>
     <ItemGroup>
+      <Compile Update="XAML\Substations\ViewSubstations.xaml.cs">
+        <DependentUpon>ViewSubstations.xaml</DependentUpon>
+      </Compile>
+    </ItemGroup>
+    <ItemGroup>
         <EmbeddedResource Update="XAML\Commission.xaml">
           <Generator>MSBuild:Compile</Generator>
         </EmbeddedResource>

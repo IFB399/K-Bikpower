@@ -6,14 +6,14 @@
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <ProjectGuid>{34B9099E-4B00-4707-BFDE-0B95997F8893}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>ZUMOAPPNAME.Droid</RootNamespace>
+    <RootNamespace>K_Bikpower.Droid</RootNamespace>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <AndroidResgenClass>Resource</AndroidResgenClass>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
     <AndroidApplication>True</AndroidApplication>
-    <AssemblyName>ZUMOAPPNAME.Droid</AssemblyName>
+    <AssemblyName>K_Bikpower.Droid</AssemblyName>
     <TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
     <AndroidSupportedAbis>armeabi-v7a;x86</AndroidSupportedAbis>
     <AndroidLinkSkip>

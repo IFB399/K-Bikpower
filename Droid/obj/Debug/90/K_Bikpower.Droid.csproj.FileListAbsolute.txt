@@ -1061,14 +1061,11 @@ C:\Users\brent\source\repos\K-Bikpower\Droid\obj\Debug\90\stamp\_ConvertResource
 C:\Users\brent\source\repos\K-Bikpower\Droid\obj\Debug\90\stamp\_GenerateJavaStubs.stamp
 C:\Users\brent\source\repos\K-Bikpower\Droid\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\brent\source\repos\K-Bikpower\Droid\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
-C:\Users\Brenton Reddish\Desktop\IFB398\azure\Droid\bin\Debug\ZUMOAPPNAME.Droid.dll
-C:\Users\Brenton Reddish\Desktop\IFB398\azure\Droid\bin\Debug\ZUMOAPPNAME.Droid.pdb
 C:\Users\Brenton Reddish\Desktop\IFB398\azure\Droid\bin\Debug\com.xamarin.sample.ZUMOAPPNAME.apk
 C:\Users\Brenton Reddish\Desktop\IFB398\azure\Droid\bin\Debug\com.xamarin.sample.ZUMOAPPNAME.aab
 C:\Users\Brenton Reddish\Desktop\IFB398\azure\Droid\bin\Debug\com.xamarin.sample.ZUMOAPPNAME-Signed.aab
 C:\Users\Brenton Reddish\Desktop\IFB398\azure\Droid\bin\Debug\com.xamarin.sample.ZUMOAPPNAME-Signed.apk
 C:\Users\Brenton Reddish\Desktop\IFB398\azure\Droid\bin\Debug\com.xamarin.sample.ZUMOAPPNAME-Signed.apk.idsig
-C:\Users\Brenton Reddish\Desktop\IFB398\azure\Droid\bin\Debug\ZUMOAPPNAME.Droid.dll.mdb
 C:\Users\Brenton Reddish\Desktop\IFB398\azure\Droid\bin\Debug\K_Bikpower.dll
 C:\Users\Brenton Reddish\Desktop\IFB398\azure\Droid\bin\Debug\K_Bikpower.pdb
 C:\Users\Brenton Reddish\Desktop\IFB398\azure\Droid\obj\Debug\90\MonoAndroid,Version=v9.0.AssemblyAttributes.cs
@@ -1083,8 +1080,6 @@ C:\Users\Brenton Reddish\Desktop\IFB398\azure\Droid\obj\Debug\90\R.cs.flag
 C:\Users\Brenton Reddish\Desktop\IFB398\azure\Droid\obj\Debug\90\K_Bikpower.Droid.csproj.CoreCompileInputs.cache
 C:\Users\Brenton Reddish\Desktop\IFB398\azure\Droid\obj\Debug\90\XamlC.stamp
 C:\Users\Brenton Reddish\Desktop\IFB398\azure\Droid\obj\Debug\90\K_Bikpower.Droid.csproj.CopyComplete
-C:\Users\Brenton Reddish\Desktop\IFB398\azure\Droid\obj\Debug\90\ZUMOAPPNAME.Droid.dll
-C:\Users\Brenton Reddish\Desktop\IFB398\azure\Droid\obj\Debug\90\ZUMOAPPNAME.Droid.pdb
 C:\Users\Brenton Reddish\Desktop\IFB398\azure\Droid\obj\Debug\90\android\bin\com.xamarin.sample.ZUMOAPPNAME.apk
 C:\Users\Brenton Reddish\Desktop\IFB398\azure\Droid\obj\Debug\90\android\bin\base.zip
 C:\Users\Brenton Reddish\Desktop\IFB398\azure\Droid\obj\Debug\90\android\bin\com.xamarin.sample.ZUMOAPPNAME.aab
@@ -1579,3 +1574,11 @@ C:\Users\Brenton Reddish\Desktop\IFB398\azure\Droid\obj\Debug\90\stamp\_ConvertR
 C:\Users\Brenton Reddish\Desktop\IFB398\azure\Droid\obj\Debug\90\stamp\_GenerateJavaStubs.stamp
 C:\Users\Brenton Reddish\Desktop\IFB398\azure\Droid\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\Brenton Reddish\Desktop\IFB398\azure\Droid\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
+C:\Users\Brenton Reddish\Desktop\IFB398\azure\Droid\bin\Debug\K_Bikpower.Droid.dll
+C:\Users\Brenton Reddish\Desktop\IFB398\azure\Droid\bin\Debug\K_Bikpower.Droid.pdb
+C:\Users\Brenton Reddish\Desktop\IFB398\azure\Droid\bin\Debug\K_Bikpower.Droid.dll.mdb
+C:\Users\Brenton Reddish\Desktop\IFB398\azure\Droid\obj\Debug\90\K_Bikpower.Droid.dll
+C:\Users\Brenton Reddish\Desktop\IFB398\azure\Droid\obj\Debug\90\K_Bikpower.Droid.pdb
+C:\Users\Brenton Reddish\Desktop\IFB398\azure\Droid\obj\Debug\90\android\assets\K_Bikpower.Droid.dll
+C:\Users\Brenton Reddish\Desktop\IFB398\azure\Droid\obj\Debug\90\android\assets\K_Bikpower.Droid.dll.mdb
+C:\Users\Brenton Reddish\Desktop\IFB398\azure\Droid\obj\Debug\90\android\src\crc64772ed7bc9e555b3b\MainActivity.java
