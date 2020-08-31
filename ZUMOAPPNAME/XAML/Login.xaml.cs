@@ -9,9 +9,21 @@ using Xamarin.Forms.Xaml;
 
 namespace K_Bikpower
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
+    /*public interface IAuthenticate
+    {
+        Task<bool> Authenticate();
+    }*/
+    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Login : ContentPage
     {
+
+        /*public static IAuthenticate Authenticator { get; private set; }
+
+        public static void Init(IAuthenticate authenticator)
+        {
+            Authenticator = authenticator;
+        }*/
+
         bool authenticated = false;
         public Login()
         {

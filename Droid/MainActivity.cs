@@ -34,7 +34,7 @@ namespace K_Bikpower.Droid
             {
                 // Sign in with Facebook login using a server-managed flow.
                 user = await AssetManager.DefaultManager.CurrentClient.LoginAsync(this,
-                    MobileServiceAuthenticationProvider.MicrosoftAccount, "{url_scheme_of_your_app}");
+                    MobileServiceAuthenticationProvider.MicrosoftAccount, "k-bikpower");
                 if (user != null)
                 {
                     message = string.Format("you are now signed-in as {0}.",

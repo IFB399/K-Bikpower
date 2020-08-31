@@ -31,7 +31,7 @@ namespace K_Bikpower.iOS
                 {
                     user = await AssetManager.DefaultManager.CurrentClient
                         .LoginAsync(UIApplication.SharedApplication.KeyWindow.RootViewController,
-                        MobileServiceAuthenticationProvider.MicrosoftAccount, "{url_scheme_of_your_app}");
+                        MobileServiceAuthenticationProvider.MicrosoftAccount, "K-Bikpower");
                     if (user != null)
                     {
                         message = string.Format("You are now signed-in as {0}.", user.UserId);

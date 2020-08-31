@@ -45,7 +45,7 @@
       <Extensions>
         <uap:Extension Category="windows.protocol">
           <uap:Protocol Name="k-bikpower">
-            <uap:DisplayName>Url</uap:DisplayName>
+            <uap:DisplayName>url</uap:DisplayName>
           </uap:Protocol>
         </uap:Extension>
       </Extensions>

@@ -42,7 +42,7 @@ namespace UWP
                 if (user == null)
                 {
                     user = await AssetManager.DefaultManager.CurrentClient
-                        .LoginAsync(MobileServiceAuthenticationProvider.MicrosoftAccount, "{url_scheme_of_your_app}");
+                        .LoginAsync(MobileServiceAuthenticationProvider.WindowsAzureActiveDirectory, "k-bikpower");
                     if (user != null)
                     {
                         success = true;
