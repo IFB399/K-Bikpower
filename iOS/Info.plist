@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
@@ -57,6 +57,18 @@
 	<string>LaunchScreen</string>
 	<key>CFBundleName</key>
 	<string>ZUMOAPPNAME</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>URL</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>k-bikpower</string>
+			</array>
+			<key>CFBundleTypeRole</key>
+			<string>None</string>
+		</dict>
+	</array>
 </dict>
 </plist>
-

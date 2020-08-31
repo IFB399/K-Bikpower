@@ -18,13 +18,7 @@
             <Frame CornerRadius="10" BackgroundColor="#7fe0ff">
                 <StackLayout Margin="20,20,20,20" Padding="10,10,10,10" Spacing="50">
                     <!-- login -->
-
-                    <Entry x:Name="Username" Placeholder="Username" VerticalOptions="EndAndExpand" MaxLength="25" IsSpellCheckEnabled="false" IsTextPredictionEnabled="false"  WidthRequest="600" HeightRequest="100" HorizontalOptions="CenterAndExpand" FontSize="36"/>
-
-                    <!-- paswword -->
-
-                    <Entry Placeholder="Password"  x:Name="Password" VerticalOptions="EndAndExpand" MaxLength="25" IsPassword="true" IsSpellCheckEnabled="false" IsTextPredictionEnabled="false" WidthRequest="600" HeightRequest="100"  FontSize="36"  HorizontalOptions="CenterAndExpand"/>
-                    <Button Text="Submit" Clicked="Button_Clicked" VerticalOptions="EndAndExpand" CornerRadius="30" BorderColor="Black" BorderWidth="1" BackgroundColor="#343f4b" TextColor="White" WidthRequest="300" HorizontalOptions="Center" HeightRequest="75"/>
+                    <Button x:Name="loginButton" Text="Sign-in" Clicked="loginButton_Clicked" VerticalOptions="EndAndExpand" CornerRadius="30" BorderColor="Black" BorderWidth="1" BackgroundColor="#343f4b" TextColor="White" WidthRequest="300" HorizontalOptions="Center" HeightRequest="75"/>
                 </StackLayout>
             </Frame>
 

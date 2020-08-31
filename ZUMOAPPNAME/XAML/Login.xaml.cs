@@ -12,35 +12,23 @@ namespace K_Bikpower
 	[XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Login : ContentPage
     {
+        bool authenticated = false;
         public Login()
         {
             InitializeComponent();
-            /*var details = App.Database.GetUserAsync();
-            DateTime lastlogin = details.LastLogin;
-            if (lastlogin.AddHours(24) > DateTime.UtcNow)
-            {
-                string username = details.UserName;
-                string password = details.Password;
-                if (username == "Test" && password == "1234") whyy done you work 
-                {
-                    Navigation.PushAsync(new MainPage());
-                }
-            }
-            else { App.Database.DeleteUser(); };
-            */
+
         }
 
-        async void Button_Clicked(object sender, EventArgs e)
+
+        async void loginButton_Clicked(object sender, EventArgs e)
         {
-            string username = Username.Text;
-            string password = Password.Text;
-            if (username == "Test" && password == "1234")
-            {
-                
-                await Navigation.PushAsync(new MainPage()); 
-            }
-            
-            else { await DisplayAlert("Incorrect", "Incorrect username or password", "Close"); }
+            if (App.Authenticator != null)
+                authenticated = await App.Authenticator.Authenticate();
+
+            // Set syncItems to true to synchronize the data on startup when offline is enabled.
+            if (authenticated == true)
+                await Navigation.PushAsync(new MainPage());
         }
+
     }
 }
