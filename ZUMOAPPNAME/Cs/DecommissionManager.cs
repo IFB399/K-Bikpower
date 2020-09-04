@@ -1,4 +1,4 @@
-/*
+﻿/*
  * To add Offline Sync Support:
  *  1) Add the NuGet package Microsoft.Azure.Mobile.Client.SQLiteStore (and dependencies) to all client projects
  *  2) Uncomment the #define OFFLINE_SYNC_ENABLED
@@ -23,37 +23,37 @@ using Microsoft.WindowsAzure.MobileServices.Sync;
 
 namespace K_Bikpower
 {
-    public partial class SubstationManager
+    public partial class DecommissionManager
     {
-        static SubstationManager defaultInstance = new SubstationManager();
+        static DecommissionManager defaultInstance = new DecommissionManager();
         MobileServiceClient client;
 
 #if OFFLINE_SYNC_ENABLED
-        IMobileServiceSyncTable<Substation> todoTable;
+        IMobileServiceSyncTable<DecommissionData> todoTable;
 #else
-        IMobileServiceTable<Substation> todoTable;
+        IMobileServiceTable<DecommissionData> todoTable;
 #endif
 
         const string offlineDbPath = @"localstore.db";
 
-        private SubstationManager()
+        private DecommissionManager()
         {
             this.client = new MobileServiceClient(Constants.ApplicationURL);
 
 #if OFFLINE_SYNC_ENABLED
             var store = new MobileServiceSQLiteStore(offlineDbPath);
-            store.DefineTable<Substation>();
+            store.DefineTable<DecommissionData>();
 
             //Initializes the SyncContext using the default IMobileServiceSyncHandler.
             this.client.SyncContext.InitializeAsync(store);
 
-            this.todoTable = client.GetSyncTable<Substation>();
+            this.todoTable = client.GetSyncTable<DecommissionData>();
 #else
-            this.todoTable = client.GetTable<Substation>();
+            this.todoTable = client.GetTable<DecommissionData>();
 #endif
         }
 
-        public static SubstationManager DefaultManager
+        public static DecommissionManager DefaultManager
         {
             get
             {
@@ -72,10 +72,10 @@ namespace K_Bikpower
 
         public bool IsOfflineEnabled
         {
-            get { return todoTable is Microsoft.WindowsAzure.MobileServices.Sync.IMobileServiceSyncTable<Substation>; }
+            get { return todoTable is Microsoft.WindowsAzure.MobileServices.Sync.IMobileServiceSyncTable<DecommissionData>; }
         }
 
-        public async Task<ObservableCollection<Substation>> GetTodoItemsAsync(bool syncItems = false)
+        public async Task<ObservableCollection<DecommissionData>> GetTodoItemsAsync(bool syncItems = false)
         {
             try
             {
@@ -85,10 +85,10 @@ namespace K_Bikpower
                     await this.SyncAsync();
                 }
 #endif
-                IEnumerable<Substation> items = await todoTable
+                IEnumerable<DecommissionData> items = await todoTable
                     .ToEnumerableAsync();
 
-                return new ObservableCollection<Substation>(items);
+                return new ObservableCollection<DecommissionData>(items);
             }
             catch (MobileServiceInvalidOperationException msioe)
             {
@@ -101,7 +101,7 @@ namespace K_Bikpower
             return null;
         }
 
-        public async Task SaveTaskAsync(Substation item)
+        public async Task SaveTaskAsync(DecommissionData item)
         {
             try
             {
@@ -167,3 +167,4 @@ namespace K_Bikpower
 #endif
     }
 }
+

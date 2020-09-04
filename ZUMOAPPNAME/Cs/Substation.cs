@@ -7,7 +7,7 @@ using Newtonsoft.Json;
 
 namespace K_Bikpower
 {
-   public class Substations
+   public class Substation
     {
         string substation_code;
         string substation_name;
@@ -42,12 +42,6 @@ namespace K_Bikpower
             set { area = value; }
         }
 
-        [JsonProperty(PropertyName = "done")]
-        public bool Done
-        {
-            get { return done; }
-            set { done = value; }
-        }
         [Version]
         public string Version { get; set; }
     }

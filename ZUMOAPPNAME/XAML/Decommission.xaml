@@ -72,12 +72,12 @@
 
             <StackLayout Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="1">
                 <Label Text="De-Commissioned Details:" FontSize="30"/>
-                <Entry FontSize="30"/>
+                <Entry x:Name="Decommissioned_Details_Entry" FontSize="30"/>
             </StackLayout>
 
             <StackLayout Grid.Row="3" Grid.Column="0">
                 <Label Text="Region Name:" FontSize="30"/>
-                <Picker>
+                <Picker x:Name="Region_Picker">
                     <Picker.ItemsSource>
                         <x:Array Type="{x:Type x:String}">
                             <x:String>Metro</x:String>
@@ -92,23 +92,23 @@
 
             <StackLayout Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="1">
                 <Label Text="Location Name/Substation/Project No." FontSize="30"/>
-                <Entry />
+                <Entry x:Name="Location_Entry"/>
             </StackLayout>
 
             <StackLayout Grid.Row="4" Grid.Column="0">
                 <Label Text="De-Commissioned Plant To:" FontSize="30"/>
-                <RadioButton Text="Project" />
-                <RadioButton Text="Spares" />
-                <RadioButton Text="Workshop" />
-                <RadioButton Text="Scrap" />
+                <RadioButton x:Name="Project_Button" Text="Project" />
+                <RadioButton x:Name="Spares_Button" Text="Spares" />
+                <RadioButton x:Name="Workshop_Button" Text="Workshop" />
+                <RadioButton x:Name="Scrap_Button" Text="Scrap" />
             </StackLayout>
 
             <StackLayout Grid.Row="4" Grid.Column="1" >
                 <Label Text="Work Order No." FontSize="30"/>
-                <Entry />
+                <Entry x:Name="Work_OrderNo_Entry"/>
             </StackLayout>
 
-            <Button Grid.Row="5" Grid.Column="1" Text="Submit" WidthRequest="100" HeightRequest="50" HorizontalOptions="End" VerticalOptions="Center"/>
+            <Button Grid.Row="5" Grid.Column="1" Text="Submit" Clicked="Submit_Clicked" WidthRequest="100" HeightRequest="50" HorizontalOptions="End" VerticalOptions="Center"/>
         </Grid>
     </ScrollView>
 </ContentPage>

@@ -1,1 +1,1 @@
-C:\Users\brent\source\repos\K-Bikpower\UWP\K_Bikpower.UWP.csproj;x86
+C:\Users\jacqu\source\repos\K-Bikpower\UWP\K_Bikpower.UWP.csproj;x86
