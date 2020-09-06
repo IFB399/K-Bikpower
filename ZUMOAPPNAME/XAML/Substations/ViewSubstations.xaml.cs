@@ -85,14 +85,14 @@ namespace K_Bikpower
 
         private void ViewAssets(object sender, ItemTappedEventArgs e)
         {
-            var detail = e.Item as Substations;
-            //string details = detail.SubstationCode;
-           // if (details != null)
-            //{
+            var detail = e.Item as Substation;
+            string details = detail.Substation_Code;
+            if (details != null)
+            {
 
-              //  var Assets =  App.Database.GetSubAssetsAsync();
+                //var Assets =  App.Database.GetSubAssetsAsync(details);
                 Navigation.PushAsync(new AssetList());
-           // }
+            }
         }
         private async Task RefreshItems(bool showActivityIndicator, bool syncItems)
         {

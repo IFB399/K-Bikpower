@@ -32,19 +32,9 @@ namespace K_Bikpower
             Navigation.PushAsync((new ScanQR())); //if its not the final page change to navigation page
         }
 
-        private void Commision_Clicked(object sender, EventArgs e)
+        private void Documents_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync((new Commission())); //if its not the final page change to navigation page
-        }
-
-        private void Decommission_Clicked(object sender, EventArgs e)
-        {
-            Navigation.PushAsync((new Decommission())); //if its not the final page change to navigation page
-        }
-
-        private void View_Clicked(object sender, EventArgs e)
-        {
-           // Navigation.PushAsync(new TodoList()); //if its not the final page change to navigation page
+           Navigation.PushAsync(new Documents()); //if its not the final page change to navigation page
         }
 
         private void Signed_OUT_Clicked(object sender, EventArgs e)

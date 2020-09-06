@@ -12,11 +12,12 @@ namespace K_Bikpower
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Add_Sub : ContentPage
     {
-        Substations SubData;
-      //  TableManagerSub subtable;
-        public Add_Sub(Substations data)
+        Substation SubData;
+        SubstationManager manager;
+        public Add_Sub(Substation data)
         {
             InitializeComponent();
+            manager = SubstationManager.DefaultManager;
             if (data != null)
             {
                 SubData = data;
@@ -24,34 +25,35 @@ namespace K_Bikpower
             }
         }
 
-        private void PopulateDetails(Substations data)
+        private void PopulateDetails(Substation data)
         {
-            //Substation_Code_Entry.Text = data.SubstationCode;
-//Substation_Name_Entry.Text = data.SubstationName;
+            Substation_Code_Entry.Text = data.Substation_Code;
+            Substation_Name_Entry.Text = data.Substation_Name;
         }
 
-        async Task AddItem(Substations item)
+        async Task AddItem(Substation item)
         {
-            //await subtable.SaveTaskAsync(item);
+            await manager.SaveTaskAsync(item);
         }
         async void Button_Clicked(object sender, EventArgs e)
         {
             if (addsubbutton.Text == "Add Asset")
             {
-                var sub = new Substations
+                var sub = new Substation
                 {
-                 //   SubstationCode = Substation_Code_Entry.Text,
-                  //  SubstationName = Substation_Name_Entry.Text
+                    Substation_Code = Substation_Code_Entry.Text,
+                    Substation_Name = Substation_Name_Entry.Text
                 };
                 await AddItem(sub);
 
             }
             else 
             {
-                var sub = new Substations
+                var sub = new Substation
                 {
-                    //SubstationCode = Substation_Code_Entry.Text,
-                   // SubstationName = Substation_Name_Entry.Text
+                    Substation_Code = Substation_Code_Entry.Text,
+                    Substation_Name = Substation_Name_Entry.Text,
+                    //Area = "areaaa"
                 };
                 await AddItem(sub);
             }
