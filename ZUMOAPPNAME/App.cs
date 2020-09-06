@@ -9,25 +9,16 @@ using Xamarin.Forms.Xaml;
 namespace K_Bikpower
 {
 
-	public interface IAuthenticate
-	{
-		Task<bool> Authenticate();
-	}
+	
 	public class App : Application
 	{
 
-		public static IAuthenticate Authenticator { get; private set; }
-
-		public static void Init(IAuthenticate authenticator)
-		{
-			Authenticator = authenticator;
-		}
 
 		
 		public App ()
 		{
 			// The root page of your application
-			MainPage = new NavigationPage(new Login());
+			MainPage = new NavigationPage(new MainPage());
 		}
 
 		protected override void OnStart ()

@@ -26,8 +26,8 @@ namespace K_Bikpower
 
         private void PopulateDetails(Substations data)
         {
-            Substation_Code_Entry.Text = data.Substation_Code;
-            Substation_Name_Entry.Text = data.Substation_Name;
+            //Substation_Code_Entry.Text = data.SubstationCode;
+//Substation_Name_Entry.Text = data.SubstationName;
         }
 
         async Task AddItem(Substations item)
@@ -40,8 +40,8 @@ namespace K_Bikpower
             {
                 var sub = new Substations
                 {
-                    Substation_Code = Substation_Code_Entry.Text,
-                    Substation_Name = Substation_Name_Entry.Text
+                 //   SubstationCode = Substation_Code_Entry.Text,
+                  //  SubstationName = Substation_Name_Entry.Text
                 };
                 await AddItem(sub);
 
@@ -50,8 +50,8 @@ namespace K_Bikpower
             {
                 var sub = new Substations
                 {
-                    Substation_Code = Substation_Code_Entry.Text,
-                    Substation_Name = Substation_Name_Entry.Text
+                    //SubstationCode = Substation_Code_Entry.Text,
+                   // SubstationName = Substation_Name_Entry.Text
                 };
                 await AddItem(sub);
             }

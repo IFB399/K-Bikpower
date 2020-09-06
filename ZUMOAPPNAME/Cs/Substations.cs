@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
+
 using Microsoft.WindowsAzure.MobileServices;
 using Newtonsoft.Json;
 
@@ -22,21 +20,21 @@ namespace K_Bikpower
             set { id = value; }
         }
 
-        [JsonProperty(PropertyName = "substation_code")]
-        public string Substation_Code {
+        /*[JsonProperty(PropertyName = "substation_code")]
+        public string SubstationCode {
             get {return substation_code; }
             set { substation_code = value; }
         }
         
         [JsonProperty(PropertyName = "substation_name")]
-        public string Substation_Name
+        public string SubstationName
         {
             get { return substation_name; }
             set { substation_name = value; }
         }
 
         [JsonProperty(PropertyName = "area")]
-        public string Area
+        public string Aarea
         {
             get { return area; }
             set { area = value; }
@@ -48,6 +46,7 @@ namespace K_Bikpower
             get { return done; }
             set { done = value; }
         }
+        */
         [Version]
         public string Version { get; set; }
     }

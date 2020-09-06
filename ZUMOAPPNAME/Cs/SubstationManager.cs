@@ -5,7 +5,7 @@
  *
  * For more information, see: http://go.microsoft.com/fwlink/?LinkId=620342
  */
-#define OFFLINE_SYNC_ENABLED
+//#define OFFLINE_SYNC_ENABLED
 
 using System;
 using System.Collections.Generic;
@@ -26,19 +26,19 @@ namespace K_Bikpower
     public partial class SubstationManager
     {
         static SubstationManager defaultInstance = new SubstationManager();
-        MobileServiceClient client;
+        MobileServiceClient subclient;
 
 #if OFFLINE_SYNC_ENABLED
         IMobileServiceSyncTable<Substations> SubTable;
 #else
-        IMobileServiceTable<Substation_Codes> SubTable;
+        IMobileServiceTable<Substations> SubTable;
 #endif
 
         const string offlineDbPath = @"localstore.db";
 
         private SubstationManager()
         {
-            this.client = new MobileServiceClient(Constants.ApplicationURL);
+            this.subclient = new MobileServiceClient(Constants.ApplicationURL);
 
 #if OFFLINE_SYNC_ENABLED
             var store = new MobileServiceSQLiteStore(offlineDbPath);
@@ -49,7 +49,7 @@ namespace K_Bikpower
 
             this.SubTable = client.GetSyncTable<Substations>();
 #else
-            this.todoTable = client.GetTable<Substation_Codes>();
+            this.SubTable = subclient.GetTable<Substations>();
 #endif
         }
 
@@ -67,7 +67,7 @@ namespace K_Bikpower
 
         public MobileServiceClient CurrentClient
         {
-            get { return client; }
+            get { return subclient; }
         }
 
         public bool IsOfflineEnabled
