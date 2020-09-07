@@ -204,6 +204,12 @@ namespace K_Bikpower
         [JsonProperty(PropertyName = "decommission_form_id")]
         public string DecommissionFormId { get; set; }
 
+        [JsonProperty(PropertyName = "commission_form_id")]
+        public string CommissionFormId { get; set; }
+
+        [JsonProperty(PropertyName = "modified_by")]
+        public string ModifiedBy { get; set; }
+
         [Version]
         public string Version { get; set; }
 	}

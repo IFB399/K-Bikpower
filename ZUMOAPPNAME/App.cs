@@ -28,7 +28,7 @@ namespace K_Bikpower
 		{
 			Device.SetFlags(new string[] { "Expander_Experimental", "RadioButton_Experimental" });
 			// The root page of your application
-			MainPage = new NavigationPage(new MainPage());
+			MainPage = new NavigationPage(new Login());
 		}
 
 		protected override void OnStart ()
