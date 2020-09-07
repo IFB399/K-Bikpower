@@ -32,11 +32,16 @@ namespace K_Bikpower.Droid
 
 			// Initialize Azure Mobile Apps
 			CurrentPlatform.Init();
-
+			Xamarin.Essentials.Platform.Init(Application);
+			ZXing.Net.Mobile.Forms.Android.Platform.Init();
 			// Initialize Xamarin Forms
 			Forms.Init (this, bundle);
             // Load the main application
             LoadApplication (new App ());
+		}
+		public override void OnRequestPermissionsResult(int requestCode, string[] permissions, Permission[] grantResults)
+		{
+			global::ZXing.Net.Mobile.Android.PermissionsHandler.OnRequestPermissionsResult(requestCode, permissions, grantResults);
 		}
 	}
 }

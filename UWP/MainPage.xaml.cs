@@ -29,6 +29,7 @@ namespace UWP
     {
         public MainPage()
         {
+           
             this.InitializeComponent();
             LoadApplication(new K_Bikpower.App());
         }

@@ -4398,23 +4398,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\jacqu\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\Brenton Reddish\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jacqu\\source\\repos\\K-Bikpower\\ZUMOAPPNAME\\K_Bikpower.csproj",
+      "projectUniqueName": "C:\\Users\\Brenton Reddish\\Desktop\\IFB398\\Client\\ZUMOAPPNAME\\K_Bikpower.csproj",
       "projectName": "K_Bikpower",
-      "projectPath": "C:\\Users\\jacqu\\source\\repos\\K-Bikpower\\ZUMOAPPNAME\\K_Bikpower.csproj",
-      "packagesPath": "C:\\Users\\jacqu\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jacqu\\source\\repos\\K-Bikpower\\ZUMOAPPNAME\\obj\\",
+      "projectPath": "C:\\Users\\Brenton Reddish\\Desktop\\IFB398\\Client\\ZUMOAPPNAME\\K_Bikpower.csproj",
+      "packagesPath": "C:\\Users\\Brenton Reddish\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Brenton Reddish\\Desktop\\IFB398\\Client\\ZUMOAPPNAME\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\"
+        "C:\\Microsoft\\Xamarin\\NuGet\\",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\jacqu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Brenton Reddish\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],

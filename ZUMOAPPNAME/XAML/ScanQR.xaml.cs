@@ -24,7 +24,7 @@ namespace K_Bikpower
             {
                 
                 string search = result.ToString();
-                int qrscan = Int32.Parse(search);
+                //int qrscan = Int32.Parse(search);
                 // var test = App.Database.Scangen(qrscan);
                 //Assets testing = test[0];
                 //Console.WriteLine(testing);
