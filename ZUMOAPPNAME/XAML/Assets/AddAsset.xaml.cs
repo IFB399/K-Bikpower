@@ -48,6 +48,8 @@ namespace K_Bikpower
                 LastInstallDate = Last_Install_Date_Entry.Text,
                 EquipmentClass = Equipment_Class_Entry.Text,
                 EquipmentClassDescription = Equipment_Class_Description_Entry.Text,
+                Status="Added",
+                DecommissionFormId=null
                 //SubstationCode = "pretty please work", 
                 //PlantNumber = "another plant number", 
                 //AssetEQNO = 420 

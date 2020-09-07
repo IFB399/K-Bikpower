@@ -197,7 +197,13 @@ namespace K_Bikpower
             get { return equipmentClassDescription; }
             set { equipmentClassDescription = value; }
         }
-        
+
+        [JsonProperty(PropertyName = "status")]
+        public string Status { get; set; }
+
+        [JsonProperty(PropertyName = "decommission_form_id")]
+        public string DecommissionFormId { get; set; }
+
         [Version]
         public string Version { get; set; }
 	}
