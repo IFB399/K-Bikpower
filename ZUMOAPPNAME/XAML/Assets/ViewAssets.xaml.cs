@@ -55,27 +55,25 @@ namespace K_Bikpower
 
         public async void Add_Asset_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new AddAsset());
+            await Navigation.PushAsync(new AddAsset(null));
         }
 
         // Event handlers
         public async void OnSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            var todo = e.SelectedItem as Asset;
+            Asset todo = e.SelectedItem as Asset;
             if (Device.RuntimePlatform != Device.iOS && todo != null)
             {
                 // Not iOS - the swipe-to-delete is discoverable there
                 if (Device.RuntimePlatform == Device.Android)
                 {
-                    await DisplayAlert(todo.SubstationCode, "Press-and-hold to complete task " + todo.SubstationCode, "Got it!");
+                    await Navigation.PushAsync(new Preview_Asset(todo));
                 }
                 else
                 {
                     // Windows, not all platforms support the Context Actions yet
-                    if (await DisplayAlert("Mark completed?", "Do you wish to complete " + todo.SubstationCode + "?", "Complete", "Cancel"))
-                    {
-                        await CompleteItem(todo);
-                    }
+                    await Navigation.PushAsync(new Preview_Asset(todo));
+
                 }
             }
 

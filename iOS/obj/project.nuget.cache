@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "wriZZPzaMmUqQstEtOxgpmzmO5DXV77CpHyOG+4c6h1SxKKQmceM8HYuRCGfZNDorlpdOwGTStur6/f92fx3JQ==",
+  "dgSpecHash": "aFCWgK7WelDj3osvIRa073Z6JeoNVHn9uNFGs215xrobl3sKpR5nrMZKBo/OZJzdT5jxOcVt1hT5J7TpU2EBgQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Brenton Reddish\\Desktop\\IFB398\\Client\\iOS\\K_Bikpower.iOS.csproj",
   "expectedPackageFiles": [
@@ -21,5 +21,19 @@
     "C:\\Users\\Brenton Reddish\\.nuget\\packages\\zxing.net.mobile\\2.4.1\\zxing.net.mobile.2.4.1.nupkg.sha512",
     "C:\\Users\\Brenton Reddish\\.nuget\\packages\\zxing.net.mobile.forms\\2.4.1\\zxing.net.mobile.forms.2.4.1.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Detected package downgrade: Xamarin.Forms from 4.8.0.1364 to 4.8.0.1269. Reference the package directly from the project to select a different version. \r\n K_Bikpower.iOS -> K_Bikpower -> Xamarin.Forms (>= 4.8.0.1364) \r\n K_Bikpower.iOS -> Xamarin.Forms (>= 4.8.0.1269)",
+      "libraryId": "Xamarin.Forms",
+      "targetGraphs": [
+        "Xamarin.iOS,Version=v1.0",
+        "Xamarin.iOS,Version=v1.0/win",
+        "Xamarin.iOS,Version=v1.0/win-x64",
+        "Xamarin.iOS,Version=v1.0/win-x86"
+      ]
+    }
+  ]
 }

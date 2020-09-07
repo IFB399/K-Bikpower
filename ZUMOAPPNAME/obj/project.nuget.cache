@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "oqKkBOfkJShhugfkuAqRj2fb1bdpdceFtygdMn7wYCI/o6pXHfM4L4DoWrxX54ZHEjB8I/C50YHPV8vFtaAR2w==",
+  "dgSpecHash": "ShzPgNVgwcR95leBMm1qI5enD9QVt3i58d2wSFXoooXJDXTXJc+i4WgO9+QTA4u5IThmW6wY6qdlKdWg2GVRrQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Brenton Reddish\\Desktop\\IFB398\\Client\\ZUMOAPPNAME\\K_Bikpower.csproj",
   "expectedPackageFiles": [
@@ -68,7 +68,7 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.xml.readerwriter\\4.0.11\\system.xml.readerwriter.4.0.11.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.xml.xdocument\\4.0.11\\system.xml.xdocument.4.0.11.nupkg.sha512",
     "C:\\Users\\Brenton Reddish\\.nuget\\packages\\xamarin.essentials\\1.5.3.2\\xamarin.essentials.1.5.3.2.nupkg.sha512",
-    "C:\\Users\\Brenton Reddish\\.nuget\\packages\\xamarin.forms\\4.8.0.1269\\xamarin.forms.4.8.0.1269.nupkg.sha512",
+    "C:\\Users\\Brenton Reddish\\.nuget\\packages\\xamarin.forms\\4.8.0.1364\\xamarin.forms.4.8.0.1364.nupkg.sha512",
     "C:\\Users\\Brenton Reddish\\.nuget\\packages\\zxing.net.mobile\\2.4.1\\zxing.net.mobile.2.4.1.nupkg.sha512",
     "C:\\Users\\Brenton Reddish\\.nuget\\packages\\zxing.net.mobile.forms\\2.4.1\\zxing.net.mobile.forms.2.4.1.nupkg.sha512"
   ],

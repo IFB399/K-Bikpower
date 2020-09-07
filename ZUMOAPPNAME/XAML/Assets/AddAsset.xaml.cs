@@ -12,20 +12,63 @@ namespace K_Bikpower
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class AddAsset : ContentPage
     {
+        Asset AssetData;
         AssetManager manager;
-        public AddAsset()
+        public string Ids;
+        public AddAsset(Asset assetdata)
         {
             InitializeComponent();
             manager = AssetManager.DefaultManager;
+            if (assetdata != null)
+            {
+                AssetData = assetdata;
+                PopulateDetails(AssetData);
+                Ids = assetdata.Id;
+
+            }
+
+          
         }
+        private void PopulateDetails(Asset data)
+        {
+
+            Substation_Picker.Text = data.SubstationCode;
+            Plant_Number_Entry.Text = data.PlantNumber;
+            Asset_Equipment_Number_Entry.Text = data.AssetEQNO.ToString();
+            Equipment_Status_Entry.Text = data.EQStatus;
+            Serial_Number_Entry.Text = data.SerialNumber;
+            Modifier_Code_Entry.Text = data.ModifierCode;
+            Location_Equipment_Number_Entry.Text = data.LocationEquipmentNumber.ToString();
+            Component_Code_Entry.Text = data.ComponentCode;
+            // WarrantyDate = WarrantyDate_Picker.Date, // change dumb dumb. 
+            Equipment_Age_Entry.Text = data.EquipmentAge.ToString();
+            Stock_Code_Entry.Text = data.StockCode;
+            Purchase_Order_Number_Entry.Text = data.PurchaseOrderNO;
+            Rated_Voltage_Entry.Text = data.RatedVoltage.ToString();
+            Nominal_Voltage_Entry.Text = data.NominalVoltage.ToString();
+            Manufacturer_Name_Entry.Text = data.ManufacturerName;
+            Manufacturer_Type_Entry.Text = data.ManufacturerType;
+            Specification_Title_Entry.Text = data.SpecificationTitle;
+            Specification_Number_Entry.Text = data.SpecificationNO;
+            Specification_Item_Number_Entry.Text = data.SpecificationItemNO;
+            Last_Install_Date_Entry.Text = data.LastInstallDate;
+            Equipment_Class_Entry.Text = data.EquipmentClass;
+            Equipment_Class_Description_Entry.Text = data.EquipmentClassDescription;
+        }
+
+
+
+
         async Task AddItem(Asset item)
         {
             await manager.SaveTaskAsync(item);
             //toDo.ItemsSource = await manager.GetTodoItemsAsync();
         }
+         
         async void Add_Asset_Clicked(object sender, EventArgs e)
         {
             var todo = new Asset {
+                Id = Ids,
                 SubstationCode = Substation_Picker.Text,
                 PlantNumber = Plant_Number_Entry.Text,
                 AssetEQNO = Int32.Parse(Asset_Equipment_Number_Entry.Text),

@@ -132,7 +132,7 @@
                             <zxcm:EncodingOptions Width="300" Height="300" />
                         </zxing:ZXingBarcodeImageView.BarcodeOptions>
                     </zxing:ZXingBarcodeImageView>
-
+                    <Button Text="Save Qrcode" Clicked="Button_Clicked_2"/>
 
                 </StackLayout>
             </Frame>

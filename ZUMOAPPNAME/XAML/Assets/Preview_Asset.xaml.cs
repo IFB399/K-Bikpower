@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using ZXing;
+using ZXing.Mobile;
 using ZXing.Net.Mobile.Forms;
 using ZXing.QrCode;
 using ZXing.QrCode.Internal;
@@ -63,15 +64,34 @@ namespace K_Bikpower
         }
         private void Button_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new AddAsset());
+            Navigation.PushAsync(new AddAsset(assetdata));
         }
 
         private void Button_Clicked_1(object sender, EventArgs e)
         {
-           // string QRId = assetdata.id;
-           // string QRidcode = QRId.ToString();
-           // Gen.BarcodeValue = QRidcode;
-            //Gen.IsVisible = true;
+            string QRId = assetdata.Id;
+            string QRidcode = QRId.ToString();
+            Gen.BarcodeValue = QRidcode;
+            Gen.IsVisible = true;
+        }
+
+        private void Button_Clicked_2(object sender, EventArgs e)
+        {
+
+            IBarcodeWriter writer = new BarcodeWriter
+            {
+                Format = BarcodeFormat.QR_CODE,
+                Options = new ZXing.Common.EncodingOptions
+                {
+                    Height = 300,
+                    Width = 300
+                }
+            };
+            var result = writer.Write("generator works");
+            var wb = result.ToBitmap() as WriteableBitmap;
+
+            //add to image component
+            image.Source = wb;
         }
     }
 }
