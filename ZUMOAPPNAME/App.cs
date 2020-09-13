@@ -15,6 +15,7 @@ namespace K_Bikpower
 	}
 	public class App : Application
 	{
+		
 
 		public static IAuthenticate Authenticator { get; private set; }
 
@@ -26,6 +27,7 @@ namespace K_Bikpower
 		
 		public App ()
 		{
+			
 			Device.SetFlags(new string[] { "Expander_Experimental", "RadioButton_Experimental" });
 			// The root page of your application
 			MainPage = new NavigationPage(new Login());
@@ -33,8 +35,8 @@ namespace K_Bikpower
 
 		protected override void OnStart ()
 		{
-			// Handle when your app starts
-		}
+		// Handle when your app starts
+	}
 
 		protected override void OnSleep ()
 		{

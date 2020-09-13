@@ -12,14 +12,17 @@
                        IsVisible="False"
                        IsEnabled="True"
                        x:Name="syncIndicator"/>
+                    <Picker x:Name="ManufacturerPicker" SelectedIndexChanged="ManufacturerPicked"/>
 
         <ListView x:Name="todoList" HasUnevenRows="false" IsPullToRefreshEnabled="true">
             <ListView.Header>
                 <Grid Margin="0,0,0,10">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="2*"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
                     <Label Text= "Substation Code" FontSize="Small" FontAttributes="Bold"  Grid.Column="0" HorizontalOptions="Center"/>
@@ -27,6 +30,7 @@
                     <Label Text= "Asset eq no" FontSize="Small" FontAttributes="Bold"  Grid.Column="2" HorizontalOptions="Center"/>
                     <Label Text= "Manufacturer Name" FontSize="Small" FontAttributes="Bold"  Grid.Column="3" HorizontalOptions="Center"/>
                     <Label Text= "Equipment Class Description" FontSize="Small" FontAttributes="Bold"  Grid.Column="4" HorizontalOptions="Center"/>
+                    <Label Text= "" FontSize="Small" FontAttributes="Bold"  Grid.Column="5" HorizontalOptions="Center"/>
                     <ActivityIndicator Grid.RowSpan="2" HorizontalOptions="Center" VerticalOptions="Center" IsVisible="False" IsEnabled="True"/>
                 </Grid>
             </ListView.Header>
@@ -36,10 +40,11 @@
                         <Frame BackgroundColor="White" BorderColor="Gray" Padding="5"  HasShadow="False">
                             <Grid HeightRequest="50" HorizontalOptions="FillAndExpand" VerticalOptions="Start">
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="*"/>
-                                    <ColumnDefinition Width="*"/>
-                                    <ColumnDefinition Width="*"/>
-                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="2*"/>
+                                    <ColumnDefinition Width="2*"/>
+                                    <ColumnDefinition Width="2*"/>
+                                    <ColumnDefinition Width="2*"/>
+                                    <ColumnDefinition Width="2*"/>
                                     <ColumnDefinition Width="*"/>
                                 </Grid.ColumnDefinitions>
                                 <Label Text="{Binding SubstationCode,StringFormat='{0:F0}'}" FontSize="Small" FontAttributes="Bold"  Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center"/>
@@ -47,6 +52,7 @@
                                 <Label Text="{Binding AssetEQNO}" FontSize="Small" FontAttributes="Bold"  Grid.Column="2" HorizontalOptions="Center" VerticalOptions="Center"/>
                                 <Label Text="{Binding ManufacturerName,StringFormat='{0:F0}'}" FontSize="Small" FontAttributes="Bold"  Grid.Column="3" HorizontalOptions="Center" VerticalOptions="Center"/>
                                 <Label Text="{Binding EquipmentClassDescription,StringFormat='{0:F0}'}" FontSize="Small" FontAttributes="Bold"  Grid.Column="4" HorizontalOptions="Center" VerticalOptions="Center"/>
+                                <CheckBox x:Name="SelectedAsset" Grid.Column="5"/>
                             </Grid>
                         </Frame>
                     </ViewCell>
@@ -57,8 +63,9 @@
             </Frame>
             <StackLayout x:Name="buttonsPanel" Orientation="Horizontal">
             <Button Text="Add Asset" Clicked="Add_Asset_Clicked" BackgroundColor="White" CornerRadius="10" FontSize="Medium" TextColor="Black"/>
-        
-        </StackLayout>
+            <Button Text="Decommission Selected Assets" Clicked="Decommission_Clicked" BackgroundColor="White" CornerRadius="10" FontSize="Medium" TextColor="Black"/>
+            <Button Text="Commission Selected Assets" Clicked="Commission_Clicked" BackgroundColor="White" CornerRadius="10" FontSize="Medium" TextColor="Black"/>
+            </StackLayout>
 
         </StackLayout>
     </ContentPage.Content>

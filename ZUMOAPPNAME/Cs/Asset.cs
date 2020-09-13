@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Microsoft.WindowsAzure.MobileServices;
 using Newtonsoft.Json;
 
@@ -212,6 +213,10 @@ namespace K_Bikpower
 
         [Version]
         public string Version { get; set; }
-	}
+
+        
+
+        
+    }
 }
 

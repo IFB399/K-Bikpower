@@ -101,6 +101,17 @@ namespace K_Bikpower
             return null;
         }
 
+        public async Task<ObservableCollection<Asset>> GetFilteredItemsAsync(string manufacturer)
+        {
+
+            IEnumerable<Asset> items = await todoTable
+                .Where(asset => asset.ManufacturerName == manufacturer).ToEnumerableAsync();
+
+            return new ObservableCollection<Asset>(items);
+            
+
+        }
+
         public async Task SaveTaskAsync(Asset item)
         {
             try

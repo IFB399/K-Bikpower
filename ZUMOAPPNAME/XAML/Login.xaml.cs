@@ -76,6 +76,7 @@ namespace K_Bikpower
                 }
             }
 
+
             /*
             if (App.Authenticator != null)
                 authenticated = await App.Authenticator.Authenticate();

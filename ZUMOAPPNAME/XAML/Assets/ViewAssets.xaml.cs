@@ -39,7 +39,8 @@ namespace K_Bikpower
         protected override async void OnAppearing()
         {
             base.OnAppearing();
-
+            ManufacturerPicker.ItemsSource = await manager.GetTodoItemsAsync();
+            ManufacturerPicker.ItemDisplayBinding = new Binding("ManufacturerName");
             // Set syncItems to true in order to synchronize the data on startup when running in offline mode
             await RefreshItems(true, syncItems: true);
         }
@@ -56,6 +57,18 @@ namespace K_Bikpower
         public async void Add_Asset_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new AddAsset());
+        }
+        public async void Decommission_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Decommission());
+        }
+        public async void Commission_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Commission());
+        }
+        public async void ManufacturerPicked(object sender, EventArgs e)
+        {
+            await RefreshItems(true, true);
         }
 
         // Event handlers
@@ -127,10 +140,24 @@ namespace K_Bikpower
 
         private async Task RefreshItems(bool showActivityIndicator, bool syncItems)
         {
-            using (var scope = new ActivityIndicatorScope(syncIndicator, showActivityIndicator))
+            string manufacturerName = null;
+            if (ManufacturerPicker.SelectedIndex != -1)
             {
-                todoList.ItemsSource = await manager.GetTodoItemsAsync(syncItems);
+                Asset a = (Asset)ManufacturerPicker.SelectedItem;
+                manufacturerName = a.ManufacturerName;
+                using (var scope = new ActivityIndicatorScope(syncIndicator, showActivityIndicator))
+                {
+                    todoList.ItemsSource = await manager.GetFilteredItemsAsync(manufacturerName);
+                }
             }
+            else
+            {
+                using (var scope = new ActivityIndicatorScope(syncIndicator, showActivityIndicator))
+                {
+                    todoList.ItemsSource = await manager.GetTodoItemsAsync(syncItems);
+                }
+            }
+
         }
 
         private class ActivityIndicatorScope : IDisposable
