@@ -134,6 +134,8 @@
                     </zxing:ZXingBarcodeImageView>
                     <Button Text="Save Qrcode" Clicked="Button_Clicked_2"/>
                     <Image x:Name="DisplayIcon" Source ="{Binding bitmap}" />
+                    <Label x:Name ="saved" Text="Notsaved" FontSize="Title" TextColor="Black"/>
+                    
 
                 </StackLayout>
             </Frame>

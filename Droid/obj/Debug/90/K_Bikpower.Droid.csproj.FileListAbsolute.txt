@@ -2100,4 +2100,3 @@ C:\Users\Brenton Reddish\Desktop\IFB398\Client\Droid\obj\Debug\90\stamp\_Convert
 C:\Users\Brenton Reddish\Desktop\IFB398\Client\Droid\obj\Debug\90\stamp\_GenerateJavaStubs.stamp
 C:\Users\Brenton Reddish\Desktop\IFB398\Client\Droid\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\Brenton Reddish\Desktop\IFB398\Client\Droid\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
-C:\Users\Brenton Reddish\Desktop\IFB398\Client\Droid\bin\Debug\System.Drawing.Common.dll

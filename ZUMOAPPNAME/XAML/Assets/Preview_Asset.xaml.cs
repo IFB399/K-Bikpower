@@ -81,29 +81,11 @@ namespace K_Bikpower
 
         private void Button_Clicked_2(object sender, EventArgs e)
         {
-            using (MemoryStream memoryStream = new MemoryStream())
-            {
-                int width = 300;
-                int height = 300;
-                string QRId = assetdata.Id;
-                var qrCodeWriter = new QRCodeWriter();
-                var bitMatrix = qrCodeWriter.encode(QRId.ToString(), ZXing.BarcodeFormat.QR_CODE, width, height);
-                var writer = new BarcodeWriter<Bitmap> { Options = { Margin = 0 } };
-
-                var bitmap = writer.Write(bitMatrix);
-                
-                    using (var stream = new System.IO.MemoryStream())
-                    {
-                        bitmap.Save(stream, System.Drawing.Imaging.ImageFormat.Gif);
-                        String.Format("data:image/gif;base64,{0}",
-                            Convert.ToBase64String(stream.ToArray()));
-
-
-                    }
-
-                
-            }
+           
+           string returned = DependencyService.Get<IQRSave>().SaveQrImage().ToString();
+            saved.Text = returned;
         }
+
     }
 }
     
