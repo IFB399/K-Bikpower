@@ -109,3 +109,4 @@ C:\Users\Brenton Reddish\Desktop\IFB398\Client\ZUMOAPPNAME\obj\Debug\netstandard
 C:\Users\Brenton Reddish\Desktop\IFB398\Client\ZUMOAPPNAME\obj\Debug\netstandard2.0\K_Bikpower.csproj.CopyComplete
 C:\Users\Brenton Reddish\Desktop\IFB398\Client\ZUMOAPPNAME\obj\Debug\netstandard2.0\K_Bikpower.dll
 C:\Users\Brenton Reddish\Desktop\IFB398\Client\ZUMOAPPNAME\obj\Debug\netstandard2.0\K_Bikpower.pdb
+C:\Users\Brenton Reddish\Desktop\IFB398\Client\ZUMOAPPNAME\bin\Debug\netstandard2.0\System.Drawing.Common.dll

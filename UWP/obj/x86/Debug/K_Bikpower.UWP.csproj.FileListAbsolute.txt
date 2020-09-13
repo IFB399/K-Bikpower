@@ -330,3 +330,4 @@ C:\Users\Brenton Reddish\Desktop\IFB398\Client\UWP\obj\x86\Debug\.winmd_cache\$M
 C:\Users\Brenton Reddish\Desktop\IFB398\Client\UWP\bin\x86\Debug\Core\AppxManifest.xml
 C:\Users\Brenton Reddish\Desktop\IFB398\Client\UWP\bin\x86\Debug\Core\UWP.exe
 C:\Users\Brenton Reddish\Desktop\IFB398\Client\UWP\bin\x86\Debug\K_Bikpower.UWP.build.appxrecipe
+C:\Users\Brenton Reddish\Desktop\IFB398\Client\UWP\bin\x86\Debug\System.Drawing.Common.dll
