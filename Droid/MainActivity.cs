@@ -13,6 +13,7 @@ using Microsoft.WindowsAzure.MobileServices;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 using System.Threading.Tasks;
+using Android;
 
 namespace K_Bikpower.Droid
 {
@@ -36,12 +37,29 @@ namespace K_Bikpower.Droid
 			ZXing.Net.Mobile.Forms.Android.Platform.Init();
 			// Initialize Xamarin Forms
 			Forms.Init (this, bundle);
-            // Load the main application
+			// Load the main application
+			CheckAppPermissions();
             LoadApplication (new App ());
 		}
 		public override void OnRequestPermissionsResult(int requestCode, string[] permissions, Permission[] grantResults)
 		{
 			global::ZXing.Net.Mobile.Android.PermissionsHandler.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+		}
+		private void CheckAppPermissions()
+		{
+			if ((int)Build.VERSION.SdkInt < 23)
+			{
+				return;
+			}
+			else
+			{
+				if (PackageManager.CheckPermission(Manifest.Permission.ReadExternalStorage, PackageName) != Permission.Granted
+					&& PackageManager.CheckPermission(Manifest.Permission.WriteExternalStorage, PackageName) != Permission.Granted)
+				{
+					var permissions = new string[] { Manifest.Permission.ReadExternalStorage, Manifest.Permission.WriteExternalStorage };
+					RequestPermissions(permissions, 1);
+				}
+			}
 		}
 	}
 }

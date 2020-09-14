@@ -33,6 +33,8 @@ namespace K_Bikpower
                 assetdata = details;
                 Console.WriteLine(assetdata);
                 PopulateDetails(assetdata);
+                string QRId = assetdata.Id;
+                DependencyService.Get<IQRSave>().Qrcode(QRId);
             }
         }
 
@@ -81,7 +83,8 @@ namespace K_Bikpower
 
         private void Button_Clicked_2(object sender, EventArgs e)
         {
-           
+            //string QRId = assetdata.Id;
+            
            string returned = DependencyService.Get<IQRSave>().SaveQrImage().ToString();
             saved.Text = returned;
         }

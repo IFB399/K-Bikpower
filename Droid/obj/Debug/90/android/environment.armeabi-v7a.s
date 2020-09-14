@@ -23,8 +23,8 @@
 	.section	.rodata.env.str.1,"aMS",%progbits,1
 	.type	.L.env.str.1, %object
 .L.env.str.1:
-	.asciz	"com.xamarin.sample.ZUMOAPPNAME"
-	.size	.L.env.str.1, 31
+	.asciz	"com.xamarin.sample.K_Bikpower"
+	.size	.L.env.str.1, 30
 	.section	.data.application_config,"aw",%progbits
 	.type	application_config, %object
 	.p2align	2
@@ -92,7 +92,7 @@ mono_aot_mode_name:
 	.section	.rodata.env.str.8,"aMS",%progbits,1
 	.type	.L.env.str.8, %object
 .L.env.str.8:
-	.asciz	"593f49c2-9aad-41d4-89f1-7f7e0b475b45"
+	.asciz	"6ca7ea56-7df0-49ee-ab24-e8bef3127f10"
 	.size	.L.env.str.8, 37
 	.section	.rodata.env.str.9,"aMS",%progbits,1
 	.type	.L.env.str.9, %object

@@ -19,6 +19,11 @@ namespace UWP
         private QrSaved notsaved;
         private QrSaved saved;
 
+        public void Qrcode(string value)
+        {
+            throw new NotImplementedException();
+        }
+
         public QrSaved SaveQrImage()
         {
             TaskCompletionSource<string> SaveQRComplete = null;
@@ -54,7 +59,7 @@ namespace UWP
                 return notsaved;
             }
             return saved;
-        }
+        } 
 
        
 

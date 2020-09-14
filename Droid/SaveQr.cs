@@ -19,8 +19,14 @@ namespace K_Bikpower.Droid
 {
     class SaveQr: IQRSave
     {
+        string text;
         private QrSaved notsaved;
         private QrSaved saved;
+
+        public void Qrcode(string value)
+        {
+            text = value;
+        }
 
         public QrSaved SaveQrImage()
         {
@@ -72,15 +78,16 @@ namespace K_Bikpower.Droid
                 }
             }
             string text2 = "im not allowed to write swear words cause i will forget to remove them :(";
-            try { SaveQRAsImage(text2); }
+            try { SaveQRAsImage(text); }
             catch (Exception ex)
             {
                 return notsaved;
             }
             return saved;
         }
+        
 
-       
+
 
     }
 }

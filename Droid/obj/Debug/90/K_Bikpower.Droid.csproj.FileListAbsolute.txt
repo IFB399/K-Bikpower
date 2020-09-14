@@ -516,16 +516,11 @@ C:\Users\Brenton Reddish\source\repos\azure-mobile-apps-quickstarts\client\xamar
 C:\Users\Brenton Reddish\source\repos\azure-mobile-apps-quickstarts\client\xamarin.forms\Droid\obj\Debug\90\stamp\_GenerateJavaStubs.stamp
 C:\Users\Brenton Reddish\source\repos\azure-mobile-apps-quickstarts\client\xamarin.forms\Droid\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\Brenton Reddish\source\repos\azure-mobile-apps-quickstarts\client\xamarin.forms\Droid\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
-C:\Users\brent\source\repos\K-Bikpower\Droid\bin\Debug\com.xamarin.sample.ZUMOAPPNAME.apk
-C:\Users\brent\source\repos\K-Bikpower\Droid\bin\Debug\com.xamarin.sample.ZUMOAPPNAME.aab
-C:\Users\brent\source\repos\K-Bikpower\Droid\bin\Debug\com.xamarin.sample.ZUMOAPPNAME-Signed.aab
-C:\Users\brent\source\repos\K-Bikpower\Droid\bin\Debug\com.xamarin.sample.ZUMOAPPNAME-Signed.apk
 C:\Users\brent\source\repos\K-Bikpower\Droid\bin\Debug\K_Bikpower.dll
 C:\Users\brent\source\repos\K-Bikpower\Droid\bin\Debug\K_Bikpower.pdb
 C:\Users\brent\source\repos\K-Bikpower\Droid\obj\Debug\90\MonoAndroid,Version=v9.0.AssemblyAttributes.cs
 C:\Users\brent\source\repos\K-Bikpower\Droid\obj\Debug\90\build.props
 C:\Users\brent\source\repos\K-Bikpower\Droid\obj\Debug\90\adb.props
-C:\Users\brent\source\repos\K-Bikpower\Droid\obj\Debug\90\K_Bikpower.Droid.csprojAssemblyReference.cache
 C:\Users\brent\source\repos\K-Bikpower\Droid\obj\Debug\90\_VerifyXamarinAndroidSupportVersions.stamp
 C:\Users\brent\source\repos\K-Bikpower\Droid\obj\Debug\90\stamp\_BuildLibraryImportsCache.stamp
 C:\Users\brent\source\repos\K-Bikpower\Droid\obj\Debug\90\res.flag
@@ -565,10 +560,7 @@ C:\Users\brent\source\repos\K-Bikpower\Droid\obj\Debug\90\R.cs.flag
 C:\Users\brent\source\repos\K-Bikpower\Droid\obj\Debug\90\K_Bikpower.Droid.csproj.CoreCompileInputs.cache
 C:\Users\brent\source\repos\K-Bikpower\Droid\obj\Debug\90\XamlC.stamp
 C:\Users\brent\source\repos\K-Bikpower\Droid\obj\Debug\90\K_Bikpower.Droid.csproj.CopyComplete
-C:\Users\brent\source\repos\K-Bikpower\Droid\obj\Debug\90\android\bin\com.xamarin.sample.ZUMOAPPNAME.apk
 C:\Users\brent\source\repos\K-Bikpower\Droid\obj\Debug\90\android\bin\base.zip
-C:\Users\brent\source\repos\K-Bikpower\Droid\obj\Debug\90\android\bin\com.xamarin.sample.ZUMOAPPNAME.aab
-C:\Users\brent\source\repos\K-Bikpower\Droid\obj\Debug\90\android\bin\com.xamarin.sample.ZUMOAPPNAME.apks
 C:\Users\brent\source\repos\K-Bikpower\Droid\obj\Debug\90\res\drawable\icon.png
 C:\Users\brent\source\repos\K-Bikpower\Droid\obj\Debug\90\res\drawable-hdpi\icon.png
 C:\Users\brent\source\repos\K-Bikpower\Droid\obj\Debug\90\res\drawable-xhdpi\icon.png
@@ -1037,7 +1029,6 @@ C:\Users\brent\source\repos\K-Bikpower\Droid\obj\Debug\90\android\src\mono\andro
 C:\Users\brent\source\repos\K-Bikpower\Droid\obj\Debug\90\android\src\mono\MonoPackageManager_Resources.java
 C:\Users\brent\source\repos\K-Bikpower\Droid\obj\Debug\90\android\src\xamarin\essentials\fileProvider.java
 C:\Users\brent\source\repos\K-Bikpower\Droid\obj\Debug\90\android\bin\packaged_resources
-C:\Users\brent\source\repos\K-Bikpower\Droid\obj\Debug\90\android\src\com\xamarin\sample\zumoappname\R.java
 C:\Users\brent\source\repos\K-Bikpower\Droid\obj\Debug\90\android\typemaps.armeabi-v7a.o
 C:\Users\brent\source\repos\K-Bikpower\Droid\obj\Debug\90\android\typemaps.x86.o
 C:\Users\brent\source\repos\K-Bikpower\Droid\obj\Debug\90\android\environment.armeabi-v7a.o
@@ -2100,3 +2091,12 @@ C:\Users\Brenton Reddish\Desktop\IFB398\Client\Droid\obj\Debug\90\stamp\_Convert
 C:\Users\Brenton Reddish\Desktop\IFB398\Client\Droid\obj\Debug\90\stamp\_GenerateJavaStubs.stamp
 C:\Users\Brenton Reddish\Desktop\IFB398\Client\Droid\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\Brenton Reddish\Desktop\IFB398\Client\Droid\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
+C:\Users\brent\source\repos\K-Bikpower\Droid\bin\Debug\com.xamarin.sample.K_Bikpower.apk
+C:\Users\brent\source\repos\K-Bikpower\Droid\bin\Debug\com.xamarin.sample.K_Bikpower.aab
+C:\Users\brent\source\repos\K-Bikpower\Droid\bin\Debug\com.xamarin.sample.K_Bikpower-Signed.aab
+C:\Users\brent\source\repos\K-Bikpower\Droid\bin\Debug\com.xamarin.sample.K_Bikpower-Signed.apk
+C:\Users\brent\source\repos\K-Bikpower\Droid\obj\Debug\90\android\bin\com.xamarin.sample.K_Bikpower.apk
+C:\Users\brent\source\repos\K-Bikpower\Droid\obj\Debug\90\android\bin\com.xamarin.sample.K_Bikpower.aab
+C:\Users\brent\source\repos\K-Bikpower\Droid\obj\Debug\90\android\bin\com.xamarin.sample.K_Bikpower.apks
+C:\Users\brent\source\repos\K-Bikpower\Droid\obj\Debug\90\android\src\com\xamarin\sample\k_bikpower\R.java
+C:\Users\brent\source\repos\K-Bikpower\Droid\obj\Debug\90\K_Bikpower.Droid.csprojAssemblyReference.cache

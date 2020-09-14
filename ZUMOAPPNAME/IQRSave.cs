@@ -6,8 +6,9 @@ namespace K_Bikpower
 {
     public interface IQRSave
     {
-
+        void Qrcode(string value);
         QrSaved SaveQrImage();
+        
  
     }
 }
