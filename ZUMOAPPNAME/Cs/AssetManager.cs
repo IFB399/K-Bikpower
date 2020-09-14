@@ -75,7 +75,7 @@ namespace K_Bikpower
             get { return todoTable is Microsoft.WindowsAzure.MobileServices.Sync.IMobileServiceSyncTable<Asset>; }
         }
 
-        public async Task<ObservableCollection<Asset>> GetTodoItemsAsync(bool syncItems = false)
+        public async Task<ObservableCollection<Asset>> GetTodoItemsAsync(bool syncItems = false, string substation = null, string equipmentClass = null, string manufacturer = null)
         {
             try
             {
@@ -85,8 +85,19 @@ namespace K_Bikpower
                     await this.SyncAsync();
                 }
 #endif
-                IEnumerable<Asset> items = await todoTable
-                    .ToEnumerableAsync();
+                IEnumerable<Asset> items = await todoTable.ToEnumerableAsync();
+                if (manufacturer != null)
+                {
+                    items = items.Where(asset => asset.ManufacturerName == manufacturer);
+                }
+                if (substation != null)
+                {
+                    items = items.Where(asset => asset.SubstationCode == substation);
+                }
+                if (equipmentClass != null)
+                {
+                    items = items.Where(asset => asset.EquipmentClass == equipmentClass);
+                }
 
                 return new ObservableCollection<Asset>(items);
             }
@@ -100,7 +111,24 @@ namespace K_Bikpower
             }
             return null;
         }
-
+        public async Task<ObservableCollection<string>> GetManufacturerNames()
+        {
+            IEnumerable<string> items = await todoTable.Select(asset => asset.ManufacturerName).ToEnumerableAsync();
+            items = items.Distinct();
+            return new ObservableCollection<string>(items);
+        }
+        public async Task<ObservableCollection<string>> GetSubstationCodes()
+        {
+            IEnumerable<string> items = await todoTable.Select(asset => asset.SubstationCode).ToEnumerableAsync();
+            items = items.Distinct();
+            return new ObservableCollection<string>(items);
+        }
+        public async Task<ObservableCollection<string>> GetEquipmentClass()
+        {
+            IEnumerable<string> items = await todoTable.Select(asset => asset.EquipmentClassDescription).ToEnumerableAsync();
+            items = items.Distinct();
+            return new ObservableCollection<string>(items);
+        }
         public async Task SaveTaskAsync(Asset item)
         {
             try

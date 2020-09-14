@@ -12,7 +12,37 @@
                        IsVisible="False"
                        IsEnabled="True"
                        x:Name="syncIndicator"/>
-
+                    <Expander  x:Name="AssetExpander" HorizontalOptions="CenterAndExpand" MinimumHeightRequest="500">
+                        <Expander.Header>
+                            <Label x:Name="FilterLabel" Text="Filters" FontAttributes="Bold" FontSize="30" HorizontalOptions="Center"/>
+                        </Expander.Header>
+                        <Grid RowSpacing="10" ColumnSpacing="10" HorizontalOptions="CenterAndExpand">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="2*" />
+                                <ColumnDefinition Width="2*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <Label Grid.Row="0" Grid.Column="0" Text="Substation Code"/>
+                            <Picker x:Name="SubstationPicker" Grid.Row="0" Grid.Column="1"/>
+                            <Button Clicked="Clear_Substation_Clicked" Text="X" Grid.Row="0" Grid.Column="2"/>
+                            <Label Text="Equipment Class" Grid.Row="1" Grid.Column="0"/>
+                            <Picker x:Name="EquipmentClassPicker" Grid.Row="1" Grid.Column="1"/>
+                            <Button Clicked="Clear_EC_Clicked" Text="X" Grid.Row="1" Grid.Column="2"/>
+                            <Label x:Name="Debug" Text="Manufacturer" Grid.Row="2" Grid.Column="0"/>
+                            <Picker x:Name="ManufacturerPicker" Grid.Row="2" Grid.Column="1"/>
+                            <Button Clicked="Clear_Manufacturer_Clicked" Text="X" Grid.Row="2" Grid.Column="2"/>
+                            <StackLayout Orientation="Horizontal" Grid.Row="3" Grid.ColumnSpan="3">
+                                <Button Text="Apply Filters" Clicked="Apply_Filters_Clicked" BackgroundColor="White" CornerRadius="10" FontSize="Medium" TextColor="Black"/>
+                                <Button Text="Clear Filters" Clicked="Clear_Filters_Clicked" BackgroundColor="White" CornerRadius="10" FontSize="Medium" TextColor="Black"/>
+                            </StackLayout>
+                        </Grid>
+                    </Expander>
                     <ListView x:Name="todoList" HasUnevenRows="false" IsPullToRefreshEnabled="true" ItemSelected="OnSelected">
             <ListView.Header>
                 <Grid Margin="0,0,0,10">
