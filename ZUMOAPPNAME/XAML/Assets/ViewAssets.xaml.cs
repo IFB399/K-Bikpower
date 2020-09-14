@@ -39,23 +39,55 @@ namespace K_Bikpower
         protected override async void OnAppearing()
         {
             base.OnAppearing();
-
+            ManufacturerPicker.ItemsSource = await manager.GetManufacturerNames();
+            SubstationPicker.ItemsSource = await manager.GetSubstationCodes();
+            EquipmentClassPicker.ItemsSource = await manager.GetEquipmentClass();
             // Set syncItems to true in order to synchronize the data on startup when running in offline mode
             await RefreshItems(true, syncItems: true);
         }
 
         // Data methods
 
-        async Task CompleteItem(Asset item)
-        {
-            item.AssetEQNO = 2; 
-            await manager.SaveTaskAsync(item);
-            todoList.ItemsSource = await manager.GetTodoItemsAsync();
-        }
 
         public async void Add_Asset_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new AddAsset(null));
+        }
+        public async void Apply_Filters_Clicked(object sender, EventArgs e)
+        {
+            string substationCode = (string)SubstationPicker.SelectedItem;
+            string equipmentClass = (string)EquipmentClassPicker.SelectedItem;
+            string manufacturerName = (string)ManufacturerPicker.SelectedItem;
+            if (SubstationPicker.SelectedIndex == -1 && EquipmentClassPicker.SelectedIndex == -1 && ManufacturerPicker.SelectedIndex == -1)
+            {
+                FilterLabel.Text = "Filters"; //will improve later
+            }
+            else
+            {
+                FilterLabel.Text = "Filters (active)";
+            }
+            await RefreshItems(true, syncItems: false, substationCode, equipmentClass, manufacturerName);
+            //todoList.ItemsSource = await manager.GetTodoItemsAsync(false, substationCode, equipmentClass, manufacturerName);
+        }
+        public async void Clear_Filters_Clicked(object sender, EventArgs e)
+        {
+            ManufacturerPicker.SelectedIndex = -1;
+            EquipmentClassPicker.SelectedIndex = -1;
+            SubstationPicker.SelectedIndex = -1;
+            await RefreshItems(true, syncItems: false);
+            FilterLabel.Text = "Filters";
+        }
+        public void Clear_Substation_Clicked(object sender, EventArgs e)
+        {
+            SubstationPicker.SelectedIndex = -1;
+        }
+        public void Clear_EC_Clicked(object sender, EventArgs e)
+        {
+            EquipmentClassPicker.SelectedIndex = -1;
+        }
+        public void Clear_Manufacturer_Clicked(object sender, EventArgs e)
+        {
+            ManufacturerPicker.SelectedIndex = -1;
         }
 
         // Event handlers
@@ -79,14 +111,6 @@ namespace K_Bikpower
 
             // prevents background getting highlighted
             todoList.SelectedItem = null;
-        }
-
-        // http://developer.xamarin.com/guides/cross-platform/xamarin-forms/working-with/listview/#context
-        public async void OnComplete(object sender, EventArgs e)
-        {
-            var mi = ((MenuItem)sender);
-            var todo = mi.CommandParameter as Asset;
-            await CompleteItem(todo);
         }
 
         // http://developer.xamarin.com/guides/cross-platform/xamarin-forms/working-with/listview/#pulltorefresh
@@ -123,11 +147,11 @@ namespace K_Bikpower
             await RefreshItems(true, false);
         }
 
-        private async Task RefreshItems(bool showActivityIndicator, bool syncItems)
+        private async Task RefreshItems(bool showActivityIndicator, bool syncItems, string substation = null, string equipmentClass = null, string manufacturer = null)
         {
             using (var scope = new ActivityIndicatorScope(syncIndicator, showActivityIndicator))
             {
-                todoList.ItemsSource = await manager.GetTodoItemsAsync(syncItems);
+                todoList.ItemsSource = await manager.GetTodoItemsAsync(syncItems, substation, equipmentClass, manufacturer);
             }
         }
 
