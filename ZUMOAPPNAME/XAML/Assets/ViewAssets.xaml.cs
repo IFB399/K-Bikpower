@@ -58,6 +58,14 @@ namespace K_Bikpower
             string substationCode = (string)SubstationPicker.SelectedItem;
             string equipmentClass = (string)EquipmentClassPicker.SelectedItem;
             string manufacturerName = (string)ManufacturerPicker.SelectedItem;
+            if (SubstationPicker.SelectedIndex == -1 && EquipmentClassPicker.SelectedIndex == -1 && ManufacturerPicker.SelectedIndex == -1)
+            {
+                FilterLabel.Text = "Filters"; //will improve later
+            }
+            else
+            {
+                FilterLabel.Text = "Filters (active)";
+            }
             await RefreshItems(true, syncItems: false, substationCode, equipmentClass, manufacturerName);
             //todoList.ItemsSource = await manager.GetTodoItemsAsync(false, substationCode, equipmentClass, manufacturerName);
         }
@@ -67,6 +75,7 @@ namespace K_Bikpower
             EquipmentClassPicker.SelectedIndex = -1;
             SubstationPicker.SelectedIndex = -1;
             await RefreshItems(true, syncItems: false);
+            FilterLabel.Text = "Filters";
         }
         public void Clear_Substation_Clicked(object sender, EventArgs e)
         {
