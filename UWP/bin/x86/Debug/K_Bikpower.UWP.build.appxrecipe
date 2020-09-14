@@ -1,148 +1,148 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>DESKTOP-TJ3US1S</Machine>
-    <WindowsUser>jacqu</WindowsUser>
+    <Machine>DESKTOP-8T2GQPH</Machine>
+    <WindowsUser>brent</WindowsUser>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetOsVersion>10.0</TargetOsVersion>
     <TargetOsDescription>Windows 10.0</TargetOsDescription>
     <SolutionConfiguration>Debug|x86</SolutionConfiguration>
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>160b6a80-7a3b-4992-86ea-4e482f867b0a</PackageIdentityName>
-    <PackageIdentityPublisher>CN=jacqu</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\jacqu\Documents\2019\latest repo 2\UWP\obj\x86\Debug\</IntermediateOutputPath>
+    <PackageIdentityPublisher>CN=brent</PackageIdentityPublisher>
+    <IntermediateOutputPath>C:\Users\brent\source\repos\K-Bikpower\UWP\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType></RemoteDeploymentType>
     <PackageRegistrationPath></PackageRegistrationPath>
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\Users\jacqu\Documents\2019\latest repo 2\UWP\bin\x86\Debug\AppX</LayoutDir>
+    <LayoutDir>C:\Users\brent\source\repos\K-Bikpower\UWP\bin\x86\Debug\AppX</LayoutDir>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\jacqu\Documents\2019\latest repo 2\UWP\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\brent\source\repos\K-Bikpower\UWP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\jacqu\Documents\2019\latest repo 2\UWP\bin\x86\Debug\UWP.exe">
+    <AppxPackagedFile Include="C:\Users\brent\source\repos\K-Bikpower\UWP\bin\x86\Debug\UWP.exe">
       <PackagePath>entrypoint\UWP.exe</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\.nuget\packages\microsoft.azure.mobile.client\4.1.2\lib\uap10.0\Microsoft.Azure.Mobile.Client.dll">
+    <AppxPackagedFile Include="C:\Users\brent\.nuget\packages\microsoft.azure.mobile.client\4.1.2\lib\uap10.0\Microsoft.Azure.Mobile.Client.dll">
       <PackagePath>Microsoft.Azure.Mobile.Client.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\.nuget\packages\microsoft.azure.mobile.client.sqlitestore\4.1.2\lib\netstandard1.4\Microsoft.Azure.Mobile.Client.SQLiteStore.dll">
+    <AppxPackagedFile Include="C:\Users\brent\.nuget\packages\microsoft.azure.mobile.client.sqlitestore\4.1.2\lib\netstandard1.4\Microsoft.Azure.Mobile.Client.SQLiteStore.dll">
       <PackagePath>Microsoft.Azure.Mobile.Client.SQLiteStore.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\.nuget\packages\newtonsoft.json\9.0.1\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll">
+    <AppxPackagedFile Include="C:\Users\brent\.nuget\packages\newtonsoft.json\9.0.1\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.10\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.10\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\.nuget\packages\sqlitepclraw.bundle_green\1.1.2\lib\uap10.0\SQLitePCLRaw.batteries_green.dll">
+    <AppxPackagedFile Include="C:\Users\brent\.nuget\packages\sqlitepclraw.bundle_green\1.1.2\lib\uap10.0\SQLitePCLRaw.batteries_green.dll">
       <PackagePath>SQLitePCLRaw.batteries_green.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\.nuget\packages\sqlitepclraw.bundle_green\1.1.2\lib\uap10.0\SQLitePCLRaw.batteries_v2.dll">
+    <AppxPackagedFile Include="C:\Users\brent\.nuget\packages\sqlitepclraw.bundle_green\1.1.2\lib\uap10.0\SQLitePCLRaw.batteries_v2.dll">
       <PackagePath>SQLitePCLRaw.batteries_v2.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\.nuget\packages\sqlitepclraw.core\1.1.2\lib\uap10.0\SQLitePCLRaw.core.dll">
+    <AppxPackagedFile Include="C:\Users\brent\.nuget\packages\sqlitepclraw.core\1.1.2\lib\uap10.0\SQLitePCLRaw.core.dll">
       <PackagePath>SQLitePCLRaw.core.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\.nuget\packages\sqlitepclraw.lib.e_sqlite3.v140\1.1.2\runtimes\win10-x86\native\e_sqlite3.dll">
+    <AppxPackagedFile Include="C:\Users\brent\.nuget\packages\sqlitepclraw.lib.e_sqlite3.v140\1.1.2\runtimes\win10-x86\native\e_sqlite3.dll">
       <PackagePath>e_sqlite3.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\.nuget\packages\sqlitepclraw.provider.e_sqlite3.uwp10\1.1.2\lib\uap10.0\SQLitePCLRaw.provider.e_sqlite3.dll">
+    <AppxPackagedFile Include="C:\Users\brent\.nuget\packages\sqlitepclraw.provider.e_sqlite3.uwp10\1.1.2\lib\uap10.0\SQLitePCLRaw.provider.e_sqlite3.dll">
       <PackagePath>SQLitePCLRaw.provider.e_sqlite3.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\.nuget\packages\win2d.uwp\1.20.0\runtimes\win10-x86\native\Microsoft.Graphics.Canvas.dll">
+    <AppxPackagedFile Include="C:\Users\brent\.nuget\packages\win2d.uwp\1.20.0\runtimes\win10-x86\native\Microsoft.Graphics.Canvas.dll">
       <PackagePath>Microsoft.Graphics.Canvas.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\.nuget\packages\xamarin.essentials\1.5.3.2\lib\uap10.0.16299\Xamarin.Essentials.dll">
+    <AppxPackagedFile Include="C:\Users\brent\.nuget\packages\xamarin.essentials\1.5.3.2\lib\uap10.0.16299\Xamarin.Essentials.dll">
       <PackagePath>Xamarin.Essentials.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\.nuget\packages\xamarin.forms\4.8.0.1269\lib\uap10.0.16299\Xamarin.Forms.Core.dll">
+    <AppxPackagedFile Include="C:\Users\brent\.nuget\packages\xamarin.forms\4.8.0.1269\lib\uap10.0.16299\Xamarin.Forms.Core.dll">
       <PackagePath>Xamarin.Forms.Core.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\.nuget\packages\xamarin.forms\4.8.0.1269\lib\uap10.0.16299\Xamarin.Forms.Platform.UAP.dll">
+    <AppxPackagedFile Include="C:\Users\brent\.nuget\packages\xamarin.forms\4.8.0.1269\lib\uap10.0.16299\Xamarin.Forms.Platform.UAP.dll">
       <PackagePath>Xamarin.Forms.Platform.UAP.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\.nuget\packages\xamarin.forms\4.8.0.1269\lib\uap10.0.16299\Xamarin.Forms.Platform.dll">
+    <AppxPackagedFile Include="C:\Users\brent\.nuget\packages\xamarin.forms\4.8.0.1269\lib\uap10.0.16299\Xamarin.Forms.Platform.dll">
       <PackagePath>Xamarin.Forms.Platform.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\.nuget\packages\xamarin.forms\4.8.0.1269\lib\uap10.0.16299\Xamarin.Forms.Xaml.dll">
+    <AppxPackagedFile Include="C:\Users\brent\.nuget\packages\xamarin.forms\4.8.0.1269\lib\uap10.0.16299\Xamarin.Forms.Xaml.dll">
       <PackagePath>Xamarin.Forms.Xaml.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\.nuget\packages\zxing.net.mobile\2.4.1\lib\UAP10\ZXing.Net.Mobile.Core.dll">
+    <AppxPackagedFile Include="C:\Users\brent\.nuget\packages\zxing.net.mobile\2.4.1\lib\UAP10\ZXing.Net.Mobile.Core.dll">
       <PackagePath>ZXing.Net.Mobile.Core.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\.nuget\packages\zxing.net.mobile\2.4.1\lib\UAP10\ZXingNetMobile.dll">
+    <AppxPackagedFile Include="C:\Users\brent\.nuget\packages\zxing.net.mobile\2.4.1\lib\UAP10\ZXingNetMobile.dll">
       <PackagePath>ZXingNetMobile.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\.nuget\packages\zxing.net.mobile\2.4.1\lib\UAP10\zxing.portable.dll">
+    <AppxPackagedFile Include="C:\Users\brent\.nuget\packages\zxing.net.mobile\2.4.1\lib\UAP10\zxing.portable.dll">
       <PackagePath>zxing.portable.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\.nuget\packages\zxing.net.mobile.forms\2.4.1\lib\UAP10\ZXing.Net.Mobile.Forms.WindowsUniversal.dll">
+    <AppxPackagedFile Include="C:\Users\brent\.nuget\packages\zxing.net.mobile.forms\2.4.1\lib\UAP10\ZXing.Net.Mobile.Forms.WindowsUniversal.dll">
       <PackagePath>ZXing.Net.Mobile.Forms.WindowsUniversal.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\.nuget\packages\zxing.net.mobile.forms\2.4.1\lib\UAP10\ZXing.Net.Mobile.Forms.dll">
+    <AppxPackagedFile Include="C:\Users\brent\.nuget\packages\zxing.net.mobile.forms\2.4.1\lib\UAP10\ZXing.Net.Mobile.Forms.dll">
       <PackagePath>ZXing.Net.Mobile.Forms.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\Documents\2019\latest repo 2\ZUMOAPPNAME\bin\Debug\netstandard2.0\K_Bikpower.dll">
+    <AppxPackagedFile Include="C:\Users\brent\source\repos\K-Bikpower\ZUMOAPPNAME\bin\Debug\netstandard2.0\K_Bikpower.dll">
       <PackagePath>K_Bikpower.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft Visual Studio\2019\Community\Common7\IDE\ReferenceAssemblies\Microsoft\Framework\Xamarin.iOS\v1.0\Facades\System.Drawing.Common.dll">
       <PackagePath>System.Drawing.Common.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\.nuget\packages\win2d.uwp\1.20.0\lib\uap10.0\Microsoft.Graphics.Canvas.winmd">
+    <AppxPackagedFile Include="C:\Users\brent\.nuget\packages\win2d.uwp\1.20.0\lib\uap10.0\Microsoft.Graphics.Canvas.winmd">
       <PackagePath>Microsoft.Graphics.Canvas.winmd</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.18362.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\.nuget\packages\xamarin.forms\4.8.0.1269\lib\uap10.0.16299\Xamarin.Forms.Platform.UAP\Xamarin.Forms.Platform.UAP.xr.xml">
+    <AppxPackagedFile Include="C:\Users\brent\.nuget\packages\xamarin.forms\4.8.0.1269\lib\uap10.0.16299\Xamarin.Forms.Platform.UAP\Xamarin.Forms.Platform.UAP.xr.xml">
       <PackagePath>Xamarin.Forms.Platform.UAP\Xamarin.Forms.Platform.UAP.xr.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\.nuget\packages\zxing.net.mobile\2.4.1\lib\UAP10\ZXingNetMobile\ZXingNetMobile.xr.xml">
+    <AppxPackagedFile Include="C:\Users\brent\.nuget\packages\zxing.net.mobile\2.4.1\lib\UAP10\ZXingNetMobile\ZXingNetMobile.xr.xml">
       <PackagePath>ZXingNetMobile\ZXingNetMobile.xr.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\Documents\2019\latest repo 2\UWP\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\brent\source\repos\K-Bikpower\UWP\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\Documents\2019\latest repo 2\UWP\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\brent\source\repos\K-Bikpower\UWP\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\Documents\2019\latest repo 2\UWP\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\brent\source\repos\K-Bikpower\UWP\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\Documents\2019\latest repo 2\UWP\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\brent\source\repos\K-Bikpower\UWP\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\Documents\2019\latest repo 2\UWP\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\brent\source\repos\K-Bikpower\UWP\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\Documents\2019\latest repo 2\UWP\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\brent\source\repos\K-Bikpower\UWP\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\Documents\2019\latest repo 2\UWP\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\brent\source\repos\K-Bikpower\UWP\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\Documents\2019\latest repo 2\UWP\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\brent\source\repos\K-Bikpower\UWP\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\Documents\2019\latest repo 2\UWP\bin\x86\Debug\UWP.xr.xml">
+    <AppxPackagedFile Include="C:\Users\brent\source\repos\K-Bikpower\UWP\bin\x86\Debug\UWP.xr.xml">
       <PackagePath>UWP.xr.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\Documents\2019\latest repo 2\UWP\bin\x86\Debug\App.xbf">
+    <AppxPackagedFile Include="C:\Users\brent\source\repos\K-Bikpower\UWP\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\Documents\2019\latest repo 2\UWP\bin\x86\Debug\MainPage.xbf">
+    <AppxPackagedFile Include="C:\Users\brent\source\repos\K-Bikpower\UWP\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.18362.0\\redist\Debug\x86\ucrtbased.dll">
@@ -151,103 +151,103 @@
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.18362.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\.nuget\packages\microsoft.ui.xaml\2.4.2\buildTransitive\..\lib\uap10.0\Microsoft.UI.Xaml.winmd">
+    <AppxPackagedFile Include="C:\Users\brent\.nuget\packages\microsoft.ui.xaml\2.4.2\buildTransitive\..\lib\uap10.0\Microsoft.UI.Xaml.winmd">
       <PackagePath>WinMetadata\Microsoft.UI.Xaml.winmd</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\Documents\2019\latest repo 2\UWP\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\brent\source\repos\K-Bikpower\UWP\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\Documents\2019\latest repo 2\UWP\bin\x86\Debug\Core\UWP.exe">
+    <AppxPackagedFile Include="C:\Users\brent\source\repos\K-Bikpower\UWP\bin\x86\Debug\Core\UWP.exe">
       <PackagePath>UWP.exe</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
-    <ResolvedSDKReference Include="C:\Users\jacqu\.nuget\packages\microsoft.ui.xaml\2.4.2\buildTransitive\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.4.appx">
+    <ResolvedSDKReference Include="C:\Users\brent\.nuget\packages\microsoft.ui.xaml\2.4.2\buildTransitive\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.4.appx">
       <Name>Microsoft.UI.Xaml.2.4</Name>
       <Version>2.42005.18002.0</Version>
       <Architecture>x86</Architecture>
       <FrameworkIdentity>Name = Microsoft.UI.Xaml.2.4, MinVersion = 2.42005.18002.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Users\jacqu\.nuget\packages\microsoft.ui.xaml\2.4.2\buildTransitive\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.4.appx</AppxLocation>
+      <AppxLocation>C:\Users\brent\.nuget\packages\microsoft.ui.xaml\2.4.2\buildTransitive\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.4.appx</AppxLocation>
       <MoreInfo></MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Users\jacqu\.nuget\packages\microsoft.ui.xaml\2.4.2\buildTransitive\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.4.appx">
+    <ResolvedSDKReference Include="C:\Users\brent\.nuget\packages\microsoft.ui.xaml\2.4.2\buildTransitive\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.4.appx">
       <Name>Microsoft.UI.Xaml.2.4</Name>
       <Version>2.42005.18002.0</Version>
       <Architecture>Win32</Architecture>
       <FrameworkIdentity>Name = Microsoft.UI.Xaml.2.4, MinVersion = 2.42005.18002.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Users\jacqu\.nuget\packages\microsoft.ui.xaml\2.4.2\buildTransitive\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.4.appx</AppxLocation>
+      <AppxLocation>C:\Users\brent\.nuget\packages\microsoft.ui.xaml\2.4.2\buildTransitive\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.4.appx</AppxLocation>
       <MoreInfo></MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Users\jacqu\.nuget\packages\microsoft.ui.xaml\2.4.2\buildTransitive\..\tools\AppX\x64\Release\Microsoft.UI.Xaml.2.4.appx">
+    <ResolvedSDKReference Include="C:\Users\brent\.nuget\packages\microsoft.ui.xaml\2.4.2\buildTransitive\..\tools\AppX\x64\Release\Microsoft.UI.Xaml.2.4.appx">
       <Name>Microsoft.UI.Xaml.2.4</Name>
       <Version>2.42005.18002.0</Version>
       <Architecture>x64</Architecture>
       <FrameworkIdentity>Name = Microsoft.UI.Xaml.2.4, MinVersion = 2.42005.18002.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Users\jacqu\.nuget\packages\microsoft.ui.xaml\2.4.2\buildTransitive\..\tools\AppX\x64\Release\Microsoft.UI.Xaml.2.4.appx</AppxLocation>
+      <AppxLocation>C:\Users\brent\.nuget\packages\microsoft.ui.xaml\2.4.2\buildTransitive\..\tools\AppX\x64\Release\Microsoft.UI.Xaml.2.4.appx</AppxLocation>
       <MoreInfo></MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Users\jacqu\.nuget\packages\microsoft.ui.xaml\2.4.2\buildTransitive\..\tools\AppX\arm\Release\Microsoft.UI.Xaml.2.4.appx">
+    <ResolvedSDKReference Include="C:\Users\brent\.nuget\packages\microsoft.ui.xaml\2.4.2\buildTransitive\..\tools\AppX\arm\Release\Microsoft.UI.Xaml.2.4.appx">
       <Name>Microsoft.UI.Xaml.2.4</Name>
       <Version>2.42005.18002.0</Version>
       <Architecture>arm</Architecture>
       <FrameworkIdentity>Name = Microsoft.UI.Xaml.2.4, MinVersion = 2.42005.18002.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Users\jacqu\.nuget\packages\microsoft.ui.xaml\2.4.2\buildTransitive\..\tools\AppX\arm\Release\Microsoft.UI.Xaml.2.4.appx</AppxLocation>
+      <AppxLocation>C:\Users\brent\.nuget\packages\microsoft.ui.xaml\2.4.2\buildTransitive\..\tools\AppX\arm\Release\Microsoft.UI.Xaml.2.4.appx</AppxLocation>
       <MoreInfo></MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Users\jacqu\.nuget\packages\microsoft.ui.xaml\2.4.2\buildTransitive\..\tools\AppX\arm64\Release\Microsoft.UI.Xaml.2.4.appx">
+    <ResolvedSDKReference Include="C:\Users\brent\.nuget\packages\microsoft.ui.xaml\2.4.2\buildTransitive\..\tools\AppX\arm64\Release\Microsoft.UI.Xaml.2.4.appx">
       <Name>Microsoft.UI.Xaml.2.4</Name>
       <Version>2.42005.18002.0</Version>
       <Architecture>arm64</Architecture>
       <FrameworkIdentity>Name = Microsoft.UI.Xaml.2.4, MinVersion = 2.42005.18002.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Users\jacqu\.nuget\packages\microsoft.ui.xaml\2.4.2\buildTransitive\..\tools\AppX\arm64\Release\Microsoft.UI.Xaml.2.4.appx</AppxLocation>
+      <AppxLocation>C:\Users\brent\.nuget\packages\microsoft.ui.xaml\2.4.2\buildTransitive\..\tools\AppX\arm64\Release\Microsoft.UI.Xaml.2.4.appx</AppxLocation>
       <MoreInfo></MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Users\jacqu\.nuget\packages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.10\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx">
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.10\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx">
       <Name>Microsoft.NET.CoreRuntime.2.2</Name>
       <Version>2.2.27902.3</Version>
       <Architecture>x86</Architecture>
       <FrameworkIdentity>Name = Microsoft.NET.CoreRuntime.2.2, MinVersion = 2.2.27902.3, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Users\jacqu\.nuget\packages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.10\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx</AppxLocation>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.10\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx</AppxLocation>
       <MoreInfo></MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Users\jacqu\.nuget\packages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.10\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx">
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.10\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx">
       <Name>Microsoft.NET.CoreRuntime.2.2</Name>
       <Version>2.2.27902.3</Version>
       <Architecture>x64</Architecture>
       <FrameworkIdentity>Name = Microsoft.NET.CoreRuntime.2.2, MinVersion = 2.2.27902.3, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Users\jacqu\.nuget\packages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.10\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx</AppxLocation>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.10\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx</AppxLocation>
       <MoreInfo></MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Users\jacqu\.nuget\packages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.10\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx">
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.10\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx">
       <Name>Microsoft.NET.CoreRuntime.2.2</Name>
       <Version>2.2.27902.3</Version>
       <Architecture>arm</Architecture>
       <FrameworkIdentity>Name = Microsoft.NET.CoreRuntime.2.2, MinVersion = 2.2.27902.3, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Users\jacqu\.nuget\packages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.10\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx</AppxLocation>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.10\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx</AppxLocation>
       <MoreInfo></MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Users\jacqu\.nuget\packages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.10\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx">
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.10\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx">
       <Name>Microsoft.NET.CoreFramework.Debug.2.2</Name>
       <Version>2.2.28529.0</Version>
       <Architecture>x86</Architecture>
       <FrameworkIdentity>Name = Microsoft.NET.CoreFramework.Debug.2.2, MinVersion = 2.2.28529.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Users\jacqu\.nuget\packages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.10\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx</AppxLocation>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.10\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx</AppxLocation>
       <MoreInfo></MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Users\jacqu\.nuget\packages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.10\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx">
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.10\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx">
       <Name>Microsoft.NET.CoreFramework.Debug.2.2</Name>
       <Version>2.2.28529.0</Version>
       <Architecture>x64</Architecture>
       <FrameworkIdentity>Name = Microsoft.NET.CoreFramework.Debug.2.2, MinVersion = 2.2.28529.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Users\jacqu\.nuget\packages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.10\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx</AppxLocation>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.10\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx</AppxLocation>
       <MoreInfo></MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Users\jacqu\.nuget\packages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.10\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx">
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.10\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx">
       <Name>Microsoft.NET.CoreFramework.Debug.2.2</Name>
       <Version>2.2.28529.0</Version>
       <Architecture>arm</Architecture>
       <FrameworkIdentity>Name = Microsoft.NET.CoreFramework.Debug.2.2, MinVersion = 2.2.28529.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Users\jacqu\.nuget\packages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.10\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx</AppxLocation>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.10\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx</AppxLocation>
       <MoreInfo></MoreInfo>
     </ResolvedSDKReference>
     <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\">
