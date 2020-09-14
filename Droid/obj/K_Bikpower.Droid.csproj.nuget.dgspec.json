@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Brenton Reddish\\Desktop\\IFB398\\Client\\Droid\\K_Bikpower.Droid.csproj": {}
+    "C:\\Users\\jacqu\\Documents\\2019\\latest repo 2\\Droid\\K_Bikpower.Droid.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Brenton Reddish\\Desktop\\IFB398\\Client\\Droid\\K_Bikpower.Droid.csproj": {
+    "C:\\Users\\jacqu\\Documents\\2019\\latest repo 2\\Droid\\K_Bikpower.Droid.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Brenton Reddish\\Desktop\\IFB398\\Client\\Droid\\K_Bikpower.Droid.csproj",
+        "projectUniqueName": "C:\\Users\\jacqu\\Documents\\2019\\latest repo 2\\Droid\\K_Bikpower.Droid.csproj",
         "projectName": "K_Bikpower.Droid",
-        "projectPath": "C:\\Users\\Brenton Reddish\\Desktop\\IFB398\\Client\\Droid\\K_Bikpower.Droid.csproj",
-        "packagesPath": "C:\\Users\\Brenton Reddish\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Brenton Reddish\\Desktop\\IFB398\\Client\\Droid\\obj\\",
+        "projectPath": "C:\\Users\\jacqu\\Documents\\2019\\latest repo 2\\Droid\\K_Bikpower.Droid.csproj",
+        "packagesPath": "C:\\Users\\jacqu\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jacqu\\Documents\\2019\\latest repo 2\\Droid\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\Brenton Reddish\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\jacqu\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -32,8 +32,8 @@
         "frameworks": {
           "monoandroid90": {
             "projectReferences": {
-              "C:\\Users\\Brenton Reddish\\Desktop\\IFB398\\Client\\ZUMOAPPNAME\\K_Bikpower.csproj": {
-                "projectPath": "C:\\Users\\Brenton Reddish\\Desktop\\IFB398\\Client\\ZUMOAPPNAME\\K_Bikpower.csproj"
+              "C:\\Users\\jacqu\\Documents\\2019\\latest repo 2\\ZUMOAPPNAME\\K_Bikpower.csproj": {
+                "projectPath": "C:\\Users\\jacqu\\Documents\\2019\\latest repo 2\\ZUMOAPPNAME\\K_Bikpower.csproj"
               }
             }
           }
@@ -62,21 +62,20 @@
         }
       }
     },
-    "C:\\Users\\Brenton Reddish\\Desktop\\IFB398\\Client\\ZUMOAPPNAME\\K_Bikpower.csproj": {
+    "C:\\Users\\jacqu\\Documents\\2019\\latest repo 2\\ZUMOAPPNAME\\K_Bikpower.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Brenton Reddish\\Desktop\\IFB398\\Client\\ZUMOAPPNAME\\K_Bikpower.csproj",
+        "projectUniqueName": "C:\\Users\\jacqu\\Documents\\2019\\latest repo 2\\ZUMOAPPNAME\\K_Bikpower.csproj",
         "projectName": "K_Bikpower",
-        "projectPath": "C:\\Users\\Brenton Reddish\\Desktop\\IFB398\\Client\\ZUMOAPPNAME\\K_Bikpower.csproj",
-        "packagesPath": "C:\\Users\\Brenton Reddish\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Brenton Reddish\\Desktop\\IFB398\\Client\\ZUMOAPPNAME\\obj\\",
+        "projectPath": "C:\\Users\\jacqu\\Documents\\2019\\latest repo 2\\ZUMOAPPNAME\\K_Bikpower.csproj",
+        "packagesPath": "C:\\Users\\jacqu\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jacqu\\Documents\\2019\\latest repo 2\\ZUMOAPPNAME\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\Brenton Reddish\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\jacqu\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],

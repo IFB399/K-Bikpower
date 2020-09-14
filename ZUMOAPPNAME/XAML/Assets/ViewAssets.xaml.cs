@@ -144,7 +144,10 @@ namespace K_Bikpower
 
         public async void OnRefreshItems(object sender, EventArgs e)
         {
-            await RefreshItems(true, false);
+            string substationCode = (string)SubstationPicker.SelectedItem;
+            string equipmentClass = (string)EquipmentClassPicker.SelectedItem;
+            string manufacturerName = (string)ManufacturerPicker.SelectedItem;
+            await RefreshItems(true, false, substationCode, equipmentClass, manufacturerName);
         }
 
         private async Task RefreshItems(bool showActivityIndicator, bool syncItems, string substation = null, string equipmentClass = null, string manufacturer = null)
