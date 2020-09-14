@@ -60,7 +60,6 @@ C:\Users\brent\source\repos\K-Bikpower\ZUMOAPPNAME\obj\Debug\netstandard2.0\XAML
 C:\Users\brent\source\repos\K-Bikpower\ZUMOAPPNAME\obj\Debug\netstandard2.0\XAML\Substations\ViewSubstations.xaml.g.cs
 C:\Users\brent\source\repos\K-Bikpower\ZUMOAPPNAME\bin\Debug\netstandard2.0\Windows.Foundation.UniversalApiContract.winmd
 C:\Users\brent\source\repos\K-Bikpower\ZUMOAPPNAME\obj\Debug\netstandard2.0\K_Bikpower.csproj.CopyComplete
-C:\Users\brent\source\repos\K-Bikpower\ZUMOAPPNAME\obj\Debug\netstandard2.0\K_Bikpower.csprojAssemblyReference.cache
 C:\Users\jacqu\source\repos\K-Bikpower\ZUMOAPPNAME\obj\Debug\netstandard2.0\XAML\Assets\AddAsset.xaml.g.cs
 C:\Users\jacqu\source\repos\K-Bikpower\ZUMOAPPNAME\obj\Debug\netstandard2.0\XAML\Assets\Preview_Asset.xaml.g.cs
 C:\Users\jacqu\source\repos\K-Bikpower\ZUMOAPPNAME\obj\Debug\netstandard2.0\XAML\Assets\ViewAssets.xaml.g.cs
@@ -110,3 +109,6 @@ C:\Users\Brenton Reddish\Desktop\IFB398\Client\ZUMOAPPNAME\obj\Debug\netstandard
 C:\Users\Brenton Reddish\Desktop\IFB398\Client\ZUMOAPPNAME\obj\Debug\netstandard2.0\K_Bikpower.dll
 C:\Users\Brenton Reddish\Desktop\IFB398\Client\ZUMOAPPNAME\obj\Debug\netstandard2.0\K_Bikpower.pdb
 C:\Users\Brenton Reddish\Desktop\IFB398\Client\ZUMOAPPNAME\bin\Debug\netstandard2.0\System.Drawing.Common.dll
+C:\Users\brent\source\repos\K-Bikpower\ZUMOAPPNAME\bin\Debug\netstandard2.0\System.Drawing.Common.dll
+C:\Users\brent\source\repos\K-Bikpower\ZUMOAPPNAME\obj\Debug\netstandard2.0\XAML\Documents.xaml.g.cs
+C:\Users\brent\source\repos\K-Bikpower\ZUMOAPPNAME\obj\Debug\netstandard2.0\XAML\GeneralDocuments.xaml.g.cs

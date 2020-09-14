@@ -17,6 +17,11 @@ namespace ZUMOAPPNAME.iOS
     {
         private QrSaved notsaved;
         private QrSaved saved;
+        string text;
+        public void Qrcode(string value)
+        {
+            text = value;
+        }
 
         public QrSaved SaveQrImage()
         {
@@ -64,8 +69,7 @@ namespace ZUMOAPPNAME.iOS
                 }
                 return SaveQRComplete.Task;
             }
-            string text2 = "im not allowed to write swear words cause i will forget to remove them :(";
-            try { SaveMyQR(text2); }
+            try { SaveMyQR(text); }
             catch (Exception ex)
             {
                 return notsaved;

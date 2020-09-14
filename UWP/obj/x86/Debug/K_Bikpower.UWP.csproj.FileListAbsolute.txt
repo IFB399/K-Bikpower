@@ -331,3 +331,4 @@ C:\Users\Brenton Reddish\Desktop\IFB398\Client\UWP\bin\x86\Debug\Core\AppxManife
 C:\Users\Brenton Reddish\Desktop\IFB398\Client\UWP\bin\x86\Debug\Core\UWP.exe
 C:\Users\Brenton Reddish\Desktop\IFB398\Client\UWP\bin\x86\Debug\K_Bikpower.UWP.build.appxrecipe
 C:\Users\Brenton Reddish\Desktop\IFB398\Client\UWP\bin\x86\Debug\System.Drawing.Common.dll
+C:\Users\brent\source\repos\K-Bikpower\UWP\bin\x86\Debug\System.Drawing.Common.dll
