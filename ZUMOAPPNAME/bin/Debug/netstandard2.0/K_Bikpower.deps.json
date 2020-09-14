@@ -16,6 +16,7 @@
           "Xamarin.Forms": "4.8.0.1364",
           "ZXing.Net.Mobile": "2.4.1",
           "ZXing.Net.Mobile.Forms": "2.4.1",
+          "System.Drawing.Common": "4.0.0.0",
           "Windows.Foundation.UniversalApiContract": "8.0.0.0"
         },
         "runtime": {
@@ -735,6 +736,14 @@
           }
         }
       },
+      "System.Drawing.Common/4.0.0.0": {
+        "runtime": {
+          "System.Drawing.Common.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.0.0.0"
+          }
+        }
+      },
       "Windows.Foundation.UniversalApiContract/8.0.0.0": {
         "runtime": {
           "Windows.Foundation.UniversalApiContract.winmd": {
@@ -1219,6 +1228,11 @@
       "sha512": "sha512-7z+MfL8TbfE36s1GGvrnlkhLUOV5dgdn1gYhUb3GU2W6YXzpfF39k6EqkmFsyNm1O07evTaKFgh7UTOqcWub3g==",
       "path": "zxing.net.mobile.forms/2.4.1",
       "hashPath": "zxing.net.mobile.forms.2.4.1.nupkg.sha512"
+    },
+    "System.Drawing.Common/4.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
     },
     "Windows.Foundation.UniversalApiContract/8.0.0.0": {
       "type": "reference",

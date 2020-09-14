@@ -1,12 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
+using System.Drawing.Imaging;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Windows.UI.Xaml.Controls;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using ZXing;
+using ZXing.Common;
 using ZXing.Mobile;
 using ZXing.Net.Mobile.Forms;
 using ZXing.QrCode;
@@ -77,22 +81,11 @@ namespace K_Bikpower
 
         private void Button_Clicked_2(object sender, EventArgs e)
         {
-
-            IBarcodeWriter writer = new BarcodeWriter
-            {
-                Format = BarcodeFormat.QR_CODE,
-                Options = new ZXing.Common.EncodingOptions
-                {
-                    Height = 300,
-                    Width = 300
-                }
-            };
-            var result = writer.Write("generator works");
-            var wb = result.ToBitmap() as WriteableBitmap;
-
-            //add to image component
-            image.Source = wb;
+           
+           string returned = DependencyService.Get<IQRSave>().SaveQrImage().ToString();
+            saved.Text = returned;
         }
+
     }
 }
     
