@@ -96,7 +96,7 @@ namespace K_Bikpower
                 }
                 if (equipmentClass != null)
                 {
-                    items = items.Where(asset => asset.EquipmentClass == equipmentClass);
+                    items = items.Where(asset => asset.EquipmentClassDescription == equipmentClass);
                 }
 
                 return new ObservableCollection<Asset>(items);
