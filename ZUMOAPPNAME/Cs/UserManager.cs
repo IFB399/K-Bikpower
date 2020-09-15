@@ -16,6 +16,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.WindowsAzure.MobileServices;
 
+
 #if OFFLINE_SYNC_ENABLED
 using Microsoft.WindowsAzure.MobileServices.SQLiteStore;
 using Microsoft.WindowsAzure.MobileServices.Sync;
@@ -27,9 +28,10 @@ namespace K_Bikpower
     {
         static UserManager defaultInstance = new UserManager();
         MobileServiceClient client;
+        string authenicationstring;
 
 #if OFFLINE_SYNC_ENABLED
-        IMobileServiceSyncTable<User> todoTable;
+        
 #else
         IMobileServiceTable<User> todoTable;
 #endif
@@ -116,7 +118,19 @@ namespace K_Bikpower
             //return u;
         }
 
-        public async Task SaveTaskAsync(User item)
+        public async Task GetUserAuth(string username)
+        {
+
+            var items = await todoTable.Where(user => user.Username == username).Select(user => user.Permission).ToEnumerableAsync();
+            authenicationstring = items.First();
+        }
+
+        public  string Authentication()
+        {
+            return authenicationstring;
+        }
+
+            public async Task SaveTaskAsync(User item)
         {
             try
             {

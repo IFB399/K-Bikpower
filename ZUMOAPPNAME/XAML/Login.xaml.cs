@@ -67,6 +67,7 @@ namespace K_Bikpower
 
                 if (CheckPassword(password, u.Password, salt) == true)
                 {
+                    await manager.GetUserAuth(username);
                     await Navigation.PushAsync(new MainPage());
                 }
                 else
