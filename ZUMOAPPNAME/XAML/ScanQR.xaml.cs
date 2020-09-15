@@ -7,31 +7,42 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using ZXing;
+using System.Collections.ObjectModel;
 
 namespace K_Bikpower
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ScanQR : ContentPage
     {
+        AssetManager manager;
         public ScanQR()
         {
-
             InitializeComponent();
+            manager = AssetManager.DefaultManager;
         }
         public void Handle_OnScanResult(Result result)
         {
+            
             Device.BeginInvokeOnMainThread(async () =>
             {
                 
-                string search = result.ToString();
+                string id = result.ToString();
+                ObservableCollection<Asset> a = await manager.GetAsset(id);
+                Asset asset = a.FirstOrDefault();
+                if (asset == null)
+                {
+                    await DisplayAlert("Error", "Asset not found", "Close");
+                }
+                else
+                {
+                    await Navigation.PushAsync(new Preview_Asset(asset));
+                }
                 //int qrscan = Int32.Parse(search);
                 // var test = App.Database.Scangen(qrscan);
                 //Assets testing = test[0];
                 //Console.WriteLine(testing);
-               // await Navigation.PushAsync(new Preview_Asset(testing));
-
-
-    });
+            });
+            
         }
     }
 }
