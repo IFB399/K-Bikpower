@@ -12,9 +12,14 @@ namespace K_Bikpower
     [DesignTimeVisible(false)]
     public partial class MainPage : ContentPage
     {
+        UserManager userauth;
+        string Authentication;
         public MainPage()
         {
+            userauth = UserManager.DefaultManager;
+            Authentication = userauth.Authentication();
             InitializeComponent();
+            
         }
 
         private void assets_button_Clicked(object sender, EventArgs e)
@@ -41,6 +46,15 @@ namespace K_Bikpower
         {
 
             Navigation.PushAsync(new Login()); //if its not the final page change to navigation page
+        }
+
+        private void Users_Clicked(object sender, EventArgs e)
+        {
+            if (Authentication == "User")
+            {
+                Navigation.PushAsync(new UsersPage());
+            }
+            else {  DisplayAlert("Denied", "You do not have permssion to access this page", "OK"); }
         }
     }
 }

@@ -138,3 +138,4 @@ C:\Users\jacqu\Documents\2019\latest repo 2\ZUMOAPPNAME\bin\Debug\netstandard2.0
 C:\Users\jacqu\Documents\2019\latest repo 2\ZUMOAPPNAME\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Users\jacqu\Documents\2019\latest repo 2\ZUMOAPPNAME\obj\Debug\netstandard2.0\K_Bikpower.csproj.CopyComplete
 C:\Users\brent\source\repos\K-Bikpower\ZUMOAPPNAME\obj\Debug\netstandard2.0\K_Bikpower.csprojAssemblyReference.cache
+C:\Users\brent\source\repos\K-Bikpower\ZUMOAPPNAME\obj\Debug\netstandard2.0\XAML\UsersPage.xaml.g.cs
