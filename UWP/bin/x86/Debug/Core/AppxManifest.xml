@@ -7,7 +7,7 @@
 
     For more information on package manifest files, see http://go.microsoft.com/fwlink/?LinkID=241727
   -->
-  <Identity Name="43e3c925-1cf2-4e0e-92ff-74d3a13fcfa3" Publisher="CN=brent" Version="1.2.0.0" ProcessorArchitecture="x86" />
+  <Identity Name="43e3c925-1cf2-4e0e-92ff-74d3a13fcfa3" Publisher="CN=Brenton Reddish" Version="1.2.0.0" ProcessorArchitecture="x86" />
   <mp:PhoneIdentity PhoneProductId="160b6a80-7a3b-4992-86ea-4e482f867b0a" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>UWP</DisplayName>
@@ -162,7 +162,7 @@
     <build:Item Name="VisualStudio" Version="16.0" />
     <build:Item Name="VisualStudioEdition" Value="Microsoft Visual Studio Community 2019" />
     <build:Item Name="OperatingSystem" Version="10.0.18362.1 (WinBuild.160101.0800)" />
-    <build:Item Name="Microsoft.Build.AppxPackage.dll" Version="16.0.30204.135" />
+    <build:Item Name="Microsoft.Build.AppxPackage.dll" Version="16.0.30329.88" />
     <build:Item Name="ProjectGUID" Value="{0483302A-9154-434A-93EB-5633AAFD4409}" />
     <build:Item Name="OptimizingToolset" Value="None" />
     <build:Item Name="TargetRuntime" Value="Managed" />

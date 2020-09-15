@@ -86,7 +86,7 @@ namespace K_Bikpower
             //string QRId = assetdata.Id;
             
            string returned = DependencyService.Get<IQRSave>().SaveQrImage().ToString();
-            saved.Text = returned;
+           // await DisplayAlert("Alert", "You have been alerted", "OK");
         }
 
     }
