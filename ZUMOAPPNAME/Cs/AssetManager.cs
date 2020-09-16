@@ -5,7 +5,7 @@
  *
  * For more information, see: http://go.microsoft.com/fwlink/?LinkId=620342
  */
-//#define OFFLINE_SYNC_ENABLED
+#define OFFLINE_SYNC_ENABLED
 
 using System;
 using System.Collections.Generic;
@@ -153,6 +153,13 @@ namespace K_Bikpower
             IEnumerable<string> items = await todoTable.Select(asset => asset.EquipmentClassDescription).ToEnumerableAsync();
             items = items.Distinct();
             return new ObservableCollection<string>(items);
+        }
+
+        public async Task<ObservableCollection<Asset>> GetScan(string id)
+        {
+            IEnumerable<Asset> items = await todoTable.Where(asset => asset.Id == id).ToEnumerableAsync();
+            items = items.Distinct();
+            return new ObservableCollection<Asset>(items);
         }
         public async Task SaveTaskAsync(Asset item)
         {
