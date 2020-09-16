@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,6 +7,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using ZXing;
+using System.Collections.ObjectModel;
 
 namespace K_Bikpower
 {
@@ -17,21 +17,32 @@ namespace K_Bikpower
         AssetManager manager;
         public ScanQR()
         {
-            manager = AssetManager.DefaultManager;
             InitializeComponent();
+            manager = AssetManager.DefaultManager;
         }
         public void Handle_OnScanResult(Result result)
         {
+            
             Device.BeginInvokeOnMainThread(async () =>
             {
                 
-                string search = result.ToString();
-                ObservableCollection<Asset> resultscan = await manager.GetScan(search);
-                Asset scan = resultscan.FirstOrDefault();
-                await Navigation.PushAsync(new Preview_Asset(scan));
-
-
-    });
+                string id = result.ToString();
+                ObservableCollection<Asset> a = await manager.GetAsset(id);
+                Asset asset = a.FirstOrDefault();
+                if (asset == null)
+                {
+                    await DisplayAlert("Error", "Asset not found", "Close");
+                }
+                else
+                {
+                    await Navigation.PushAsync(new Preview_Asset(asset));
+                }
+                //int qrscan = Int32.Parse(search);
+                // var test = App.Database.Scangen(qrscan);
+                //Assets testing = test[0];
+                //Console.WriteLine(testing);
+            });
+            
         }
     }
 }

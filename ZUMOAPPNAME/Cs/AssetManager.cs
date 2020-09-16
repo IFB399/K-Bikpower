@@ -111,6 +111,31 @@ namespace K_Bikpower
             }
             return null;
         }
+
+        public async Task<ObservableCollection<Asset>> GetAsset(string id, bool syncItems = false)
+        {
+            try
+            {
+#if OFFLINE_SYNC_ENABLED
+                if (syncItems)
+                {
+                    await this.SyncAsync();
+                }
+#endif
+                IEnumerable<Asset> items = await todoTable.Where(asset => asset.Id == id).ToEnumerableAsync();
+                return new ObservableCollection<Asset>(items);
+            }
+            catch (MobileServiceInvalidOperationException msioe)
+            {
+                Debug.WriteLine("Invalid sync operation: {0}", new[] { msioe.Message });
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine("Sync error: {0}", new[] { e.Message });
+            }
+            return null;
+        }
+
         public async Task<ObservableCollection<string>> GetManufacturerNames()
         {
             IEnumerable<string> items = await todoTable.Select(asset => asset.ManufacturerName).ToEnumerableAsync();
