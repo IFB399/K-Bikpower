@@ -52,6 +52,10 @@ namespace K_Bikpower
         {
             removeAsset.IsEnabled = true;
         }
+        private void Scan_Asset_Clicked(object sender, EventArgs e)
+        {
+            //removeAsset.IsEnabled = true;
+        }
         async void Submit_Clicked(object sender, EventArgs e)
         {
 

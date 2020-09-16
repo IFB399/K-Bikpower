@@ -15,6 +15,7 @@ namespace K_Bikpower
     public partial class ScanQR : ContentPage
     {
         AssetManager manager;
+       
         public ScanQR()
         {
             InitializeComponent();
@@ -35,6 +36,7 @@ namespace K_Bikpower
                 }
                 else
                 {
+                    _scanView.IsScanning = false;
                     await Navigation.PushAsync(new Preview_Asset(asset));
                 }
                 //int qrscan = Int32.Parse(search);
