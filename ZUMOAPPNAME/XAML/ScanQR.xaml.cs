@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,9 +14,10 @@ namespace K_Bikpower
 	[XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ScanQR : ContentPage
     {
+        AssetManager manager;
         public ScanQR()
         {
-
+            manager = AssetManager.DefaultManager;
             InitializeComponent();
         }
         public void Handle_OnScanResult(Result result)
@@ -24,11 +26,9 @@ namespace K_Bikpower
             {
                 
                 string search = result.ToString();
-                //int qrscan = Int32.Parse(search);
-                // var test = App.Database.Scangen(qrscan);
-                //Assets testing = test[0];
-                //Console.WriteLine(testing);
-               // await Navigation.PushAsync(new Preview_Asset(testing));
+                ObservableCollection<Asset> resultscan = await manager.GetScan(search);
+                Asset scan = resultscan.FirstOrDefault();
+                await Navigation.PushAsync(new Preview_Asset(scan));
 
 
     });

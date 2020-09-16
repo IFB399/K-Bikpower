@@ -50,7 +50,7 @@ namespace K_Bikpower
 
         private void Users_Clicked(object sender, EventArgs e)
         {
-            if (Authentication == "User")
+            if (Authentication == "Administrator")
             {
                 Navigation.PushAsync(new UsersPage());
             }
