@@ -9,12 +9,15 @@ namespace K_Bikpower
     public class DecommissionData
     {
         string id;
-        string date; //will change data type later
+        DateTime date; //will change data type later
         string details;
         string regionName;
         string location;
         string movedTo;
         int workOrderNumber;
+        string submittedBy;
+        string approvedBy;
+        bool approved;
 
         [JsonProperty(PropertyName = "id")]
         public string Id
@@ -24,7 +27,7 @@ namespace K_Bikpower
         }
 
         [JsonProperty(PropertyName = "date")] 
-		public string Date
+		public DateTime Date
         {
             get { return date; }
             set { date = value; }
@@ -63,7 +66,26 @@ namespace K_Bikpower
             get { return workOrderNumber; }
             set { workOrderNumber = value; }
         }
+        [JsonProperty(PropertyName = "submittedBy")]
+        public string SubmittedBy
+        {
+            get { return submittedBy; }
+            set { submittedBy = value; }
+        }
 
+        [JsonProperty(PropertyName = "approvedBy")]
+        public string ApprovedBy
+        {
+            get { return approvedBy; }
+            set { approvedBy = value; }
+        }
+
+        [JsonProperty(PropertyName = "approved")]
+        public bool Approved
+        {
+            get { return approved; }
+            set { approved = value; }
+        }
     }
 }
 

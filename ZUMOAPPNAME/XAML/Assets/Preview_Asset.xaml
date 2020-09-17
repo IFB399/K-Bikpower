@@ -58,9 +58,8 @@
 
                     <Label Text="Equipment Warranty Date" FontSize="Title" TextColor="Black"/>
                     <Frame CornerRadius="10" BorderColor="Black" HasShadow="True" >
-                        <Label x:Name="WarrantyDate_label" TextColor="Black" />
+                    <DatePicker x:Name="WarrantyDate_Picker" IsEnabled="False"></DatePicker>
                     </Frame>
-                    <DatePicker x:Name="WarrantyDate_Picker" IsEnabled="False"/>
 
                     <Label Text="Equipment Age" FontSize="Title" TextColor="Black"/>
                     <Frame CornerRadius="10" BorderColor="Black" HasShadow="True" >
@@ -110,7 +109,7 @@
 
                     <Label Text="Last Installation Date" FontSize="Title" TextColor="Black"/>
                     <Frame CornerRadius="10" BorderColor="Black" HasShadow="True" >
-                        <Label x:Name="last_install_date_label" TextColor="Black" />
+                        <DatePicker x:Name="LastInstallDate_Picker" IsEnabled="False"></DatePicker>
                     </Frame>
 
                     <Label Text="Equipment Class" FontSize="Title" TextColor="Black"/>
@@ -124,7 +123,7 @@
                     </Frame>
 
                     <StackLayout Orientation="Horizontal" >
-                        <Button Text="Edit Asset" Clicked="Button_Clicked"/>
+                        <Button Text="Edit Asset" Clicked="Edit_Asset_Clicked"/>
                         <Button Text="Generate QR Code" Clicked="Button_Clicked_1"/>
                     </StackLayout>
                     <zxing:ZXingBarcodeImageView BarcodeFormat="QR_CODE" x:Name="Gen" IsVisible="false" BarcodeValue="1" HeightRequest="300" WidthRequest="300">

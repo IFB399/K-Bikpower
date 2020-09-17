@@ -51,7 +51,7 @@ namespace K_Bikpower
             int Loceqnum = details.LocationEquipmentNumber;
             Location_Equipment_Number_label.Text = Loceqnum.ToString();
             Component_Code_label.Text = details.ComponentCode;
-           // WarrantyDate_Picker.Date = details.WarrantyDate;
+            WarrantyDate_Picker.Date = details.Date;
             int EQUage = details.EquipmentAge;
             Equipement_age_label.Text = EQUage.ToString();
             Stock_Code_label.Text = details.StockCode;
@@ -64,11 +64,11 @@ namespace K_Bikpower
             Specifiaction_title_label.Text = details.SpecificationTitle;
             Specifiaction_NO_label.Text = details.SpecificationNO;
             Specifiaction_item_NO_label.Text = details.SpecificationItemNO;
-            last_install_date_label.Text = details.LastInstallDate;
+            LastInstallDate_Picker.Date = details.LastInstallDate;
             Equipment_class_label.Text = details.EquipmentClass;
             Equipment_class_description_label.Text = details.EquipmentClassDescription;
         }
-        private void Button_Clicked(object sender, EventArgs e)
+        private void Edit_Asset_Clicked(object sender, EventArgs e)
         {
             Navigation.PushAsync(new AddAsset(assetdata));
         }

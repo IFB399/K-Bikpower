@@ -19,8 +19,10 @@ namespace K_Bikpower
         {
             InitializeComponent();
             manager = AssetManager.DefaultManager;
+
             if (assetdata != null)
             {
+                AddOrUpdateButton.Text = "Update Asset";
                 AssetData = assetdata;
                 PopulateDetails(AssetData);
                 Ids = assetdata.Id;
@@ -40,7 +42,7 @@ namespace K_Bikpower
             Modifier_Code_Entry.Text = data.ModifierCode;
             Location_Equipment_Number_Entry.Text = data.LocationEquipmentNumber.ToString();
             Component_Code_Entry.Text = data.ComponentCode;
-            // WarrantyDate = WarrantyDate_Picker.Date, // change dumb dumb. 
+            WarrantyDate_Picker.Date = data.Date; // change dumb dumb. 
             Equipment_Age_Entry.Text = data.EquipmentAge.ToString();
             Stock_Code_Entry.Text = data.StockCode;
             Purchase_Order_Number_Entry.Text = data.PurchaseOrderNO;
@@ -51,7 +53,7 @@ namespace K_Bikpower
             Specification_Title_Entry.Text = data.SpecificationTitle;
             Specification_Number_Entry.Text = data.SpecificationNO;
             Specification_Item_Number_Entry.Text = data.SpecificationItemNO;
-            Last_Install_Date_Entry.Text = data.LastInstallDate;
+            LastInstallDate_Picker.Date = data.LastInstallDate;
             Equipment_Class_Entry.Text = data.EquipmentClass;
             Equipment_Class_Description_Entry.Text = data.EquipmentClassDescription;
         }
@@ -77,7 +79,7 @@ namespace K_Bikpower
                 ModifierCode = Modifier_Code_Entry.Text,
                 LocationEquipmentNumber = Int32.Parse(Location_Equipment_Number_Entry.Text),
                 ComponentCode = Component_Code_Entry.Text,
-                //WarrantyDate = WarrantyDate_Picker.Date, // change dumb dumb. 
+                Date = WarrantyDate_Picker.Date.ToLocalTime(), // change dumb dumb. 
                 EquipmentAge = Int32.Parse(Equipment_Age_Entry.Text),
                 StockCode = Stock_Code_Entry.Text,
                 PurchaseOrderNO = Purchase_Order_Number_Entry.Text,
@@ -88,17 +90,14 @@ namespace K_Bikpower
                 SpecificationTitle = Specification_Title_Entry.Text,
                 SpecificationNO = Specification_Number_Entry.Text,
                 SpecificationItemNO = Specification_Item_Number_Entry.Text,
-                LastInstallDate = Last_Install_Date_Entry.Text,
+                LastInstallDate = LastInstallDate_Picker.Date.ToLocalTime(),
                 EquipmentClass = Equipment_Class_Entry.Text,
                 EquipmentClassDescription = Equipment_Class_Description_Entry.Text,
                 Status="Added",
-                DecommissionFormId="11111111111",
-                CommissionFormId=null,
-                ModifiedBy="a user"
-                //SubstationCode = "pretty please work", 
-                //PlantNumber = "another plant number", 
-                //AssetEQNO = 420 
-            }; //default asseteqno is 0
+                ModifiedBy="a user",
+                AddedBy="XSXAXSMK"
+            };
+
             await AddItem(todo);
             await Navigation.PushAsync(new AssetList());
         }

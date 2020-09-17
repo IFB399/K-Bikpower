@@ -15,7 +15,7 @@ namespace K_Bikpower
         string modifierCode;
         int locationEQNO;
         string componentCode;
-        //string warrantyDate;
+        DateTime date; //warranty date
         int equipmentAge;
         string stockCode;
         string poNO;
@@ -26,9 +26,12 @@ namespace K_Bikpower
         string specificationTitle;
         string specificationNO;
         string specificationItemNO;
-        string lastInstallDate;
+        DateTime lastInstallDate;
         string equipmentClass;
         string equipmentClassDescription;
+        string status;
+        string modifiedBy;
+        string addedBy;
 
         [JsonProperty(PropertyName = "id")]
 		public string Id
@@ -96,14 +99,14 @@ namespace K_Bikpower
             set { componentCode = value; }
         }
 
-        /*
-        [JsonProperty(PropertyName = "warranty_date")]
-        public string WarrantyDate
+        
+        [JsonProperty(PropertyName = "date")]
+        public DateTime Date
         {
-            get { return warrantyDate; }
-            set { warrantyDate = value; }
+            get { return date; }
+            set { date = value; }
         }
-        */
+        
 
 
         [JsonProperty(PropertyName = "equipment_age")]
@@ -178,7 +181,7 @@ namespace K_Bikpower
         }
 
         [JsonProperty(PropertyName = "last_install_date")]
-        public string LastInstallDate
+        public DateTime LastInstallDate
         {
             get { return lastInstallDate; }
             set { lastInstallDate = value; }
@@ -199,16 +202,25 @@ namespace K_Bikpower
         }
 
         [JsonProperty(PropertyName = "status")]
-        public string Status { get; set; }
+        public string Status
+        {
+            get { return status; }
+            set { status = value; }
+        }
 
-        [JsonProperty(PropertyName = "decommission_form_id")]
-        public string DecommissionFormId { get; set; }
-
-        [JsonProperty(PropertyName = "commission_form_id")]
-        public string CommissionFormId { get; set; }
+        [JsonProperty(PropertyName = "added_by")]
+        public string AddedBy
+        {
+            get { return addedBy; }
+            set { addedBy = value; }
+        }
 
         [JsonProperty(PropertyName = "modified_by")]
-        public string ModifiedBy { get; set; }
+        public string ModifiedBy
+        {
+            get { return modifiedBy; }
+            set { modifiedBy = value; }
+        }
 
         [Version]
         public string Version { get; set; }

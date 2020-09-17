@@ -78,7 +78,9 @@ namespace K_Bikpower
             }
             var form = new DecommissionData
             {
-                Date = Decommissioned_Details_Entry.Text, //will change later
+                //Date = Decommissioned_Details_Entry.Text, //will change later
+                //Date = DateTime.UtcNow
+                Date = Date_Decommissioned.Date.ToLocalTime(),
                 Details = Decommissioned_Details_Entry.Text,
                 RegionName = Region_Picker.SelectedItem.ToString(),
                 Location = Location_Entry.Text,
