@@ -35,6 +35,7 @@ namespace K_Bikpower
                 }
                 else
                 {
+                    _scanView.IsScanning = false;
                     await Navigation.PushAsync(new Preview_Asset(asset));
                 }
                 //int qrscan = Int32.Parse(search);
