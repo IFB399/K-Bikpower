@@ -41,6 +41,9 @@ namespace K_Bikpower {
         private global::Xamarin.Forms.Entry Component_Code_Entry;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::Xamarin.Forms.DatePicker WarrantyDate_Picker;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private global::Xamarin.Forms.Entry Equipment_Age_Entry;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
@@ -71,7 +74,7 @@ namespace K_Bikpower {
         private global::Xamarin.Forms.Entry Specification_Item_Number_Entry;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::Xamarin.Forms.Entry Last_Install_Date_Entry;
+        private global::Xamarin.Forms.DatePicker LastInstallDate_Picker;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private global::Xamarin.Forms.Entry Equipment_Class_Entry;
@@ -80,7 +83,7 @@ namespace K_Bikpower {
         private global::Xamarin.Forms.Entry Equipment_Class_Description_Entry;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::Xamarin.Forms.Button addassetbutton;
+        private global::Xamarin.Forms.Button AddOrUpdateButton;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
@@ -93,6 +96,7 @@ namespace K_Bikpower {
             Modifier_Code_Entry = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Entry>(this, "Modifier_Code_Entry");
             Location_Equipment_Number_Entry = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Entry>(this, "Location_Equipment_Number_Entry");
             Component_Code_Entry = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Entry>(this, "Component_Code_Entry");
+            WarrantyDate_Picker = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.DatePicker>(this, "WarrantyDate_Picker");
             Equipment_Age_Entry = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Entry>(this, "Equipment_Age_Entry");
             Stock_Code_Entry = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Entry>(this, "Stock_Code_Entry");
             Purchase_Order_Number_Entry = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Entry>(this, "Purchase_Order_Number_Entry");
@@ -103,10 +107,10 @@ namespace K_Bikpower {
             Specification_Title_Entry = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Entry>(this, "Specification_Title_Entry");
             Specification_Number_Entry = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Entry>(this, "Specification_Number_Entry");
             Specification_Item_Number_Entry = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Entry>(this, "Specification_Item_Number_Entry");
-            Last_Install_Date_Entry = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Entry>(this, "Last_Install_Date_Entry");
+            LastInstallDate_Picker = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.DatePicker>(this, "LastInstallDate_Picker");
             Equipment_Class_Entry = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Entry>(this, "Equipment_Class_Entry");
             Equipment_Class_Description_Entry = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Entry>(this, "Equipment_Class_Description_Entry");
-            addassetbutton = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Button>(this, "addassetbutton");
+            AddOrUpdateButton = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Button>(this, "AddOrUpdateButton");
         }
     }
 }

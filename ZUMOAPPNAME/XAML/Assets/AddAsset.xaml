@@ -33,6 +33,9 @@
                 <Label Text="Component Code" FontSize="Title" TextColor="Black"/>
                 <Entry  x:Name="Component_Code_Entry" ClearButtonVisibility="WhileEditing" VerticalOptions="EndAndExpand" MaxLength="25" IsSpellCheckEnabled="True" IsTextPredictionEnabled="false"/>
 
+                <Label Text="Warranty Date" FontSize="Title" TextColor="Black"/>
+                <DatePicker  x:Name="WarrantyDate_Picker"></DatePicker>
+
                 <Label Text="Equipment Age" FontSize="Title" TextColor="Black"/>
                 <Entry  x:Name="Equipment_Age_Entry" ClearButtonVisibility="WhileEditing" VerticalOptions="EndAndExpand" MaxLength="25" IsSpellCheckEnabled="True" IsTextPredictionEnabled="false"/>
 
@@ -64,8 +67,8 @@
                 <Entry  x:Name="Specification_Item_Number_Entry" ClearButtonVisibility="WhileEditing" VerticalOptions="EndAndExpand" MaxLength="25" IsSpellCheckEnabled="True" IsTextPredictionEnabled="false"/>
 
                 <Label Text="Last Installation Date" FontSize="Title" TextColor="Black"/>
-                <Entry  x:Name="Last_Install_Date_Entry" ClearButtonVisibility="WhileEditing" VerticalOptions="EndAndExpand" MaxLength="25" IsSpellCheckEnabled="True" IsTextPredictionEnabled="false"/>
-
+                <DatePicker  x:Name="LastInstallDate_Picker"></DatePicker>
+                  
                 <Label Text="Equipment Class" FontSize="Title" TextColor="Black"/>
                 <Entry  x:Name="Equipment_Class_Entry" ClearButtonVisibility="WhileEditing" VerticalOptions="EndAndExpand" MaxLength="25" IsSpellCheckEnabled="True" IsTextPredictionEnabled="false"/>
 
@@ -73,7 +76,7 @@
                 <Entry  x:Name="Equipment_Class_Description_Entry" ClearButtonVisibility="WhileEditing" VerticalOptions="EndAndExpand" MaxLength="25" IsSpellCheckEnabled="True" IsTextPredictionEnabled="false"/>
 
 
-                <Button Text="Add Asset" Clicked="Add_Asset_Clicked" VerticalOptions="EndAndExpand" x:Name = "addassetbutton" CornerRadius="5" BorderColor="Black" BorderWidth="1"/>
+                <Button x:Name="AddOrUpdateButton"  Text="Add Asset" Clicked="Add_Asset_Clicked" VerticalOptions="EndAndExpand" CornerRadius="5" BorderColor="Black" BorderWidth="1"/>
             </StackLayout>
         </Frame>
         </ScrollView>

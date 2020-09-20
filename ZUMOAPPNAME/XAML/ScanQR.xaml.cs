@@ -15,6 +15,7 @@ namespace K_Bikpower
     public partial class ScanQR : ContentPage
     {
         AssetManager manager;
+       
         public ScanQR()
         {
             InitializeComponent();

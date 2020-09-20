@@ -37,7 +37,7 @@
                     </Grid.RowDefinitions>
                     <StackLayout Orientation="Horizontal" Grid.Row="0" HorizontalOptions="Center">
                         <Entry x:Name="AssetEntry"  Placeholder="Asset ID" WidthRequest="200"/>
-                        <Button Text="Scan"/>
+                        <Button Text="Scan" Clicked="Scan_Asset_Clicked"/>
                         <Button x:Name="addAsset" Text="Add" Clicked="addAsset_Clicked"/>
                         <Button x:Name="removeAsset" Text="Remove" Clicked="removeAsset_Clicked" IsEnabled="False"/>
                     </StackLayout>

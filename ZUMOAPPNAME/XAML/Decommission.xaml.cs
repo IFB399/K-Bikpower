@@ -52,6 +52,10 @@ namespace K_Bikpower
         {
             removeAsset.IsEnabled = true;
         }
+        private void Scan_Asset_Clicked(object sender, EventArgs e)
+        {
+            //removeAsset.IsEnabled = true;
+        }
         async void Submit_Clicked(object sender, EventArgs e)
         {
 
@@ -74,7 +78,9 @@ namespace K_Bikpower
             }
             var form = new DecommissionData
             {
-                Date = Decommissioned_Details_Entry.Text, //will change later
+                //Date = Decommissioned_Details_Entry.Text, //will change later
+                //Date = DateTime.UtcNow
+                Date = Date_Decommissioned.Date.ToLocalTime(),
                 Details = Decommissioned_Details_Entry.Text,
                 RegionName = Region_Picker.SelectedItem.ToString(),
                 Location = Location_Entry.Text,

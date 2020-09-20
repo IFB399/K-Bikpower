@@ -19,7 +19,7 @@ namespace K_Bikpower
             userauth = UserManager.DefaultManager;
             Authentication = userauth.Authentication();
             InitializeComponent();
-            
+            WelcomeLabel.Text = "Welcome " + userauth.ReturnUser();
         }
 
         private void assets_button_Clicked(object sender, EventArgs e)
