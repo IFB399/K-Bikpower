@@ -69,7 +69,7 @@ namespace K_Bikpower
                 {
                     manager.SetUsername(username);
                     await manager.GetUserAuth(username);
-                    await Navigation.PushAsync(new MainPage());
+                    App.Current.MainPage = new main();
                 }
                 else
                 {
