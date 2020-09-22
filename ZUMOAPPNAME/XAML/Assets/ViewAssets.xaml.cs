@@ -8,11 +8,11 @@ namespace K_Bikpower
     public partial class AssetList : ContentPage
     {
         AssetManager manager;
-
+        DecommissionManager decommission;
         public AssetList()
         {
             InitializeComponent();
-
+            decommission = DecommissionManager.DefaultManager;
             manager = AssetManager.DefaultManager;
             if (Device.RuntimePlatform == Device.UWP)
             {
@@ -44,6 +44,7 @@ namespace K_Bikpower
             EquipmentClassPicker.ItemsSource = await manager.GetEquipmentClass();
             // Set syncItems to true in order to synchronize the data on startup when running in offline mode
             await RefreshItems(true, syncItems: true);
+           
         }
 
         // Data methods
