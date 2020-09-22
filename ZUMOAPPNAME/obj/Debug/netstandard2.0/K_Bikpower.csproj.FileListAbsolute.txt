@@ -140,3 +140,6 @@ C:\Users\jacqu\Documents\2019\latest repo 2\ZUMOAPPNAME\obj\Debug\netstandard2.0
 C:\Users\brent\source\repos\K-Bikpower\ZUMOAPPNAME\obj\Debug\netstandard2.0\K_Bikpower.csprojAssemblyReference.cache
 C:\Users\brent\source\repos\K-Bikpower\ZUMOAPPNAME\obj\Debug\netstandard2.0\XAML\UsersPage.xaml.g.cs
 C:\Users\jacqu\Documents\2019\latest repo 2\ZUMOAPPNAME\obj\Debug\netstandard2.0\XAML\UsersPage.xaml.g.cs
+C:\Users\jacqu\Documents\2019\latest repo 2\ZUMOAPPNAME\obj\Debug\netstandard2.0\XAML\ViewDecommissionForms.xaml.g.cs
+C:\Users\jacqu\Documents\2019\latest repo 2\ZUMOAPPNAME\obj\Debug\netstandard2.0\XAML\ApproveDecommission.xaml.g.cs
+C:\Users\jacqu\Documents\2019\latest repo 2\ZUMOAPPNAME\obj\Debug\netstandard2.0\XAML\ManageFormAssets.xaml.g.cs

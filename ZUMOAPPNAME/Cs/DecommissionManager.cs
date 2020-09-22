@@ -75,7 +75,7 @@ namespace K_Bikpower
             get { return todoTable is Microsoft.WindowsAzure.MobileServices.Sync.IMobileServiceSyncTable<DecommissionData>; }
         }
 
-        public async Task<ObservableCollection<DecommissionData>> GetTodoItemsAsync(bool syncItems = false)
+        public async Task<ObservableCollection<DecommissionData>> GetDFormsAsync(bool syncItems = false, string submittedBy = null, string status = null, ObservableCollection<string> formIds = null)
         {
             try
             {
@@ -85,10 +85,34 @@ namespace K_Bikpower
                     await this.SyncAsync();
                 }
 #endif
-                IEnumerable<DecommissionData> items = await todoTable
-                    .ToEnumerableAsync();
+                IEnumerable<DecommissionData> items = await todoTable.ToEnumerableAsync();
+                if (formIds != null)
+                {
+                    items = items.Where(asset => formIds.Contains(asset.Id)); //the user is viewing forms of a particular asset
+                }
+                if (submittedBy != null)
+                {
+                    items = items.Where(asset => asset.SubmittedBy == submittedBy);
+                }
+                
+                if (status != null)
+                {
+                    if (status == "Rejected")
+                    {
+                        items = items.Where(asset => asset.Status.Contains("Rejected")); 
+                    }
+                    else if (status == "Approved" )
+                    {
+                        items = items.Where(asset => asset.Status.Contains("Approved"));
+                    }
+                    else
+                    {
+                        items = items.Where(asset => asset.Status == status);
+                    }
+                }
+                
 
-                return new ObservableCollection<DecommissionData>(items);
+                return new ObservableCollection<DecommissionData>(items.OrderByDescending(item => item.Date));
             }
             catch (MobileServiceInvalidOperationException msioe)
             {
@@ -99,6 +123,17 @@ namespace K_Bikpower
                 Debug.WriteLine("Sync error: {0}", new[] { e.Message });
             }
             return null;
+        }
+        public async Task DeleteFormAsync(DecommissionData d)
+        {
+            await todoTable.DeleteAsync(d);
+        }
+
+        public async Task<ObservableCollection<string>> GetSubmittedByNames()
+        {
+            IEnumerable<string> items = await todoTable.Where(form => (form.SubmittedBy != "" && form.SubmittedBy != null)).Select(form => form.SubmittedBy).ToEnumerableAsync();
+            items = items.Distinct();
+            return new ObservableCollection<string>(items);
         }
 
         public async Task SaveTaskAsync(DecommissionData item)

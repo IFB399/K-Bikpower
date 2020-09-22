@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="K_Bikpower.ManageFormAssets">
+    <ScrollView>
+        <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <StackLayout Orientation="Horizontal" Grid.Row="0" HorizontalOptions="Center">
+                <Button x:Name="ScanButton"  Text="Scan" Clicked="Scan_Asset_Clicked"/>
+                <Button x:Name="removeAsset" Text="Remove" Clicked="removeAsset_Clicked" IsEnabled="False"/>
+                <Button x:Name="AddButton" Text="Add by Table" Clicked="Add_Clicked" />
+                <Button x:Name="DoneButton" Text="Done" Clicked="Done_Clicked" />
+            </StackLayout>
+            <ListView x:Name="assetList" Grid.Row="1" ItemsSource="{Binding Assets}" ItemSelected="selectedAsset" HasUnevenRows="false">
+                <ListView.Header>
+                    <Grid>
+                        <Label Grid.Column="0"  Text="Asset Equipment Number" HorizontalOptions="Center" FontAttributes="Bold"/>
+                        <Label Grid.Column="1" Text="Substation" HorizontalOptions="Center" FontAttributes="Bold"/>
+                        <Label Grid.Column="2" Text="Manufacturer" HorizontalOptions="Center" FontAttributes="Bold"/>
+                        <Label Grid.Column="3" Text="Equipment Class" HorizontalOptions="Center" FontAttributes="Bold"/>
+                    </Grid>
+                </ListView.Header>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Label Grid.Column="0" Text="{Binding AssetEQNO}" HorizontalOptions="Center"/>
+                                <Label Grid.Column="1" Text="{Binding SubstationCode}" HorizontalOptions="Center"/>
+                                <Label Grid.Column="2" Text="{Binding ManufacturerName}" HorizontalOptions="Center"/>
+                                <Label Grid.Column="3" Text="{Binding EquipmentClassDescription}" HorizontalOptions="Center"/>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
+    </ScrollView>
+</ContentPage>

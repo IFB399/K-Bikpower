@@ -1,18 +1,21 @@
 ﻿using System;
 using System.Threading.Tasks;
 using Xamarin.Forms;
-
+using System.Collections.ObjectModel;
+using System.Linq;
 
 namespace K_Bikpower
 {
     public partial class AssetList : ContentPage
     {
         AssetManager manager;
-
-        public AssetList()
+        Object savedData;
+        ObservableCollection<Asset> assetList = new ObservableCollection<Asset>();
+        bool prevPage;
+        public AssetList(Object o = null, ObservableCollection<Asset> assets = null, bool prevPage2 = false)
         {
             InitializeComponent();
-
+            prevPage = prevPage2;
             manager = AssetManager.DefaultManager;
             if (Device.RuntimePlatform == Device.UWP)
             {
@@ -34,6 +37,11 @@ namespace K_Bikpower
                     buttonsPanel.Children.Add(syncButton);
                 }
             }
+            savedData = o;
+            if (assets != null)
+            {
+                assetList = assets;
+            }
         }
 
         protected override async void OnAppearing()
@@ -45,9 +53,6 @@ namespace K_Bikpower
             // Set syncItems to true in order to synchronize the data on startup when running in offline mode
             await RefreshItems(true, syncItems: true);
         }
-
-        // Data methods
-
 
         public async void Add_Asset_Clicked(object sender, EventArgs e)
         {
@@ -67,7 +72,6 @@ namespace K_Bikpower
                 FilterLabel.Text = "Filters (active)";
             }
             await RefreshItems(true, syncItems: false, substationCode, equipmentClass, manufacturerName);
-            //todoList.ItemsSource = await manager.GetTodoItemsAsync(false, substationCode, equipmentClass, manufacturerName);
         }
         public async void Clear_Filters_Clicked(object sender, EventArgs e)
         {
@@ -90,23 +94,45 @@ namespace K_Bikpower
             ManufacturerPicker.SelectedIndex = -1;
         }
 
-        // Event handlers
         public async void OnSelected(object sender, SelectedItemChangedEventArgs e)
         {
             Asset todo = e.SelectedItem as Asset;
             if (Device.RuntimePlatform != Device.iOS && todo != null)
             {
-                // Not iOS - the swipe-to-delete is discoverable there
-                if (Device.RuntimePlatform == Device.Android)
+                if (savedData == null)
                 {
-                    await Navigation.PushAsync(new Preview_Asset(todo));
+                    // Not iOS - the swipe-to-delete is discoverable there
+                    if (Device.RuntimePlatform == Device.Android)
+                    {
+                        await Navigation.PushAsync(new Preview_Asset(todo));
+                    }
+                    else
+                    {
+                        // Windows, not all platforms support the Context Actions yet
+                        await Navigation.PushAsync(new Preview_Asset(todo));
+
+                    }
                 }
-                else
+                else if(typeof(DecommissionData).IsInstanceOfType(savedData))
                 {
-                    // Windows, not all platforms support the Context Actions yet
-                    await Navigation.PushAsync(new Preview_Asset(todo));
+                    DecommissionData d = (DecommissionData)savedData;
+                    if (assetList.Any((a) => a.Id == todo.Id))
+                    {
+                        //_scanView.IsScanning = true;
+                        await DisplayAlert("Duplicate Error", "Asset already added", "Close");
+                    }
+                    else if (todo.Status == "Decommissioned")
+                    {
+                        await DisplayAlert("Asset already decommissioned", "Try commissioning the asset first", "Close");
+                    }
+                    else
+                    {
+                        assetList.Add(todo);
+                        await Navigation.PushAsync(new ManageFormAssets(d, assetList, prevPage));
+                    }
 
                 }
+
             }
 
             // prevents background getting highlighted

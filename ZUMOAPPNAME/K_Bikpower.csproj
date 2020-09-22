@@ -26,6 +26,12 @@
       </Compile>
     </ItemGroup>
     <ItemGroup>
+        <EmbeddedResource Update="XAML\ApproveDecommission.xaml">
+          <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+        </EmbeddedResource>
+        <EmbeddedResource Update="XAML\ManageFormAssets.xaml">
+          <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+        </EmbeddedResource>
         <EmbeddedResource Update="XAML\UsersPage.xaml">
           <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
         </EmbeddedResource>
@@ -49,6 +55,9 @@
         </EmbeddedResource>
         <EmbeddedResource Update="XAML\ScanQR.xaml">
           <Generator>MSBuild:Compile</Generator>
+        </EmbeddedResource>
+        <EmbeddedResource Update="XAML\ViewDecommissionForms.xaml">
+          <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
         </EmbeddedResource>
     </ItemGroup>
     <ItemGroup>

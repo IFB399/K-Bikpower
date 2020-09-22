@@ -12,6 +12,8 @@ namespace K_Bikpower
 		string permission;
 		string password;
 		string salt;
+		string firstName;
+		string lastName;
 
 		[JsonProperty(PropertyName = "id")]
 		public string Id
@@ -50,6 +52,18 @@ namespace K_Bikpower
 		{
 			get { return salt; }
 			set { salt = value; }
+		}
+		[JsonProperty(PropertyName = "firstName")]
+		public string FirstName
+		{
+			get { return firstName; }
+			set { firstName = value; }
+		}
+		[JsonProperty(PropertyName = "lastName")]
+		public string LastName
+		{
+			get { return lastName; }
+			set { lastName = value; }
 		}
 	}
 }
