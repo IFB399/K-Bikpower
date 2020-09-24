@@ -137,6 +137,7 @@ C:\Users\jacqu\Documents\2019\latest repo 2\ZUMOAPPNAME\bin\Debug\netstandard2.0
 C:\Users\jacqu\Documents\2019\latest repo 2\ZUMOAPPNAME\bin\Debug\netstandard2.0\Windows.Foundation.UniversalApiContract.winmd
 C:\Users\jacqu\Documents\2019\latest repo 2\ZUMOAPPNAME\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Users\jacqu\Documents\2019\latest repo 2\ZUMOAPPNAME\obj\Debug\netstandard2.0\K_Bikpower.csproj.CopyComplete
+C:\Users\brent\source\repos\K-Bikpower\ZUMOAPPNAME\obj\Debug\netstandard2.0\K_Bikpower.csprojAssemblyReference.cache
 C:\Users\brent\source\repos\K-Bikpower\ZUMOAPPNAME\obj\Debug\netstandard2.0\XAML\UsersPage.xaml.g.cs
 C:\Users\jacqu\Documents\2019\latest repo 2\ZUMOAPPNAME\obj\Debug\netstandard2.0\XAML\UsersPage.xaml.g.cs
 C:\Users\Brenton Reddish\Desktop\IFB398\kbik\ZUMOAPPNAME\bin\Debug\netstandard2.0\K_Bikpower.deps.json
@@ -145,7 +146,6 @@ C:\Users\Brenton Reddish\Desktop\IFB398\kbik\ZUMOAPPNAME\bin\Debug\netstandard2.
 C:\Users\Brenton Reddish\Desktop\IFB398\kbik\ZUMOAPPNAME\bin\Debug\netstandard2.0\System.Drawing.Common.dll
 C:\Users\Brenton Reddish\Desktop\IFB398\kbik\ZUMOAPPNAME\bin\Debug\netstandard2.0\Windows.Foundation.UniversalApiContract.winmd
 C:\Users\Brenton Reddish\Desktop\IFB398\kbik\ZUMOAPPNAME\obj\Debug\netstandard2.0\K_Bikpower.csprojAssemblyReference.cache
-C:\Users\Brenton Reddish\Desktop\IFB398\kbik\ZUMOAPPNAME\obj\Debug\netstandard2.0\CustomViewCell.xaml.g.cs
 C:\Users\Brenton Reddish\Desktop\IFB398\kbik\ZUMOAPPNAME\obj\Debug\netstandard2.0\XAML\Assets\AddAsset.xaml.g.cs
 C:\Users\Brenton Reddish\Desktop\IFB398\kbik\ZUMOAPPNAME\obj\Debug\netstandard2.0\XAML\Assets\Preview_Asset.xaml.g.cs
 C:\Users\Brenton Reddish\Desktop\IFB398\kbik\ZUMOAPPNAME\obj\Debug\netstandard2.0\XAML\Assets\ViewAssets.xaml.g.cs
@@ -166,4 +166,6 @@ C:\Users\Brenton Reddish\Desktop\IFB398\kbik\ZUMOAPPNAME\obj\Debug\netstandard2.
 C:\Users\Brenton Reddish\Desktop\IFB398\kbik\ZUMOAPPNAME\obj\Debug\netstandard2.0\K_Bikpower.csproj.CopyComplete
 C:\Users\Brenton Reddish\Desktop\IFB398\kbik\ZUMOAPPNAME\obj\Debug\netstandard2.0\K_Bikpower.dll
 C:\Users\Brenton Reddish\Desktop\IFB398\kbik\ZUMOAPPNAME\obj\Debug\netstandard2.0\K_Bikpower.pdb
-C:\Users\brent\source\repos\K-Bikpower\ZUMOAPPNAME\obj\Debug\netstandard2.0\XAML\Assets\CustomViewCell.xaml.g.cs
+C:\Users\Brenton Reddish\Desktop\IFB398\kbik\ZUMOAPPNAME\obj\Debug\netstandard2.0\XAML\Assets\CustomViewCell.xaml.g.cs
+C:\Users\Brenton Reddish\Desktop\IFB398\kbik\ZUMOAPPNAME\obj\Debug\netstandard2.0\MasterPage.xaml.g.cs
+C:\Users\Brenton Reddish\Desktop\IFB398\kbik\ZUMOAPPNAME\obj\Debug\netstandard2.0\XAML\main.xaml.g.cs

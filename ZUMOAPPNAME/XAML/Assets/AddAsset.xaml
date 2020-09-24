@@ -66,10 +66,10 @@
                 <Label Text="Specification Item Number" FontSize="Title" TextColor="Black"/>
                 <Entry  x:Name="Specification_Item_Number_Entry" ClearButtonVisibility="WhileEditing" VerticalOptions="EndAndExpand" MaxLength="25" IsSpellCheckEnabled="True" IsTextPredictionEnabled="false"/>
 
-                <Label Text="Last Installation Date" FontSize="Title" TextColor="Black"/>
-                <DatePicker  x:Name="LastInstallDate_Picker"></DatePicker>
-                  
-                <Label Text="Equipment Class" FontSize="Title" TextColor="Black"/>
+                    <Label Text="Last Installation Date" FontSize="Title" TextColor="Black"/>
+                    <DatePicker  x:Name="LastInstallDate_Picker"/>
+
+                    <Label Text="Equipment Class" FontSize="Title" TextColor="Black"/>
                 <Entry  x:Name="Equipment_Class_Entry" ClearButtonVisibility="WhileEditing" VerticalOptions="EndAndExpand" MaxLength="25" IsSpellCheckEnabled="True" IsTextPredictionEnabled="false"/>
 
                 <Label Text="Equipment Class Description" FontSize="Title" TextColor="Black"/>

@@ -14,15 +14,18 @@ namespace K_Bikpower
     {
         Asset AssetData;
         AssetManager manager;
+        UserManager user_manager;
         public string Ids;
+        bool update = false;
         public AddAsset(Asset assetdata)
         {
             InitializeComponent();
             manager = AssetManager.DefaultManager;
-
+            user_manager = UserManager.DefaultManager;
             if (assetdata != null)
             {
                 AddOrUpdateButton.Text = "Update Asset";
+                update = true;
                 AssetData = assetdata;
                 PopulateDetails(AssetData);
                 Ids = assetdata.Id;
@@ -69,7 +72,8 @@ namespace K_Bikpower
          
         async void Add_Asset_Clicked(object sender, EventArgs e)
         {
-            var todo = new Asset {
+            Asset todo = new Asset
+            {
                 Id = Ids,
                 SubstationCode = Substation_Picker.Text,
                 PlantNumber = Plant_Number_Entry.Text,
@@ -93,10 +97,18 @@ namespace K_Bikpower
                 LastInstallDate = LastInstallDate_Picker.Date.ToLocalTime(),
                 EquipmentClass = Equipment_Class_Entry.Text,
                 EquipmentClassDescription = Equipment_Class_Description_Entry.Text,
-                Status="Added",
-                ModifiedBy="a user",
-                AddedBy="XSXAXSMK"
             };
+            if (update == false) //a brand new asset is being added
+            {
+                todo.Status = "Added";
+                todo.AddedBy = user_manager.ReturnUser();
+            }
+            else
+            {
+                todo.Status = AssetData.Status; //don't change status
+                todo.AddedBy = AssetData.AddedBy; //don't change added by
+                todo.ModifiedBy = user_manager.ReturnUser();
+            }
 
             await AddItem(todo);
             await Navigation.PushAsync(new AssetList());

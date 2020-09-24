@@ -23,7 +23,8 @@ namespace K_Bikpower
 
         private void Decommission_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync((new Decommission())); 
+            //Navigation.PushAsync((new Decommission())); 
+            Navigation.PushAsync(new ViewDecommissionForms());
         }
     }
 }

@@ -12,53 +12,55 @@ namespace K_Bikpower
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Decommission : ContentPage
-    {
-        ObservableCollection<Asset> assets = new ObservableCollection<Asset>();
-        DecommissionManager manager;
-        public Decommission()
-        {
+    {   
+        AssetFormLinkManager afl_manager;
+        AssetManager asset_manager;
+        DecommissionManager decommission_manager;
+        UserManager user_manager;
 
+        ObservableCollection<Asset> globalAssets = new ObservableCollection<Asset>();
+
+        public Decommission(DecommissionData savedForm = null, ObservableCollection<Asset> assets = null)
+        {
             InitializeComponent();
-            manager = DecommissionManager.DefaultManager;
+            afl_manager = AssetFormLinkManager.DefaultManager;
+            asset_manager = AssetManager.DefaultManager;
+            decommission_manager = DecommissionManager.DefaultManager;
+            user_manager = UserManager.DefaultManager;
 
-            assetList.ItemsSource = assets;
-           // assets.Add(new Asset() { id = "329474", Substation_Code = "ALB", Manufacture_Name = "RH" }); //just for display purposes for now
+            
+            
+
             dateLabel.Text = DateTime.UtcNow.ToString("d");
-        }
-        async Task AddItem(DecommissionData item)
-        {
-            //await dTable.InsertAsync(item);
-            await manager.SaveTaskAsync(item);
-        }
-        private void addAsset_Clicked(object sender, EventArgs e)
-        {
-            //code breaks when something other than a number is entered
-            if (!string.IsNullOrWhiteSpace(AssetEntry.Text))
+            int count = 0;
+            if (assets != null)
             {
-             //   assets.Add(new Asset() { id = AssetEntry.Text, Substation_Code = "BEL", Manufacture_Name = "ELIN" });
-                assetList.HeightRequest += 50; //chose a random number for now, differs between devices
-                AssetExpander.ForceUpdateSize();
+                globalAssets = assets;
+                count = assets.Count();
+            }
+            ManageAssets_Button.Text = "Manage Assets (" + count.ToString() + ")";
+
+            if (savedForm != null)
+            {
+                LoadForm(savedForm);
             }
 
         }
-        private void removeAsset_Clicked(object sender, EventArgs e)
+        async Task AddItem(DecommissionData item)
         {
-            assets.Remove((Asset)assetList.SelectedItem);
-            assetList.HeightRequest -= 50;
-            AssetExpander.ForceUpdateSize();
-            removeAsset.IsEnabled = false;
+            await decommission_manager.SaveTaskAsync(item);
         }
-        private void selectedAsset(object sender, EventArgs e)
+        async Task AddLink(AssetFormLink item)
         {
-            removeAsset.IsEnabled = true;
+            await afl_manager.SaveTaskAsync(item);
         }
-        private void Scan_Asset_Clicked(object sender, EventArgs e)
+        async Task UpdateAsset(Asset item)
         {
-            //removeAsset.IsEnabled = true;
+            await asset_manager.SaveTaskAsync(item);
         }
-        async void Submit_Clicked(object sender, EventArgs e)
-        {
 
+        private DecommissionData SaveData()
+        {
             string movedto = "";
             if (Scrap_Button.IsChecked)
             {
@@ -76,34 +78,100 @@ namespace K_Bikpower
             {
                 movedto = Workshop_Button.Text;
             }
-            var form = new DecommissionData
+            string regionName = null;
+            if (Region_Picker.SelectedIndex != -1)
             {
-                //Date = Decommissioned_Details_Entry.Text, //will change later
-                //Date = DateTime.UtcNow
+                regionName = Region_Picker.SelectedItem.ToString();
+            }
+            int workOrderNumber = -1; //will have to change later, maybe store work order number as a string in the database
+            if (String.IsNullOrEmpty(Work_OrderNo_Entry.Text) == false)
+            {
+                workOrderNumber = Int32.Parse(Work_OrderNo_Entry.Text); //will break if an int is not given
+            }
+            DecommissionData form = new DecommissionData
+            {
                 Date = Date_Decommissioned.Date.ToLocalTime(),
                 Details = Decommissioned_Details_Entry.Text,
-                RegionName = Region_Picker.SelectedItem.ToString(),
+                RegionName = regionName,
                 Location = Location_Entry.Text,
                 MovedTo = movedto,
-                WorkOrderNumber = Int32.Parse(Work_OrderNo_Entry.Text)
-
-
+                WorkOrderNumber = workOrderNumber               
             };
-            /*
-
-            var form = new DecommissionData
+            return form;
+        }
+        private void LoadForm(DecommissionData form)
+        {
+            Date_Decommissioned.Date = form.Date;
+            Decommissioned_Details_Entry.Text = form.Details;
+            if (form.RegionName != null)
             {
-                Date = "pp", //will change later
-                Details = "pp",
-                RegionName = "pp",
-                Location = "pp",
-                MovedTo = "pp",
-                WorkOrderNumber = 12
-            };
-            */
-            await AddItem(form);
-            //await dTable.InsertAsync(form);
-            await Navigation.PushAsync(new MainPage());
+                Region_Picker.SelectedItem = form.RegionName;
+            }
+            Location_Entry.Text = form.Location;
+            if (form.MovedTo == "Scrap")
+            {
+                Scrap_Button.IsChecked = true;
+            }
+            else if (form.MovedTo == "Project")
+            {
+                Project_Button.IsChecked = true;
+            }
+            else if (form.MovedTo == "Spares")
+            {
+                Spares_Button.IsChecked = true;
+            }
+            else if (form.MovedTo == "Workshop")
+            {
+                Workshop_Button.IsChecked = true;
+            }
+            if (form.WorkOrderNumber != -1)
+            {
+                Work_OrderNo_Entry.Text = form.WorkOrderNumber.ToString();
+            }
+        }
+
+        private void Scan_Asset_Clicked(object sender, EventArgs e)
+        {
+            DecommissionData d = SaveData();
+            Navigation.PushAsync(new ScanQR(d, globalAssets)); //go to scan page
+
+        }
+        async void Submit_Clicked(object sender, EventArgs e)
+        {
+            if (globalAssets.Count() == 0 || globalAssets == null)
+            {
+                await DisplayAlert("Cannot Submit Form", "Please add at least one asset in the manage assets page", "Close");
+            }
+            else
+            {
+                DecommissionData form = SaveData();
+                form.SubmittedBy = user_manager.ReturnUser();
+                form.Status = "Submitted";
+
+                await AddItem(form);
+                await Navigation.PushAsync(new ViewDecommissionForms());
+                if (globalAssets != null)
+                {
+                    foreach (Asset a in globalAssets)
+                    {
+                        //to ensure assets of this form can be retrieved
+                        AssetFormLink afl = new AssetFormLink
+                        {
+                            FormId = form.Id,
+                            AssetId = a.Id,
+                            FormType = "Decommission"
+                        };
+                        await AddLink(afl);
+                    }
+                }
+            }
+
+
+        }
+        private async void ManageAssets_Clicked(object sender, EventArgs e)
+        {
+            DecommissionData d = SaveData();
+            await Navigation.PushAsync(new ManageFormAssets(d, globalAssets));
 
         }
     }

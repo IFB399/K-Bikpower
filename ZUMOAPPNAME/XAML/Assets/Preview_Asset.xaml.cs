@@ -22,12 +22,13 @@ namespace K_Bikpower
     public partial class Preview_Asset : ContentPage
     {
         Asset assetdata;
-        
+        AssetManager asset_manager;
 
 
         public Preview_Asset(Asset details)
         {
             InitializeComponent();
+            asset_manager = AssetManager.DefaultManager;
             if (details != null)
             {
                 assetdata = details;
@@ -72,7 +73,25 @@ namespace K_Bikpower
         {
             Navigation.PushAsync(new AddAsset(assetdata));
         }
+        private async void Delete_Asset_Clicked(object sender, EventArgs e)
+        {
+            //note deleting assets that are included in forms may need special attention
+            bool answer = await DisplayAlert("Confirm Asset Deletion", "Delete this asset?", "Yes", "No"); 
+            if (answer == true)
+            {
+                await asset_manager.DeleteAssetAsync(assetdata);
+                await Navigation.PushAsync(new AssetList());
+            }
 
+        }
+        private void DForms_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new ViewDecommissionForms(assetdata));
+        }
+        private void CForms_Clicked(object sender, EventArgs e)
+        {
+            //to be completed
+        }
         private void Button_Clicked_1(object sender, EventArgs e)
         {
             string QRId = assetdata.Id;
