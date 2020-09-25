@@ -1,20 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Drawing.Imaging;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Windows.UI.Xaml.Controls;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using ZXing;
-using ZXing.Common;
-using ZXing.Mobile;
-using ZXing.Net.Mobile.Forms;
-using ZXing.QrCode;
-using ZXing.QrCode.Internal;
+
 
 namespace K_Bikpower
 {
