@@ -18,7 +18,7 @@ using Android;
 namespace K_Bikpower.Droid
 {
 	[Activity (Label = "K_Bikpower.Droid",
-		Icon = "@drawable/icon",
+		Icon = "@drawable/homeicon",
 		MainLauncher = true,
 		ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation,
 		Theme = "@android:style/Theme.Holo.Light")]

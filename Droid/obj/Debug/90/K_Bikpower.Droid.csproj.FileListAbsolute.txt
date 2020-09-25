@@ -2618,3 +2618,5 @@ C:\Users\Brenton Reddish\Desktop\IFB398\kbik\Droid\obj\Debug\90\stamp\_GenerateJ
 C:\Users\Brenton Reddish\Desktop\IFB398\kbik\Droid\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\Brenton Reddish\Desktop\IFB398\kbik\Droid\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
 C:\Users\Brenton Reddish\Desktop\IFB398\kbik\Droid\obj\Debug\90\K_Bikpower.Droid.csprojAssemblyReference.cache
+C:\Users\Brenton Reddish\Desktop\IFB398\kbik\Droid\obj\Debug\90\res\drawable\homeicon.png
+C:\Users\Brenton Reddish\Desktop\IFB398\kbik\Droid\obj\Debug\90\res\drawable\ic_launcher.png

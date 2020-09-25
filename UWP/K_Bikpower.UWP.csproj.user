@@ -3,4 +3,14 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <UseSimulator>false</UseSimulator>
   </PropertyGroup>
+  <PropertyGroup>
+    <Source>C:\Users\Brenton Reddish\Desktop\IFB398\kbik\UWP\Assets\120035674_339056044006226_8303584661565132024_n.png</Source>
+    <SmallTileSource>C:\Users\Brenton Reddish\Desktop\IFB398\kbik\UWP\Assets\120035674_339056044006226_8303584661565132024_n.png</SmallTileSource>
+    <MediumTileSource>C:\Users\Brenton Reddish\Desktop\IFB398\kbik\UWP\Assets\120035674_339056044006226_8303584661565132024_n.png</MediumTileSource>
+    <WideTileSource>C:\Users\Brenton Reddish\Desktop\IFB398\kbik\UWP\Assets\120035674_339056044006226_8303584661565132024_n.png</WideTileSource>
+    <LargeTileSource>C:\Users\Brenton Reddish\Desktop\IFB398\kbik\UWP\Assets\120035674_339056044006226_8303584661565132024_n.png</LargeTileSource>
+    <AppIconSource>C:\Users\Brenton Reddish\Desktop\IFB398\kbik\UWP\Assets\120035674_339056044006226_8303584661565132024_n.png</AppIconSource>
+    <PackageLogoSource>C:\Users\Brenton Reddish\Desktop\IFB398\kbik\UWP\Assets\120035674_339056044006226_8303584661565132024_n.png</PackageLogoSource>
+    <SplashScreenSource>C:\Users\Brenton Reddish\Desktop\IFB398\kbik\UWP\Assets\gif.gif</SplashScreenSource>
+  </PropertyGroup>
 </Project>
