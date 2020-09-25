@@ -124,6 +124,9 @@
 
                     <StackLayout Orientation="Horizontal" >
                         <Button Text="Edit Asset" Clicked="Edit_Asset_Clicked"/>
+                        <Button Text="Delete Asset" Clicked="Delete_Asset_Clicked"/>
+                        <Button x:Name="DForms_Button" Text="View Decommission Forms" Clicked="DForms_Clicked"/>
+                        <Button x:Name="CForms_Button" Text="View Commission Forms" Clicked="CForms_Clicked"/>
                         <Button Text="Generate QR Code" Clicked="Button_Clicked_1"/>
                     </StackLayout>
                     <zxing:ZXingBarcodeImageView BarcodeFormat="QR_CODE" x:Name="Gen" IsVisible="false" BarcodeValue="1" HeightRequest="300" WidthRequest="300">

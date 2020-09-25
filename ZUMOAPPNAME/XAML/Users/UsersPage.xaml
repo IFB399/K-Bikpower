@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="K_Bikpower.UsersPage">
+    <ContentPage.Content>
+        <StackLayout Margin="50,50,50,30">
+            <Frame CornerRadius="10" BackgroundColor="AliceBlue" HasShadow ="True">
+                <StackLayout>
+                    <ActivityIndicator 
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       IsVisible="False"
+                       IsEnabled="True"
+                       x:Name="syncIndicator"/>
+                    <ListView x:Name="UserList" HasUnevenRows="false" IsPullToRefreshEnabled="true" ItemSelected="OnSelected">
+                        <ListView.Header>
+                            <Grid Margin="0,0,0,10">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Text= "Name" FontSize="Small" FontAttributes="Bold"  Grid.Column="0" HorizontalOptions="Center"/>
+                                <Label Text= "Email" FontSize="Small" FontAttributes="Bold"  Grid.Column="1" HorizontalOptions="Center"/>
+                                <Label Text= "Username" FontSize="Small" FontAttributes="Bold"  Grid.Column="2" HorizontalOptions="Center"/>
+                                <Label Text= "Permission" FontSize="Small" FontAttributes="Bold"  Grid.Column="3" HorizontalOptions="Center"/>
+                                <ActivityIndicator Grid.RowSpan="2" HorizontalOptions="Center" VerticalOptions="Center" IsVisible="False" IsEnabled="True"/>
+                            </Grid>
+                        </ListView.Header>
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <Frame BackgroundColor="White" BorderColor="Gray" Padding="5"  HasShadow="False">
+                                        <Grid HeightRequest="50" HorizontalOptions="FillAndExpand" VerticalOptions="Start">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
+                                            <Label Text="{Binding FirstName,StringFormat='{0:F0}'}" FontSize="Small" FontAttributes="Bold"  Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center"/>
+                                            <Label Text="{Binding LastName,StringFormat='{0:F0}'}" FontSize="Small" FontAttributes="Bold"  Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center"/>
+                                            <Label Text="{Binding Email,StringFormat='{0:F0}'}" FontSize="Small" FontAttributes="Bold"  Grid.Column="2" HorizontalOptions="Center" VerticalOptions="Center"/>
+                                            <Label Text="{Binding Username,StringFormat='{0:F0}'}" FontSize="Small" FontAttributes="Bold"  Grid.Column="3" HorizontalOptions="Center" VerticalOptions="Center"/>
+                                            <Label Text="{Binding Permisison,StringFormat='{0:F0}'}" FontSize="Small" FontAttributes="Bold"  Grid.Column="4" HorizontalOptions="Center" VerticalOptions="Center"/>
+                                            <Button Text="Delete User" FontSize="Small" FontAttributes="Bold" Grid.Column="5" HorizontalOptions="Center" VerticalOptions="Center" Command="{Binding Source={x:Reference Name=UserList}, Path=BindingContext.DeleteCommand}" Clicked="Button_Clicked"/>
+                                        </Grid>
+                                    </Frame>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
+            </Frame>
+            <StackLayout x:Name="buttonsPanel" Orientation="Horizontal">
+                <Button Text="Add Asset" Clicked="Add_Asset_Clicked" BackgroundColor="White" CornerRadius="10" FontSize="Medium" TextColor="Black"/>
+
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

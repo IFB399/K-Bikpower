@@ -139,8 +139,12 @@ namespace K_Bikpower
         {
             return SavedUsername;
         }
+        public async Task DeleteUserAsync(User a)
+        {
+            await todoTable.DeleteAsync(a);
+        }
 
-            public async Task SaveTaskAsync(User item)
+        public async Task SaveTaskAsync(User item)
         {
             try
             {

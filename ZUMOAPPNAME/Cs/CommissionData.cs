@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Newtonsoft.Json;
 
-namespace K_Bikpower.Cs
+namespace K_Bikpower
 {
     public class CommissionData
     {
@@ -18,8 +18,7 @@ namespace K_Bikpower.Cs
         string equipmentClass;
         string rating;
         string submittedBy;
-        string approvedBy;
-        bool approved;
+        string status;
 
         [JsonProperty(PropertyName = "id")]
         public string Id
@@ -98,18 +97,12 @@ namespace K_Bikpower.Cs
             set { submittedBy = value; }
         }
 
-        [JsonProperty(PropertyName = "approvedBy")]
-        public string ApprovedBy
+        [JsonProperty(PropertyName = "status")]
+        public string Status
         {
-            get { return approvedBy; }
-            set { approvedBy = value; }
+            get { return status; }
+            set { status = value; }
         }
 
-        [JsonProperty(PropertyName = "approved")]
-        public bool Approved
-        {
-            get { return approved; }
-            set { approved = value; }
-        }
     }
 }

@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="K_Bikpower.AddUser">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Firstname:" FontSize="Title" TextColor="Black"/>
+            <Entry  x:Name="Firstname" ClearButtonVisibility="WhileEditing" VerticalOptions="EndAndExpand" MaxLength="25" IsSpellCheckEnabled="True" IsTextPredictionEnabled="false"/>
+
+            <Label Text="Lastname:" FontSize="Title" TextColor="Black"/>
+            <Entry  x:Name="Lastname" ClearButtonVisibility="WhileEditing" VerticalOptions="EndAndExpand" MaxLength="25" IsSpellCheckEnabled="True" IsTextPredictionEnabled="false"/>
+
+            <Label Text="Email:" FontSize="Title" TextColor="Black"/>
+            <Entry  x:Name="Email" ClearButtonVisibility="WhileEditing" VerticalOptions="EndAndExpand" MaxLength="25" IsSpellCheckEnabled="True" IsTextPredictionEnabled="false"/>
+
+            <Label Text="Username:" FontSize="Title" TextColor="Black"/>
+            <Entry  x:Name="Username" ClearButtonVisibility="WhileEditing" VerticalOptions="EndAndExpand" MaxLength="25" IsSpellCheckEnabled="True" IsTextPredictionEnabled="false"/>
+
+            <Label Text="Temporary Password" FontSize="Title" TextColor="Black"/>
+            <Entry  x:Name="Temp_PAssword" ClearButtonVisibility="WhileEditing" VerticalOptions="EndAndExpand" MaxLength="25" IsSpellCheckEnabled="True" IsTextPredictionEnabled="false"/>
+
+            <Label Text="Authorisation" FontSize="Title" TextColor="Black"/>
+            <Picker x:Name="Auth" SelectedIndex="{Binding Authenication}" HorizontalOptions="FillAndExpand">
+                <Picker.Items>
+                    <x:String>User</x:String>
+                    <x:String>Administrator</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <Button x:Name="AddOrUpdateButton" Clicked="Add_User_Clicked" Text="Add User"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

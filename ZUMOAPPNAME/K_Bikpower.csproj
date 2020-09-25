@@ -32,19 +32,22 @@
         <EmbeddedResource Update="XAML\main.xaml">
           <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
         </EmbeddedResource>
-        <EmbeddedResource Update="XAML\UsersPage.xaml">
+        <EmbeddedResource Update="XAML\Users\AddUser.xaml">
           <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
         </EmbeddedResource>
-        <EmbeddedResource Update="XAML\Commission.xaml">
-          <Generator>MSBuild:Compile</Generator>
-        </EmbeddedResource>
-        <EmbeddedResource Update="XAML\Decommission.xaml">
-          <Generator>MSBuild:Compile</Generator>
-        </EmbeddedResource>
-        <EmbeddedResource Update="XAML\Documents.xaml">
+        <EmbeddedResource Update="XAML\Users\UsersPage.xaml">
           <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
         </EmbeddedResource>
-        <EmbeddedResource Update="XAML\GeneralDocuments.xaml">
+        <EmbeddedResource Update="XAML\Forms\Commission.xaml">
+          <Generator>MSBuild:Compile</Generator>
+        </EmbeddedResource>
+        <EmbeddedResource Update="XAML\Forms\Decommission.xaml">
+          <Generator>MSBuild:Compile</Generator>
+        </EmbeddedResource>
+        <EmbeddedResource Update="XAML\Forms\Documents.xaml">
+          <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+        </EmbeddedResource>
+        <EmbeddedResource Update="XAML\Forms\GeneralDocuments.xaml">
           <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
         </EmbeddedResource>
         <EmbeddedResource Update="XAML\Login.xaml">
