@@ -35,7 +35,6 @@ namespace K_Bikpower
                 Firstname.IsVisible = false;
                 Lastname.IsVisible = false;
                 Email.IsVisible = false;
-                Username.IsVisible = false;
                 Auth.IsVisible = false;
                 AddOrUpdateButton.IsVisible = false;
                 Firstnamelabel.IsVisible = false;
@@ -96,11 +95,6 @@ namespace K_Bikpower
                await DisplayAlert("Alert", "Please enter an email address", "OK");
                 return;
             }
-            if (String.IsNullOrWhiteSpace(Username.Text))
-            {
-                await DisplayAlert("Alert", "Please enter a username", "OK");
-                return;
-            }
 
             User todo = new User
             {
@@ -111,18 +105,18 @@ namespace K_Bikpower
                 Password = Temp_PAssword.Text,
                 Permission = Auth.SelectedItem.ToString()
             };
-            var result = await user_manager.GetUser(Username.Text);
+            var result = await user_manager.GetUser(Email.Text);
             if (result == null)
             {
                 await AddItem(todo);
                 await Navigation.PushAsync(new UsersPage());
             }
-            else { await DisplayAlert("Alert", "Username already exists please try another", "OK"); };
+            else { await DisplayAlert("Alert", "Email already exists please try another", "OK"); };
         }
 
         async void Next_Clicked(object sender, EventArgs e)
         {
-            if (String.IsNullOrWhiteSpace(Username.Text))
+            if (String.IsNullOrWhiteSpace(Email.Text))
             {
                 await DisplayAlert("Alert", "Inncorrect Password", "OK");
                 return;
@@ -147,7 +141,12 @@ namespace K_Bikpower
 
             return (correctHash == hashpass);
         }
-
+        string GenerateSalt()
+        {
+            byte[] buf = new byte[32];
+            (new RNGCryptoServiceProvider()).GetBytes(buf);
+            return Convert.ToBase64String(buf);
+        }
         string HashPassword(string pass, string salt)
         {
             SHA256Managed hash = new SHA256Managed();
@@ -160,13 +159,15 @@ namespace K_Bikpower
 
         async void Changepass_Clicked(object sender, EventArgs e)
         {
+            string salt = GenerateSalt();
+            string hashedPassword = HashPassword(NewPaaassword.Text, salt);
             User todo = new User
             {
                 FirstName = Firstname.Text,
                 LastName = Lastname.Text,
                 Email = Email.Text,
                 //Username = Username.Text,
-                Password = NewPaaassword.Text,
+                Password = hashedPassword,
                 Permission = Auth.SelectedItem.ToString()
             };
                 await AddItem(todo);
