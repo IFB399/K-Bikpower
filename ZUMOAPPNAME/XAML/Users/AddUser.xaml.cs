@@ -55,7 +55,7 @@ namespace K_Bikpower
             Firstname.Text = data.FirstName;
             Lastname.Text = data.LastName;
             Email.Text = data.Email;
-            Username.Text = data.Username;
+            //Username.Text = data.Username;
             Auth.SelectedItem = data.Permission;
         }
 
@@ -98,7 +98,7 @@ namespace K_Bikpower
                 FirstName = Firstname.Text,
                 LastName = Lastname.Text,
                 Email = Email.Text,
-                Username = Username.Text,
+                //Username = Username.Text,
                 Password = Temp_PAssword.Text,
                 Permission = Auth.SelectedItem.ToString()
             };
@@ -156,7 +156,7 @@ namespace K_Bikpower
                 FirstName = Firstname.Text,
                 LastName = Lastname.Text,
                 Email = Email.Text,
-                Username = Username.Text,
+                //Username = Username.Text,
                 Password = NewPaaassword.Text,
                 Permission = Auth.SelectedItem.ToString()
             };

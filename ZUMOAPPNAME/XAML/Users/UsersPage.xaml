@@ -24,9 +24,9 @@
                                     <ColumnDefinition Width="*"/>
                                     <ColumnDefinition Width="*"/>
                                 </Grid.ColumnDefinitions>
-                                <Label Text= "Name" FontSize="Small" FontAttributes="Bold"  Grid.Column="0" HorizontalOptions="Center"/>
-                                <Label Text= "Email" FontSize="Small" FontAttributes="Bold"  Grid.Column="1" HorizontalOptions="Center"/>
-                                <Label Text= "Username" FontSize="Small" FontAttributes="Bold"  Grid.Column="2" HorizontalOptions="Center"/>
+                                <Label Text= "First Name" FontSize="Small" FontAttributes="Bold"  Grid.Column="0" HorizontalOptions="Center"/>
+                                <Label Text= "Last Name" FontSize="Small" FontAttributes="Bold"  Grid.Column="1" HorizontalOptions="Center"/>
+                                <Label Text= "Email" FontSize="Small" FontAttributes="Bold"  Grid.Column="2" HorizontalOptions="Center"/>
                                 <Label Text= "Permission" FontSize="Small" FontAttributes="Bold"  Grid.Column="3" HorizontalOptions="Center"/>
                                 <ActivityIndicator Grid.RowSpan="2" HorizontalOptions="Center" VerticalOptions="Center" IsVisible="False" IsEnabled="True"/>
                             </Grid>
@@ -41,13 +41,11 @@
                                                 <ColumnDefinition Width="*"/>
                                                 <ColumnDefinition Width="*"/>
                                                 <ColumnDefinition Width="*"/>
-                                                <ColumnDefinition Width="*"/>
                                             </Grid.ColumnDefinitions>
                                             <Label Text="{Binding FirstName,StringFormat='{0:F0}'}" FontSize="Small" FontAttributes="Bold"  Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center"/>
                                             <Label Text="{Binding LastName,StringFormat='{0:F0}'}" FontSize="Small" FontAttributes="Bold"  Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center"/>
                                             <Label Text="{Binding Email,StringFormat='{0:F0}'}" FontSize="Small" FontAttributes="Bold"  Grid.Column="2" HorizontalOptions="Center" VerticalOptions="Center"/>
-                                            <Label Text="{Binding Username,StringFormat='{0:F0}'}" FontSize="Small" FontAttributes="Bold"  Grid.Column="3" HorizontalOptions="Center" VerticalOptions="Center"/>
-                                            <Label Text="{Binding Permisison,StringFormat='{0:F0}'}" FontSize="Small" FontAttributes="Bold"  Grid.Column="4" HorizontalOptions="Center" VerticalOptions="Center"/>
+                                            <Label Text="{Binding Permission,StringFormat='{0:F0}'}" FontSize="Small" FontAttributes="Bold"  Grid.Column="3" HorizontalOptions="Center" VerticalOptions="Center"/>
                                             
                                         </Grid>
                                     </Frame>

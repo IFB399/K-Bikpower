@@ -90,7 +90,7 @@ namespace K_Bikpower
             }
             DecommissionData form = new DecommissionData
             {
-                Date = Date_Decommissioned.Date.ToLocalTime(),
+                DateDecommissioned = Date_Decommissioned.Date.ToLocalTime(),
                 Details = Decommissioned_Details_Entry.Text,
                 RegionName = regionName,
                 Location = Location_Entry.Text,
@@ -101,7 +101,7 @@ namespace K_Bikpower
         }
         private void LoadForm(DecommissionData form)
         {
-            Date_Decommissioned.Date = form.Date;
+            Date_Decommissioned.Date = form.DateDecommissioned;
             Decommissioned_Details_Entry.Text = form.Details;
             if (form.RegionName != null)
             {

@@ -48,7 +48,7 @@ namespace K_Bikpower
             Firstname.Text = data.FirstName;
             Lastname.Text = data.LastName;
             Email.Text = data.Email;
-            Username.Text = data.Username;
+            //Username.Text = data.Username;
         }
 
         private void UpdateButton_Clicked(object sender, EventArgs e)
