@@ -113,7 +113,7 @@ namespace K_Bikpower
             await RefreshItems(true, false);
         }
 
-        private async Task RefreshItems(bool showActivityIndicator, bool syncItems, string substation = null, string equipmentClass = null, string manufacturer = null)
+        private async Task RefreshItems(bool showActivityIndicator, bool syncItems)
         {
             using (var scope = new ActivityIndicatorScope(syncIndicator, showActivityIndicator))
             {

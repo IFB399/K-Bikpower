@@ -2559,24 +2559,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\brent\\.nuget\\packages\\": {},
+    "C:\\Users\\jacqu\\.nuget\\packages\\": {},
     "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\brent\\Desktop\\IFB399\\Droid\\K_Bikpower.Droid.csproj",
+      "projectUniqueName": "C:\\Users\\jacqu\\Documents\\2018\\latest repo 3\\Droid\\K_Bikpower.Droid.csproj",
       "projectName": "K_Bikpower.Droid",
-      "projectPath": "C:\\Users\\brent\\Desktop\\IFB399\\Droid\\K_Bikpower.Droid.csproj",
-      "packagesPath": "C:\\Users\\brent\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\brent\\Desktop\\IFB399\\Droid\\obj\\",
+      "projectPath": "C:\\Users\\jacqu\\Documents\\2018\\latest repo 3\\Droid\\K_Bikpower.Droid.csproj",
+      "packagesPath": "C:\\Users\\jacqu\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\jacqu\\Documents\\2018\\latest repo 3\\Droid\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\brent\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\jacqu\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -2590,8 +2590,8 @@
       "frameworks": {
         "monoandroid90": {
           "projectReferences": {
-            "C:\\Users\\brent\\Desktop\\IFB399\\ZUMOAPPNAME\\K_Bikpower.csproj": {
-              "projectPath": "C:\\Users\\brent\\Desktop\\IFB399\\ZUMOAPPNAME\\K_Bikpower.csproj"
+            "C:\\Users\\jacqu\\Documents\\2018\\latest repo 3\\ZUMOAPPNAME\\K_Bikpower.csproj": {
+              "projectPath": "C:\\Users\\jacqu\\Documents\\2018\\latest repo 3\\ZUMOAPPNAME\\K_Bikpower.csproj"
             }
           }
         }

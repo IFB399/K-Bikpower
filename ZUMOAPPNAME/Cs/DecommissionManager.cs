@@ -112,7 +112,7 @@ namespace K_Bikpower
                 }
                 
 
-                return new ObservableCollection<DecommissionData>(items.OrderByDescending(item => item.Date));
+                return new ObservableCollection<DecommissionData>(items.OrderByDescending(item => item.DateDecommissioned));
             }
             catch (MobileServiceInvalidOperationException msioe)
             {

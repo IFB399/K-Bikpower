@@ -41,7 +41,7 @@ namespace K_Bikpower
             Firstname.Text = data.FirstName;
             Lastname.Text = data.LastName;
             Email.Text = data.Email;
-            Username.Text = data.Username;
+            //Username.Text = data.Username;
         }
 
 
@@ -83,7 +83,7 @@ namespace K_Bikpower
                 FirstName = Firstname.Text,
                 LastName = Lastname.Text,
                 Email = Email.Text,
-                Username = Username.Text,
+                //Username = Username.Text,
                 Permission = Auth.SelectedItem.ToString()
         };
             var result = await user_manager.GetUser(Username.Text);

@@ -106,10 +106,10 @@ namespace K_Bikpower
 
         
         //public async Task<User> GetUser(string username)
-        public async Task<ObservableCollection<User>> GetUser(string username)
+        public async Task<ObservableCollection<User>> GetUser(string email)
         {
 
-            IEnumerable<User> items = await todoTable.Where(user => user.Username == username) //ideally just want to return a user not a collection?
+            IEnumerable<User> items = await todoTable.Where(user => user.Email == email) //ideally just want to return a user not a collection?
                 .ToEnumerableAsync();
 
             //User u = (User)await todoTable.Where(user => user.Username == username) //ideally just want to return a user not a collection?
@@ -119,10 +119,10 @@ namespace K_Bikpower
             //return u;
         }
 
-        public async Task GetUserAuth(string username)
+        public async Task GetUserAuth(string email)
         {
 
-            var items = await todoTable.Where(user => user.Username == username).Select(user => user.Permission).ToEnumerableAsync();
+            var items = await todoTable.Where(user => user.Email == email).Select(user => user.Permission).ToEnumerableAsync();
             authenicationstring = items.First();
         }
 
@@ -131,9 +131,9 @@ namespace K_Bikpower
             return authenicationstring;
         }
 
-        public void SetUsername(string username)
+        public void SetUsername(string email)
         {
-            SavedUsername = username;
+            SavedUsername = email;
         }
         public string ReturnUser()
         {

@@ -8,17 +8,18 @@ namespace K_Bikpower
     public class CommissionData
     {
         string id;
-        DateTime date;
-        string substationName;
-        string substationCode;
-        string operationalId;
-        string operationalDescription;
-        string voltage;
-        string insulation;
-        string equipmentClass;
-        string rating;
+        DateTime dateCommissioned;
+        string newInstallation;
+        string replacement;
+        string regionName;
+        string location;
+        string movedFrom;
+        int workOrderNumber;
         string submittedBy;
         string status;
+        string approvedBy;
+        string rejectedBy;
+
 
         [JsonProperty(PropertyName = "id")]
         public string Id
@@ -27,67 +28,53 @@ namespace K_Bikpower
             set { id = value; }
         }
 
-        [JsonProperty(PropertyName = "date")]
-        public DateTime Date
+        [JsonProperty(PropertyName = "dateCommissioned")]
+        public DateTime DateCommissioned
         {
-            get { return date; }
-            set { date = value; }
+            get { return dateCommissioned; }
+            set { dateCommissioned = value; }
         }
 
-        [JsonProperty(PropertyName = "substationName")]
-        public string SubstationName
+        [JsonProperty(PropertyName = "newInstallation")]
+        public string NewInstallation
         {
-            get { return substationName; }
-            set { substationName = value; }
+            get { return newInstallation; }
+            set { newInstallation = value; }
         }
 
-        [JsonProperty(PropertyName = "substationCode")]
-        public string SubstationCode
+        [JsonProperty(PropertyName = "replacement")]
+        public string Replacement
         {
-            get { return substationCode; }
-            set { substationCode = value; }
+            get { return replacement; }
+            set { replacement = value; }
         }
 
-        [JsonProperty(PropertyName = "operationalId")]
-        public string OperationalId
+        [JsonProperty(PropertyName = "regionName")]
+        public string RegionName
         {
-            get { return operationalId; }
-            set { operationalId = value; }
+            get { return regionName; }
+            set { regionName = value; }
         }
 
-        [JsonProperty(PropertyName = "operationalDescription")]
-        public string OperationalDescription
+        [JsonProperty(PropertyName = "location")]
+        public string Location
         {
-            get { return operationalDescription; }
-            set { operationalDescription = value; }
+            get { return location; }
+            set { location = value; }
         }
 
-        [JsonProperty(PropertyName = "voltage")]
-        public string Voltage
+        [JsonProperty(PropertyName = "movedFrom")]
+        public string MovedFrom
         {
-            get { return voltage; }
-            set { voltage = value; }
+            get { return movedFrom; }
+            set { movedFrom = value; }
         }
 
-        [JsonProperty(PropertyName = "insulation")]
-        public string Insulation
+        [JsonProperty(PropertyName = "workOrderNumber")]
+        public int WorkOrderNumber
         {
-            get { return insulation; }
-            set { insulation = value; }
-        }
-
-        [JsonProperty(PropertyName = "equipmentClass")]
-        public string EquipmentClass
-        {
-            get { return equipmentClass; }
-            set { equipmentClass = value; }
-        }
-
-        [JsonProperty(PropertyName = "rating")]
-        public string Rating
-        {
-            get { return rating; }
-            set { rating = value; }
+            get { return workOrderNumber; }
+            set { workOrderNumber = value; }
         }
 
         [JsonProperty(PropertyName = "submittedBy")]
@@ -104,5 +91,18 @@ namespace K_Bikpower
             set { status = value; }
         }
 
+        [JsonProperty(PropertyName = "approvedBy")]
+        public string ApprovedBy
+        {
+            get { return approvedBy; }
+            set { approvedBy = value; }
+        }
+
+        [JsonProperty(PropertyName = "rejectedBy")]
+        public string RejectedBy
+        {
+            get { return rejectedBy; }
+            set { rejectedBy = value; }
+        }
     }
 }

@@ -51,10 +51,10 @@ namespace K_Bikpower
 
         async void loginButton_Clicked(object sender, EventArgs e)
         {
-            string username = UsernameEntry.Text;
+            string email = UsernameEntry.Text;
             string password = PasswordEntry.Text;
 
-            ObservableCollection<User> userList = await manager.GetUser(username);
+            ObservableCollection<User> userList = await manager.GetUser(email);
             User u = userList.FirstOrDefault();
             //User u = await manager.GetUser(username);
             if (u == null)
@@ -67,8 +67,8 @@ namespace K_Bikpower
 
                 if (CheckPassword(password, u.Password, salt) == true)
                 {
-                    manager.SetUsername(username);
-                    await manager.GetUserAuth(username);
+                    manager.SetUsername(email);
+                    await manager.GetUserAuth(email);
                     App.Current.MainPage = new main();
                 }
                 else

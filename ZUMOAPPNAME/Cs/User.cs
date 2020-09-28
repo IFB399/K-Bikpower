@@ -7,7 +7,6 @@ namespace K_Bikpower
     public class User
     {
 		string id;
-		string username;
 		string email;
 		string permission;
 		string password;
@@ -22,12 +21,6 @@ namespace K_Bikpower
 			set { id = value; }
 		}
 
-		[JsonProperty(PropertyName = "username")]
-		public string Username //must be unique
-		{
-			get { return username; }
-			set { username = value; }
-		}
 		[JsonProperty(PropertyName = "email")]
 		public string Email //must be unique
 		{
