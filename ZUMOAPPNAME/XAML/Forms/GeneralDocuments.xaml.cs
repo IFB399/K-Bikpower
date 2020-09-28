@@ -18,7 +18,7 @@ namespace K_Bikpower
         }
         private void Commission_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync((new Commission())); 
+            Navigation.PushAsync((new ViewCommissionForms()));
         }
 
         private void Decommission_Clicked(object sender, EventArgs e)

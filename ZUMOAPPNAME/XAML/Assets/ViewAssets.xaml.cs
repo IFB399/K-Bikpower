@@ -132,6 +132,24 @@ namespace K_Bikpower
                     }
 
                 }
+                else if (typeof(CommissionData).IsInstanceOfType(savedData))
+                {
+                    CommissionData c = (CommissionData)savedData;
+                    if (assetList.Any((a) => a.Id == todo.Id))
+                    {
+                        await DisplayAlert("Duplicate Error", "Asset already added", "Close");
+                    }
+                    else if (todo.Status == "Commissioned")
+                    {
+                        await DisplayAlert("Asset already commissioned", "Try decommissioning the asset first", "Close");
+                    }
+                    else
+                    {
+                        assetList.Add(todo);
+                        await Navigation.PushAsync(new ManageFormAssets(c, assetList, prevPage));
+                    }
+
+                }
 
             }
 

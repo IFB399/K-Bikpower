@@ -217,7 +217,6 @@ C:\Users\Brenton Reddish\Desktop\IFB398\kbik\ZUMOAPPNAME\obj\Debug\netstandard2.
 C:\Users\Brenton Reddish\Desktop\IFB398\kbik\ZUMOAPPNAME\obj\Debug\netstandard2.0\XAML\Users\UsersPage.xaml.g.cs
 C:\Users\jacqu\Documents\2018\latest repo 3\ZUMOAPPNAME\obj\Debug\netstandard2.0\MasterPage.xaml.g.cs
 C:\Users\jacqu\Documents\2018\latest repo 3\ZUMOAPPNAME\obj\Debug\netstandard2.0\XAML\Assets\AddAsset.xaml.g.cs
-C:\Users\jacqu\Documents\2018\latest repo 3\ZUMOAPPNAME\obj\Debug\netstandard2.0\XAML\Assets\CustomViewCell.xaml.g.cs
 C:\Users\jacqu\Documents\2018\latest repo 3\ZUMOAPPNAME\obj\Debug\netstandard2.0\XAML\Assets\Preview_Asset.xaml.g.cs
 C:\Users\jacqu\Documents\2018\latest repo 3\ZUMOAPPNAME\obj\Debug\netstandard2.0\XAML\Assets\ViewAssets.xaml.g.cs
 C:\Users\jacqu\Documents\2018\latest repo 3\ZUMOAPPNAME\obj\Debug\netstandard2.0\XAML\Forms\ApproveDecommission.xaml.g.cs
@@ -248,4 +247,5 @@ C:\Users\jacqu\Documents\2018\latest repo 3\ZUMOAPPNAME\bin\Debug\netstandard2.0
 C:\Users\jacqu\Documents\2018\latest repo 3\ZUMOAPPNAME\bin\Debug\netstandard2.0\Windows.Foundation.UniversalApiContract.winmd
 C:\Users\jacqu\Documents\2018\latest repo 3\ZUMOAPPNAME\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Users\jacqu\Documents\2018\latest repo 3\ZUMOAPPNAME\obj\Debug\netstandard2.0\K_Bikpower.csproj.CopyComplete
+C:\Users\jacqu\Documents\2018\latest repo 3\ZUMOAPPNAME\obj\Debug\netstandard2.0\XAML\Forms\ViewCommissionForms.xaml.g.cs
 C:\Users\jacqu\Documents\2018\latest repo 3\ZUMOAPPNAME\obj\Debug\netstandard2.0\K_Bikpower.csprojAssemblyReference.cache

@@ -29,7 +29,7 @@
       </Compile>
     </ItemGroup>
     <ItemGroup>
-        <EmbeddedResource Update="XAML\Assets\CustomViewCell.xaml">
+        <EmbeddedResource Update="XAML\Forms\ViewCommissionForms.xaml">
           <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
         </EmbeddedResource>
         <EmbeddedResource Update="XAML\main.xaml">

@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="K_Bikpower.ViewCommissionForms"
+             BackgroundColor="#63d9ff">
+    <ScrollView>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal" Padding="10,10,40,10" Spacing="0">
+                <Button x:Name="Home" Text="Home" FontSize="Title" BackgroundColor="#d7d7d7" CornerRadius="5" WidthRequest="150" HorizontalOptions="EndAndExpand" HeightRequest="75" BorderColor="DimGray"/>
+                <Button x:Name="Account" Text="Account" FontSize="Title" BackgroundColor="#d7d7d7" CornerRadius="5" WidthRequest="150" HorizontalOptions="Center" HeightRequest="75"/>
+            </StackLayout>
+            <StackLayout>
+                <ActivityIndicator 
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       IsVisible="False"
+                       IsEnabled="True"
+                       x:Name="syncIndicator"/>
+                <Expander  x:Name="FilterExpander" HorizontalOptions="CenterAndExpand" MinimumHeightRequest="500">
+                    <Expander.Header>
+                        <Label x:Name="FilterLabel" Text="Filters" FontAttributes="Bold" FontSize="30" HorizontalOptions="Center"/>
+                    </Expander.Header>
+                    <Grid RowSpacing="10" ColumnSpacing="10" HorizontalOptions="CenterAndExpand">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*" />
+                            <ColumnDefinition Width="2*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Label Grid.Row="0" Grid.Column="0" Text="Status"/>
+                        <Picker x:Name="Status_Picker" Grid.Row="0" Grid.Column="1">
+                            <Picker.Items>
+                                <x:String>Submitted</x:String>
+                                <x:String>Approved</x:String>
+                                <x:String>Rejected</x:String>
+                            </Picker.Items>
+                        </Picker>
+                        <Button Clicked="Clear_Status_Clicked" Text="X" Grid.Row="0" Grid.Column="2"/>
+                        <Label Text="Submitted By" Grid.Row="1" Grid.Column="0"/>
+                        <Picker x:Name="SubmittedBy_Picker" Grid.Row="1" Grid.Column="1"/>
+                        <Button Clicked="Clear_SubmittedBy_Clicked" Text="X" Grid.Row="1" Grid.Column="2"/>
+                        <Label x:Name="assetLabel" IsVisible="False" Grid.Row="2"/>
+                        <StackLayout Orientation="Horizontal" Grid.Row="3" Grid.ColumnSpan="3">
+                            <Button Text="Apply Filters" Clicked="Apply_Filters_Clicked" BackgroundColor="White" CornerRadius="10" FontSize="Medium" TextColor="Black"/>
+                            <Button Text="Clear Filters" Clicked="Clear_Filters_Clicked" BackgroundColor="White" CornerRadius="10" FontSize="Medium" TextColor="Black"/>
+                        </StackLayout>
+                    </Grid>
+                </Expander>
+                <ListView x:Name="formList" HasUnevenRows="false" IsPullToRefreshEnabled="true" ItemSelected="OnSelected">
+                    <ListView.Header>
+                        <Grid Margin="0,0,0,10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Text= "Date" FontSize="Small" FontAttributes="Bold"  Grid.Column="0" HorizontalOptions="Center"/>
+                            <Label Text= "New Installation?" FontSize="Small" FontAttributes="Bold"  Grid.Column="1" HorizontalOptions="Center"/>
+                            <Label Text= "Moved From" FontSize="Small" FontAttributes="Bold"  Grid.Column="2" HorizontalOptions="Center"/>
+                            <Label Text= "Submitted By" FontSize="Small" FontAttributes="Bold"  Grid.Column="3" HorizontalOptions="Center"/>
+                            <Label Text= "Status" FontSize="Small" FontAttributes="Bold"  Grid.Column="4" HorizontalOptions="Center"/>
+                            <ActivityIndicator Grid.RowSpan="2" HorizontalOptions="Center" VerticalOptions="Center" IsVisible="False" IsEnabled="True"/>
+                        </Grid>
+                    </ListView.Header>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+
+                            <ViewCell>
+                                <Frame BackgroundColor="White" BorderColor="Gray" Padding="5"  HasShadow="False">
+                                    <Grid HeightRequest="50" HorizontalOptions="FillAndExpand" VerticalOptions="Start">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Label Text="{Binding DateCommissioned,StringFormat='{0:MMMM dd, yyyy}'}" FontSize="Small" FontAttributes="Bold"  Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center"/>
+                                        <Label Text="{Binding NewInstallation,StringFormat='{0:F0}'}" FontSize="Small" FontAttributes="Bold"  Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center"/>
+                                        <Label Text="{Binding MovedFrom,StringFormat='{0:F0}'}" FontSize="Small" FontAttributes="Bold"  Grid.Column="2" HorizontalOptions="Center" VerticalOptions="Center"/>
+                                        <Label Text="{Binding SubmittedBy,StringFormat='{0:F0}'}" FontSize="Small" FontAttributes="Bold"  Grid.Column="3" HorizontalOptions="Center" VerticalOptions="Center"/>
+                                        <Label Text="{Binding Status,StringFormat='{0:F0}'}" FontSize="Small" FontAttributes="Bold"  Grid.Column="4" HorizontalOptions="Center" VerticalOptions="Center"/>
+
+                                    </Grid>
+                                </Frame>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+                <StackLayout x:Name="buttonsPanel" Orientation="Horizontal">
+                    <Button Text="Add Form" Clicked="Add_Form_Clicked" BackgroundColor="White" CornerRadius="10" FontSize="Medium" TextColor="Black"/>
+
+                </StackLayout>
+
+            </StackLayout>
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
