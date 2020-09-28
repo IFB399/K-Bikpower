@@ -16,9 +16,6 @@
             <Label Text="Email:" FontSize="Title" TextColor="Black"/>
             <Entry  x:Name="Email" ClearButtonVisibility="WhileEditing" VerticalOptions="EndAndExpand" MaxLength="25" IsSpellCheckEnabled="True" IsTextPredictionEnabled="false"/>
 
-            <Label Text="Username:" FontSize="Title" TextColor="Black"/>
-            <Entry  x:Name="Username" ClearButtonVisibility="WhileEditing" VerticalOptions="EndAndExpand" MaxLength="25" IsSpellCheckEnabled="True" IsTextPredictionEnabled="false"/>
-
             <Label Text="Temporary Password" FontSize="Title" TextColor="Black"/>
             <Entry  x:Name="Temp_PAssword" ClearButtonVisibility="WhileEditing" VerticalOptions="EndAndExpand" MaxLength="25" IsSpellCheckEnabled="True" IsTextPredictionEnabled="false"/>
 
@@ -38,7 +35,7 @@
 
             <Label x:Name ="Newpass" Text="Enter Old Password" FontSize="Title" TextColor="Black" IsVisible="false"/>
             <Entry  x:Name="NewPaaassword" ClearButtonVisibility="WhileEditing" VerticalOptions="EndAndExpand" MaxLength="25" IsSpellCheckEnabled="True" IsTextPredictionEnabled="false" IsVisible="false"/>
-            <Button x:Name="Changepass" Clicked="Changepass_Clicked"  Text="Change Pasword" IsVisible="false"/>
+            <Button x:Name="Changepass" Clicked="Changepass_Clicked"  Text="Change Password" IsVisible="false"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
