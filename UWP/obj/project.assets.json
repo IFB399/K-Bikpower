@@ -14680,11 +14680,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\brent\\source\\repos\\K-Bikpower\\UWP\\K_Bikpower.UWP.csproj",
+      "projectUniqueName": "C:\\Users\\brent\\Desktop\\IFB399\\UWP\\K_Bikpower.UWP.csproj",
       "projectName": "K_Bikpower.UWP",
-      "projectPath": "C:\\Users\\brent\\source\\repos\\K-Bikpower\\UWP\\K_Bikpower.UWP.csproj",
+      "projectPath": "C:\\Users\\brent\\Desktop\\IFB399\\UWP\\K_Bikpower.UWP.csproj",
       "packagesPath": "C:\\Users\\brent\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\brent\\source\\repos\\K-Bikpower\\UWP\\obj\\",
+      "outputPath": "C:\\Users\\brent\\Desktop\\IFB399\\UWP\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -14706,8 +14706,8 @@
       "frameworks": {
         "uap10.0.16299": {
           "projectReferences": {
-            "C:\\Users\\brent\\source\\repos\\K-Bikpower\\ZUMOAPPNAME\\K_Bikpower.csproj": {
-              "projectPath": "C:\\Users\\brent\\source\\repos\\K-Bikpower\\ZUMOAPPNAME\\K_Bikpower.csproj"
+            "C:\\Users\\brent\\Desktop\\IFB399\\ZUMOAPPNAME\\K_Bikpower.csproj": {
+              "projectPath": "C:\\Users\\brent\\Desktop\\IFB399\\ZUMOAPPNAME\\K_Bikpower.csproj"
             }
           }
         }

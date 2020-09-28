@@ -10,7 +10,7 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>160b6a80-7a3b-4992-86ea-4e482f867b0a</PackageIdentityName>
     <PackageIdentityPublisher>CN=brent</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\brent\source\repos\K-Bikpower\UWP\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\brent\Desktop\IFB399\UWP\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType>
     </RemoteDeploymentType>
     <PackageRegistrationPath>
@@ -18,8 +18,8 @@
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\Users\brent\source\repos\K-Bikpower\UWP\bin\x86\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>70CBAAE99D56ED9FACE858B794961A59735AB8E5CCB4E97D734E801C81D7474F</RegisteredManifestChecksum>
+    <LayoutDir>C:\Users\brent\Desktop\IFB399\UWP\bin\x86\Debug\AppX</LayoutDir>
+    <RegisteredManifestChecksum>C5A2F10D3EF8D3C169B3F1C041A5A8BFF84CA1440F7EE9E52811CBB5AF45A82C</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>43e3c925-1cf2-4e0e-92ff-74d3a13fcfa3_1.2.0.0_x86__z8pdeejqpj4zj</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>43e3c925-1cf2-4e0e-92ff-74d3a13fcfa3_z8pdeejqpj4zj!App</RegisteredUserModeAppID>
     <RegisteredPackageID>43e3c925-1cf2-4e0e-92ff-74d3a13fcfa3</RegisteredPackageID>
@@ -27,16 +27,16 @@
     <RegisteredVersion>1.2.0.0</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\brent\source\repos\K-Bikpower\UWP\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\brent\Desktop\IFB399\UWP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-09-25T04:15:00.927</Modified>
+      <Modified>2020-09-28T01:52:50.943</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\brent\source\repos\K-Bikpower\UWP\bin\x86\Debug\UWP.exe">
+    <AppxPackagedFile Include="C:\Users\brent\Desktop\IFB399\UWP\bin\x86\Debug\UWP.exe">
       <PackagePath>entrypoint\UWP.exe</PackagePath>
-      <Modified>2020-09-25T04:14:58.333</Modified>
+      <Modified>2020-09-28T01:52:49.540</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\brent\.nuget\packages\microsoft.azure.mobile.client\4.1.2\lib\uap10.0\Microsoft.Azure.Mobile.Client.dll">
       <PackagePath>Microsoft.Azure.Mobile.Client.dll</PackagePath>
@@ -118,9 +118,9 @@
       <PackagePath>ZXing.Net.Mobile.Forms.dll</PackagePath>
       <Modified>2018-04-03T21:26:40.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\brent\source\repos\K-Bikpower\ZUMOAPPNAME\bin\Debug\netstandard2.0\K_Bikpower.dll">
+    <AppxPackagedFile Include="C:\Users\brent\Desktop\IFB399\ZUMOAPPNAME\bin\Debug\netstandard2.0\K_Bikpower.dll">
       <PackagePath>K_Bikpower.dll</PackagePath>
-      <Modified>2020-09-25T04:14:51.291</Modified>
+      <Modified>2020-09-28T01:52:43.643</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft Visual Studio\2019\Community\Common7\IDE\ReferenceAssemblies\Microsoft\Framework\Xamarin.iOS\v1.0\Facades\System.Drawing.Common.dll">
       <PackagePath>System.Drawing.Common.dll</PackagePath>
@@ -142,55 +142,275 @@
       <PackagePath>ZXingNetMobile\ZXingNetMobile.xr.xml</PackagePath>
       <Modified>2018-04-03T21:26:38.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\brent\source\repos\K-Bikpower\UWP\Properties\Default.rd.xml">
-      <PackagePath>Properties\Default.rd.xml</PackagePath>
-      <Modified>2020-09-24T00:21:20.162</Modified>
+    <AppxPackagedFile Include="C:\Users\brent\Desktop\IFB399\UWP\Assets\LargeTile.scale-100.png">
+      <PackagePath>Assets\LargeTile.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-09-28T00:53:43.658</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\brent\source\repos\K-Bikpower\UWP\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\brent\Desktop\IFB399\UWP\Assets\LargeTile.scale-125.png">
+      <PackagePath>Assets\LargeTile.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-09-28T00:53:43.659</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\brent\Desktop\IFB399\UWP\Assets\LargeTile.scale-150.png">
+      <PackagePath>Assets\LargeTile.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-09-28T00:53:43.660</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\brent\Desktop\IFB399\UWP\Assets\LargeTile.scale-200.png">
+      <PackagePath>Assets\LargeTile.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-09-28T00:53:43.662</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\brent\Desktop\IFB399\UWP\Assets\LargeTile.scale-400.png">
+      <PackagePath>Assets\LargeTile.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-09-28T00:53:43.663</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\brent\Desktop\IFB399\UWP\Assets\SmallTile.scale-100.png">
+      <PackagePath>Assets\SmallTile.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-09-28T00:53:43.665</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\brent\Desktop\IFB399\UWP\Assets\SmallTile.scale-125.png">
+      <PackagePath>Assets\SmallTile.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-09-28T00:53:43.666</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\brent\Desktop\IFB399\UWP\Assets\SmallTile.scale-150.png">
+      <PackagePath>Assets\SmallTile.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-09-28T00:53:43.667</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\brent\Desktop\IFB399\UWP\Assets\SmallTile.scale-200.png">
+      <PackagePath>Assets\SmallTile.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-09-28T00:53:43.668</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\brent\Desktop\IFB399\UWP\Assets\SmallTile.scale-400.png">
+      <PackagePath>Assets\SmallTile.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-09-28T00:53:43.670</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\brent\Desktop\IFB399\UWP\Assets\SplashScreen.scale-100.png">
+      <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-09-28T00:53:43.671</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\brent\Desktop\IFB399\UWP\Assets\SplashScreen.scale-125.png">
+      <PackagePath>Assets\SplashScreen.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-09-28T00:53:43.672</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\brent\Desktop\IFB399\UWP\Assets\SplashScreen.scale-150.png">
+      <PackagePath>Assets\SplashScreen.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-09-28T00:53:43.673</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\brent\Desktop\IFB399\UWP\Assets\SplashScreen.scale-400.png">
+      <PackagePath>Assets\SplashScreen.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-09-28T00:53:43.677</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\brent\Desktop\IFB399\UWP\Assets\Square150x150Logo.scale-100.png">
+      <PackagePath>Assets\Square150x150Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-09-28T00:53:43.678</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\brent\Desktop\IFB399\UWP\Assets\Square150x150Logo.scale-125.png">
+      <PackagePath>Assets\Square150x150Logo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-09-28T00:53:43.679</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\brent\Desktop\IFB399\UWP\Assets\Square150x150Logo.scale-150.png">
+      <PackagePath>Assets\Square150x150Logo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-09-28T00:53:43.680</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\brent\Desktop\IFB399\UWP\Assets\Square150x150Logo.scale-400.png">
+      <PackagePath>Assets\Square150x150Logo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-09-28T00:53:43.682</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\brent\Desktop\IFB399\UWP\Assets\Square44x44Logo.altform-lightunplated_targetsize-16.png">
+      <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-16.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-09-28T00:53:43.683</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\brent\Desktop\IFB399\UWP\Assets\Square44x44Logo.altform-lightunplated_targetsize-24.png">
+      <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-24.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-09-28T00:53:43.684</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\brent\Desktop\IFB399\UWP\Assets\Square44x44Logo.altform-lightunplated_targetsize-256.png">
+      <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-256.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-09-28T00:53:43.685</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\brent\Desktop\IFB399\UWP\Assets\Square44x44Logo.altform-lightunplated_targetsize-32.png">
+      <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-32.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-09-28T00:53:43.686</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\brent\Desktop\IFB399\UWP\Assets\Square44x44Logo.altform-lightunplated_targetsize-48.png">
+      <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-48.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-09-28T00:53:43.687</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\brent\Desktop\IFB399\UWP\Assets\Square44x44Logo.altform-unplated_targetsize-16.png">
+      <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-16.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-09-28T00:53:43.688</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\brent\Desktop\IFB399\UWP\Assets\Square44x44Logo.altform-unplated_targetsize-256.png">
+      <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-256.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-09-28T00:53:43.689</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\brent\Desktop\IFB399\UWP\Assets\Square44x44Logo.altform-unplated_targetsize-32.png">
+      <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-32.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-09-28T00:53:43.690</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\brent\Desktop\IFB399\UWP\Assets\Square44x44Logo.altform-unplated_targetsize-48.png">
+      <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-48.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-09-28T00:53:43.691</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\brent\Desktop\IFB399\UWP\Assets\Square44x44Logo.scale-100.png">
+      <PackagePath>Assets\Square44x44Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-09-28T00:53:43.692</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\brent\Desktop\IFB399\UWP\Assets\Square44x44Logo.scale-125.png">
+      <PackagePath>Assets\Square44x44Logo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-09-28T00:53:43.693</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\brent\Desktop\IFB399\UWP\Assets\Square44x44Logo.scale-150.png">
+      <PackagePath>Assets\Square44x44Logo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-09-28T00:53:43.693</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\brent\Desktop\IFB399\UWP\Assets\Square44x44Logo.scale-400.png">
+      <PackagePath>Assets\Square44x44Logo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-09-28T00:53:43.696</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\brent\Desktop\IFB399\UWP\Assets\Square44x44Logo.targetsize-16.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-16.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-09-28T00:53:43.697</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\brent\Desktop\IFB399\UWP\Assets\Square44x44Logo.targetsize-24.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-24.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-09-28T00:53:43.698</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\brent\Desktop\IFB399\UWP\Assets\Square44x44Logo.targetsize-256.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-256.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-09-28T00:53:43.700</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\brent\Desktop\IFB399\UWP\Assets\Square44x44Logo.targetsize-32.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-32.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-09-28T00:53:43.701</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\brent\Desktop\IFB399\UWP\Assets\Square44x44Logo.targetsize-48.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-48.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-09-28T00:53:43.702</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\brent\Desktop\IFB399\UWP\Assets\StoreLogo.scale-100.png">
+      <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-09-28T00:53:43.705</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\brent\Desktop\IFB399\UWP\Assets\StoreLogo.scale-125.png">
+      <PackagePath>Assets\StoreLogo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-09-28T00:53:43.706</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\brent\Desktop\IFB399\UWP\Assets\StoreLogo.scale-150.png">
+      <PackagePath>Assets\StoreLogo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-09-28T00:53:43.707</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\brent\Desktop\IFB399\UWP\Assets\StoreLogo.scale-200.png">
+      <PackagePath>Assets\StoreLogo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-09-28T00:53:43.709</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\brent\Desktop\IFB399\UWP\Assets\StoreLogo.scale-400.png">
+      <PackagePath>Assets\StoreLogo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-09-28T00:53:43.710</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\brent\Desktop\IFB399\UWP\Assets\Wide310x150Logo.scale-100.png">
+      <PackagePath>Assets\Wide310x150Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-09-28T00:53:43.711</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\brent\Desktop\IFB399\UWP\Assets\Wide310x150Logo.scale-125.png">
+      <PackagePath>Assets\Wide310x150Logo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-09-28T00:53:43.712</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\brent\Desktop\IFB399\UWP\Assets\Wide310x150Logo.scale-150.png">
+      <PackagePath>Assets\Wide310x150Logo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-09-28T00:53:43.713</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\brent\Desktop\IFB399\UWP\Assets\Wide310x150Logo.scale-400.png">
+      <PackagePath>Assets\Wide310x150Logo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-09-28T00:53:43.716</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\brent\Desktop\IFB399\UWP\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
-      <Modified>2020-09-24T00:21:20.156</Modified>
+      <Modified>2020-09-28T00:53:43.664</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\brent\source\repos\K-Bikpower\UWP\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\brent\Desktop\IFB399\UWP\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-09-24T00:21:20.157</Modified>
+      <Modified>2020-09-28T00:53:43.675</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\brent\source\repos\K-Bikpower\UWP\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\brent\Desktop\IFB399\UWP\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-09-24T00:21:20.157</Modified>
+      <Modified>2020-09-28T00:53:43.681</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\brent\source\repos\K-Bikpower\UWP\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\brent\Desktop\IFB399\UWP\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-09-24T00:21:20.158</Modified>
+      <Modified>2020-09-28T00:53:43.695</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\brent\source\repos\K-Bikpower\UWP\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\brent\Desktop\IFB399\UWP\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-09-24T00:21:20.158</Modified>
+      <Modified>2020-09-28T00:53:43.699</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\brent\source\repos\K-Bikpower\UWP\Assets\StoreLogo.png">
-      <PackagePath>Assets\StoreLogo.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-09-24T00:21:20.158</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\brent\source\repos\K-Bikpower\UWP\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\brent\Desktop\IFB399\UWP\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-09-24T00:21:20.159</Modified>
+      <Modified>2020-09-28T00:53:43.714</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\brent\source\repos\K-Bikpower\UWP\bin\x86\Debug\UWP.xr.xml">
+    <AppxPackagedFile Include="C:\Users\brent\Desktop\IFB399\UWP\Properties\Default.rd.xml">
+      <PackagePath>Properties\Default.rd.xml</PackagePath>
+      <Modified>2020-09-28T00:53:43.730</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\brent\Desktop\IFB399\UWP\bin\x86\Debug\UWP.xr.xml">
       <PackagePath>UWP.xr.xml</PackagePath>
-      <Modified>2020-09-24T00:21:20.497</Modified>
+      <Modified>2020-09-28T00:53:44.499</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\brent\source\repos\K-Bikpower\UWP\bin\x86\Debug\App.xbf">
+    <AppxPackagedFile Include="C:\Users\brent\Desktop\IFB399\UWP\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2020-09-25T04:14:58.091</Modified>
+      <Modified>2020-09-28T01:52:49.382</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\brent\source\repos\K-Bikpower\UWP\bin\x86\Debug\MainPage.xbf">
+    <AppxPackagedFile Include="C:\Users\brent\Desktop\IFB399\UWP\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2020-09-25T04:14:58.092</Modified>
+      <Modified>2020-09-28T01:52:49.382</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.18362.0\\redist\Debug\x86\ucrtbased.dll">
       <PackagePath>ucrtbased.dll</PackagePath>
@@ -204,13 +424,13 @@
       <PackagePath>WinMetadata\Microsoft.UI.Xaml.winmd</PackagePath>
       <Modified>2020-05-18T23:27:08.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\brent\source\repos\K-Bikpower\UWP\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\brent\Desktop\IFB399\UWP\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2020-09-24T01:59:32.665</Modified>
+      <Modified>2020-09-28T00:55:39.764</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\brent\source\repos\K-Bikpower\UWP\bin\x86\Debug\Core\UWP.exe">
+    <AppxPackagedFile Include="C:\Users\brent\Desktop\IFB399\UWP\bin\x86\Debug\Core\UWP.exe">
       <PackagePath>UWP.exe</PackagePath>
-      <Modified>2020-09-25T04:15:00.899</Modified>
+      <Modified>2020-09-28T01:52:50.936</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8fziLjP7l82DboM8/XgPiz6QrhElH+YpaXqxih5IjqWYynC+sglpRbcsz8zfscLRBBE4I0YsU/UULYYOQJwTKQ==",
+  "dgSpecHash": "oEjmMwTolyGU399MDyH7DoE4f5N3Ql2yyi0th0RndDJi3tD+TuLLdL+LRHKELAG4OTadvmr9oMYSzbqNVMVvnQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\brent\\source\\repos\\K-Bikpower\\UWP\\K_Bikpower.UWP.csproj",
+  "projectFilePath": "C:\\Users\\brent\\Desktop\\IFB399\\UWP\\K_Bikpower.UWP.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\brent\\.nuget\\packages\\microsoft.azure.mobile.client\\4.1.2\\microsoft.azure.mobile.client.4.1.2.nupkg.sha512",
     "C:\\Users\\brent\\.nuget\\packages\\microsoft.azure.mobile.client.sqlitestore\\4.1.2\\microsoft.azure.mobile.client.sqlitestore.4.1.2.nupkg.sha512",

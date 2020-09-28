@@ -19,7 +19,6 @@ namespace K_Bikpower
             if (details != null)
             {
                 assetdata = details;
-                Console.WriteLine(assetdata);
                 PopulateDetails(assetdata);
                 string QRId = assetdata.Id;
                 DependencyService.Get<IQRSave>().Qrcode(QRId);

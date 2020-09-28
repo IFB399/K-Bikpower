@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9BBlwJZbB4u+/3YJU0Pe3eAVrFqlkcU3hhjqC+ahVc25p8f4E2TrMWY1gtcM1lbv2u8cbSjI0Xd9z9kDaybv0w==",
+  "dgSpecHash": "pUpLL2r2T+O1eeBAM7RPI8e7XUsie8+OyXg4ngMz3nD2ydSAEJfWBHjWU6PweYVAJot+81ZP4qUhXwijXSNsrQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\brent\\source\\repos\\K-Bikpower\\Droid\\K_Bikpower.Droid.csproj",
+  "projectFilePath": "C:\\Users\\brent\\Desktop\\IFB399\\Droid\\K_Bikpower.Droid.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\brent\\.nuget\\packages\\fastandroidcamera\\2.0.0\\fastandroidcamera.2.0.0.nupkg.sha512",
     "C:\\Users\\brent\\.nuget\\packages\\microsoft.azure.mobile.client\\4.1.2\\microsoft.azure.mobile.client.4.1.2.nupkg.sha512",

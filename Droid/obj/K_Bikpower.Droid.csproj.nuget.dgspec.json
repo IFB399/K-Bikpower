@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\brent\\source\\repos\\K-Bikpower\\Droid\\K_Bikpower.Droid.csproj": {}
+    "C:\\Users\\brent\\Desktop\\IFB399\\Droid\\K_Bikpower.Droid.csproj": {}
   },
   "projects": {
-    "C:\\Users\\brent\\source\\repos\\K-Bikpower\\Droid\\K_Bikpower.Droid.csproj": {
+    "C:\\Users\\brent\\Desktop\\IFB399\\Droid\\K_Bikpower.Droid.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\brent\\source\\repos\\K-Bikpower\\Droid\\K_Bikpower.Droid.csproj",
+        "projectUniqueName": "C:\\Users\\brent\\Desktop\\IFB399\\Droid\\K_Bikpower.Droid.csproj",
         "projectName": "K_Bikpower.Droid",
-        "projectPath": "C:\\Users\\brent\\source\\repos\\K-Bikpower\\Droid\\K_Bikpower.Droid.csproj",
+        "projectPath": "C:\\Users\\brent\\Desktop\\IFB399\\Droid\\K_Bikpower.Droid.csproj",
         "packagesPath": "C:\\Users\\brent\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\brent\\source\\repos\\K-Bikpower\\Droid\\obj\\",
+        "outputPath": "C:\\Users\\brent\\Desktop\\IFB399\\Droid\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -32,8 +32,8 @@
         "frameworks": {
           "monoandroid90": {
             "projectReferences": {
-              "C:\\Users\\brent\\source\\repos\\K-Bikpower\\ZUMOAPPNAME\\K_Bikpower.csproj": {
-                "projectPath": "C:\\Users\\brent\\source\\repos\\K-Bikpower\\ZUMOAPPNAME\\K_Bikpower.csproj"
+              "C:\\Users\\brent\\Desktop\\IFB399\\ZUMOAPPNAME\\K_Bikpower.csproj": {
+                "projectPath": "C:\\Users\\brent\\Desktop\\IFB399\\ZUMOAPPNAME\\K_Bikpower.csproj"
               }
             }
           }
@@ -62,14 +62,14 @@
         }
       }
     },
-    "C:\\Users\\brent\\source\\repos\\K-Bikpower\\ZUMOAPPNAME\\K_Bikpower.csproj": {
+    "C:\\Users\\brent\\Desktop\\IFB399\\ZUMOAPPNAME\\K_Bikpower.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\brent\\source\\repos\\K-Bikpower\\ZUMOAPPNAME\\K_Bikpower.csproj",
+        "projectUniqueName": "C:\\Users\\brent\\Desktop\\IFB399\\ZUMOAPPNAME\\K_Bikpower.csproj",
         "projectName": "K_Bikpower",
-        "projectPath": "C:\\Users\\brent\\source\\repos\\K-Bikpower\\ZUMOAPPNAME\\K_Bikpower.csproj",
+        "projectPath": "C:\\Users\\brent\\Desktop\\IFB399\\ZUMOAPPNAME\\K_Bikpower.csproj",
         "packagesPath": "C:\\Users\\brent\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\brent\\source\\repos\\K-Bikpower\\ZUMOAPPNAME\\obj\\",
+        "outputPath": "C:\\Users\\brent\\Desktop\\IFB399\\ZUMOAPPNAME\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
