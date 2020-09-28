@@ -1,16 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>DESKTOP-TJ3US1S</Machine>
-    <WindowsUser>jacqu</WindowsUser>
+    <Machine>DESKTOP-67MN648</Machine>
+    <WindowsUser>Brenton Reddish</WindowsUser>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetOsVersion>10.0</TargetOsVersion>
     <TargetOsDescription>Windows 10.0</TargetOsDescription>
     <SolutionConfiguration>Debug|x86</SolutionConfiguration>
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>160b6a80-7a3b-4992-86ea-4e482f867b0a</PackageIdentityName>
-    <PackageIdentityPublisher>CN=jacqu</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\jacqu\Documents\2018\latest repo 3\UWP\obj\x86\Debug\</IntermediateOutputPath>
+    <PackageIdentityPublisher>CN=Brenton Reddish</PackageIdentityPublisher>
+    <IntermediateOutputPath>C:\Users\Brenton Reddish\Desktop\IFB398\kbik\UWP\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType>
     </RemoteDeploymentType>
     <PackageRegistrationPath>
@@ -18,115 +18,115 @@
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\Users\jacqu\Documents\2018\latest repo 3\UWP\bin\x86\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>C0E937D39E5BB328DE831697ACE8047C8D53A19F5E4E2FA2FC5226E82319DDE1</RegisteredManifestChecksum>
-    <RegisteredPackageMoniker>43e3c925-1cf2-4e0e-92ff-74d3a13fcfa3_1.2.0.0_x86__rwqtpdn3f5m0a</RegisteredPackageMoniker>
-    <RegisteredUserModeAppID>43e3c925-1cf2-4e0e-92ff-74d3a13fcfa3_rwqtpdn3f5m0a!App</RegisteredUserModeAppID>
+    <LayoutDir>C:\Users\Brenton Reddish\Desktop\IFB398\kbik\UWP\bin\x86\Debug\AppX</LayoutDir>
+    <RegisteredManifestChecksum>D2982BF2FA0B9445DE61D3E8DB587D5E748D72D04C785816DDFEB5C801AEA23B</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>43e3c925-1cf2-4e0e-92ff-74d3a13fcfa3_1.2.0.0_x86__91k9588wthxrg</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>43e3c925-1cf2-4e0e-92ff-74d3a13fcfa3_91k9588wthxrg!App</RegisteredUserModeAppID>
     <RegisteredPackageID>43e3c925-1cf2-4e0e-92ff-74d3a13fcfa3</RegisteredPackageID>
-    <RegisteredPackagePublisher>CN=jacqu</RegisteredPackagePublisher>
+    <RegisteredPackagePublisher>CN=Brenton Reddish</RegisteredPackagePublisher>
     <RegisteredVersion>1.2.0.0</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\jacqu\Documents\2018\latest repo 3\UWP\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\Brenton Reddish\Desktop\IFB398\kbik\UWP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-09-28T08:42:31.811</Modified>
+      <Modified>2020-09-28T09:00:03.426</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\jacqu\Documents\2018\latest repo 3\UWP\bin\x86\Debug\UWP.exe">
+    <AppxPackagedFile Include="C:\Users\Brenton Reddish\Desktop\IFB398\kbik\UWP\bin\x86\Debug\UWP.exe">
       <PackagePath>entrypoint\UWP.exe</PackagePath>
-      <Modified>2020-09-28T08:42:28.233</Modified>
+      <Modified>2020-09-28T09:00:01.987</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\.nuget\packages\microsoft.azure.mobile.client\4.1.2\lib\uap10.0\Microsoft.Azure.Mobile.Client.dll">
+    <AppxPackagedFile Include="C:\Users\Brenton Reddish\.nuget\packages\microsoft.azure.mobile.client\4.1.2\lib\uap10.0\Microsoft.Azure.Mobile.Client.dll">
       <PackagePath>Microsoft.Azure.Mobile.Client.dll</PackagePath>
       <Modified>2019-12-02T09:27:44.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\.nuget\packages\microsoft.azure.mobile.client.sqlitestore\4.1.2\lib\netstandard1.4\Microsoft.Azure.Mobile.Client.SQLiteStore.dll">
+    <AppxPackagedFile Include="C:\Users\Brenton Reddish\.nuget\packages\microsoft.azure.mobile.client.sqlitestore\4.1.2\lib\netstandard1.4\Microsoft.Azure.Mobile.Client.SQLiteStore.dll">
       <PackagePath>Microsoft.Azure.Mobile.Client.SQLiteStore.dll</PackagePath>
       <Modified>2019-12-02T09:27:02.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\.nuget\packages\newtonsoft.json\9.0.1\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll">
+    <AppxPackagedFile Include="C:\Users\Brenton Reddish\.nuget\packages\newtonsoft.json\9.0.1\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
       <Modified>2016-06-13T13:06:14.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.10\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.10\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
       <Modified>2020-02-27T09:16:04.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\.nuget\packages\sqlitepclraw.bundle_green\1.1.2\lib\uap10.0\SQLitePCLRaw.batteries_green.dll">
+    <AppxPackagedFile Include="C:\Users\Brenton Reddish\.nuget\packages\sqlitepclraw.bundle_green\1.1.2\lib\uap10.0\SQLitePCLRaw.batteries_green.dll">
       <PackagePath>SQLitePCLRaw.batteries_green.dll</PackagePath>
       <Modified>2017-01-03T23:54:32.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\.nuget\packages\sqlitepclraw.bundle_green\1.1.2\lib\uap10.0\SQLitePCLRaw.batteries_v2.dll">
+    <AppxPackagedFile Include="C:\Users\Brenton Reddish\.nuget\packages\sqlitepclraw.bundle_green\1.1.2\lib\uap10.0\SQLitePCLRaw.batteries_v2.dll">
       <PackagePath>SQLitePCLRaw.batteries_v2.dll</PackagePath>
       <Modified>2017-01-03T23:54:32.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\.nuget\packages\sqlitepclraw.core\1.1.2\lib\uap10.0\SQLitePCLRaw.core.dll">
+    <AppxPackagedFile Include="C:\Users\Brenton Reddish\.nuget\packages\sqlitepclraw.core\1.1.2\lib\uap10.0\SQLitePCLRaw.core.dll">
       <PackagePath>SQLitePCLRaw.core.dll</PackagePath>
       <Modified>2017-01-03T23:54:30.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\.nuget\packages\sqlitepclraw.lib.e_sqlite3.v140\1.1.2\runtimes\win10-x86\native\e_sqlite3.dll">
+    <AppxPackagedFile Include="C:\Users\Brenton Reddish\.nuget\packages\sqlitepclraw.lib.e_sqlite3.v140\1.1.2\runtimes\win10-x86\native\e_sqlite3.dll">
       <PackagePath>e_sqlite3.dll</PackagePath>
       <Modified>2017-01-03T23:55:12.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\.nuget\packages\sqlitepclraw.provider.e_sqlite3.uwp10\1.1.2\lib\uap10.0\SQLitePCLRaw.provider.e_sqlite3.dll">
+    <AppxPackagedFile Include="C:\Users\Brenton Reddish\.nuget\packages\sqlitepclraw.provider.e_sqlite3.uwp10\1.1.2\lib\uap10.0\SQLitePCLRaw.provider.e_sqlite3.dll">
       <PackagePath>SQLitePCLRaw.provider.e_sqlite3.dll</PackagePath>
       <Modified>2017-01-03T23:54:52.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\.nuget\packages\win2d.uwp\1.20.0\runtimes\win10-x86\native\Microsoft.Graphics.Canvas.dll">
+    <AppxPackagedFile Include="C:\Users\Brenton Reddish\.nuget\packages\win2d.uwp\1.20.0\runtimes\win10-x86\native\Microsoft.Graphics.Canvas.dll">
       <PackagePath>Microsoft.Graphics.Canvas.dll</PackagePath>
       <Modified>2016-11-29T16:58:38.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\.nuget\packages\xamarin.essentials\1.5.3.2\lib\uap10.0.16299\Xamarin.Essentials.dll">
+    <AppxPackagedFile Include="C:\Users\Brenton Reddish\.nuget\packages\xamarin.essentials\1.5.3.2\lib\uap10.0.16299\Xamarin.Essentials.dll">
       <PackagePath>Xamarin.Essentials.dll</PackagePath>
       <Modified>2020-05-11T14:41:08.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\.nuget\packages\xamarin.forms\4.8.0.1269\lib\uap10.0.16299\Xamarin.Forms.Core.dll">
+    <AppxPackagedFile Include="C:\Users\Brenton Reddish\.nuget\packages\xamarin.forms\4.8.0.1269\lib\uap10.0.16299\Xamarin.Forms.Core.dll">
       <PackagePath>Xamarin.Forms.Core.dll</PackagePath>
       <Modified>2020-08-05T18:12:54.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\.nuget\packages\xamarin.forms\4.8.0.1269\lib\uap10.0.16299\Xamarin.Forms.Platform.UAP.dll">
+    <AppxPackagedFile Include="C:\Users\Brenton Reddish\.nuget\packages\xamarin.forms\4.8.0.1269\lib\uap10.0.16299\Xamarin.Forms.Platform.UAP.dll">
       <PackagePath>Xamarin.Forms.Platform.UAP.dll</PackagePath>
       <Modified>2020-08-05T18:12:54.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\.nuget\packages\xamarin.forms\4.8.0.1269\lib\uap10.0.16299\Xamarin.Forms.Platform.dll">
+    <AppxPackagedFile Include="C:\Users\Brenton Reddish\.nuget\packages\xamarin.forms\4.8.0.1269\lib\uap10.0.16299\Xamarin.Forms.Platform.dll">
       <PackagePath>Xamarin.Forms.Platform.dll</PackagePath>
       <Modified>2020-08-05T18:12:56.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\.nuget\packages\xamarin.forms\4.8.0.1269\lib\uap10.0.16299\Xamarin.Forms.Xaml.dll">
+    <AppxPackagedFile Include="C:\Users\Brenton Reddish\.nuget\packages\xamarin.forms\4.8.0.1269\lib\uap10.0.16299\Xamarin.Forms.Xaml.dll">
       <PackagePath>Xamarin.Forms.Xaml.dll</PackagePath>
       <Modified>2020-08-05T18:12:56.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\.nuget\packages\zxing.net.mobile\2.4.1\lib\UAP10\ZXing.Net.Mobile.Core.dll">
+    <AppxPackagedFile Include="C:\Users\Brenton Reddish\.nuget\packages\zxing.net.mobile\2.4.1\lib\UAP10\ZXing.Net.Mobile.Core.dll">
       <PackagePath>ZXing.Net.Mobile.Core.dll</PackagePath>
       <Modified>2018-04-03T21:26:38.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\.nuget\packages\zxing.net.mobile\2.4.1\lib\UAP10\ZXingNetMobile.dll">
+    <AppxPackagedFile Include="C:\Users\Brenton Reddish\.nuget\packages\zxing.net.mobile\2.4.1\lib\UAP10\ZXingNetMobile.dll">
       <PackagePath>ZXingNetMobile.dll</PackagePath>
       <Modified>2018-04-03T21:26:38.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\.nuget\packages\zxing.net.mobile\2.4.1\lib\UAP10\zxing.portable.dll">
+    <AppxPackagedFile Include="C:\Users\Brenton Reddish\.nuget\packages\zxing.net.mobile\2.4.1\lib\UAP10\zxing.portable.dll">
       <PackagePath>zxing.portable.dll</PackagePath>
       <Modified>2018-04-03T21:26:38.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\.nuget\packages\zxing.net.mobile.forms\2.4.1\lib\UAP10\ZXing.Net.Mobile.Forms.WindowsUniversal.dll">
+    <AppxPackagedFile Include="C:\Users\Brenton Reddish\.nuget\packages\zxing.net.mobile.forms\2.4.1\lib\UAP10\ZXing.Net.Mobile.Forms.WindowsUniversal.dll">
       <PackagePath>ZXing.Net.Mobile.Forms.WindowsUniversal.dll</PackagePath>
       <Modified>2018-04-03T21:26:40.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\.nuget\packages\zxing.net.mobile.forms\2.4.1\lib\UAP10\ZXing.Net.Mobile.Forms.dll">
+    <AppxPackagedFile Include="C:\Users\Brenton Reddish\.nuget\packages\zxing.net.mobile.forms\2.4.1\lib\UAP10\ZXing.Net.Mobile.Forms.dll">
       <PackagePath>ZXing.Net.Mobile.Forms.dll</PackagePath>
       <Modified>2018-04-03T21:26:40.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\Documents\2018\latest repo 3\ZUMOAPPNAME\bin\Debug\netstandard2.0\K_Bikpower.dll">
+    <AppxPackagedFile Include="C:\Users\Brenton Reddish\Desktop\IFB398\kbik\ZUMOAPPNAME\bin\Debug\netstandard2.0\K_Bikpower.dll">
       <PackagePath>K_Bikpower.dll</PackagePath>
-      <Modified>2020-09-28T08:40:25.880</Modified>
+      <Modified>2020-09-28T08:59:56.467</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft Visual Studio\2019\Community\Common7\IDE\ReferenceAssemblies\Microsoft\Framework\Xamarin.iOS\v1.0\Facades\System.Drawing.Common.dll">
       <PackagePath>System.Drawing.Common.dll</PackagePath>
-      <Modified>2020-08-22T13:01:17.207</Modified>
+      <Modified>2020-08-13T06:24:54.903</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\.nuget\packages\win2d.uwp\1.20.0\lib\uap10.0\Microsoft.Graphics.Canvas.winmd">
+    <AppxPackagedFile Include="C:\Users\Brenton Reddish\.nuget\packages\win2d.uwp\1.20.0\lib\uap10.0\Microsoft.Graphics.Canvas.winmd">
       <PackagePath>Microsoft.Graphics.Canvas.winmd</PackagePath>
       <Modified>2016-11-29T16:58:38.000</Modified>
     </AppxPackagedFile>
@@ -134,283 +134,283 @@
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
       <Modified>2019-03-18T08:36:56.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\.nuget\packages\xamarin.forms\4.8.0.1269\lib\uap10.0.16299\Xamarin.Forms.Platform.UAP\Xamarin.Forms.Platform.UAP.xr.xml">
+    <AppxPackagedFile Include="C:\Users\Brenton Reddish\.nuget\packages\xamarin.forms\4.8.0.1269\lib\uap10.0.16299\Xamarin.Forms.Platform.UAP\Xamarin.Forms.Platform.UAP.xr.xml">
       <PackagePath>Xamarin.Forms.Platform.UAP\Xamarin.Forms.Platform.UAP.xr.xml</PackagePath>
       <Modified>2020-08-05T18:12:50.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\.nuget\packages\zxing.net.mobile\2.4.1\lib\UAP10\ZXingNetMobile\ZXingNetMobile.xr.xml">
+    <AppxPackagedFile Include="C:\Users\Brenton Reddish\.nuget\packages\zxing.net.mobile\2.4.1\lib\UAP10\ZXingNetMobile\ZXingNetMobile.xr.xml">
       <PackagePath>ZXingNetMobile\ZXingNetMobile.xr.xml</PackagePath>
       <Modified>2018-04-03T21:26:38.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\Documents\2018\latest repo 3\UWP\Assets\LargeTile.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Brenton Reddish\Desktop\IFB398\kbik\UWP\Assets\LargeTile.scale-100.png">
       <PackagePath>Assets\LargeTile.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-09-28T03:13:06.805</Modified>
+      <Modified>2020-09-25T07:06:22.247</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\Documents\2018\latest repo 3\UWP\Assets\LargeTile.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\Brenton Reddish\Desktop\IFB398\kbik\UWP\Assets\LargeTile.scale-125.png">
       <PackagePath>Assets\LargeTile.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-09-28T03:13:06.807</Modified>
+      <Modified>2020-09-25T07:06:22.270</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\Documents\2018\latest repo 3\UWP\Assets\LargeTile.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\Brenton Reddish\Desktop\IFB398\kbik\UWP\Assets\LargeTile.scale-150.png">
       <PackagePath>Assets\LargeTile.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-09-28T03:13:06.809</Modified>
+      <Modified>2020-09-25T07:06:22.297</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\Documents\2018\latest repo 3\UWP\Assets\LargeTile.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Brenton Reddish\Desktop\IFB398\kbik\UWP\Assets\LargeTile.scale-200.png">
       <PackagePath>Assets\LargeTile.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-09-28T03:13:06.811</Modified>
+      <Modified>2020-09-25T07:06:22.337</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\Documents\2018\latest repo 3\UWP\Assets\LargeTile.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\Brenton Reddish\Desktop\IFB398\kbik\UWP\Assets\LargeTile.scale-400.png">
       <PackagePath>Assets\LargeTile.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-09-28T03:13:06.814</Modified>
+      <Modified>2020-09-25T07:06:22.474</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\Documents\2018\latest repo 3\UWP\Assets\SmallTile.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Brenton Reddish\Desktop\IFB398\kbik\UWP\Assets\SmallTile.scale-100.png">
       <PackagePath>Assets\SmallTile.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-09-28T03:13:06.817</Modified>
+      <Modified>2020-09-25T07:06:21.940</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\Documents\2018\latest repo 3\UWP\Assets\SmallTile.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\Brenton Reddish\Desktop\IFB398\kbik\UWP\Assets\SmallTile.scale-125.png">
       <PackagePath>Assets\SmallTile.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-09-28T03:13:06.819</Modified>
+      <Modified>2020-09-25T07:06:21.951</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\Documents\2018\latest repo 3\UWP\Assets\SmallTile.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\Brenton Reddish\Desktop\IFB398\kbik\UWP\Assets\SmallTile.scale-150.png">
       <PackagePath>Assets\SmallTile.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-09-28T03:13:06.821</Modified>
+      <Modified>2020-09-25T07:06:21.962</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\Documents\2018\latest repo 3\UWP\Assets\SmallTile.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Brenton Reddish\Desktop\IFB398\kbik\UWP\Assets\SmallTile.scale-200.png">
       <PackagePath>Assets\SmallTile.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-09-28T03:13:06.823</Modified>
+      <Modified>2020-09-25T07:06:21.985</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\Documents\2018\latest repo 3\UWP\Assets\SmallTile.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\Brenton Reddish\Desktop\IFB398\kbik\UWP\Assets\SmallTile.scale-400.png">
       <PackagePath>Assets\SmallTile.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-09-28T03:13:06.824</Modified>
+      <Modified>2020-09-25T07:06:22.002</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\Documents\2018\latest repo 3\UWP\Assets\SplashScreen.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Brenton Reddish\Desktop\IFB398\kbik\UWP\Assets\SplashScreen.scale-100.png">
       <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-09-28T03:13:06.826</Modified>
+      <Modified>2020-09-25T07:12:04.454</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\Documents\2018\latest repo 3\UWP\Assets\SplashScreen.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\Brenton Reddish\Desktop\IFB398\kbik\UWP\Assets\SplashScreen.scale-125.png">
       <PackagePath>Assets\SplashScreen.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-09-28T03:13:06.828</Modified>
+      <Modified>2020-09-25T07:09:18.635</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\Documents\2018\latest repo 3\UWP\Assets\SplashScreen.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\Brenton Reddish\Desktop\IFB398\kbik\UWP\Assets\SplashScreen.scale-150.png">
       <PackagePath>Assets\SplashScreen.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-09-28T03:13:06.830</Modified>
+      <Modified>2020-09-25T07:09:18.693</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\Documents\2018\latest repo 3\UWP\Assets\SplashScreen.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\Brenton Reddish\Desktop\IFB398\kbik\UWP\Assets\SplashScreen.scale-400.png">
       <PackagePath>Assets\SplashScreen.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-09-28T03:13:06.834</Modified>
+      <Modified>2020-09-25T07:12:04.780</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\Documents\2018\latest repo 3\UWP\Assets\Square150x150Logo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Brenton Reddish\Desktop\IFB398\kbik\UWP\Assets\Square150x150Logo.scale-100.png">
       <PackagePath>Assets\Square150x150Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-09-28T03:13:06.836</Modified>
+      <Modified>2020-09-25T07:06:22.016</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\Documents\2018\latest repo 3\UWP\Assets\Square150x150Logo.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\Brenton Reddish\Desktop\IFB398\kbik\UWP\Assets\Square150x150Logo.scale-125.png">
       <PackagePath>Assets\Square150x150Logo.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-09-28T03:13:06.838</Modified>
+      <Modified>2020-09-25T07:06:22.027</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\Documents\2018\latest repo 3\UWP\Assets\Square150x150Logo.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\Brenton Reddish\Desktop\IFB398\kbik\UWP\Assets\Square150x150Logo.scale-150.png">
       <PackagePath>Assets\Square150x150Logo.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-09-28T03:13:06.840</Modified>
+      <Modified>2020-09-25T07:06:22.040</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\Documents\2018\latest repo 3\UWP\Assets\Square150x150Logo.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\Brenton Reddish\Desktop\IFB398\kbik\UWP\Assets\Square150x150Logo.scale-400.png">
       <PackagePath>Assets\Square150x150Logo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-09-28T03:13:06.844</Modified>
+      <Modified>2020-09-25T07:06:22.095</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\Documents\2018\latest repo 3\UWP\Assets\Square44x44Logo.altform-lightunplated_targetsize-16.png">
+    <AppxPackagedFile Include="C:\Users\Brenton Reddish\Desktop\IFB398\kbik\UWP\Assets\Square44x44Logo.altform-lightunplated_targetsize-16.png">
       <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-16.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-09-28T03:13:06.846</Modified>
+      <Modified>2020-09-25T07:06:22.630</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\Documents\2018\latest repo 3\UWP\Assets\Square44x44Logo.altform-lightunplated_targetsize-24.png">
+    <AppxPackagedFile Include="C:\Users\Brenton Reddish\Desktop\IFB398\kbik\UWP\Assets\Square44x44Logo.altform-lightunplated_targetsize-24.png">
       <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-24.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-09-28T03:13:06.848</Modified>
+      <Modified>2020-09-25T07:06:22.638</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\Documents\2018\latest repo 3\UWP\Assets\Square44x44Logo.altform-lightunplated_targetsize-256.png">
+    <AppxPackagedFile Include="C:\Users\Brenton Reddish\Desktop\IFB398\kbik\UWP\Assets\Square44x44Logo.altform-lightunplated_targetsize-256.png">
       <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-256.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-09-28T03:13:06.851</Modified>
+      <Modified>2020-09-25T07:06:22.671</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\Documents\2018\latest repo 3\UWP\Assets\Square44x44Logo.altform-lightunplated_targetsize-32.png">
+    <AppxPackagedFile Include="C:\Users\Brenton Reddish\Desktop\IFB398\kbik\UWP\Assets\Square44x44Logo.altform-lightunplated_targetsize-32.png">
       <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-32.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-09-28T03:13:06.853</Modified>
+      <Modified>2020-09-25T07:06:22.646</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\Documents\2018\latest repo 3\UWP\Assets\Square44x44Logo.altform-lightunplated_targetsize-48.png">
+    <AppxPackagedFile Include="C:\Users\Brenton Reddish\Desktop\IFB398\kbik\UWP\Assets\Square44x44Logo.altform-lightunplated_targetsize-48.png">
       <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-48.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-09-28T03:13:06.855</Modified>
+      <Modified>2020-09-25T07:06:22.654</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\Documents\2018\latest repo 3\UWP\Assets\Square44x44Logo.altform-unplated_targetsize-16.png">
+    <AppxPackagedFile Include="C:\Users\Brenton Reddish\Desktop\IFB398\kbik\UWP\Assets\Square44x44Logo.altform-unplated_targetsize-16.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-16.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-09-28T03:13:06.859</Modified>
+      <Modified>2020-09-25T07:06:22.580</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\Documents\2018\latest repo 3\UWP\Assets\Square44x44Logo.altform-unplated_targetsize-256.png">
+    <AppxPackagedFile Include="C:\Users\Brenton Reddish\Desktop\IFB398\kbik\UWP\Assets\Square44x44Logo.altform-unplated_targetsize-256.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-256.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-09-28T03:13:06.867</Modified>
+      <Modified>2020-09-25T07:06:22.622</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\Documents\2018\latest repo 3\UWP\Assets\Square44x44Logo.altform-unplated_targetsize-32.png">
+    <AppxPackagedFile Include="C:\Users\Brenton Reddish\Desktop\IFB398\kbik\UWP\Assets\Square44x44Logo.altform-unplated_targetsize-32.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-32.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-09-28T03:13:06.870</Modified>
+      <Modified>2020-09-25T07:06:22.597</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\Documents\2018\latest repo 3\UWP\Assets\Square44x44Logo.altform-unplated_targetsize-48.png">
+    <AppxPackagedFile Include="C:\Users\Brenton Reddish\Desktop\IFB398\kbik\UWP\Assets\Square44x44Logo.altform-unplated_targetsize-48.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-48.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-09-28T03:13:06.872</Modified>
+      <Modified>2020-09-25T07:06:22.606</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\Documents\2018\latest repo 3\UWP\Assets\Square44x44Logo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Brenton Reddish\Desktop\IFB398\kbik\UWP\Assets\Square44x44Logo.scale-100.png">
       <PackagePath>Assets\Square44x44Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-09-28T03:13:06.874</Modified>
+      <Modified>2020-09-25T07:06:22.483</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\Documents\2018\latest repo 3\UWP\Assets\Square44x44Logo.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\Brenton Reddish\Desktop\IFB398\kbik\UWP\Assets\Square44x44Logo.scale-125.png">
       <PackagePath>Assets\Square44x44Logo.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-09-28T03:13:06.876</Modified>
+      <Modified>2020-09-25T07:06:22.492</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\Documents\2018\latest repo 3\UWP\Assets\Square44x44Logo.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\Brenton Reddish\Desktop\IFB398\kbik\UWP\Assets\Square44x44Logo.scale-150.png">
       <PackagePath>Assets\Square44x44Logo.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-09-28T03:13:06.878</Modified>
+      <Modified>2020-09-25T07:06:22.502</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\Documents\2018\latest repo 3\UWP\Assets\Square44x44Logo.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\Brenton Reddish\Desktop\IFB398\kbik\UWP\Assets\Square44x44Logo.scale-400.png">
       <PackagePath>Assets\Square44x44Logo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-09-28T03:13:06.882</Modified>
+      <Modified>2020-09-25T07:06:22.524</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\Documents\2018\latest repo 3\UWP\Assets\Square44x44Logo.targetsize-16.png">
+    <AppxPackagedFile Include="C:\Users\Brenton Reddish\Desktop\IFB398\kbik\UWP\Assets\Square44x44Logo.targetsize-16.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-16.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-09-28T03:13:06.884</Modified>
+      <Modified>2020-09-25T07:06:22.532</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\Documents\2018\latest repo 3\UWP\Assets\Square44x44Logo.targetsize-24.png">
+    <AppxPackagedFile Include="C:\Users\Brenton Reddish\Desktop\IFB398\kbik\UWP\Assets\Square44x44Logo.targetsize-24.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-09-28T03:13:06.885</Modified>
+      <Modified>2020-09-25T07:06:22.540</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\Documents\2018\latest repo 3\UWP\Assets\Square44x44Logo.targetsize-256.png">
+    <AppxPackagedFile Include="C:\Users\Brenton Reddish\Desktop\IFB398\kbik\UWP\Assets\Square44x44Logo.targetsize-256.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-256.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-09-28T03:13:06.890</Modified>
+      <Modified>2020-09-25T07:06:22.572</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\Documents\2018\latest repo 3\UWP\Assets\Square44x44Logo.targetsize-32.png">
+    <AppxPackagedFile Include="C:\Users\Brenton Reddish\Desktop\IFB398\kbik\UWP\Assets\Square44x44Logo.targetsize-32.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-32.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-09-28T03:13:06.892</Modified>
+      <Modified>2020-09-25T07:06:22.548</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\Documents\2018\latest repo 3\UWP\Assets\Square44x44Logo.targetsize-48.png">
+    <AppxPackagedFile Include="C:\Users\Brenton Reddish\Desktop\IFB398\kbik\UWP\Assets\Square44x44Logo.targetsize-48.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-48.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-09-28T03:13:06.894</Modified>
+      <Modified>2020-09-25T07:06:22.557</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\Documents\2018\latest repo 3\UWP\Assets\StoreLogo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Brenton Reddish\Desktop\IFB398\kbik\UWP\Assets\StoreLogo.scale-100.png">
       <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-09-28T03:13:06.899</Modified>
+      <Modified>2020-09-25T07:06:22.680</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\Documents\2018\latest repo 3\UWP\Assets\StoreLogo.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\Brenton Reddish\Desktop\IFB398\kbik\UWP\Assets\StoreLogo.scale-125.png">
       <PackagePath>Assets\StoreLogo.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-09-28T03:13:06.901</Modified>
+      <Modified>2020-09-25T07:06:22.689</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\Documents\2018\latest repo 3\UWP\Assets\StoreLogo.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\Brenton Reddish\Desktop\IFB398\kbik\UWP\Assets\StoreLogo.scale-150.png">
       <PackagePath>Assets\StoreLogo.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-09-28T03:13:06.902</Modified>
+      <Modified>2020-09-25T07:06:22.698</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\Documents\2018\latest repo 3\UWP\Assets\StoreLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Brenton Reddish\Desktop\IFB398\kbik\UWP\Assets\StoreLogo.scale-200.png">
       <PackagePath>Assets\StoreLogo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-09-28T03:13:06.904</Modified>
+      <Modified>2020-09-25T07:06:22.707</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\Documents\2018\latest repo 3\UWP\Assets\StoreLogo.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\Brenton Reddish\Desktop\IFB398\kbik\UWP\Assets\StoreLogo.scale-400.png">
       <PackagePath>Assets\StoreLogo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-09-28T03:13:06.906</Modified>
+      <Modified>2020-09-25T07:06:22.721</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\Documents\2018\latest repo 3\UWP\Assets\Wide310x150Logo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Brenton Reddish\Desktop\IFB398\kbik\UWP\Assets\Wide310x150Logo.scale-100.png">
       <PackagePath>Assets\Wide310x150Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-09-28T03:13:06.908</Modified>
+      <Modified>2020-09-25T07:06:22.109</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\Documents\2018\latest repo 3\UWP\Assets\Wide310x150Logo.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\Brenton Reddish\Desktop\IFB398\kbik\UWP\Assets\Wide310x150Logo.scale-125.png">
       <PackagePath>Assets\Wide310x150Logo.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-09-28T03:13:06.910</Modified>
+      <Modified>2020-09-25T07:06:22.124</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\Documents\2018\latest repo 3\UWP\Assets\Wide310x150Logo.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\Brenton Reddish\Desktop\IFB398\kbik\UWP\Assets\Wide310x150Logo.scale-150.png">
       <PackagePath>Assets\Wide310x150Logo.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-09-28T03:13:06.912</Modified>
+      <Modified>2020-09-25T07:06:22.141</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\Documents\2018\latest repo 3\UWP\Assets\Wide310x150Logo.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\Brenton Reddish\Desktop\IFB398\kbik\UWP\Assets\Wide310x150Logo.scale-400.png">
       <PackagePath>Assets\Wide310x150Logo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-09-28T03:13:06.917</Modified>
+      <Modified>2020-09-25T07:06:22.230</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\Documents\2018\latest repo 3\UWP\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Brenton Reddish\Desktop\IFB398\kbik\UWP\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
-      <Modified>2020-09-28T03:13:06.815</Modified>
+      <Modified>2020-09-19T11:01:53.894</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\Documents\2018\latest repo 3\UWP\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Brenton Reddish\Desktop\IFB398\kbik\UWP\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-09-28T03:13:06.832</Modified>
+      <Modified>2020-09-25T07:12:04.525</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\Documents\2018\latest repo 3\UWP\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Brenton Reddish\Desktop\IFB398\kbik\UWP\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-09-28T03:13:06.842</Modified>
+      <Modified>2020-09-25T07:06:22.056</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\Documents\2018\latest repo 3\UWP\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Brenton Reddish\Desktop\IFB398\kbik\UWP\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-09-28T03:13:06.880</Modified>
+      <Modified>2020-09-25T07:06:22.511</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\Documents\2018\latest repo 3\UWP\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\Brenton Reddish\Desktop\IFB398\kbik\UWP\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-09-28T03:13:06.887</Modified>
+      <Modified>2020-09-25T07:06:22.589</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\Documents\2018\latest repo 3\UWP\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Brenton Reddish\Desktop\IFB398\kbik\UWP\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-09-28T03:13:06.914</Modified>
+      <Modified>2020-09-25T07:06:22.164</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\Documents\2018\latest repo 3\UWP\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\Brenton Reddish\Desktop\IFB398\kbik\UWP\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
-      <Modified>2020-09-28T03:13:06.938</Modified>
+      <Modified>2020-09-19T11:01:53.901</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\Documents\2018\latest repo 3\UWP\bin\x86\Debug\UWP.xr.xml">
+    <AppxPackagedFile Include="C:\Users\Brenton Reddish\Desktop\IFB398\kbik\UWP\bin\x86\Debug\UWP.xr.xml">
       <PackagePath>UWP.xr.xml</PackagePath>
-      <Modified>2020-09-28T03:13:07.752</Modified>
+      <Modified>2020-09-19T11:01:54.179</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\Documents\2018\latest repo 3\UWP\bin\x86\Debug\App.xbf">
+    <AppxPackagedFile Include="C:\Users\Brenton Reddish\Desktop\IFB398\kbik\UWP\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2020-09-28T08:42:27.874</Modified>
+      <Modified>2020-09-28T09:00:01.844</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\Documents\2018\latest repo 3\UWP\bin\x86\Debug\MainPage.xbf">
+    <AppxPackagedFile Include="C:\Users\Brenton Reddish\Desktop\IFB398\kbik\UWP\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2020-09-28T08:42:27.875</Modified>
+      <Modified>2020-09-28T09:00:01.845</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.18362.0\\redist\Debug\x86\ucrtbased.dll">
       <PackagePath>ucrtbased.dll</PackagePath>
@@ -420,116 +420,116 @@
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
       <Modified>2019-03-18T07:33:42.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\.nuget\packages\microsoft.ui.xaml\2.4.2\buildTransitive\..\lib\uap10.0\Microsoft.UI.Xaml.winmd">
+    <AppxPackagedFile Include="C:\Users\Brenton Reddish\.nuget\packages\microsoft.ui.xaml\2.4.2\buildTransitive\..\lib\uap10.0\Microsoft.UI.Xaml.winmd">
       <PackagePath>WinMetadata\Microsoft.UI.Xaml.winmd</PackagePath>
       <Modified>2020-05-18T23:27:08.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\Documents\2018\latest repo 3\UWP\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\Brenton Reddish\Desktop\IFB398\kbik\UWP\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2020-09-28T08:40:36.797</Modified>
+      <Modified>2020-09-28T08:49:50.228</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jacqu\Documents\2018\latest repo 3\UWP\bin\x86\Debug\Core\UWP.exe">
+    <AppxPackagedFile Include="C:\Users\Brenton Reddish\Desktop\IFB398\kbik\UWP\bin\x86\Debug\Core\UWP.exe">
       <PackagePath>UWP.exe</PackagePath>
-      <Modified>2020-09-28T08:42:31.802</Modified>
+      <Modified>2020-09-28T09:00:03.407</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
-    <ResolvedSDKReference Include="C:\Users\jacqu\.nuget\packages\microsoft.ui.xaml\2.4.2\buildTransitive\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.4.appx">
+    <ResolvedSDKReference Include="C:\Users\Brenton Reddish\.nuget\packages\microsoft.ui.xaml\2.4.2\buildTransitive\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.4.appx">
       <Name>Microsoft.UI.Xaml.2.4</Name>
       <Version>2.42005.18002.0</Version>
       <Architecture>x86</Architecture>
       <FrameworkIdentity>Name = Microsoft.UI.Xaml.2.4, MinVersion = 2.42005.18002.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Users\jacqu\.nuget\packages\microsoft.ui.xaml\2.4.2\buildTransitive\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.4.appx</AppxLocation>
+      <AppxLocation>C:\Users\Brenton Reddish\.nuget\packages\microsoft.ui.xaml\2.4.2\buildTransitive\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.4.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Users\jacqu\.nuget\packages\microsoft.ui.xaml\2.4.2\buildTransitive\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.4.appx">
+    <ResolvedSDKReference Include="C:\Users\Brenton Reddish\.nuget\packages\microsoft.ui.xaml\2.4.2\buildTransitive\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.4.appx">
       <Name>Microsoft.UI.Xaml.2.4</Name>
       <Version>2.42005.18002.0</Version>
       <Architecture>Win32</Architecture>
       <FrameworkIdentity>Name = Microsoft.UI.Xaml.2.4, MinVersion = 2.42005.18002.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Users\jacqu\.nuget\packages\microsoft.ui.xaml\2.4.2\buildTransitive\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.4.appx</AppxLocation>
+      <AppxLocation>C:\Users\Brenton Reddish\.nuget\packages\microsoft.ui.xaml\2.4.2\buildTransitive\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.4.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Users\jacqu\.nuget\packages\microsoft.ui.xaml\2.4.2\buildTransitive\..\tools\AppX\x64\Release\Microsoft.UI.Xaml.2.4.appx">
+    <ResolvedSDKReference Include="C:\Users\Brenton Reddish\.nuget\packages\microsoft.ui.xaml\2.4.2\buildTransitive\..\tools\AppX\x64\Release\Microsoft.UI.Xaml.2.4.appx">
       <Name>Microsoft.UI.Xaml.2.4</Name>
       <Version>2.42005.18002.0</Version>
       <Architecture>x64</Architecture>
       <FrameworkIdentity>Name = Microsoft.UI.Xaml.2.4, MinVersion = 2.42005.18002.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Users\jacqu\.nuget\packages\microsoft.ui.xaml\2.4.2\buildTransitive\..\tools\AppX\x64\Release\Microsoft.UI.Xaml.2.4.appx</AppxLocation>
+      <AppxLocation>C:\Users\Brenton Reddish\.nuget\packages\microsoft.ui.xaml\2.4.2\buildTransitive\..\tools\AppX\x64\Release\Microsoft.UI.Xaml.2.4.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Users\jacqu\.nuget\packages\microsoft.ui.xaml\2.4.2\buildTransitive\..\tools\AppX\arm\Release\Microsoft.UI.Xaml.2.4.appx">
+    <ResolvedSDKReference Include="C:\Users\Brenton Reddish\.nuget\packages\microsoft.ui.xaml\2.4.2\buildTransitive\..\tools\AppX\arm\Release\Microsoft.UI.Xaml.2.4.appx">
       <Name>Microsoft.UI.Xaml.2.4</Name>
       <Version>2.42005.18002.0</Version>
       <Architecture>arm</Architecture>
       <FrameworkIdentity>Name = Microsoft.UI.Xaml.2.4, MinVersion = 2.42005.18002.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Users\jacqu\.nuget\packages\microsoft.ui.xaml\2.4.2\buildTransitive\..\tools\AppX\arm\Release\Microsoft.UI.Xaml.2.4.appx</AppxLocation>
+      <AppxLocation>C:\Users\Brenton Reddish\.nuget\packages\microsoft.ui.xaml\2.4.2\buildTransitive\..\tools\AppX\arm\Release\Microsoft.UI.Xaml.2.4.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Users\jacqu\.nuget\packages\microsoft.ui.xaml\2.4.2\buildTransitive\..\tools\AppX\arm64\Release\Microsoft.UI.Xaml.2.4.appx">
+    <ResolvedSDKReference Include="C:\Users\Brenton Reddish\.nuget\packages\microsoft.ui.xaml\2.4.2\buildTransitive\..\tools\AppX\arm64\Release\Microsoft.UI.Xaml.2.4.appx">
       <Name>Microsoft.UI.Xaml.2.4</Name>
       <Version>2.42005.18002.0</Version>
       <Architecture>arm64</Architecture>
       <FrameworkIdentity>Name = Microsoft.UI.Xaml.2.4, MinVersion = 2.42005.18002.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Users\jacqu\.nuget\packages\microsoft.ui.xaml\2.4.2\buildTransitive\..\tools\AppX\arm64\Release\Microsoft.UI.Xaml.2.4.appx</AppxLocation>
+      <AppxLocation>C:\Users\Brenton Reddish\.nuget\packages\microsoft.ui.xaml\2.4.2\buildTransitive\..\tools\AppX\arm64\Release\Microsoft.UI.Xaml.2.4.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Users\jacqu\.nuget\packages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.10\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx">
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.10\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx">
       <Name>Microsoft.NET.CoreRuntime.2.2</Name>
       <Version>2.2.27902.3</Version>
       <Architecture>x86</Architecture>
       <FrameworkIdentity>Name = Microsoft.NET.CoreRuntime.2.2, MinVersion = 2.2.27902.3, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Users\jacqu\.nuget\packages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.10\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx</AppxLocation>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.10\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Users\jacqu\.nuget\packages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.10\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx">
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.10\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx">
       <Name>Microsoft.NET.CoreRuntime.2.2</Name>
       <Version>2.2.27902.3</Version>
       <Architecture>x64</Architecture>
       <FrameworkIdentity>Name = Microsoft.NET.CoreRuntime.2.2, MinVersion = 2.2.27902.3, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Users\jacqu\.nuget\packages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.10\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx</AppxLocation>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.10\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Users\jacqu\.nuget\packages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.10\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx">
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.10\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx">
       <Name>Microsoft.NET.CoreRuntime.2.2</Name>
       <Version>2.2.27902.3</Version>
       <Architecture>arm</Architecture>
       <FrameworkIdentity>Name = Microsoft.NET.CoreRuntime.2.2, MinVersion = 2.2.27902.3, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Users\jacqu\.nuget\packages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.10\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx</AppxLocation>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.10\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Users\jacqu\.nuget\packages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.10\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx">
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.10\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx">
       <Name>Microsoft.NET.CoreFramework.Debug.2.2</Name>
       <Version>2.2.28529.0</Version>
       <Architecture>x86</Architecture>
       <FrameworkIdentity>Name = Microsoft.NET.CoreFramework.Debug.2.2, MinVersion = 2.2.28529.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Users\jacqu\.nuget\packages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.10\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx</AppxLocation>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.10\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Users\jacqu\.nuget\packages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.10\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx">
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.10\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx">
       <Name>Microsoft.NET.CoreFramework.Debug.2.2</Name>
       <Version>2.2.28529.0</Version>
       <Architecture>x64</Architecture>
       <FrameworkIdentity>Name = Microsoft.NET.CoreFramework.Debug.2.2, MinVersion = 2.2.28529.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Users\jacqu\.nuget\packages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.10\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx</AppxLocation>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.10\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Users\jacqu\.nuget\packages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.10\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx">
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.10\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx">
       <Name>Microsoft.NET.CoreFramework.Debug.2.2</Name>
       <Version>2.2.28529.0</Version>
       <Architecture>arm</Architecture>
       <FrameworkIdentity>Name = Microsoft.NET.CoreFramework.Debug.2.2, MinVersion = 2.2.28529.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Users\jacqu\.nuget\packages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.10\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx</AppxLocation>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.10\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
