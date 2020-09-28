@@ -15,7 +15,6 @@ namespace K_Bikpower
     {
         UserManager manager;
         Object savedData;
-        public Command DeleteCommand { get; set; }
         public UsersPage()
             {
                 InitializeComponent();
@@ -64,12 +63,12 @@ namespace K_Bikpower
                     // Not iOS - the swipe-to-delete is discoverable there
                     if (Device.RuntimePlatform == Device.Android)
                     {
-                        await Navigation.PushAsync(new AddUser(todo));
+                        await Navigation.PushAsync(new PreviewUser(todo));
                     }
                     else
                     {
                         // Windows, not all platforms support the Context Actions yet
-                        await Navigation.PushAsync(new AddUser(todo));
+                        await Navigation.PushAsync(new PreviewUser(todo));
 
                     }
                 }
@@ -157,18 +156,6 @@ namespace K_Bikpower
                     indicatorDelay.ContinueWith(t => SetIndicatorActivity(false), TaskScheduler.FromCurrentSynchronizationContext());
                 }
             }
-        }
-
-
-        private async void OnDeleteTapped(object obj)
-        {
-            User user = obj as User;
-            await manager.DeleteUserAsync(user);
-        }
-
-        private void Button_Clicked(object sender, EventArgs e)
-        {
-           DeleteCommand = new Command(OnDeleteTapped);
         }
     }
 }

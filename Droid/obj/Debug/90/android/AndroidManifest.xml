@@ -14,7 +14,7 @@
         <category android:name="android.intent.category.BROWSABLE" />
       </intent-filter>
     </activity>
-    <activity android:configChanges="orientation|screenSize" android:icon="@drawable/ic_launcher" android:label="K_Bikpower.Droid" android:theme="@android:style/Theme.Holo.Light" android:name="crc64772ed7bc9e555b3b.MainActivity">
+    <activity android:configChanges="orientation|screenSize" android:icon="@drawable/homeicon" android:label="K_Bikpower.Droid" android:theme="@android:style/Theme.Holo.Light" android:name="crc64772ed7bc9e555b3b.MainActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />

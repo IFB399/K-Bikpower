@@ -48,7 +48,7 @@
                                             <Label Text="{Binding Email,StringFormat='{0:F0}'}" FontSize="Small" FontAttributes="Bold"  Grid.Column="2" HorizontalOptions="Center" VerticalOptions="Center"/>
                                             <Label Text="{Binding Username,StringFormat='{0:F0}'}" FontSize="Small" FontAttributes="Bold"  Grid.Column="3" HorizontalOptions="Center" VerticalOptions="Center"/>
                                             <Label Text="{Binding Permisison,StringFormat='{0:F0}'}" FontSize="Small" FontAttributes="Bold"  Grid.Column="4" HorizontalOptions="Center" VerticalOptions="Center"/>
-                                            <Button Text="Delete User" FontSize="Small" FontAttributes="Bold" Grid.Column="5" HorizontalOptions="Center" VerticalOptions="Center" Command="{Binding Source={x:Reference Name=UserList}, Path=BindingContext.DeleteCommand}" Clicked="Button_Clicked"/>
+                                            
                                         </Grid>
                                     </Frame>
                                 </ViewCell>
@@ -58,7 +58,7 @@
                 </StackLayout>
             </Frame>
             <StackLayout x:Name="buttonsPanel" Orientation="Horizontal">
-                <Button Text="Add Asset" Clicked="Add_Asset_Clicked" BackgroundColor="White" CornerRadius="10" FontSize="Medium" TextColor="Black"/>
+                <Button Text="Add User" Clicked="Add_Asset_Clicked" BackgroundColor="White" CornerRadius="10" FontSize="Medium" TextColor="Black"/>
 
             </StackLayout>
 

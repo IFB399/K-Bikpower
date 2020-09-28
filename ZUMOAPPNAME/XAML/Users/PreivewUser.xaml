@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="K_Bikpower.PreviewUser">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Firstname:" FontSize="Title" TextColor="Black"/>
+            <Label  x:Name="Firstname"  VerticalOptions="EndAndExpand" FontSize="Title" TextColor="Black" />
+
+            <Label Text="Lastname:" FontSize="Title" TextColor="Black"/>
+            <Label  x:Name="Lastname" VerticalOptions="EndAndExpand" FontSize="Title" TextColor="Black" />
+
+            <Label Text="Email:" FontSize="Title" TextColor="Black"/>
+            <Label  x:Name="Email" VerticalOptions="EndAndExpand" FontSize="Title" TextColor="Black"/>
+
+            <Label Text="Username:" FontSize="Title" TextColor="Black"/>
+            <Label  x:Name="Username"  VerticalOptions="EndAndExpand" FontSize="Title" TextColor="Black" />
+
+            <Label Text="Temporary Password" FontSize="Title" TextColor="Black"/>
+            <Label  x:Name="Temp_PAssword"  VerticalOptions="EndAndExpand" FontSize="Title" TextColor="Black"/>
+
+            <Label Text="Authorisation" FontSize="Title" TextColor="Black"/>
+            <Label x:Name="Auth" FontSize="Title" TextColor="Black" HorizontalOptions="FillAndExpand"/>
+
+            <Button x:Name="UpdateButton" Clicked="UpdateButton_Clicked" Text="Edit User"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

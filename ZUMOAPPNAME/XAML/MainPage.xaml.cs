@@ -20,6 +20,10 @@ namespace K_Bikpower
             Authentication = userauth.Authentication();
             InitializeComponent();
             WelcomeLabel.Text = "Welcome " + userauth.ReturnUser();
+            if (Authentication != "Administrator")
+            {
+                Users.IsVisible = false;
+            }
         }
 
         private void assets_button_Clicked(object sender, EventArgs e)
@@ -55,6 +59,11 @@ namespace K_Bikpower
                 Navigation.PushAsync(new UsersPage());
             }
             else {  DisplayAlert("Denied", "You do not have permssion to access this page", "OK"); }
+        }
+
+        private void MyAccount_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new MyAccount());
         }
     }
 }
