@@ -29,7 +29,7 @@ namespace K_Bikpower
                 Ids = Userdata.Id;
 
             }
-            if (random != null && Userdata != null) 
+            if (random != null) 
             {
                 popuserData = Userdata;
                 Firstname.IsVisible = false;
@@ -37,6 +37,15 @@ namespace K_Bikpower
                 Email.IsVisible = false;
                 Auth.IsVisible = false;
                 AddOrUpdateButton.IsVisible = false;
+                Firstnamelabel.IsVisible = false;
+                LastnameLabel.IsVisible = false;
+                Emaillabel.IsVisible = false;
+                UsernameLabel.IsVisible = false;
+                Temp_PAsswordLabel.IsVisible = false;
+                Authlabel.IsVisible = false;
+
+
+
                 OldPaaassword.IsVisible = true;
                 Oldpass.IsVisible = true;
                 Next.IsVisible = true;

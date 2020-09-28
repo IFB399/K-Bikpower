@@ -2559,24 +2559,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\jacqu\\.nuget\\packages\\": {},
+    "C:\\Users\\Brenton Reddish\\.nuget\\packages\\": {},
     "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jacqu\\Documents\\2018\\latest repo 3\\Droid\\K_Bikpower.Droid.csproj",
+      "projectUniqueName": "C:\\Users\\Brenton Reddish\\Desktop\\IFB398\\kbik\\Droid\\K_Bikpower.Droid.csproj",
       "projectName": "K_Bikpower.Droid",
-      "projectPath": "C:\\Users\\jacqu\\Documents\\2018\\latest repo 3\\Droid\\K_Bikpower.Droid.csproj",
-      "packagesPath": "C:\\Users\\jacqu\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jacqu\\Documents\\2018\\latest repo 3\\Droid\\obj\\",
+      "projectPath": "C:\\Users\\Brenton Reddish\\Desktop\\IFB398\\kbik\\Droid\\K_Bikpower.Droid.csproj",
+      "packagesPath": "C:\\Users\\Brenton Reddish\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Brenton Reddish\\Desktop\\IFB398\\kbik\\Droid\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\jacqu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Brenton Reddish\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -2590,8 +2590,8 @@
       "frameworks": {
         "monoandroid90": {
           "projectReferences": {
-            "C:\\Users\\jacqu\\Documents\\2018\\latest repo 3\\ZUMOAPPNAME\\K_Bikpower.csproj": {
-              "projectPath": "C:\\Users\\jacqu\\Documents\\2018\\latest repo 3\\ZUMOAPPNAME\\K_Bikpower.csproj"
+            "C:\\Users\\Brenton Reddish\\Desktop\\IFB398\\kbik\\ZUMOAPPNAME\\K_Bikpower.csproj": {
+              "projectPath": "C:\\Users\\Brenton Reddish\\Desktop\\IFB398\\kbik\\ZUMOAPPNAME\\K_Bikpower.csproj"
             }
           }
         }

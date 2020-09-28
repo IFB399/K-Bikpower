@@ -37,7 +37,7 @@ namespace K_Bikpower
         private void PopulateDetails(Asset data)
         {
 
-            Substation_Picker.Text = data.SubstationCode;
+            Substation_Picker.SelectedItem = data.SubstationCode;
             Plant_Number_Entry.Text = data.PlantNumber;
             Asset_Equipment_Number_Entry.Text = data.AssetEQNO.ToString();
             Equipment_Status_Entry.Text = data.EQStatus;
@@ -75,7 +75,7 @@ namespace K_Bikpower
             Asset todo = new Asset
             {
                 Id = Ids,
-                SubstationCode = Substation_Picker.Text,
+                SubstationCode = Substation_Picker.SelectedIndex.ToString(),
                 PlantNumber = Plant_Number_Entry.Text,
                 AssetEQNO = Int32.Parse(Asset_Equipment_Number_Entry.Text),
                 EQStatus = Equipment_Status_Entry.Text,

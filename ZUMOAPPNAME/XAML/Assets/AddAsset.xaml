@@ -8,7 +8,7 @@
             <StackLayout Padding="50">
 
                 <Label Text="Substation Code" FontSize="Title" TextColor="Black"/>
-                <Entry x:Name="Substation_Picker"/>
+                <Picker x:Name="Substation_Picker"/>
 
                 <!--drop down-->
                 <Label Text="Plant Number" FontSize="Title" TextColor="Black"/>

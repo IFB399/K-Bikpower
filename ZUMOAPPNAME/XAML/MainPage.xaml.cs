@@ -63,7 +63,7 @@ namespace K_Bikpower
 
         private void MyAccount_Clicked(object sender, EventArgs e)
         {
-           // Navigation.PushAsync(new MyAccount());
+            Navigation.PushAsync(new PreviewUser(null));
         }
     }
 }
