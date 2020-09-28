@@ -32,6 +32,13 @@
 
             <Button x:Name="AddOrUpdateButton" Clicked="Add_User_Clicked" Text="Add User"/>
 
+            <Label x:Name ="Oldpass" Text="Enter Old Password" FontSize="Title" TextColor="Black" IsVisible="false"/>
+            <Entry  x:Name="OldPaaassword" ClearButtonVisibility="WhileEditing" VerticalOptions="EndAndExpand" MaxLength="25" IsSpellCheckEnabled="True" IsTextPredictionEnabled="false" IsVisible="false"/>
+            <Button x:Name="Next" Clicked="Next_Clicked"  Text="Next" IsVisible="false"/>
+
+            <Label x:Name ="Newpass" Text="Enter Old Password" FontSize="Title" TextColor="Black" IsVisible="false"/>
+            <Entry  x:Name="NewPaaassword" ClearButtonVisibility="WhileEditing" VerticalOptions="EndAndExpand" MaxLength="25" IsSpellCheckEnabled="True" IsTextPredictionEnabled="false" IsVisible="false"/>
+            <Button x:Name="Changepass" Clicked="Changepass_Clicked"  Text="Change Pasword" IsVisible="false"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

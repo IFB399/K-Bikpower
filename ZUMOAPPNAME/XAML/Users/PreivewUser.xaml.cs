@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,8 +15,9 @@ namespace K_Bikpower
     {
         User popuserData;
         UserManager user_manager;
+        string randomstring;
         public string Ids;
-        public PreviewUser(User Userdata)
+        public  PreviewUser(User Userdata)
         {
             InitializeComponent();
 
@@ -28,10 +30,19 @@ namespace K_Bikpower
                 Ids = Userdata.Id;
 
             }
-
-
+            if (Userdata == null)
+            {
+                GetUserData();
+            }
+            }
+        private async void GetUserData ()
+        {
+            string username = user_manager.ReturnUser();
+            ObservableCollection<User> userList = await user_manager.GetUser(username);
+            User u = userList.FirstOrDefault();
+            PopulateDetails(u);
+            randomstring = "Warp Tach is Rad";
         }
-
         private void PopulateDetails(User data)
         {
             Firstname.Text = data.FirstName;
@@ -42,7 +53,7 @@ namespace K_Bikpower
 
         private void UpdateButton_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new AddUser(popuserData));
+            Navigation.PushAsync(new AddUser(popuserData, randomstring));
         }
     }
 }

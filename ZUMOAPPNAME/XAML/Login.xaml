@@ -6,25 +6,28 @@
              mc:Ignorable="d"
              x:Class="K_Bikpower.Login">
     <ContentPage.Content>
-        <StackLayout BackgroundColor="#63d9ff" Padding="40,40,40,100">
-            <!-- Place new controls here -->
-            <Label Text="Please log in" 
-               FontSize="Large"
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+        <StackLayout BackgroundColor="#1B252D" Padding="40,40,40,100">
 
             <!--need Logo-->
-            
-            <Frame CornerRadius="10" BackgroundColor="#7fe0ff">
-                <StackLayout Margin="20,20,20,20" Padding="10,10,10,10" Spacing="50">
+
+            <Frame BackgroundColor="#fafafa" CornerRadius="0"  VerticalOptions="FillAndExpand">
+                <StackLayout BackgroundColor ="#fafafa" Margin="20,20,20,20" Padding="10,10,10,10" Spacing="50">
+
+                    <!-- Place new controls here -->
+
+                    <!-- <Label Text="Enter User Credentials"
+                           FontSize="Large"
+                           HorizontalOptions="Center"
+                           VerticalOptions="CenterAndExpand"/> -->
                     <!-- login -->
-                    <Entry x:Name="UsernameEntry" Placeholder="Username" VerticalOptions="EndAndExpand" MaxLength="25" IsSpellCheckEnabled="false" IsTextPredictionEnabled="false"  WidthRequest="600" HeightRequest="100" HorizontalOptions="CenterAndExpand" FontSize="36"/>
+                    <Entry x:Name="UsernameEntry" Placeholder="Username" VerticalOptions="Center" MaxLength="25" IsSpellCheckEnabled="false" IsTextPredictionEnabled="false"  WidthRequest="500" HeightRequest="75" HorizontalOptions="Center" FontSize="36"/>
 
                     <!-- paswword -->
 
-                    <Entry x:Name="PasswordEntry" Placeholder="Password" VerticalOptions="EndAndExpand" MaxLength="25" IsPassword="true" IsSpellCheckEnabled="false" IsTextPredictionEnabled="false" WidthRequest="600" HeightRequest="100"  FontSize="36"  HorizontalOptions="CenterAndExpand"/>
-                    <Button x:Name="loginButton" Text="Sign-in" Clicked="loginButton_Clicked" VerticalOptions="EndAndExpand" CornerRadius="30" BorderColor="Black" BorderWidth="1" BackgroundColor="#343f4b" TextColor="White" WidthRequest="300" HorizontalOptions="Center" HeightRequest="75"/>
+                    <Entry x:Name="PasswordEntry" Placeholder="Password" VerticalOptions="Center" MaxLength="25" IsPassword="true" IsSpellCheckEnabled="false" IsTextPredictionEnabled="false" WidthRequest="500" HeightRequest="75"  FontSize="36"  HorizontalOptions="Center"/>
+                    <Button x:Name="loginButton" Text="Log In" Clicked="loginButton_Clicked" VerticalOptions="Center" BorderColor="#29A8E2" BorderWidth="1" BackgroundColor="#29A8E2" TextColor="White" WidthRequest="300" HorizontalOptions="Center" HeightRequest="75" FontSize="36"/>
                 </StackLayout>
+
             </Frame>
 
         </StackLayout>

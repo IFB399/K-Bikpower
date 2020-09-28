@@ -50,7 +50,7 @@ namespace K_Bikpower
 
         public async void Add_Asset_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new AddUser(null));
+            await Navigation.PushAsync(new AddUser(null,null));
         }
      
         public async void OnSelected(object sender, SelectedItemChangedEventArgs e)
