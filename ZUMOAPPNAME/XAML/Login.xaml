@@ -20,7 +20,7 @@
                            HorizontalOptions="Center"
                            VerticalOptions="CenterAndExpand"/> -->
                     <!-- login -->
-                    <Entry x:Name="UsernameEntry" Placeholder="Username" VerticalOptions="Center" MaxLength="25" IsSpellCheckEnabled="false" IsTextPredictionEnabled="false"  WidthRequest="500" HeightRequest="75" HorizontalOptions="Center" FontSize="36"/>
+                    <Entry x:Name="UsernameEntry" Placeholder="Email" VerticalOptions="Center" MaxLength="25" IsSpellCheckEnabled="false" IsTextPredictionEnabled="false"  WidthRequest="500" HeightRequest="75" HorizontalOptions="Center" FontSize="36"/>
 
                     <!-- paswword -->
 
