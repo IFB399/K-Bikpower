@@ -15,14 +15,14 @@ namespace K_Bikpower
         public CustomViewCell()
         {
             InitializeComponent();
-            
+
         }
         protected override async void OnAppearing()
         {
             base.OnAppearing();
             if (status.Text == "Decommissioned")
             {
-                framecolour.BackgroundColor = Xamarin.Forms.Color.FromHex("#FFFF66");
+                framecolour.BackgroundColor = Xamarin.Forms.Color.FromHex("#E2C2C6");
             }
             else if (status.Text == "Commissioned")
             {

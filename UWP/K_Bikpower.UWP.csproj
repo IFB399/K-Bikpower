@@ -20,7 +20,7 @@
     <PackageCertificateKeyFile>
     </PackageCertificateKeyFile>
     <RuntimeIdentifiers>win10-arm;win10-arm-aot;win10-x86;win10-x86-aot;win10-x64;win10-x64-aot</RuntimeIdentifiers>
-    <PackageCertificateThumbprint>574EAAAFFD237A272C58ABA8700B8AB2D81F4B51</PackageCertificateThumbprint>
+    <PackageCertificateThumbprint>666A338FC79766037C1F83F9FF4F9E64A6D6D317</PackageCertificateThumbprint>
     <AppxPackageSigningEnabled>True</AppxPackageSigningEnabled>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
