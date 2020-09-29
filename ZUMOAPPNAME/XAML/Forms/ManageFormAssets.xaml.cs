@@ -14,13 +14,15 @@ namespace K_Bikpower
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ManageFormAssets : ContentPage
     {
-        DecommissionData dform;
+        //DecommissionData dform;
+        Object form;
         ObservableCollection<Asset> globalAssets = new ObservableCollection<Asset>();
         bool prevPage;
-        public ManageFormAssets(DecommissionData d, ObservableCollection<Asset> assets, bool fromApprovalPage = false)
+        public ManageFormAssets(Object o, ObservableCollection<Asset> assets, bool fromApprovalPage = false)
         {
             InitializeComponent();
-            dform = d;
+            //dform = d;
+            form = o;
             globalAssets = assets;
             assetList.ItemsSource = assets;
             prevPage = fromApprovalPage;
@@ -44,24 +46,43 @@ namespace K_Bikpower
         private void Scan_Asset_Clicked(object sender, EventArgs e)
         {
             
-            Navigation.PushAsync(new ScanQR(dform, globalAssets, prevPage)); //go to scan page
+            Navigation.PushAsync(new ScanQR(form, globalAssets, prevPage)); //go to scan page
 
         }
         private async void Add_Clicked(object sender, EventArgs e)
         {
 
-            await Navigation.PushAsync(new AssetList(dform, globalAssets, prevPage)); //go to table page
+            await Navigation.PushAsync(new AssetList(form, globalAssets, prevPage)); //go to table page
 
         }
         private void Done_Clicked(object sender, EventArgs e)
         {
             if (prevPage == false)
             {
-                Navigation.PushAsync(new Decommission(dform, globalAssets)); //return to correct page
+                if (typeof(DecommissionData).IsInstanceOfType(form))
+                {
+                    DecommissionData d = (DecommissionData)form;
+                    Navigation.PushAsync(new Decommission(d, globalAssets)); //return to correct page
+                }
+                else //return to commission page
+                {
+                    CommissionData c = (CommissionData)form;
+                    Navigation.PushAsync(new Commission(c, globalAssets)); //return to correct page
+                }
             }
             else
             {
-                Navigation.PushAsync(new ApproveDecommission(dform, globalAssets)); //return to correct page
+                if (typeof(DecommissionData).IsInstanceOfType(form))
+                {
+                    DecommissionData d = (DecommissionData)form;
+                    Navigation.PushAsync(new ApproveDecommission(d, globalAssets)); //return to correct page
+                }
+                else //go to approve commission page TO BE COMPLETED
+                {
+                    CommissionData c = (CommissionData)form;
+                    //go to page
+                }
+                    
             }
         }
     }

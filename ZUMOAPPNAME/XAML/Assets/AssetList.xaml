@@ -64,7 +64,7 @@
                         </ListView.Header>
                         <ListView.ItemTemplate>
                             <DataTemplate>
-                                <k_bikpower:CustomViewCell BindingContext = "{Binding}" />
+                                <k_bikpower:CustomViewCell BindingContext ="{Binding}"/>
                             </DataTemplate>
                         </ListView.ItemTemplate>
                     </ListView>

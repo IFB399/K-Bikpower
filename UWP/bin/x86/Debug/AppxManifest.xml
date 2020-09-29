@@ -7,7 +7,7 @@
 
     For more information on package manifest files, see http://go.microsoft.com/fwlink/?LinkID=241727
   -->
-  <Identity Name="43e3c925-1cf2-4e0e-92ff-74d3a13fcfa3" Publisher="CN=Brenton Reddish" Version="1.2.0.0" ProcessorArchitecture="x86" />
+  <Identity Name="43e3c925-1cf2-4e0e-92ff-74d3a13fcfa3" Publisher="CN=jacqu" Version="1.2.0.0" ProcessorArchitecture="x86" />
   <mp:PhoneIdentity PhoneProductId="160b6a80-7a3b-4992-86ea-4e482f867b0a" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>UWP</DisplayName>
@@ -33,7 +33,6 @@
           <uap:Rotation Preference="landscape" />
         </uap:InitialRotationPreference>
       </uap:VisualElements>
-     
       <Extensions>
         <uap:Extension Category="windows.protocol">
           <uap:Protocol Name="k-bikpower">

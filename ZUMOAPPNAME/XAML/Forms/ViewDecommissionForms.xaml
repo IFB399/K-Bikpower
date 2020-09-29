@@ -82,7 +82,7 @@
                                                     <ColumnDefinition Width="*"/>
                                                     <ColumnDefinition Width="*"/>
                                             </Grid.ColumnDefinitions>
-                                                <Label Text="{Binding Date,StringFormat='{0:MMMM dd, yyyy}'}" FontSize="Small" FontAttributes="Bold"  Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center"/>
+                                                <Label Text="{Binding DateDecommissioned,StringFormat='{0:MMMM dd, yyyy}'}" FontSize="Small" FontAttributes="Bold"  Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center"/>
                                                 <Label Text="{Binding Details,StringFormat='{0:F0}'}" FontSize="Small" FontAttributes="Bold"  Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center"/>
                                                 <Label Text="{Binding MovedTo,StringFormat='{0:F0}'}" FontSize="Small" FontAttributes="Bold"  Grid.Column="2" HorizontalOptions="Center" VerticalOptions="Center"/>
                                                 <Label Text="{Binding SubmittedBy,StringFormat='{0:F0}'}" FontSize="Small" FontAttributes="Bold"  Grid.Column="3" HorizontalOptions="Center" VerticalOptions="Center"/>

@@ -28,9 +28,6 @@ namespace K_Bikpower
             decommission_manager = DecommissionManager.DefaultManager;
             user_manager = UserManager.DefaultManager;
 
-            
-            
-
             dateLabel.Text = DateTime.UtcNow.ToString("d");
             int count = 0;
             if (assets != null)
@@ -165,8 +162,6 @@ namespace K_Bikpower
                     }
                 }
             }
-
-
         }
         private async void ManageAssets_Clicked(object sender, EventArgs e)
         {
