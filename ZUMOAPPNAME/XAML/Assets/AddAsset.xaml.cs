@@ -18,6 +18,7 @@ namespace K_Bikpower
         SubstationManager Subs;
         public string Ids;
         bool update = false;
+        string value;
         public AddAsset(Asset assetdata)
         {
             InitializeComponent();
@@ -75,10 +76,15 @@ namespace K_Bikpower
          
         async void Add_Asset_Clicked(object sender, EventArgs e)
         {
+            if (Substation_Picker.SelectedItem == null)
+            {
+                 value = "null";
+            }
+            else { value = Substation_Picker.SelectedItem.ToString(); }
             Asset todo = new Asset
             {
                 Id = Ids,
-                SubstationCode = Substation_Picker.SelectedItem.ToString(),
+                SubstationCode = value,
                 PlantNumber = Plant_Number_Entry.Text,
                 AssetEQNO = Int32.Parse(Asset_Equipment_Number_Entry.Text),
                 EQStatus = Equipment_Status_Entry.Text,
