@@ -65,14 +65,32 @@ namespace K_Bikpower
                         else
                         {
                             _scanView.IsScanning = false; //stop scanning
-                            assetList.Add(asset); //also send back asset just scanned
-                            await Navigation.PushAsync(new ManageFormAssets(d, assetList, prevPage));
+                            //assetList.Add(asset); //also send back asset just scanned
+                            //await Navigation.PushAsync(new ManageFormAssets(d, assetList, prevPage));
+                            await Navigation.PushAsync(new FormPreviewAsset(asset, 1,savedData, assetList, prevPage));
                         }
                     }
                     else //of type commission TO BE COMPLETED
                     {
                         CommissionData c = (CommissionData)savedData;
-                        //await Navigation.PushAsync(new Commission(c));
+                        if (assetList.Any((a) => a.Id == asset.Id))
+                        {
+                            //don't stop scanning
+                            await DisplayAlert("Error", "Asset already added", "Close");
+                        }
+                        else if (asset.Status == "Commissioned")
+                        {
+                            //don't stop scanning
+                            await DisplayAlert("Asset already commissioned", "Try decommissioning the asset first", "Close");
+                        }
+                        else
+                        {
+                            _scanView.IsScanning = false; //stop scanning
+                            //assetList.Add(asset); //also send back asset just scanned
+                            //go to preview page actually
+                            await Navigation.PushAsync(new FormPreviewAsset(asset, 1,savedData, assetList, prevPage));
+                            //await Navigation.PushAsync(new ManageFormAssets(c, assetList, prevPage));
+                        }
                     }
 
                 }

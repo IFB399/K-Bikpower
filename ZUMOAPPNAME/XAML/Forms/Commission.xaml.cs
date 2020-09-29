@@ -5,7 +5,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Windows.ApplicationModel.Store.Preview.InstallControl;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -18,11 +18,14 @@ namespace K_Bikpower
         AssetManager asset_manager;
         CommissionManager commission_manager;
         UserManager user_manager;
+        CommissionData commissionForm;
+        bool update = false;
 
         ObservableCollection<Asset> globalAssets = new ObservableCollection<Asset>();
         public Commission(CommissionData savedForm = null, ObservableCollection<Asset> assets = null)
         {
             InitializeComponent();
+            commissionForm = savedForm;
             afl_manager = AssetFormLinkManager.DefaultManager;
             asset_manager = AssetManager.DefaultManager;
             commission_manager = CommissionManager.DefaultManager;
@@ -38,6 +41,11 @@ namespace K_Bikpower
 
             if (savedForm != null)
             {
+                if (savedForm.Id != null)
+                {
+                    SubmitButton.Text = "Update Form";
+                    update = true;
+                }
                 LoadForm(savedForm);
             }
         }
@@ -68,21 +76,21 @@ namespace K_Bikpower
             string installation = "";
             if (Yes_Button1.IsChecked)
             {
-                installation = Yes_Button1.Text;
+                installation = "Yes";
             }
-            if (No_Button1.IsChecked)
+            else if (No_Button1.IsChecked)
             {
-                installation = No_Button1.Text;
+                installation = "No";
             }
 
             string replacement = "";
-            if (Yes_Button2.IsChecked)
+            if (Yes.IsChecked)
             {
-                replacement = Yes_Button2.Text;
+                replacement = "Yes";
             }
-            if (No_Button2.IsChecked)
+            else if (No.IsChecked)
             {
-                replacement = No_Button2.Text;
+                replacement = "No";
             }
 
             string regionName = null;
@@ -95,22 +103,49 @@ namespace K_Bikpower
             {
                 workOrderNumber = Int32.Parse(Work_OrderNo_Entry.Text); //will break if an int is not given
             }
-            CommissionData form = new CommissionData
+            if (commissionForm == null)
             {
-                DateCommissioned = Date_Commissioned.Date.ToLocalTime(),
-                NewInstallation = installation,
-                Replacement = replacement,
-                RegionName = regionName,
-                Location = Location_Entry.Text,
-                MovedFrom = movedFrom,
-                WorkOrderNumber = workOrderNumber
-            };
-            return form;
+                CommissionData form = new CommissionData
+                {
+                    DateCommissioned = Date_Commissioned.Date.ToLocalTime(),
+                    NewInstallation = installation,
+                    Replacement = replacement,
+                    RegionName = regionName,
+                    Location = Location_Entry.Text,
+                    MovedFrom = movedFrom,
+                    WorkOrderNumber = workOrderNumber
+                };
+                return form; //brand new form
+            }
+            else
+            {
+                //update existing
+                commissionForm.DateCommissioned = Date_Commissioned.Date.ToLocalTime();
+                commissionForm.NewInstallation = installation;
+                commissionForm.Replacement = replacement;
+                commissionForm.RegionName = regionName;
+                commissionForm.Location = Location_Entry.Text;
+                commissionForm.MovedFrom = movedFrom;
+                commissionForm.WorkOrderNumber = workOrderNumber;
+                return null; //don't return a new form, just use the one that already exists
+            }
+            
         }
         private void LoadForm(CommissionData form)
         {
+            
             //Date
             Date_Commissioned.Date = form.DateCommissioned;
+
+            //replacement
+            if (form.Replacement == "Yes")
+            {
+                Yes.IsChecked = true;
+            }
+            else if (form.Replacement == "No")
+            {
+                No.IsChecked = true;
+            }
             //installation
             if (form.NewInstallation == "Yes")
             {
@@ -119,15 +154,6 @@ namespace K_Bikpower
             else if (form.NewInstallation == "No")
             {
                 No_Button1.IsChecked = true;
-            }
-            //replacement
-            if (form.Replacement == "Yes")
-            {
-                Yes_Button2.IsChecked = true;
-            }
-            else if (form.Replacement == "No")
-            {
-                No_Button2.IsChecked = true;
             }
             //region
             if (form.RegionName != null)
@@ -171,31 +197,95 @@ namespace K_Bikpower
             {
                 CommissionData form = SaveData();
                 //form.SubmittedBy = user_manager.ReturnUser(); NEED TO FIX
-                form.Status = "Submitted";
-
-                await AddItem(form);
-                await Navigation.PushAsync(new ViewCommissionForms());
-                if (globalAssets != null)
+                if (form != null)
                 {
+                    form.Status = "Submitted";
+                    await AddItem(form);
+                    if (globalAssets != null)
+                    {
+                        foreach (Asset a in globalAssets)
+                        {
+                            //to ensure assets of this form can be retrieved
+                            AssetFormLink afl = new AssetFormLink
+                            {
+                                FormId = form.Id,
+                                AssetId = a.Id,
+                                FormType = "Commission"
+                            };
+                            await AddLink(afl);
+                        }
+                    }
+                }
+                else
+                {
+                    //delete old links
+                    ObservableCollection<AssetFormLink> afls = await afl_manager.GetLinksByFormAsync(commissionForm.Id, "Commission");
+                    foreach (AssetFormLink afl in afls)
+                    {
+                        await afl_manager.DeleteLinkAsync(afl); //delete all the links
+                    }
+                    //add links again
                     foreach (Asset a in globalAssets)
                     {
                         //to ensure assets of this form can be retrieved
                         AssetFormLink afl = new AssetFormLink
                         {
-                            FormId = form.Id,
+                            //FormId = form.Id,
+                            FormId = commissionForm.Id,
                             AssetId = a.Id,
                             FormType = "Commission"
                         };
                         await AddLink(afl);
                     }
+
+                    await AddItem(commissionForm); //SHOULD UPDATE
                 }
+
+                await Navigation.PushAsync(new ViewCommissionForms());
+
             }
         }
         private async void ManageAssets_Clicked(object sender, EventArgs e)
         {
+            
             CommissionData c = SaveData();
-            await Navigation.PushAsync(new ManageFormAssets(c, globalAssets)); //WILL FIX LATER
+            if (c != null) //new form
+            {
+                await Navigation.PushAsync(new ManageFormAssets(c, globalAssets)); //WILL FIX LATER
+            }
+            else
+            {
+                await Navigation.PushAsync(new ManageFormAssets(commissionForm, globalAssets));
+            }
 
+        }
+        private void Yes1_changed(object sender, EventArgs e)
+        {
+            if (Yes_Button1.IsChecked)
+            {
+                No_Button1.IsChecked = false;
+            }
+        }
+        private void Yes2_changed(object sender, EventArgs e)
+        {
+            if (Yes.IsChecked)
+            {
+                No.IsChecked = false;
+            }
+        }
+        private void No1_changed(object sender, EventArgs e)
+        {
+            if (No_Button1.IsChecked)
+            {
+                Yes_Button1.IsChecked = false;
+            }
+        }
+        private void No2_changed(object sender, EventArgs e)
+        {
+            if (No.IsChecked)
+            {
+                Yes.IsChecked = false;
+            }
         }
     }
 }

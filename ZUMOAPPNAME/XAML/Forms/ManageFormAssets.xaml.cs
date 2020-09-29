@@ -39,9 +39,19 @@ namespace K_Bikpower
             globalAssets.Remove((Asset)assetList.SelectedItem);
             removeAsset.IsEnabled = false;
         }
+        private async void Asset_Details_Clicked(object sender, EventArgs e)
+        {
+            /*
+            globalAssets.Remove((Asset)assetList.SelectedItem);
+            removeAsset.IsEnabled = false;
+            */
+            AssetDetailsButton.IsEnabled = false;
+            await Navigation.PushAsync(new FormPreviewAsset((Asset)assetList.SelectedItem, 3, form, globalAssets, prevPage));
+        }
         private void selectedAsset(object sender, EventArgs e)
         {
             removeAsset.IsEnabled = true;
+            AssetDetailsButton.IsEnabled = true;
         }
         private void Scan_Asset_Clicked(object sender, EventArgs e)
         {

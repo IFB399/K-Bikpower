@@ -57,7 +57,7 @@ namespace K_Bikpower
             int count = 0;
             if (assets == null)
             {
-                ObservableCollection<string> assetIds = await afl_manager.GetAssetsAsync(form.Id);
+                ObservableCollection<string> assetIds = await afl_manager.GetAssetsAsync(form.Id,"Decommission");
                 foreach (string s in assetIds)
                 {
                     ObservableCollection<Asset> a = await asset_manager.GetAsset(s);
@@ -144,7 +144,7 @@ namespace K_Bikpower
             if (answer == true)
             {
                 //delete form and afls
-                ObservableCollection<AssetFormLink> afls = await afl_manager.GetLinksByFormAsync(decommission_form.Id);
+                ObservableCollection<AssetFormLink> afls = await afl_manager.GetLinksByFormAsync(decommission_form.Id, "Decommission");
                 foreach (AssetFormLink afl in afls)
                 {
                     await afl_manager.DeleteLinkAsync(afl); //delete all the links
