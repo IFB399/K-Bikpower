@@ -68,6 +68,7 @@ namespace K_Bikpower
                 if (CheckPassword(password, u.Password, salt) == true)
                 {
                     manager.SetUsername(email);
+                    manager.Setname(u.FirstName, u.LastName);
                     await manager.GetUserAuth(email);
                     App.Current.MainPage = new main();
                 }

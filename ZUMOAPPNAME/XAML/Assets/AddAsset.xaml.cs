@@ -15,12 +15,15 @@ namespace K_Bikpower
         Asset AssetData;
         AssetManager manager;
         UserManager user_manager;
+        SubstationManager Subs;
         public string Ids;
         bool update = false;
+        string value;
         public AddAsset(Asset assetdata)
         {
             InitializeComponent();
             manager = AssetManager.DefaultManager;
+            Subs = SubstationManager.DefaultManager;
             user_manager = UserManager.DefaultManager;
             if (assetdata != null)
             {
@@ -30,14 +33,18 @@ namespace K_Bikpower
                 PopulateDetails(AssetData);
                 Ids = assetdata.Id;
 
-            }
-
+            }    
           
+        }
+        protected override async void OnAppearing()
+        {
+            base.OnAppearing();
+            Substation_Picker.ItemsSource = await Subs.GetTodoItemsAsync();
         }
         private void PopulateDetails(Asset data)
         {
 
-            Substation_Picker.SelectedItem = data.SubstationCode;
+            Substation_Picker.SelectedItem = data.SubstationCode.ToString();
             Plant_Number_Entry.Text = data.PlantNumber;
             Asset_Equipment_Number_Entry.Text = data.AssetEQNO.ToString();
             Equipment_Status_Entry.Text = data.EQStatus;
@@ -61,9 +68,6 @@ namespace K_Bikpower
             Equipment_Class_Description_Entry.Text = data.EquipmentClassDescription;
         }
 
-
-
-
         async Task AddItem(Asset item)
         {
             await manager.SaveTaskAsync(item);
@@ -72,10 +76,15 @@ namespace K_Bikpower
          
         async void Add_Asset_Clicked(object sender, EventArgs e)
         {
+            if (Substation_Picker.SelectedItem == null)
+            {
+                 value = "null";
+            }
+            else { value = Substation_Picker.SelectedItem.ToString(); }
             Asset todo = new Asset
             {
                 Id = Ids,
-                SubstationCode = Substation_Picker.SelectedIndex.ToString(),
+                SubstationCode = value,
                 PlantNumber = Plant_Number_Entry.Text,
                 AssetEQNO = Int32.Parse(Asset_Equipment_Number_Entry.Text),
                 EQStatus = Equipment_Status_Entry.Text,

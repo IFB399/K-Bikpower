@@ -140,10 +140,8 @@ C:\Users\Brenton Reddish\Desktop\IFB398\kbik\ZUMOAPPNAME\bin\Debug\netstandard2.
 C:\Users\Brenton Reddish\Desktop\IFB398\kbik\ZUMOAPPNAME\bin\Debug\netstandard2.0\K_Bikpower.pdb
 C:\Users\Brenton Reddish\Desktop\IFB398\kbik\ZUMOAPPNAME\bin\Debug\netstandard2.0\System.Drawing.Common.dll
 C:\Users\Brenton Reddish\Desktop\IFB398\kbik\ZUMOAPPNAME\bin\Debug\netstandard2.0\Windows.Foundation.UniversalApiContract.winmd
-C:\Users\Brenton Reddish\Desktop\IFB398\kbik\ZUMOAPPNAME\obj\Debug\netstandard2.0\K_Bikpower.csprojAssemblyReference.cache
 C:\Users\Brenton Reddish\Desktop\IFB398\kbik\ZUMOAPPNAME\obj\Debug\netstandard2.0\XAML\Assets\AddAsset.xaml.g.cs
 C:\Users\Brenton Reddish\Desktop\IFB398\kbik\ZUMOAPPNAME\obj\Debug\netstandard2.0\XAML\Assets\Preview_Asset.xaml.g.cs
-C:\Users\Brenton Reddish\Desktop\IFB398\kbik\ZUMOAPPNAME\obj\Debug\netstandard2.0\XAML\Assets\ViewAssets.xaml.g.cs
 C:\Users\Brenton Reddish\Desktop\IFB398\kbik\ZUMOAPPNAME\obj\Debug\netstandard2.0\XAML\Login.xaml.g.cs
 C:\Users\Brenton Reddish\Desktop\IFB398\kbik\ZUMOAPPNAME\obj\Debug\netstandard2.0\XAML\MainPage.xaml.g.cs
 C:\Users\Brenton Reddish\Desktop\IFB398\kbik\ZUMOAPPNAME\obj\Debug\netstandard2.0\XAML\ScanQR.xaml.g.cs
@@ -250,5 +248,6 @@ C:\Users\jacqu\Documents\2018\latest repo 3\ZUMOAPPNAME\obj\Debug\netstandard2.0
 C:\Users\jacqu\Documents\2018\latest repo 3\ZUMOAPPNAME\obj\Debug\netstandard2.0\XAML\Forms\ViewCommissionForms.xaml.g.cs
 C:\Users\jacqu\Documents\2018\latest repo 3\ZUMOAPPNAME\obj\Debug\netstandard2.0\K_Bikpower.csprojAssemblyReference.cache
 C:\Users\jacqu\Documents\2018\latest repo 3\ZUMOAPPNAME\obj\Debug\netstandard2.0\XAML\Assets\CustomViewCell.xaml.g.cs
-C:\Users\jacqu\Documents\2018\latest repo 3\ZUMOAPPNAME\obj\Debug\netstandard2.0\XAML\Forms\ApproveCommission.xaml.g.cs
-C:\Users\jacqu\Documents\2018\latest repo 3\ZUMOAPPNAME\obj\Debug\netstandard2.0\XAML\Forms\FormPreviewAsset.xaml.g.cs
+C:\Users\Brenton Reddish\Desktop\IFB398\kbik\ZUMOAPPNAME\obj\Debug\netstandard2.0\XAML\Assets\AssetList.xaml.g.cs
+C:\Users\Brenton Reddish\Desktop\IFB398\kbik\ZUMOAPPNAME\obj\Debug\netstandard2.0\XAML\Forms\ViewCommissionForms.xaml.g.cs
+C:\Users\Brenton Reddish\Desktop\IFB398\kbik\ZUMOAPPNAME\obj\Debug\netstandard2.0\K_Bikpower.csprojAssemblyReference.cache

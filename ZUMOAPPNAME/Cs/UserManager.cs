@@ -29,7 +29,8 @@ namespace K_Bikpower
         static UserManager defaultInstance = new UserManager();
         MobileServiceClient client;
         string authenicationstring;
-        string SavedUsername; 
+        string SavedUsername;
+        string[] name;
 
 #if OFFLINE_SYNC_ENABLED
         
@@ -135,6 +136,17 @@ namespace K_Bikpower
         {
             SavedUsername = email;
         }
+
+        public void Setname(string firstname, string lastname)
+        {
+            name = new string[] { firstname, lastname };
+        }
+
+        public string[] Returname()
+        {
+            return name;
+        }
+
         public string ReturnUser()
         {
             return SavedUsername;
