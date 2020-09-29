@@ -16,9 +16,6 @@
             <Label x:Name="Emaillabel" Text="Email:" FontSize="Title" TextColor="Black"/>
             <Entry  x:Name="Email" ClearButtonVisibility="WhileEditing" VerticalOptions="EndAndExpand" MaxLength="25" IsSpellCheckEnabled="True" IsTextPredictionEnabled="false"/>
 
-            <Label  x:Name="UsernameLabel" Text="Username:" FontSize="Title" TextColor="Black"/>
-            <Entry  x:Name="Username" ClearButtonVisibility="WhileEditing" VerticalOptions="EndAndExpand" MaxLength="25" IsSpellCheckEnabled="True" IsTextPredictionEnabled="false"/>
-
             <Label x:Name="Temp_PAsswordLabel" Text="Temporary Password" FontSize="Title" TextColor="Black"/>
             <Entry  x:Name="Temp_PAssword" ClearButtonVisibility="WhileEditing" VerticalOptions="EndAndExpand" MaxLength="25" IsSpellCheckEnabled="True" IsTextPredictionEnabled="false"/>
 

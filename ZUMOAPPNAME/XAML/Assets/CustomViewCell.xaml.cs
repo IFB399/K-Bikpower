@@ -22,7 +22,7 @@ namespace K_Bikpower
             base.OnAppearing();
             if (status.Text == "Decommissioned")
             {
-                framecolour.BackgroundColor = Xamarin.Forms.Color.FromHex("#E2C2C6");
+                framecolour.BackgroundColor = Xamarin.Forms.Color.FromHex("#FFFF66");
             }
             else if (status.Text == "Commissioned")
             {

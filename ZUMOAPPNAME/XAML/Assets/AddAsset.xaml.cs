@@ -15,12 +15,14 @@ namespace K_Bikpower
         Asset AssetData;
         AssetManager manager;
         UserManager user_manager;
+        SubstationManager Subs;
         public string Ids;
         bool update = false;
         public AddAsset(Asset assetdata)
         {
             InitializeComponent();
             manager = AssetManager.DefaultManager;
+            Subs = SubstationManager.DefaultManager;
             user_manager = UserManager.DefaultManager;
             if (assetdata != null)
             {
@@ -30,9 +32,13 @@ namespace K_Bikpower
                 PopulateDetails(AssetData);
                 Ids = assetdata.Id;
 
-            }
-
+            }    
           
+        }
+        protected override async void OnAppearing()
+        {
+            base.OnAppearing();
+            Substation_Picker.ItemsSource = await Subs.GetTodoItemsAsync();
         }
         private void PopulateDetails(Asset data)
         {
@@ -60,9 +66,6 @@ namespace K_Bikpower
             Equipment_Class_Entry.Text = data.EquipmentClass;
             Equipment_Class_Description_Entry.Text = data.EquipmentClassDescription;
         }
-
-
-
 
         async Task AddItem(Asset item)
         {

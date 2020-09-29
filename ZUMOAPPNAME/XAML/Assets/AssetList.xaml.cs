@@ -12,6 +12,7 @@ namespace K_Bikpower
         Object savedData;
         ObservableCollection<Asset> assetList = new ObservableCollection<Asset>();
         bool prevPage;
+
         public AssetList(Object o = null, ObservableCollection<Asset> assets = null, bool prevPage2 = false)
         {
             InitializeComponent();

@@ -2,14 +2,13 @@
 <ViewCell xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="K_Bikpower.CustomViewCell">
-    <Frame x:Name="framecolour" BackgroundColor="White" BorderColor="#F5F5F5" Padding="5"  HasShadow="False" CornerRadius="0">
-        <!-- <Grid HeightRequest="50" HorizontalOptions="FillAndExpand" VerticalOptions="Start"> -->
-        <Grid HeightRequest="50" HorizontalOptions="FillAndExpand" VerticalOptions="End">
+    <Frame x:Name="framecolour" BackgroundColor="White" BorderColor="Gray" Padding="5"  HasShadow="False">
+        <Grid HeightRequest="50" HorizontalOptions="FillAndExpand" VerticalOptions="Start">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width=""/>
-                <ColumnDefinition Width=""/>
-                <ColumnDefinition Width=""/>
-                <ColumnDefinition Width=""/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Label Text="{Binding SubstationCode,StringFormat='{0:F0}'}" FontSize="Small" FontAttributes="Bold"  Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center"/>

@@ -21,6 +21,9 @@
       </Reference>
     </ItemGroup>
     <ItemGroup>
+      <Compile Update="XAML\Assets\AssetList.xaml.cs">
+        <DependentUpon>AssetList.xaml</DependentUpon>
+      </Compile>
       <Compile Update="XAML\Substations\ViewSubstations.xaml.cs">
         <DependentUpon>ViewSubstations.xaml</DependentUpon>
       </Compile>

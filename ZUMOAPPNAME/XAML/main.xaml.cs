@@ -27,11 +27,29 @@ namespace K_Bikpower
         void OnItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             var item = e.SelectedItem as MasterPageItem;
+
             if (item != null)
             {
-                Detail = new NavigationPage((Page)Activator.CreateInstance(item.TargetType));
-                masterPage.listView.SelectedItem = null;
-                IsPresented = false;
+                if(item.Title == "Assets")
+                {
+                    Detail = new NavigationPage(new AssetList());
+                    masterPage.listView.SelectedItem = null;
+                    IsPresented = false;
+                    return;
+                }
+                if (item.Title == "Qr Code Scanner")
+                {
+                    Detail = new NavigationPage(new ScanQR());
+                    masterPage.listView.SelectedItem = null;
+                    IsPresented = false;
+                    return;
+                }
+                else
+                {
+                    Detail = new NavigationPage((Page)Activator.CreateInstance(item.TargetType));
+                    masterPage.listView.SelectedItem = null;
+                    IsPresented = false;
+                }
             }
         }
     }

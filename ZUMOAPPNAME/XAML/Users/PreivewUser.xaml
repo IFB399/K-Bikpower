@@ -16,9 +16,6 @@
             <Label Text="Email:" FontSize="Title" TextColor="Black"/>
             <Label  x:Name="Email" VerticalOptions="EndAndExpand" FontSize="Title" TextColor="Black"/>
 
-            <Label Text="Username:" FontSize="Title" TextColor="Black"/>
-            <Label  x:Name="Username"  VerticalOptions="EndAndExpand" FontSize="Title" TextColor="Black" />
-
             <Label Text="Temporary Password" FontSize="Title" TextColor="Black"/>
             <Label  x:Name="Temp_PAssword"  VerticalOptions="EndAndExpand" FontSize="Title" TextColor="Black"/>
 
@@ -26,6 +23,8 @@
             <Label x:Name="Auth" FontSize="Title" TextColor="Black" HorizontalOptions="FillAndExpand"/>
 
             <Button x:Name="UpdateButton" Clicked="UpdateButton_Clicked" Text="Edit User"/>
+            <Button x:Name="DeleteButton" Clicked="DeleteButton_Clicked" Text="Delete User" IsVisible="false"/>
+
 
         </StackLayout>
     </ContentPage.Content>

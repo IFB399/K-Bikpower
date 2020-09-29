@@ -40,10 +40,9 @@ namespace K_Bikpower
                 Firstnamelabel.IsVisible = false;
                 LastnameLabel.IsVisible = false;
                 Emaillabel.IsVisible = false;
-                UsernameLabel.IsVisible = false;
                 Temp_PAsswordLabel.IsVisible = false;
+                Temp_PAssword.IsVisible = false;
                 Authlabel.IsVisible = false;
-
 
 
                 OldPaaassword.IsVisible = true;
@@ -95,14 +94,17 @@ namespace K_Bikpower
                await DisplayAlert("Alert", "Please enter an email address", "OK");
                 return;
             }
-
+            string salt = GenerateSalt();
+            string hashedPassword = HashPassword(Temp_PAssword.Text, salt);
             User todo = new User
             {
+                Id = Ids,
                 FirstName = Firstname.Text,
                 LastName = Lastname.Text,
                 Email = Email.Text,
                 //Username = Username.Text,
-                Password = Temp_PAssword.Text,
+                Salt = salt,
+                Password = hashedPassword,
                 Permission = Auth.SelectedItem.ToString()
             };
             var result = await user_manager.GetUser(Email.Text);
@@ -116,7 +118,7 @@ namespace K_Bikpower
 
         async void Next_Clicked(object sender, EventArgs e)
         {
-            if (String.IsNullOrWhiteSpace(Email.Text))
+            if (String.IsNullOrWhiteSpace(OldPaaassword.Text))
             {
                 await DisplayAlert("Alert", "Inncorrect Password", "OK");
                 return;
@@ -163,11 +165,13 @@ namespace K_Bikpower
             string hashedPassword = HashPassword(NewPaaassword.Text, salt);
             User todo = new User
             {
+                Id = Ids,
                 FirstName = Firstname.Text,
                 LastName = Lastname.Text,
                 Email = Email.Text,
                 //Username = Username.Text,
                 Password = hashedPassword,
+                Salt = salt,
                 Permission = Auth.SelectedItem.ToString()
             };
                 await AddItem(todo);

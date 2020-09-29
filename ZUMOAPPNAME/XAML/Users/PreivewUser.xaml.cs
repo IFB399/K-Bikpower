@@ -22,6 +22,7 @@ namespace K_Bikpower
             InitializeComponent();
 
             user_manager = UserManager.DefaultManager;
+            string auth = user_manager.Authentication();
             if (Userdata != null)
             {
 
@@ -34,13 +35,18 @@ namespace K_Bikpower
             {
                 GetUserData();
             }
+            if (auth == "Administrator") 
+            {
+                DeleteButton.IsVisible = true;
             }
+        }
         private async void GetUserData ()
         {
             string username = user_manager.ReturnUser();
             ObservableCollection<User> userList = await user_manager.GetUser(username);
             User u = userList.FirstOrDefault();
             PopulateDetails(u);
+            popuserData = u;
             randomstring = "Warp Tach is Rad";
         }
         private void PopulateDetails(User data)
@@ -54,6 +60,11 @@ namespace K_Bikpower
         private void UpdateButton_Clicked(object sender, EventArgs e)
         {
             Navigation.PushAsync(new AddUser(popuserData, randomstring));
+        }
+
+        private async void DeleteButton_Clicked(object sender, EventArgs e)
+        {
+            await user_manager.DeleteUserAsync(popuserData);
         }
     }
 }
