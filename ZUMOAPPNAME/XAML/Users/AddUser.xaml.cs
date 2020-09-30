@@ -24,7 +24,7 @@ namespace K_Bikpower
             user_manager = UserManager.DefaultManager;
             if (Userdata != null)
             {
-                AddOrUpdateButton.Text = "Update Asset";
+                AddOrUpdateButton.Text = "Update User";
                 popuserData = Userdata;
                 PopulateDetails(popuserData);
                 Ids = Userdata.Id;

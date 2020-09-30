@@ -17,18 +17,17 @@ namespace K_Bikpower
         Object savedData;
         ObservableCollection<Asset> assetList = new ObservableCollection<Asset>();
         Asset assetPreviewed;
-        bool prevPage;
+        //bool prevPage;
         //1 if from scan page
         //2 if from add by table page
         //3 if from manage form assets page
         //4 if from commission approval page
         //5 if from decommission approval page
         int prevPageNumber; 
-        public FormPreviewAsset(Asset a, int number=-1, Object o = null, ObservableCollection<Asset> assets = null, bool prevPage2 = false)
+        public FormPreviewAsset(Asset a, int number=-1, Object o = null, ObservableCollection<Asset> assets = null)
         {
             InitializeComponent();
             savedData = o;
-            prevPage = prevPage2;
             assetPreviewed = a;
             prevPageNumber = number;
             if (assets != null)
@@ -36,7 +35,7 @@ namespace K_Bikpower
                 assetList = assets;
             }
             PopulateDetails(assetPreviewed);
-            if (number == 3 || number == 4)
+            if (number == 3 || number == 4 || number == 5)
             {
                 AddButton.IsVisible = false; //approver is viewing in non edit mode and asset is already added
             }
@@ -44,7 +43,7 @@ namespace K_Bikpower
         private async void Add_Asset_Clicked(object sender, EventArgs e)
         {
             assetList.Add(assetPreviewed); //add asset to list
-            await Navigation.PushAsync(new ManageFormAssets(savedData, assetList, prevPage)); //return to manage form assets page
+            await Navigation.PushAsync(new ManageFormAssets(savedData, assetList)); //return to manage form assets page
             //IN CASE I BROKE THIS:
             /*
             if (typeof(DecommissionData).IsInstanceOfType(savedData))
@@ -64,20 +63,25 @@ namespace K_Bikpower
             //return to correct page
             if (prevPageNumber == 1)
             {
-                Navigation.PushAsync(new ScanQR(savedData, assetList, prevPage)); //go to scan page
+                Navigation.PushAsync(new ScanQR(savedData, assetList)); //go to scan page
             }
             else if (prevPageNumber == 2)
             {
-                Navigation.PushAsync(new AssetList(savedData, assetList, prevPage)); //go to table page
+                Navigation.PushAsync(new AssetList(savedData, assetList)); //go to table page
             }
             else if (prevPageNumber == 3)
             {
-                Navigation.PushAsync(new ManageFormAssets(savedData, assetList, prevPage)); //go to manage form assets
+                Navigation.PushAsync(new ManageFormAssets(savedData, assetList)); //go to manage form assets
             }
             else if (prevPageNumber == 4)
             {
                 CommissionData c = (CommissionData)savedData;
                 Navigation.PushAsync(new ApproveCommission(c, assetList)); //go to approve commission page
+            }
+            else if (prevPageNumber == 5)
+            {
+                DecommissionData d = (DecommissionData)savedData;
+                Navigation.PushAsync(new ApproveDecommission(d, assetList)); //go to approve decommission page
             }
         }
         private void PopulateDetails(Asset details)

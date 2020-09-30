@@ -18,6 +18,8 @@ namespace K_Bikpower
         DecommissionManager decommission_manager;
         UserManager user_manager;
 
+        DecommissionData decommissionForm = null;
+        bool update = false;
         ObservableCollection<Asset> globalAssets = new ObservableCollection<Asset>();
 
         public Decommission(DecommissionData savedForm = null, ObservableCollection<Asset> assets = null)
@@ -29,6 +31,7 @@ namespace K_Bikpower
             user_manager = UserManager.DefaultManager;
 
             dateLabel.Text = DateTime.UtcNow.ToString("d");
+
             int count = 0;
             if (assets != null)
             {
@@ -39,25 +42,26 @@ namespace K_Bikpower
 
             if (savedForm != null)
             {
+                if (savedForm.Id != null) //form has already been submitted
+                {
+                    decommissionForm = savedForm;
+                    SubmitButton.Text = "Update Form";
+                    update = true;
+                }
                 LoadForm(savedForm);
             }
-
         }
         async Task AddItem(DecommissionData item)
         {
-            await decommission_manager.SaveTaskAsync(item);
+            await decommission_manager.SaveTaskAsync(item); //adds decommission form to database or updates an existing one
         }
         async Task AddLink(AssetFormLink item)
         {
             await afl_manager.SaveTaskAsync(item);
         }
-        async Task UpdateAsset(Asset item)
-        {
-            await asset_manager.SaveTaskAsync(item);
-        }
-
         private DecommissionData SaveData()
         {
+            //MOVED TO RADIO BUTTON
             string movedto = "";
             if (Scrap_Button.IsChecked)
             {
@@ -76,37 +80,64 @@ namespace K_Bikpower
                 movedto = Workshop_Button.Text;
             }
 
+            //REGION PICKER
             string regionName = null;
             if (Region_Picker.SelectedIndex != -1)
             {
                 regionName = Region_Picker.SelectedItem.ToString();
             }
 
+            //WORK ORDER NUMBER
             int workOrderNumber = -1; //will have to change later, maybe store work order number as a string in the database
             if (String.IsNullOrEmpty(Work_OrderNo_Entry.Text) == false)
             {
                 workOrderNumber = Int32.Parse(Work_OrderNo_Entry.Text); //will break if an int is not given
             }
-            DecommissionData form = new DecommissionData
+
+            //SAVE NEW FORM
+            if (update == false) //used to be if decommissionForm == null but didnt work
             {
-                DateDecommissioned = Date_Decommissioned.Date.ToLocalTime(),
-                Details = Decommissioned_Details_Entry.Text,
-                RegionName = regionName,
-                Location = Location_Entry.Text,
-                MovedTo = movedto,
-                WorkOrderNumber = workOrderNumber               
-            };
-            return form;
+                DecommissionData form = new DecommissionData
+                {
+                    DateDecommissioned = Date_Decommissioned.Date.ToLocalTime(),
+                    Details = Decommissioned_Details_Entry.Text,
+                    RegionName = regionName,
+                    Location = Location_Entry.Text,
+                    MovedTo = movedto,
+                    WorkOrderNumber = workOrderNumber
+                };
+                return form; //brand new form
+            }
+            //UPDATE EXISTING FORM
+            else
+            {
+                decommissionForm.DateDecommissioned = Date_Decommissioned.Date.ToLocalTime();
+                decommissionForm.Details = Decommissioned_Details_Entry.Text;
+                decommissionForm.RegionName = regionName;
+                decommissionForm.Location = Location_Entry.Text;
+                decommissionForm.MovedTo = movedto;
+                decommissionForm.WorkOrderNumber = workOrderNumber;
+                return null; //don't return a new form, just use the one that already exists
+            }
         }
         private void LoadForm(DecommissionData form)
         {
+            //load date
             Date_Decommissioned.Date = form.DateDecommissioned;
+
+            //load details
             Decommissioned_Details_Entry.Text = form.Details;
+
+            //load region
             if (form.RegionName != null)
             {
                 Region_Picker.SelectedItem = form.RegionName;
             }
+
+            //load location
             Location_Entry.Text = form.Location;
+
+            //load moved to
             if (form.MovedTo == "Scrap")
             {
                 Scrap_Button.IsChecked = true;
@@ -123,18 +154,14 @@ namespace K_Bikpower
             {
                 Workshop_Button.IsChecked = true;
             }
+
+            //load work order number
             if (form.WorkOrderNumber != -1)
             {
                 Work_OrderNo_Entry.Text = form.WorkOrderNumber.ToString();
             }
         }
 
-        private void Scan_Asset_Clicked(object sender, EventArgs e)
-        {
-            DecommissionData d = SaveData();
-            Navigation.PushAsync(new ScanQR(d, globalAssets)); //go to scan page
-
-        }
         async void Submit_Clicked(object sender, EventArgs e)
         {
             if (globalAssets.Count() == 0 || globalAssets == null)
@@ -144,32 +171,65 @@ namespace K_Bikpower
             else
             {
                 DecommissionData form = SaveData();
-                form.SubmittedBy = user_manager.ReturnName();
-                form.Status = "Submitted";
-
-                await AddItem(form);
-                await Navigation.PushAsync(new ViewDecommissionForms());
-                if (globalAssets != null)
+                if (form != null) //form is being submitted for the first time
                 {
+                    form.SubmittedBy = user_manager.ReturnName();
+                    form.Status = "Submitted";
+                    await AddItem(form);
+                    if (globalAssets != null)
+                    {
+                        foreach (Asset a in globalAssets)
+                        {
+                            //to ensure assets of this form can be retrieved
+                            AssetFormLink afl = new AssetFormLink
+                            {
+                                FormId = form.Id,
+                                AssetId = a.Id,
+                                FormType = "Decommission"
+                            };
+                            await AddLink(afl);
+                        }
+                    }
+                }
+                else
+                {
+                    //change a modified by field?
+                    //delete old links
+                    ObservableCollection<AssetFormLink> afls = await afl_manager.GetLinksByFormAsync(decommissionForm.Id, "Decommission");
+                    foreach (AssetFormLink afl in afls)
+                    {
+                        await afl_manager.DeleteLinkAsync(afl); //delete all the links
+                    }
+                    //add links again
                     foreach (Asset a in globalAssets)
                     {
                         //to ensure assets of this form can be retrieved
                         AssetFormLink afl = new AssetFormLink
                         {
-                            FormId = form.Id,
+                            FormId = decommissionForm.Id, //use existing form id
                             AssetId = a.Id,
                             FormType = "Decommission"
                         };
                         await AddLink(afl);
                     }
+
+                    await AddItem(decommissionForm); //SHOULD UPDATE EXISTING FORM
                 }
+                await Navigation.PushAsync(new ViewDecommissionForms());
             }
         }
         private async void ManageAssets_Clicked(object sender, EventArgs e)
         {
+            //update existing instance or return a new form
             DecommissionData d = SaveData();
-            await Navigation.PushAsync(new ManageFormAssets(d, globalAssets));
-
+            if (d != null) //new form
+            {
+                await Navigation.PushAsync(new ManageFormAssets(d, globalAssets));
+            }
+            else
+            {
+                await Navigation.PushAsync(new ManageFormAssets(decommissionForm, globalAssets)); //send existing instance
+            }
         }
     }
 }

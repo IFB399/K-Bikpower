@@ -33,11 +33,6 @@ namespace K_Bikpower
             commission_manager = CommissionManager.DefaultManager;
             user_manager = UserManager.DefaultManager;
             dateLabel.Text = DateTime.UtcNow.ToString("d");
-
-            if (savedForm != null)
-            {
-                commissionForm = savedForm;
-            }
             
             int count = 0;
             if (assets != null)
@@ -49,6 +44,7 @@ namespace K_Bikpower
 
             if (savedForm != null)
             {
+                commissionForm = savedForm;
                 if (savedForm.Id != null) //form has already been submitted
                 {
                     SubmitButton.Text = "Update Form";

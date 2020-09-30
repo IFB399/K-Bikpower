@@ -30,18 +30,23 @@ namespace K_Bikpower
             user_manager = UserManager.DefaultManager;
 
             decommission_form = submittedForm;
-            if (submittedForm.Status.Contains("Approved") == false)
-            {
-                DeleteButton.IsEnabled = true;
-            }
-
             if (assets != null)
             {
                 globalAssets = assets;
-                
+
             }
             RetrieveAssets(submittedForm, assets);
             LoadForm(submittedForm);
+
+            assetList.ItemsSource = globalAssets;
+
+            if (submittedForm.Status == "Approved") //the form can only be viewed
+            {
+                DeleteButton.IsEnabled = false; //can't delete a approved form
+                EditButton.IsEnabled = false; //can't edit a approved form
+                RejectButton.IsEnabled = false; //can't reject a approved form?
+                ApproveButton.IsEnabled = false; //can't approve an already approved form
+            }
         }
 
         async Task UpdateAsset(Asset item)
@@ -65,43 +70,24 @@ namespace K_Bikpower
                     globalAssets.Add(asset);
                 }
                 count = globalAssets.Count();
-                ManageAssets_Button.Text = "View Assets (" + count.ToString() + ")";
+                ExpanderLabel.Text = "View Assets (" + count.ToString() + ")";
             }
             else //count the assets that have already been retrieved
             {
                 count = globalAssets.Count();
-                ManageAssets_Button.Text = "View Assets (" + count.ToString() + ")";
+                ExpanderLabel.Text = "View Assets (" + count.ToString() + ")";
             }
         }
         private void LoadForm(DecommissionData form)
         {
-            Date_Decommissioned.Date = form.DateDecommissioned;
-            Decommissioned_Details_Entry.Text = form.Details;
-            if (form.RegionName != null)
-            {
-                Region_Picker.SelectedItem = form.RegionName;
-            }
-            Location_Entry.Text = form.Location;
-            if (form.MovedTo == "Scrap")
-            {
-                Scrap_Button.IsChecked = true;
-            }
-            else if (form.MovedTo == "Project")
-            {
-                Project_Button.IsChecked = true;
-            }
-            else if (form.MovedTo == "Spares")
-            {
-                Spares_Button.IsChecked = true;
-            }
-            else if (form.MovedTo == "Workshop")
-            {
-                Workshop_Button.IsChecked = true;
-            }
-            if (form.WorkOrderNumber != -1)
-            {
-                Work_OrderNo_Entry.Text = form.WorkOrderNumber.ToString();
-            }
+            SubmittedByLabel.Text = form.SubmittedBy;
+            DateDecommissionedLabel.Text = form.DateDecommissioned.ToString("d");
+            DetailsLabel.Text = form.Details;
+            RegionLabel.Text = form.RegionName;
+            LocationLabel.Text = form.Location;
+            MovedToLabel.Text = form.MovedTo;
+            WorkLabel.Text = form.WorkOrderNumber.ToString();
+            
         }
 
         async void Approve_Clicked(object sender, EventArgs e)
@@ -129,12 +115,16 @@ namespace K_Bikpower
             bool answer = await DisplayAlert("Confirm Rejection", "Reject this form?", "Yes", "No");
             if (answer == true)
             {
-                //decommission_form.Status = "Rejected by " + user_manager.ReturnUser();
                 decommission_form.RejectedBy = user_manager.ReturnName();
                 decommission_form.Status = "Rejected";
                 await UpdateForm(decommission_form);
                 await Navigation.PushAsync(new ViewDecommissionForms());
             }
+        }
+        async void Edit_Clicked(object sender, EventArgs e)
+        {
+            //SHOULD ONLY BE POSSIBLE IF NOT APPROVED
+            await Navigation.PushAsync(new Decommission(decommission_form, globalAssets));
         }
         async void Exit_Clicked(object sender, EventArgs e)
         {
@@ -157,11 +147,10 @@ namespace K_Bikpower
 
 
         }
-        private async void ManageAssets_Clicked(object sender, EventArgs e)
+        private async void selectedAsset(object sender, EventArgs e)
         {
-            //DecommissionData d = SaveData();
-            await Navigation.PushAsync(new ManageFormAssets(decommission_form, globalAssets, true)); //indicate that we have come from approval page
-
+            //number 5?
+            await Navigation.PushAsync(new FormPreviewAsset((Asset)assetList.SelectedItem, 5, decommission_form, globalAssets));
         }
     }
 }

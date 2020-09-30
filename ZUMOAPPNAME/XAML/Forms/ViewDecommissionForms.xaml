@@ -5,9 +5,9 @@
              BackgroundColor="#63d9ff">
     <ScrollView>
         <StackLayout>
-            <StackLayout Orientation="Horizontal" Padding="10,10,40,10" Spacing="0">
-                <Button x:Name="Home" Text="Home" FontSize="Title" BackgroundColor="#d7d7d7" CornerRadius="5" WidthRequest="150" HorizontalOptions="EndAndExpand" HeightRequest="75" BorderColor="DimGray"/>
-                <Button x:Name="Account" Text="Account" FontSize="Title" BackgroundColor="#d7d7d7" CornerRadius="5" WidthRequest="150" HorizontalOptions="Center" HeightRequest="75"/>
+            <Label Text="Decommission Forms" FontSize="Large" HorizontalOptions="Center"/>
+            <StackLayout x:Name="buttonsPanel" Orientation="Horizontal" HorizontalOptions="Center">
+                <Button Text="Add Form" Clicked="Add_Form_Clicked" BackgroundColor="White" CornerRadius="10" FontSize="Medium" TextColor="Black"/>
             </StackLayout>
             <StackLayout>
                 <ActivityIndicator 
@@ -95,10 +95,7 @@
                             </ListView.ItemTemplate>
                         </ListView>
 
-                <StackLayout x:Name="buttonsPanel" Orientation="Horizontal">
-                    <Button Text="Add Form" Clicked="Add_Form_Clicked" BackgroundColor="White" CornerRadius="10" FontSize="Medium" TextColor="Black"/>
 
-                </StackLayout>
 
             </StackLayout>
 

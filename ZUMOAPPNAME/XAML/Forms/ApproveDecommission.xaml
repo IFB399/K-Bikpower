@@ -6,73 +6,114 @@
              mc:Ignorable="d"
              x:Class="K_Bikpower.ApproveDecommission">
     <ScrollView>
-        <Grid Margin="10" RowSpacing="50">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-            </Grid.ColumnDefinitions>
+        <Grid Margin="10" RowSpacing="20">
             <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
-            <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="Center" Grid.Row="0" Grid.ColumnSpan="2">
-                <Label Text="Decommission Form" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" FontSize="40"/>
-                <Button x:Name="ManageAssets_Button" Text="View Assets" Clicked="ManageAssets_Clicked"/>
+
+            <Label Grid.Row="0" Text="Decommission Form" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" FontSize="40"/>
+
+            <BoxView x:Name="BoxView"  Grid.Row="1" Color="Aquamarine" CornerRadius="10"></BoxView>
+            <Expander  x:Name="AssetExpander" Grid.Row="1" HorizontalOptions="Center">
+                <Expander.Header>
+                    <Label x:Name="ExpanderLabel" Text="Assets" FontAttributes="Bold" FontSize="30" HorizontalOptions="Center"/>
+                </Expander.Header>
+
+                <ListView x:Name="assetList" HeightRequest="100" ItemSelected="selectedAsset">
+                    <ListView.Header>
+                        <Grid>
+                            <Label Grid.Column="0" Text="Manufacturer" HorizontalOptions="Center" FontAttributes="Bold"/>
+                            <Label Grid.Column="1" Text="Serial Number" HorizontalOptions="Center" FontAttributes="Bold"/>
+                            <Label Grid.Column="2" Text="Equipment Class" HorizontalOptions="Center" FontAttributes="Bold"/>
+                        </Grid>
+                    </ListView.Header>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid>
+                                    <Label Grid.Column="0" Text="{Binding ManufacturerName}" HorizontalOptions="Center"/>
+                                    <Label Grid.Column="1" Text="{Binding SerialNumber}" HorizontalOptions="Center"/>
+                                    <Label Grid.Column="2" Text="{Binding EquipmentClassDescription}" HorizontalOptions="Center"/>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Expander>
+
+            <StackLayout Orientation="Vertical" Grid.Row="2">
+                <Label Text="Submitted By" FontSize="30" FontAttributes="Bold"/>
+                <Frame CornerRadius="10" BorderColor="Black" HasShadow="True" >
+                    <Label x:Name="SubmittedByLabel"  Text="insert user" FontSize="30"/>
+                </Frame>
             </StackLayout>
 
-            <StackLayout Grid.Row="1" Grid.Column="0">
-                <Label Text="Date De-Commissioned:" FontSize="30"/>
-                <DatePicker x:Name="Date_Decommissioned" Grid.Row="2" Grid.Column="0" FontSize="30" IsEnabled="False"></DatePicker>
+            <StackLayout Orientation="Vertical" Grid.Row="3">
+                <Label Text="Submitted On" FontSize="30" FontAttributes="Bold"/>
+                <Frame CornerRadius="10" BorderColor="Black" HasShadow="True" >
+                    <Label x:Name="SubmittedOnLabel" Text="insert date" FontSize="30"/>
+                </Frame>
             </StackLayout>
 
-            <StackLayout Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="1">
-                <Label Text="De-Commissioned Details:" FontSize="30"/>
-                <Entry x:Name="Decommissioned_Details_Entry" FontSize="30" IsReadOnly="True"/>
+            <StackLayout Orientation="Vertical" Grid.Row="4" >
+                <Label Text="Date Decommissioned:" FontSize="30" FontAttributes="Bold"/>
+                <Frame CornerRadius="10" BorderColor="Black" HasShadow="True" >
+                    <Label x:Name="DateDecommissionedLabel" Text="insert date here" FontSize="30"/>
+                </Frame>
             </StackLayout>
 
-            <StackLayout Grid.Row="2" Grid.Column="0">
-                <Label Text="Region Name:" FontSize="30"/>
-                <Picker x:Name="Region_Picker" IsEnabled="False">
-                    <Picker.ItemsSource>
-                        <x:Array Type="{x:Type x:String}">
-                            <x:String>Metro</x:String>
-                            <x:String>South Country</x:String>
-                            <x:String>North Country</x:String>
-                            <x:String>Pilbara</x:String>
-                            <x:String>Goldfields</x:String>
-                        </x:Array>
-                    </Picker.ItemsSource>
-                </Picker>
+            <StackLayout Orientation="Vertical" Grid.Row="5">
+                <Label Text="Decommissioned Details" FontSize="30" FontAttributes="Bold"/>
+                <Frame CornerRadius="10" BorderColor="Black" HasShadow="True" >
+                    <Label x:Name="DetailsLabel" FontSize="30"/>
+                </Frame>
             </StackLayout>
 
-            <StackLayout Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="1">
-                <Label Text="Location Name/Substation/Project No." FontSize="30"/>
-                <Entry x:Name="Location_Entry" IsReadOnly="True"/>
+            <StackLayout Orientation="Vertical" Grid.Row="6">
+                <Label Text="Region Name:" FontSize="30" FontAttributes="Bold"/>
+                <Frame CornerRadius="10" BorderColor="Black" HasShadow="True" >
+                    <Label x:Name="RegionLabel" FontSize="30"/>
+                </Frame>
             </StackLayout>
 
-            <StackLayout Grid.Row="3" Grid.Column="0">
-                <Label Text="De-Commissioned Plant To:" FontSize="30"/>
-                <RadioButton x:Name="Project_Button" Text="Project" IsEnabled="False"/>
-                <RadioButton x:Name="Spares_Button" Text="Spares" IsEnabled="False"/>
-                <RadioButton x:Name="Workshop_Button" Text="Workshop" IsEnabled="False"/>
-                <RadioButton x:Name="Scrap_Button" Text="Scrap" IsEnabled="False"/>
+            <StackLayout Orientation="Vertical" Grid.Row="7">
+                <Label Text="Location Name/Substation/Project No." FontSize="30" FontAttributes="Bold"/>
+                <Frame CornerRadius="10" BorderColor="Black" HasShadow="True" >
+                    <Label x:Name="LocationLabel" FontSize="30"/>
+                </Frame>
             </StackLayout>
 
-            <StackLayout Grid.Row="3" Grid.Column="1" >
-                <Label Text="Work Order No." FontSize="30"/>
-                <Entry x:Name="Work_OrderNo_Entry" IsReadOnly="True"/>
+            <StackLayout Orientation="Vertical" Grid.Row="8">
+                <Label Text="De-Commissioned Plant To:" FontSize="30" FontAttributes="Bold"/>
+                <Frame CornerRadius="10" BorderColor="Black" HasShadow="True" >
+                    <Label x:Name="MovedToLabel" FontSize="30"/>
+                </Frame>
             </StackLayout>
 
-            <StackLayout Orientation="Horizontal" Grid.Row="4" Grid.Column="1" HorizontalOptions="End" VerticalOptions="Center">
-                <Button Text="Approve" Clicked="Approve_Clicked" WidthRequest="100" HeightRequest="50" />
-                <Button Text="Reject" Clicked="Reject_Clicked" WidthRequest="100" HeightRequest="50" />
-                <Button x:Name="DeleteButton"  Text="Delete Form" Clicked="Delete_Clicked" WidthRequest="100" HeightRequest="50" IsEnabled="False" />
+            <StackLayout Orientation="Vertical" Grid.Row="9">
+                <Label Text="Work Order No." FontSize="30" FontAttributes="Bold"/>
+                <Frame CornerRadius="10" BorderColor="Black" HasShadow="True" >
+                    <Label x:Name="WorkLabel" FontSize="30"/>
+                </Frame>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" Grid.Row="10" HorizontalOptions="End" VerticalOptions="Center">
+                <Button x:Name="EditButton" Text="Edit" Clicked="Edit_Clicked" WidthRequest="100" HeightRequest="50"/>
+                <Button x:Name="ApproveButton" Text="Approve" Clicked="Approve_Clicked" WidthRequest="100" HeightRequest="50" />
+                <Button x:Name="RejectButton" Text="Reject" Clicked="Reject_Clicked" WidthRequest="100" HeightRequest="50" />
+                <Button x:Name="DeleteButton"  Text="Delete Form" Clicked="Delete_Clicked" WidthRequest="100" HeightRequest="50" />
                 <Button Text="Exit" Clicked="Exit_Clicked" WidthRequest="100" HeightRequest="50" />
             </StackLayout>
-            
         </Grid>
     </ScrollView>
 </ContentPage>
