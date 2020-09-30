@@ -15,7 +15,7 @@ namespace K_Bikpower
         string modifierCode;
         int locationEQNO;
         string componentCode;
-        DateTime date; //warranty date
+        DateTime? date; //warranty date
         int equipmentAge;
         string stockCode;
         string poNO;
@@ -101,7 +101,7 @@ namespace K_Bikpower
 
         
         [JsonProperty(PropertyName = "date")]
-        public DateTime Date
+        public DateTime? Date
         {
             get { return date; }
             set { date = value; }

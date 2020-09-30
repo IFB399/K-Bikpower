@@ -52,7 +52,7 @@ namespace K_Bikpower
             Modifier_Code_Entry.Text = data.ModifierCode;
             Location_Equipment_Number_Entry.Text = data.LocationEquipmentNumber.ToString();
             Component_Code_Entry.Text = data.ComponentCode;
-            WarrantyDate_Picker.Date = data.Date; // change dumb dumb. 
+            WarrantyDate_Picker.Date = (DateTime)data.Date; // change dumb dumb. 
             Equipment_Age_Entry.Text = data.EquipmentAge.ToString();
             Stock_Code_Entry.Text = data.StockCode;
             Purchase_Order_Number_Entry.Text = data.PurchaseOrderNO;
