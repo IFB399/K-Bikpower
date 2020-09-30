@@ -144,7 +144,7 @@ namespace K_Bikpower
             else
             {
                 DecommissionData form = SaveData();
-                form.SubmittedBy = user_manager.ReturnUser();
+                form.SubmittedBy = user_manager.ReturnName();
                 form.Status = "Submitted";
 
                 await AddItem(form);

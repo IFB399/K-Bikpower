@@ -16,8 +16,10 @@ namespace K_Bikpower
         AssetFormLinkManager afl_manager;
         AssetManager asset_manager;
         CommissionManager commission_manager;
+        UserManager user_manager;
         ObservableCollection<Asset> globalAssets = new ObservableCollection<Asset>();
         CommissionData commission_form;
+
         public ApproveCommission(CommissionData submittedForm, ObservableCollection<Asset> assets = null)
         {
             InitializeComponent();
@@ -25,6 +27,7 @@ namespace K_Bikpower
             afl_manager = AssetFormLinkManager.DefaultManager;
             asset_manager = AssetManager.DefaultManager;
             commission_manager = CommissionManager.DefaultManager;
+            user_manager = UserManager.DefaultManager;
             commission_form = submittedForm;
             if (assets != null)
             {
@@ -73,6 +76,7 @@ namespace K_Bikpower
             if (answer == true)
             {
                 //decommission_form.Status = "Approved by " + user_manager.ReturnUser();
+                commission_form.ApprovedBy = user_manager.ReturnName();
                 commission_form.Status = "Approved";
                 await UpdateForm(commission_form);
                 //update asset form links?
@@ -110,7 +114,7 @@ namespace K_Bikpower
             bool answer = await DisplayAlert("Confirm Rejection", "Reject this form?", "Yes", "No");
             if (answer == true)
             {
-                //decommission_form.Status = "Rejected by " + user_manager.ReturnUser();
+                commission_form.RejectedBy = user_manager.ReturnName();
                 commission_form.Status = "Rejected";
                 await UpdateForm(commission_form);
                 await Navigation.PushAsync(new ViewCommissionForms());

@@ -110,6 +110,7 @@ namespace K_Bikpower
             if (answer == true)
             {
                 //decommission_form.Status = "Approved by " + user_manager.ReturnUser();
+                decommission_form.ApprovedBy = user_manager.ReturnName();
                 decommission_form.Status = "Approved";
                 await UpdateForm(decommission_form);
                 //update asset form links?
@@ -129,6 +130,7 @@ namespace K_Bikpower
             if (answer == true)
             {
                 //decommission_form.Status = "Rejected by " + user_manager.ReturnUser();
+                decommission_form.RejectedBy = user_manager.ReturnName();
                 decommission_form.Status = "Rejected";
                 await UpdateForm(decommission_form);
                 await Navigation.PushAsync(new ViewDecommissionForms());

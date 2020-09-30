@@ -20,7 +20,7 @@
                 
             </Grid.RowDefinitions>
             <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="Center" Grid.Row="0">
-                <Label Text="Commission Form" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" FontSize="40"/>
+                <Label x:Name="Debug"  Text="Commission Form" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" FontSize="40"/>
                 <Label x:Name="dateLabel" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" FontSize="20"/>
                 <Button x:Name="ManageAssets_Button" Text="Manage Assets" Clicked="ManageAssets_Clicked"/>
             </StackLayout>

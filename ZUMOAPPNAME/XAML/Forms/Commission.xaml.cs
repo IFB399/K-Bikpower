@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,14 +19,18 @@ namespace K_Bikpower
         AssetManager asset_manager;
         CommissionManager commission_manager;
         UserManager user_manager;
-        CommissionData commissionForm;
+        CommissionData commissionForm = null;
         bool update = false;
 
         ObservableCollection<Asset> globalAssets = new ObservableCollection<Asset>();
         public Commission(CommissionData savedForm = null, ObservableCollection<Asset> assets = null)
         {
             InitializeComponent();
-            commissionForm = savedForm;
+            
+            if (savedForm != null)
+            {
+                commissionForm = savedForm;
+            }
             afl_manager = AssetFormLinkManager.DefaultManager;
             asset_manager = AssetManager.DefaultManager;
             commission_manager = CommissionManager.DefaultManager;
@@ -103,7 +108,7 @@ namespace K_Bikpower
             {
                 workOrderNumber = Int32.Parse(Work_OrderNo_Entry.Text); //will break if an int is not given
             }
-            if (commissionForm == null)
+            if (update == false) 
             {
                 CommissionData form = new CommissionData
                 {
@@ -196,9 +201,11 @@ namespace K_Bikpower
             else
             {
                 CommissionData form = SaveData();
-                //form.SubmittedBy = user_manager.ReturnUser(); NEED TO FIX
+                // //breaks
                 if (form != null)
                 {
+                    //Debug.Text = "form not null";
+                    form.SubmittedBy = user_manager.ReturnName();
                     form.Status = "Submitted";
                     await AddItem(form);
                     if (globalAssets != null)
@@ -218,6 +225,7 @@ namespace K_Bikpower
                 }
                 else
                 {
+                    //Debug.Text = "form is null :(";
                     //delete old links
                     ObservableCollection<AssetFormLink> afls = await afl_manager.GetLinksByFormAsync(commissionForm.Id, "Commission");
                     foreach (AssetFormLink afl in afls)
