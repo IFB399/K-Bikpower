@@ -45,6 +45,14 @@ namespace K_Bikpower
                 ApproveButton.IsEnabled = false; //can't approve an already approved form
             }
         }
+        async Task UpdateAsset(Asset item)
+        {
+            await asset_manager.SaveTaskAsync(item);
+        }
+        async Task UpdateForm(CommissionData form)
+        {
+            await commission_manager.SaveTaskAsync(form);
+        }
         private async void RetrieveAssets(CommissionData form, ObservableCollection<Asset> assets)
         {
             int count = 0;
@@ -97,26 +105,6 @@ namespace K_Bikpower
                 }
             }
         }
-        async void Edit_Clicked(object sender, EventArgs e)
-        {
-            //this might suck TO BE COMPLETED
-            //SHOULD ONLY BE POSSIBLE IF NOT APPROVED
-            await Navigation.PushAsync(new Commission(commission_form, globalAssets));
-        }
-        private async void selectedAsset(object sender, EventArgs e)
-        {
-            //removeAsset.IsEnabled = true;
-            //AssetDetailsButton.IsEnabled = true;
-            await Navigation.PushAsync(new FormPreviewAsset((Asset)assetList.SelectedItem, 4, commission_form, globalAssets));
-        }
-        async Task UpdateAsset(Asset item)
-        {
-            await asset_manager.SaveTaskAsync(item);
-        }
-        async Task UpdateForm(CommissionData form)
-        {
-            await commission_manager.SaveTaskAsync(form);
-        }
         async void Reject_Clicked(object sender, EventArgs e)
         {
             bool answer = await DisplayAlert("Confirm Rejection", "Reject this form?", "Yes", "No");
@@ -127,6 +115,11 @@ namespace K_Bikpower
                 await UpdateForm(commission_form);
                 await Navigation.PushAsync(new ViewCommissionForms());
             }
+        }
+        async void Edit_Clicked(object sender, EventArgs e)
+        {
+            //SHOULD ONLY BE POSSIBLE IF NOT APPROVED
+            await Navigation.PushAsync(new Commission(commission_form, globalAssets));
         }
         async void Exit_Clicked(object sender, EventArgs e)
         {
@@ -146,6 +139,10 @@ namespace K_Bikpower
                 await commission_manager.DeleteFormAsync(commission_form);
                 await Navigation.PushAsync(new ViewCommissionForms());
             }
+        }
+        private async void selectedAsset(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new FormPreviewAsset((Asset)assetList.SelectedItem, 4, commission_form, globalAssets));
         }
     }
 }

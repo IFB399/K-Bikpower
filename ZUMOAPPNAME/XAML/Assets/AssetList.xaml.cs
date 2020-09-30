@@ -11,12 +11,10 @@ namespace K_Bikpower
         AssetManager manager;
         Object savedData;
         ObservableCollection<Asset> assetList = new ObservableCollection<Asset>();
-        bool prevPage;
 
-        public AssetList(Object o = null, ObservableCollection<Asset> assets = null, bool prevPage2 = false)
+        public AssetList(Object o = null, ObservableCollection<Asset> assets = null)
         {
             InitializeComponent();
-            prevPage = prevPage2;
             manager = AssetManager.DefaultManager;
             if (Device.RuntimePlatform == Device.UWP)
             {
@@ -130,7 +128,7 @@ namespace K_Bikpower
                     {
                         //assetList.Add(todo);
                         //await Navigation.PushAsync(new ManageFormAssets(d, assetList, prevPage));
-                        await Navigation.PushAsync(new FormPreviewAsset(todo, 2,savedData, assetList, prevPage));
+                        await Navigation.PushAsync(new FormPreviewAsset(todo, 2,savedData, assetList));
                     }
 
                 }
@@ -149,7 +147,7 @@ namespace K_Bikpower
                     {
                         //assetList.Add(todo);
                         //await Navigation.PushAsync(new ManageFormAssets(c, assetList, prevPage));
-                        await Navigation.PushAsync(new FormPreviewAsset(todo, 2,savedData, assetList, prevPage));
+                        await Navigation.PushAsync(new FormPreviewAsset(todo, 2,savedData, assetList));
                     }
 
                 }

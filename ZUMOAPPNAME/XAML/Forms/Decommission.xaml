@@ -66,7 +66,7 @@
                 <Entry x:Name="Work_OrderNo_Entry"/>
             </StackLayout>
 
-            <Button Grid.Row="7" Text="Submit" Clicked="Submit_Clicked" WidthRequest="100" HeightRequest="50" HorizontalOptions="End" VerticalOptions="Center"/>
+            <Button x:Name="SubmitButton" Grid.Row="7" Text="Submit" Clicked="Submit_Clicked" WidthRequest="100" HeightRequest="50" HorizontalOptions="End" VerticalOptions="Center"/>
         </Grid>
     </ScrollView>
 </ContentPage>

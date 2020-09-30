@@ -99,7 +99,7 @@
             </StackLayout>
 
             <StackLayout Orientation="Vertical" Grid.Row="9">
-                <Label Text="De-Commissioned Plant From:" FontSize="30" FontAttributes="Bold"/>
+                <Label Text="Commissioned Plant From:" FontSize="30" FontAttributes="Bold"/>
                 <Frame CornerRadius="10" BorderColor="Black" HasShadow="True" >
                     <Label x:Name="MovedFromLabel" Text="somewheree" FontSize="30"/>
                 </Frame>

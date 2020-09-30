@@ -18,13 +18,11 @@ namespace K_Bikpower
         AssetManager manager;
         Object savedData;
         ObservableCollection<Asset> assetList = new ObservableCollection<Asset>();
-        bool prevPage;
-        public ScanQR(Object o = null, ObservableCollection<Asset> assets = null, bool prevPage2 = false)
+        public ScanQR(Object o = null, ObservableCollection<Asset> assets = null)
         {
             InitializeComponent();
             manager = AssetManager.DefaultManager;
             savedData = o;
-            prevPage = prevPage2;
             if (assets != null)
             {
                 assetList = assets;
@@ -67,7 +65,7 @@ namespace K_Bikpower
                             _scanView.IsScanning = false; //stop scanning
                             //assetList.Add(asset); //also send back asset just scanned
                             //await Navigation.PushAsync(new ManageFormAssets(d, assetList, prevPage));
-                            await Navigation.PushAsync(new FormPreviewAsset(asset, 1,savedData, assetList, prevPage));
+                            await Navigation.PushAsync(new FormPreviewAsset(asset, 1,savedData, assetList));
                         }
                     }
                     else //of type commission TO BE COMPLETED
@@ -88,7 +86,7 @@ namespace K_Bikpower
                             _scanView.IsScanning = false; //stop scanning
                             //assetList.Add(asset); //also send back asset just scanned
                             //go to preview page actually
-                            await Navigation.PushAsync(new FormPreviewAsset(asset, 1,savedData, assetList, prevPage));
+                            await Navigation.PushAsync(new FormPreviewAsset(asset, 1,savedData, assetList));
                             //await Navigation.PushAsync(new ManageFormAssets(c, assetList, prevPage));
                         }
                     }
