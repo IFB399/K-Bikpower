@@ -110,13 +110,13 @@ namespace K_Bikpower
             if (update == false) //a brand new asset is being added
             {
                 todo.Status = "Added";
-                todo.AddedBy = user_manager.ReturnUser();
+                todo.AddedBy = user_manager.ReturnName();
             }
             else
             {
                 todo.Status = AssetData.Status; //don't change status
                 todo.AddedBy = AssetData.AddedBy; //don't change added by
-                todo.ModifiedBy = user_manager.ReturnUser();
+                todo.ModifiedBy = user_manager.ReturnName();
             }
 
             await AddItem(todo);

@@ -36,6 +36,14 @@ namespace K_Bikpower
             RetrieveAssets(submittedForm, assets); //will add assets to global assets
             LoadForm(submittedForm);
             assetList.ItemsSource = globalAssets;
+
+            if (submittedForm.Status == "Approved") //the form can only be viewed
+            {
+                DeleteButton.IsEnabled = false; //can't delete a approved form
+                EditButton.IsEnabled = false; //can't edit a approved form
+                RejectButton.IsEnabled = false; //can't reject a approved form?
+                ApproveButton.IsEnabled = false; //can't approve an already approved form
+            }
         }
         private async void RetrieveAssets(CommissionData form, ObservableCollection<Asset> assets)
         {

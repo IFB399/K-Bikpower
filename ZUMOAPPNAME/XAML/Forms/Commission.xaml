@@ -20,7 +20,7 @@
                 
             </Grid.RowDefinitions>
             <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="Center" Grid.Row="0">
-                <Label x:Name="Debug"  Text="Commission Form" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" FontSize="40"/>
+                <Label Text="Commission Form" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" FontSize="40"/>
                 <Label x:Name="dateLabel" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" FontSize="20"/>
                 <Button x:Name="ManageAssets_Button" Text="Manage Assets" Clicked="ManageAssets_Clicked"/>
             </StackLayout>
@@ -34,11 +34,11 @@
                 <Label Text="New Installation?" FontSize="30"/>
                 <StackLayout Orientation="Horizontal">
                     <Label Text="Yes" VerticalOptions="Center"/>
-                    <CheckBox x:Name="Yes_Button1" VerticalOptions="Center" CheckedChanged="Yes1_changed"/>
+                    <CheckBox x:Name="InstallationYes" VerticalOptions="Center" CheckedChanged="InstallationYes_changed"/>
                 </StackLayout>
                 <StackLayout Orientation="Horizontal">
                     <Label Text="No" VerticalOptions="Center"/>
-                    <CheckBox x:Name="No_Button1" VerticalOptions="Center" CheckedChanged="No1_changed"/>
+                    <CheckBox x:Name="InstallationNo" VerticalOptions="Center" CheckedChanged="InstallationNo_changed"/>
                 </StackLayout>
             </StackLayout>
 
@@ -46,17 +46,13 @@
                 <Label Text="Replacement Item?" FontSize="30"/>
                 <StackLayout Orientation="Horizontal">
                     <Label Text="Yes" VerticalOptions="Center"/>
-                    <CheckBox x:Name="Yes" VerticalOptions="Center" CheckedChanged="Yes2_changed"/>
+                    <CheckBox x:Name="ReplacementYes" VerticalOptions="Center" CheckedChanged="ReplacementYes_changed"/>
                 </StackLayout>
                 <StackLayout Orientation="Horizontal">
                     <Label Text="No" VerticalOptions="Center"/>
-                    <CheckBox x:Name="No" VerticalOptions="Center" CheckedChanged="No2_changed"/>
+                    <CheckBox x:Name="ReplacementNo" VerticalOptions="Center" CheckedChanged="ReplacementNo_changed"/>
                 </StackLayout>
             </StackLayout>
-            
-
-
-
 
             <StackLayout Grid.Row="4">
                 <Label Text="Region Name:" FontSize="30"/>

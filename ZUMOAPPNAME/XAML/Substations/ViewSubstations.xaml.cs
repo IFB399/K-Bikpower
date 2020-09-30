@@ -91,7 +91,7 @@ namespace K_Bikpower
             {
 
                 //var Assets =  App.Database.GetSubAssetsAsync(details);
-                Navigation.PushAsync(new AssetList());
+                Navigation.PushAsync(new AssetList()); //NEEDS FIXING
             }
         }
         private async Task RefreshItems(bool showActivityIndicator, bool syncItems)

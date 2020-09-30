@@ -23,63 +23,67 @@ namespace K_Bikpower
         //3 if from manage form assets page
         //4 if from commission approval page
         //5 if from decommission approval page
-        int scanPage; //needs a less confusing name
-        public FormPreviewAsset(Asset a, int scanPage2=-1, Object o = null, ObservableCollection<Asset> assets = null, bool prevPage2 = false)
+        int prevPageNumber; 
+        public FormPreviewAsset(Asset a, int number=-1, Object o = null, ObservableCollection<Asset> assets = null, bool prevPage2 = false)
         {
             InitializeComponent();
             savedData = o;
             prevPage = prevPage2;
             assetPreviewed = a;
-            scanPage = scanPage2;
+            prevPageNumber = number;
             if (assets != null)
             {
                 assetList = assets;
             }
             PopulateDetails(assetPreviewed);
-            if (scanPage == 3 || scanPage == 4)
+            if (number == 3 || number == 4)
             {
-                AddButton.IsVisible = false;
+                AddButton.IsVisible = false; //approver is viewing in non edit mode and asset is already added
             }
         }
         private async void Add_Asset_Clicked(object sender, EventArgs e)
         {
             assetList.Add(assetPreviewed); //add asset to list
+            await Navigation.PushAsync(new ManageFormAssets(savedData, assetList, prevPage)); //return to manage form assets page
+            //IN CASE I BROKE THIS:
+            /*
             if (typeof(DecommissionData).IsInstanceOfType(savedData))
             {
-                DecommissionData d = (DecommissionData)savedData;
-                await Navigation.PushAsync(new ManageFormAssets(d, assetList, prevPage));
+                //DecommissionData d = (DecommissionData)savedData;
+                await Navigation.PushAsync(new ManageFormAssets(d, assetList, prevPage)); //return to manage form assets page
             }
-            else //return to commission page
+            else //return to manage form assets page
             {
-                CommissionData c = (CommissionData)savedData;
+                //CommissionData c = (CommissionData)savedData;
                 await Navigation.PushAsync(new ManageFormAssets(c, assetList, prevPage));
             }
-                
+            */
         }
         private void Go_Back_Clicked(object sender, EventArgs e)
         {
-            //return to scan page or add by table page
-            if (scanPage == 1)
+            //return to correct page
+            if (prevPageNumber == 1)
             {
                 Navigation.PushAsync(new ScanQR(savedData, assetList, prevPage)); //go to scan page
             }
-            else if (scanPage == 2)
+            else if (prevPageNumber == 2)
             {
                 Navigation.PushAsync(new AssetList(savedData, assetList, prevPage)); //go to table page
             }
-            else if (scanPage == 3)
+            else if (prevPageNumber == 3)
             {
                 Navigation.PushAsync(new ManageFormAssets(savedData, assetList, prevPage)); //go to manage form assets
             }
-            else if (scanPage == 4)
+            else if (prevPageNumber == 4)
             {
                 CommissionData c = (CommissionData)savedData;
-                Navigation.PushAsync(new ApproveCommission(c, assetList)); //go to table page
+                Navigation.PushAsync(new ApproveCommission(c, assetList)); //go to approve commission page
             }
         }
         private void PopulateDetails(Asset details)
         {
-
+            Status_label.Text = details.Status;
+            AddedBy_label.Text = details.AddedBy;
             Substation_Code_label.Text = details.SubstationCode;
             Plant_Number_label.Text = details.PlantNumber;
             int AssentEQNO = details.AssetEQNO;

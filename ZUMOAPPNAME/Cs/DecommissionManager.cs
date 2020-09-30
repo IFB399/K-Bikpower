@@ -97,6 +97,8 @@ namespace K_Bikpower
                 
                 if (status != null)
                 {
+                    items = items.Where(asset => asset.Status == status);
+                    /*
                     if (status == "Rejected")
                     {
                         items = items.Where(asset => asset.Status.Contains("Rejected")); 
@@ -109,6 +111,7 @@ namespace K_Bikpower
                     {
                         items = items.Where(asset => asset.Status == status);
                     }
+                    */
                 }
                 
 

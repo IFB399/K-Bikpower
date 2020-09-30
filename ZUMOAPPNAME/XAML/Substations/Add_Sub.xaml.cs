@@ -29,6 +29,7 @@ namespace K_Bikpower
         {
             Substation_Code_Entry.Text = data.Substation_Code;
             Substation_Name_Entry.Text = data.Substation_Name;
+            Substation_Area_Entry.Text = data.Area;
         }
 
         async Task AddItem(Substation item)
@@ -37,12 +38,13 @@ namespace K_Bikpower
         }
         async void Button_Clicked(object sender, EventArgs e)
         {
-            if (addsubbutton.Text == "Add Asset")
+            if (addsubbutton.Text == "Add Substation")
             {
                 var sub = new Substation
                 {
                     Substation_Code = Substation_Code_Entry.Text,
-                    Substation_Name = Substation_Name_Entry.Text
+                    Substation_Name = Substation_Name_Entry.Text,
+                    Area = Substation_Area_Entry.Text
                 };
                 await AddItem(sub);
 
@@ -53,6 +55,7 @@ namespace K_Bikpower
                 {
                     Substation_Code = Substation_Code_Entry.Text,
                     Substation_Name = Substation_Name_Entry.Text,
+                    Area = Substation_Area_Entry.Text
                     //Area = "areaaa"
                 };
                 await AddItem(sub);

@@ -97,18 +97,21 @@ namespace K_Bikpower
 
                 if (status != null)
                 {
+                    items = items.Where(asset => asset.Status == status);
+                    /*
                     if (status == "Rejected")
                     {
-                        items = items.Where(asset => asset.Status.Contains("Rejected"));
+                        items = items.Where(asset => asset.Status == "Rejected");
                     }
                     else if (status == "Approved")
                     {
-                        items = items.Where(asset => asset.Status.Contains("Approved"));
+                        items = items.Where(asset => asset.Status == "Approved");
                     }
                     else
                     {
                         items = items.Where(asset => asset.Status == status);
                     }
+                    */
                 }
 
 

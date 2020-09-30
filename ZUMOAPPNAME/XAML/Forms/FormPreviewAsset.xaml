@@ -17,6 +17,17 @@
                         <Button x:Name="AddButton"  Text="Add Asset To Form" Clicked="Add_Asset_Clicked"/>
                         <Button Text="Go Back" Clicked="Go_Back_Clicked"/>
                     </StackLayout>
+
+
+                    <Label Text="Status" FontSize="Title" TextColor="Black" />
+                    <Frame CornerRadius="10" BorderColor="Black" HasShadow="True" >
+                        <Label x:Name="Status_label" TextColor="Black" />
+                    </Frame>
+
+                    <Label Text="Added By" FontSize="Title" TextColor="Black" />
+                    <Frame CornerRadius="10" BorderColor="Black" HasShadow="True" >
+                        <Label x:Name="AddedBy_label" TextColor="Black" />
+                    </Frame>
                     
                     <Label Text="Substation Code" FontSize="Title" TextColor="Black"/>
                     <Frame CornerRadius="10" BorderColor="Black" HasShadow="True" >

@@ -13,12 +13,22 @@
                 <StackLayout Spacing="10" Padding="50">
                     <Label Text="Preview" TextColor="Black" FontSize="Large"/>
 
+                    <Label Text="Status" FontSize="Title" TextColor="Black" />
+                    <Frame CornerRadius="10" BorderColor="Black" HasShadow="True" >
+                        <Label x:Name="Status_label" TextColor="Black" />
+                    </Frame>
+
+                    <Label Text="Added By" FontSize="Title" TextColor="Black" />
+                    <Frame CornerRadius="10" BorderColor="Black" HasShadow="True" >
+                        <Label x:Name="AddedBy_label" TextColor="Black" />
+                    </Frame>
+
                     <Label Text="Substation Code" FontSize="Title" TextColor="Black"/>
                     <Frame CornerRadius="10" BorderColor="Black" HasShadow="True" >
                         <Label x:Name="Substation_Code_label" TextColor="Black" />
                     </Frame>
+                    
                     <Label Text="Plant Number" FontSize="Title" TextColor="Black" />
-
                     <Frame CornerRadius="10" BorderColor="Black" HasShadow="True" >
                         <Label x:Name="Plant_Number_label" TextColor="Black" />
                     </Frame>

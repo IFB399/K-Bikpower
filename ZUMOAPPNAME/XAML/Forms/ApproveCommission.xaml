@@ -113,10 +113,10 @@
             </StackLayout>
 
             <StackLayout Orientation="Horizontal" Grid.Row="11" HorizontalOptions="End" VerticalOptions="Center">
-                <Button Text="Edit" Clicked="Edit_Clicked" WidthRequest="100" HeightRequest="50" />
-                <Button Text="Approve" Clicked="Approve_Clicked" WidthRequest="100" HeightRequest="50" />
-                <Button Text="Reject" Clicked="Reject_Clicked" WidthRequest="100" HeightRequest="50" />
-                <Button x:Name="DeleteButton"  Text="Delete Form" Clicked="Delete_Clicked" WidthRequest="100" HeightRequest="50" IsEnabled="False" />
+                <Button x:Name="EditButton" Text="Edit" Clicked="Edit_Clicked" WidthRequest="100" HeightRequest="50"/>
+                <Button x:Name="ApproveButton" Text="Approve" Clicked="Approve_Clicked" WidthRequest="100" HeightRequest="50" />
+                <Button x:Name="RejectButton" Text="Reject" Clicked="Reject_Clicked" WidthRequest="100" HeightRequest="50" />
+                <Button x:Name="DeleteButton"  Text="Delete Form" Clicked="Delete_Clicked" WidthRequest="100" HeightRequest="50" />
                 <Button Text="Exit" Clicked="Exit_Clicked" WidthRequest="100" HeightRequest="50" />
             </StackLayout>
         </Grid>
