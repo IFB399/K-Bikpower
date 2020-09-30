@@ -76,15 +76,22 @@ namespace K_Bikpower
          
         async void Add_Asset_Clicked(object sender, EventArgs e)
         {
+            string selected = null;
             if (Substation_Picker.SelectedIndex == -1)
             {
-                Substation_Picker.SelectedItem = "null";
+                //selected = "null";
+                await DisplayAlert("Error", "Substation Code not selected", "Close");
+                return;
+            }
+            if (Substation_Picker.SelectedIndex != -1)
+            {
+                selected = Substation_Picker.Items[Substation_Picker.SelectedIndex].ToString();
             }
             //else { value = Substation_Picker.SelectedItem; }
             Asset todo = new Asset
             {
                 Id = Ids,
-                SubstationCode = Substation_Picker.Items[Substation_Picker.SelectedIndex],
+                SubstationCode = selected,
                 PlantNumber = Plant_Number_Entry.Text,
                 AssetEQNO = Int32.Parse(Asset_Equipment_Number_Entry.Text),
                 EQStatus = Equipment_Status_Entry.Text,

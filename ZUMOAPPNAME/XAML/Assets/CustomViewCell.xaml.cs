@@ -29,10 +29,10 @@ namespace K_Bikpower
                 framecolour.BackgroundColor = Xamarin.Forms.Color.Green;
             }
 
-            if (Subcode.Text == "null" ) 
+            /*if (Subcode.Text == "null" ) not needed now.
             {
                 Subcode.Text = null;
-            }
+            }*/
         }
     }
 }

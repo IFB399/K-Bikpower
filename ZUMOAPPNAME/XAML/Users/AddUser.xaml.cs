@@ -24,7 +24,7 @@ namespace K_Bikpower
             user_manager = UserManager.DefaultManager;
             if (Userdata != null)
             {
-                AddOrUpdateButton.Text = "Update Asset";
+                AddOrUpdateButton.Text = "Update User";
                 popuserData = Userdata;
                 PopulateDetails(popuserData);
                 Ids = Userdata.Id;
@@ -32,6 +32,7 @@ namespace K_Bikpower
             }
             if (random != null) 
             {
+                
                 popuserData = Userdata;
                 Firstname.IsVisible = false;
                 Lastname.IsVisible = false;
@@ -110,6 +111,12 @@ namespace K_Bikpower
             };
             ObservableCollection<User> u = await user_manager.GetUser(Email.Text);
             User user = u.FirstOrDefault();
+            if (AddOrUpdateButton.Text == "Update User")
+            {
+                await AddItem(todo);
+                await Navigation.PushAsync(new UsersPage());
+            }
+            
             if (user == null)
             {
                 await AddItem(todo);
