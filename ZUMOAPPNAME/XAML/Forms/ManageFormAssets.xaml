@@ -12,6 +12,7 @@
                 <Button x:Name="ScanButton"  Text="Scan" Clicked="Scan_Asset_Clicked"/>
                 <Button x:Name="removeAsset" Text="Remove" Clicked="removeAsset_Clicked" IsEnabled="False"/>
                 <Button x:Name="AddButton" Text="Add by Table" Clicked="Add_Clicked" />
+                <Button x:Name="AssetDetailsButton" Text="View Asset Details" Clicked="Asset_Details_Clicked" IsEnabled="False"/>
                 <Button x:Name="DoneButton" Text="Done" Clicked="Done_Clicked" />
             </StackLayout>
             <ListView x:Name="assetList" Grid.Row="1" ItemsSource="{Binding Assets}" ItemSelected="selectedAsset" HasUnevenRows="false">

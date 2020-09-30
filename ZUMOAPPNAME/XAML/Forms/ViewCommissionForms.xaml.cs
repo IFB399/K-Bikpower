@@ -139,8 +139,8 @@ namespace K_Bikpower
         }
         public async void OnSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            CommissionData d = e.SelectedItem as CommissionData;
-            //await Navigation.PushAsync(new ApproveDecommission(d)); FIX
+            CommissionData c = e.SelectedItem as CommissionData;
+            await Navigation.PushAsync(new ApproveCommission(c));
         }
 
         private class ActivityIndicatorScope : IDisposable

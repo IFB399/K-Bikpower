@@ -27,7 +27,8 @@ namespace K_Bikpower
 
         private void PopulateDetails(Asset details)
         {
-            
+            Status_label.Text = details.Status;
+            AddedBy_label.Text = details.AddedBy;
             Substation_Code_label.Text = details.SubstationCode;
             Plant_Number_label.Text = details.PlantNumber;
             int AssentEQNO = details.AssetEQNO;
@@ -76,6 +77,7 @@ namespace K_Bikpower
         }
         private void CForms_Clicked(object sender, EventArgs e)
         {
+            Navigation.PushAsync(new ViewCommissionForms(assetdata));
             //to be completed
         }
         private void Button_Clicked_1(object sender, EventArgs e)

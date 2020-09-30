@@ -128,8 +128,9 @@ namespace K_Bikpower
                     }
                     else
                     {
-                        assetList.Add(todo);
-                        await Navigation.PushAsync(new ManageFormAssets(d, assetList, prevPage));
+                        //assetList.Add(todo);
+                        //await Navigation.PushAsync(new ManageFormAssets(d, assetList, prevPage));
+                        await Navigation.PushAsync(new FormPreviewAsset(todo, 2,savedData, assetList, prevPage));
                     }
 
                 }
@@ -146,8 +147,9 @@ namespace K_Bikpower
                     }
                     else
                     {
-                        assetList.Add(todo);
-                        await Navigation.PushAsync(new ManageFormAssets(c, assetList, prevPage));
+                        //assetList.Add(todo);
+                        //await Navigation.PushAsync(new ManageFormAssets(c, assetList, prevPage));
+                        await Navigation.PushAsync(new FormPreviewAsset(todo, 2,savedData, assetList, prevPage));
                     }
 
                 }

@@ -4,14 +4,20 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:zxing="clr-namespace:ZXing.Net.Mobile.Forms;assembly=ZXing.Net.Mobile.Forms" xmlns:zxcm="clr-namespace:ZXing.Common;assembly=zxing.portable"
              mc:Ignorable="d"
-             x:Class="K_Bikpower.Preview_Asset"
+             x:Class="K_Bikpower.FormPreviewAsset"
              BackgroundColor="#63d9ff">
     <ContentPage.Content>
-        
+
         <ScrollView Padding="50" Margin="50,10,50,10">
             <Frame CornerRadius="10" BackgroundColor="AliceBlue" HasShadow ="True">
                 <StackLayout Spacing="10" Padding="50">
                     <Label Text="Preview" TextColor="Black" FontSize="Large"/>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Button x:Name="AddButton"  Text="Add Asset To Form" Clicked="Add_Asset_Clicked"/>
+                        <Button Text="Go Back" Clicked="Go_Back_Clicked"/>
+                    </StackLayout>
+
 
                     <Label Text="Status" FontSize="Title" TextColor="Black" />
                     <Frame CornerRadius="10" BorderColor="Black" HasShadow="True" >
@@ -22,13 +28,13 @@
                     <Frame CornerRadius="10" BorderColor="Black" HasShadow="True" >
                         <Label x:Name="AddedBy_label" TextColor="Black" />
                     </Frame>
-
+                    
                     <Label Text="Substation Code" FontSize="Title" TextColor="Black"/>
                     <Frame CornerRadius="10" BorderColor="Black" HasShadow="True" >
                         <Label x:Name="Substation_Code_label" TextColor="Black" />
                     </Frame>
-                    
                     <Label Text="Plant Number" FontSize="Title" TextColor="Black" />
+
                     <Frame CornerRadius="10" BorderColor="Black" HasShadow="True" >
                         <Label x:Name="Plant_Number_label" TextColor="Black" />
                     </Frame>
@@ -68,7 +74,7 @@
 
                     <Label Text="Equipment Warranty Date" FontSize="Title" TextColor="Black"/>
                     <Frame CornerRadius="10" BorderColor="Black" HasShadow="True" >
-                    <DatePicker x:Name="WarrantyDate_Picker" IsEnabled="False"></DatePicker>
+                        <DatePicker x:Name="WarrantyDate_Picker" IsEnabled="False"></DatePicker>
                     </Frame>
 
                     <Label Text="Equipment Age" FontSize="Title" TextColor="Black"/>
@@ -131,23 +137,6 @@
                     <Frame CornerRadius="10" BorderColor="Black" HasShadow="True" >
                         <Label x:Name="Equipment_class_description_label" TextColor="Black" />
                     </Frame>
-
-                    <StackLayout Orientation="Horizontal" >
-                        <Button Text="Edit Asset" Clicked="Edit_Asset_Clicked"/>
-                        <Button Text="Delete Asset" Clicked="Delete_Asset_Clicked"/>
-                        <Button x:Name="DForms_Button" Text="View Decommission Forms" Clicked="DForms_Clicked"/>
-                        <Button x:Name="CForms_Button" Text="View Commission Forms" Clicked="CForms_Clicked"/>
-                        <Button Text="Generate QR Code" Clicked="Button_Clicked_1"/>
-                    </StackLayout>
-                    <zxing:ZXingBarcodeImageView BarcodeFormat="QR_CODE" x:Name="Gen" IsVisible="false" BarcodeValue="1" HeightRequest="300" WidthRequest="300">
-                        <zxing:ZXingBarcodeImageView.BarcodeOptions>
-                            <zxcm:EncodingOptions Width="300" Height="300" />
-                        </zxing:ZXingBarcodeImageView.BarcodeOptions>
-                    </zxing:ZXingBarcodeImageView>
-                    <Button Text="Save Qrcode" Clicked="Button_Clicked_2"/>
-                    
-                    
-                    
 
                 </StackLayout>
             </Frame>

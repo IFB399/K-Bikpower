@@ -99,7 +99,7 @@ namespace K_Bikpower
             }
             return null;
         }
-        public async Task<ObservableCollection<string>> GetAssetsAsync(string id, bool syncItems = false)
+        public async Task<ObservableCollection<string>> GetAssetsAsync(string id, string formType, bool syncItems = false)
         {
             try
             {
@@ -110,7 +110,7 @@ namespace K_Bikpower
                 }
 #endif
 
-                IEnumerable<string> items = await linkTable.Where(link => (link.FormId == id && link.FormType == "Decommission")).Select(link => link.AssetId).ToEnumerableAsync();
+                IEnumerable<string> items = await linkTable.Where(link => (link.FormId == id && link.FormType == formType)).Select(link => link.AssetId).ToEnumerableAsync();
 
                 return new ObservableCollection<string>(items);
             }
@@ -124,7 +124,7 @@ namespace K_Bikpower
             }
             return null;
         }
-        public async Task<ObservableCollection<AssetFormLink>> GetLinksByFormAsync(string id, bool syncItems = false)
+        public async Task<ObservableCollection<AssetFormLink>> GetLinksByFormAsync(string id, string formType, bool syncItems = false)
         {
             try
             {
@@ -135,7 +135,7 @@ namespace K_Bikpower
                 }
 #endif
 
-                IEnumerable<AssetFormLink> items = await linkTable.Where(link => (link.FormId == id && link.FormType == "Decommission")).ToEnumerableAsync();
+                IEnumerable<AssetFormLink> items = await linkTable.Where(link => (link.FormId == id && link.FormType == formType)).ToEnumerableAsync();
 
                 return new ObservableCollection<AssetFormLink>(items);
             }

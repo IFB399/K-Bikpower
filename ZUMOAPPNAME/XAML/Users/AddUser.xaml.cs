@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using System.Collections.ObjectModel;
 
 namespace K_Bikpower
 {
@@ -107,12 +108,14 @@ namespace K_Bikpower
                 Password = hashedPassword,
                 Permission = Auth.SelectedItem.ToString()
             };
-            var result = await user_manager.GetUser(Email.Text);
-            if (result == null)
+            ObservableCollection<User> u = await user_manager.GetUser(Email.Text);
+            User user = u.FirstOrDefault();
+            if (user == null)
             {
                 await AddItem(todo);
                 await Navigation.PushAsync(new UsersPage());
             }
+
             else { await DisplayAlert("Alert", "Email already exists please try another", "OK"); };
         }
 

@@ -75,11 +75,13 @@ namespace K_Bikpower
             {
                 movedto = Workshop_Button.Text;
             }
+
             string regionName = null;
             if (Region_Picker.SelectedIndex != -1)
             {
                 regionName = Region_Picker.SelectedItem.ToString();
             }
+
             int workOrderNumber = -1; //will have to change later, maybe store work order number as a string in the database
             if (String.IsNullOrEmpty(Work_OrderNo_Entry.Text) == false)
             {
@@ -142,7 +144,7 @@ namespace K_Bikpower
             else
             {
                 DecommissionData form = SaveData();
-                form.SubmittedBy = user_manager.ReturnUser();
+                form.SubmittedBy = user_manager.ReturnName();
                 form.Status = "Submitted";
 
                 await AddItem(form);

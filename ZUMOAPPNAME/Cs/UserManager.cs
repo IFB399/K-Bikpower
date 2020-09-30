@@ -30,7 +30,7 @@ namespace K_Bikpower
         MobileServiceClient client;
         string authenicationstring;
         string SavedUsername;
-        string[] name;
+        string name;
 
 #if OFFLINE_SYNC_ENABLED
         
@@ -139,10 +139,11 @@ namespace K_Bikpower
 
         public void Setname(string firstname, string lastname)
         {
-            name = new string[] { firstname, lastname };
+            //name = new string[] { firstname, lastname };
+            name = firstname + " " + lastname;
         }
 
-        public string[] Returname()
+        public string ReturnName()
         {
             return name;
         }

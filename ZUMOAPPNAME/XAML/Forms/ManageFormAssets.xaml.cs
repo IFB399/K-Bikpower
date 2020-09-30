@@ -14,24 +14,23 @@ namespace K_Bikpower
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ManageFormAssets : ContentPage
     {
-        //DecommissionData dform;
-        Object form;
         ObservableCollection<Asset> globalAssets = new ObservableCollection<Asset>();
-        bool prevPage;
+ 
+        Object form; //could be a decommission form or commission form
+        
+        bool prevPage; //determines if user has come from approval page MIGHT REMOVE
         public ManageFormAssets(Object o, ObservableCollection<Asset> assets, bool fromApprovalPage = false)
         {
             InitializeComponent();
-            //dform = d;
             form = o;
             globalAssets = assets;
             assetList.ItemsSource = assets;
             prevPage = fromApprovalPage;
-            if (prevPage == true) //not allowing approver to update because cbb updating asset form links :/
+            if (prevPage == true) //not allowing approver to update for now (only relevant for decommission)
             {
                 ScanButton.IsEnabled = false;
                 removeAsset.IsEnabled = false;
                 AddButton.IsEnabled = false;
-
             }
         }
         private void removeAsset_Clicked(object sender, EventArgs e)
@@ -39,21 +38,24 @@ namespace K_Bikpower
             globalAssets.Remove((Asset)assetList.SelectedItem);
             removeAsset.IsEnabled = false;
         }
+        private async void Asset_Details_Clicked(object sender, EventArgs e)
+        {
+            AssetDetailsButton.IsEnabled = false;
+            //go to preview asset page and indicate that user has come from manage assets page with number 3
+            await Navigation.PushAsync(new FormPreviewAsset((Asset)assetList.SelectedItem, 3, form, globalAssets, prevPage));
+        }
         private void selectedAsset(object sender, EventArgs e)
         {
             removeAsset.IsEnabled = true;
+            AssetDetailsButton.IsEnabled = true;
         }
         private void Scan_Asset_Clicked(object sender, EventArgs e)
         {
-            
             Navigation.PushAsync(new ScanQR(form, globalAssets, prevPage)); //go to scan page
-
         }
         private async void Add_Clicked(object sender, EventArgs e)
         {
-
             await Navigation.PushAsync(new AssetList(form, globalAssets, prevPage)); //go to table page
-
         }
         private void Done_Clicked(object sender, EventArgs e)
         {
@@ -79,8 +81,10 @@ namespace K_Bikpower
                 }
                 else //go to approve commission page TO BE COMPLETED
                 {
-                    CommissionData c = (CommissionData)form;
+                    //CommissionData c = (CommissionData)form;
                     //go to page
+                    //at the moment there is no manage assets page in the commission approval process
+                    //so this can be ignored
                 }
                     
             }

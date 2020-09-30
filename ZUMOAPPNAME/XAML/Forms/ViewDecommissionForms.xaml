@@ -88,7 +88,7 @@
                                                 <Label Text="{Binding SubmittedBy,StringFormat='{0:F0}'}" FontSize="Small" FontAttributes="Bold"  Grid.Column="3" HorizontalOptions="Center" VerticalOptions="Center"/>
                                                 <Label Text="{Binding Status,StringFormat='{0:F0}'}" FontSize="Small" FontAttributes="Bold"  Grid.Column="4" HorizontalOptions="Center" VerticalOptions="Center"/>
                                                 
-                                    </Grid>
+                                            </Grid>
                                         </Frame>
                                     </ViewCell>
                                 </DataTemplate>
