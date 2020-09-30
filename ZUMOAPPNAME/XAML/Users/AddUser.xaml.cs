@@ -115,6 +115,7 @@ namespace K_Bikpower
             {
                 await AddItem(todo);
                 await Navigation.PushAsync(new UsersPage());
+                return;
             }
             
             if (user == null)
