@@ -36,7 +36,7 @@
                 <Label Text="Warranty Date" FontSize="Title" TextColor="Black"/>
                 <DatePicker  x:Name="WarrantyDate_Picker"></DatePicker>
 
-                <Label Text="Equipment Age" FontSize="Title" TextColor="Black"/>
+                <Label Text="Year Manufactured" FontSize="Title" TextColor="Black"/>
                 <Entry  x:Name="Equipment_Age_Entry" ClearButtonVisibility="WhileEditing" VerticalOptions="EndAndExpand" MaxLength="25" IsSpellCheckEnabled="True" IsTextPredictionEnabled="false"/>
 
                 <Label Text="Stock Code" FontSize="Title" TextColor="Black"/>

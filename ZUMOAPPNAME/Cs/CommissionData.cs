@@ -14,12 +14,13 @@ namespace K_Bikpower
         string regionName;
         string location;
         string movedFrom;
-        int workOrderNumber;
+        string workOrderNumber;
         string submittedBy;
         string status;
         string approvedBy;
         string rejectedBy;
-
+        DateTime submittedOn;
+        DateTime lastModifiedOn;
 
         [JsonProperty(PropertyName = "id")]
         public string Id
@@ -71,7 +72,7 @@ namespace K_Bikpower
         }
 
         [JsonProperty(PropertyName = "workOrderNumber")]
-        public int WorkOrderNumber
+        public string WorkOrderNumber
         {
             get { return workOrderNumber; }
             set { workOrderNumber = value; }
@@ -103,6 +104,19 @@ namespace K_Bikpower
         {
             get { return rejectedBy; }
             set { rejectedBy = value; }
+        }
+
+        [JsonProperty(PropertyName = "submittedOn")]
+        public DateTime SubmittedOn
+        {
+            get { return submittedOn; }
+            set { submittedOn = value; }
+        }
+        [JsonProperty(PropertyName = "lastModifiedOn")]
+        public DateTime LastModifiedOn
+        {
+            get { return lastModifiedOn; }
+            set { lastModifiedOn = value; }
         }
     }
 }

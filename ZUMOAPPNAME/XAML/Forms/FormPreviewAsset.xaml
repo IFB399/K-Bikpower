@@ -77,7 +77,7 @@
                         <DatePicker x:Name="WarrantyDate_Picker" IsEnabled="False"></DatePicker>
                     </Frame>
 
-                    <Label Text="Equipment Age" FontSize="Title" TextColor="Black"/>
+                    <Label Text="Year Manufactured" FontSize="Title" TextColor="Black"/>
                     <Frame CornerRadius="10" BorderColor="Black" HasShadow="True" >
                         <Label x:Name="Equipement_age_label" TextColor="Black" />
                     </Frame>

@@ -86,14 +86,14 @@ namespace K_Bikpower
             {
                 regionName = Region_Picker.SelectedItem.ToString();
             }
-
+            /*
             //WORK ORDER NUMBER
             int workOrderNumber = -1; //will have to change later, maybe store work order number as a string in the database
             if (String.IsNullOrEmpty(Work_OrderNo_Entry.Text) == false)
             {
                 workOrderNumber = Int32.Parse(Work_OrderNo_Entry.Text); //will break if an int is not given
             }
-
+            */
             //SAVE NEW FORM
             if (update == false) //used to be if decommissionForm == null but didnt work
             {
@@ -104,7 +104,7 @@ namespace K_Bikpower
                     RegionName = regionName,
                     Location = Location_Entry.Text,
                     MovedTo = movedto,
-                    WorkOrderNumber = workOrderNumber
+                    WorkOrderNumber = Work_OrderNo_Entry.Text
                 };
                 return form; //brand new form
             }
@@ -116,7 +116,7 @@ namespace K_Bikpower
                 decommissionForm.RegionName = regionName;
                 decommissionForm.Location = Location_Entry.Text;
                 decommissionForm.MovedTo = movedto;
-                decommissionForm.WorkOrderNumber = workOrderNumber;
+                decommissionForm.WorkOrderNumber = Work_OrderNo_Entry.Text;
                 return null; //don't return a new form, just use the one that already exists
             }
         }
@@ -154,12 +154,14 @@ namespace K_Bikpower
             {
                 Workshop_Button.IsChecked = true;
             }
-
+            /*
             //load work order number
             if (form.WorkOrderNumber != -1)
             {
                 Work_OrderNo_Entry.Text = form.WorkOrderNumber.ToString();
             }
+            */
+            Work_OrderNo_Entry.Text = form.WorkOrderNumber;
         }
 
         async void Submit_Clicked(object sender, EventArgs e)
@@ -175,6 +177,8 @@ namespace K_Bikpower
                 {
                     form.SubmittedBy = user_manager.ReturnName();
                     form.Status = "Submitted";
+                    form.SubmittedOn = DateTime.UtcNow;
+                    form.LastModifiedOn = DateTime.UtcNow;
                     await AddItem(form);
                     if (globalAssets != null)
                     {

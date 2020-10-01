@@ -254,3 +254,4 @@ C:\Users\jacqu\Documents\2018\latest repo 3\ZUMOAPPNAME\obj\Debug\netstandard2.0
 C:\Users\jacqu\Documents\2018\latest repo 3\ZUMOAPPNAME\obj\Debug\netstandard2.0\XAML\Forms\FormPreviewAsset.xaml.g.cs
 C:\Users\Brenton Reddish\Desktop\IFB398\kbik\ZUMOAPPNAME\obj\Debug\netstandard2.0\XAML\Forms\ApproveCommission.xaml.g.cs
 C:\Users\Brenton Reddish\Desktop\IFB398\kbik\ZUMOAPPNAME\obj\Debug\netstandard2.0\XAML\Forms\FormPreviewAsset.xaml.g.cs
+C:\Users\jacqu\Documents\2018\latest repo 3\ZUMOAPPNAME\obj\Debug\netstandard2.0\K_Bikpower.csprojAssemblyReference.cache
