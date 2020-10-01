@@ -2,7 +2,7 @@
 <ViewCell xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="K_Bikpower.CustomViewCell">
-    <Frame x:Name="framecolour" BackgroundColor="White" BorderColor="Gray" Padding="5"  HasShadow="False">
+    <Frame x:Name="framecolour" BackgroundColor="White" BorderColor="#f5f5f5" Padding="5"  HasShadow="False" CornerRadius="0">
         <Grid HeightRequest="50" HorizontalOptions="FillAndExpand" VerticalOptions="Start">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>

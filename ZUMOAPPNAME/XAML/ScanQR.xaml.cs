@@ -8,7 +8,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using ZXing;
 using System.Collections.ObjectModel;
-using Windows.UI.Xaml.Printing;
+//using Windows.UI.Xaml.Printing;
 
 namespace K_Bikpower
 {

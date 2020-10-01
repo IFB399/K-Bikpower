@@ -2559,24 +2559,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\jacqu\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\maxna\\.nuget\\packages\\": {},
+    "D:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jacqu\\Documents\\2018\\latest repo 3\\Droid\\K_Bikpower.Droid.csproj",
+      "projectUniqueName": "D:\\University\\Year_3\\399\\K-Bikpower\\Droid\\K_Bikpower.Droid.csproj",
       "projectName": "K_Bikpower.Droid",
-      "projectPath": "C:\\Users\\jacqu\\Documents\\2018\\latest repo 3\\Droid\\K_Bikpower.Droid.csproj",
-      "packagesPath": "C:\\Users\\jacqu\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jacqu\\Documents\\2018\\latest repo 3\\Droid\\obj\\",
+      "projectPath": "D:\\University\\Year_3\\399\\K-Bikpower\\Droid\\K_Bikpower.Droid.csproj",
+      "packagesPath": "C:\\Users\\maxna\\.nuget\\packages\\",
+      "outputPath": "D:\\University\\Year_3\\399\\K-Bikpower\\Droid\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\"
+        "D:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\jacqu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\maxna\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -2590,8 +2590,8 @@
       "frameworks": {
         "monoandroid90": {
           "projectReferences": {
-            "C:\\Users\\jacqu\\Documents\\2018\\latest repo 3\\ZUMOAPPNAME\\K_Bikpower.csproj": {
-              "projectPath": "C:\\Users\\jacqu\\Documents\\2018\\latest repo 3\\ZUMOAPPNAME\\K_Bikpower.csproj"
+            "D:\\University\\Year_3\\399\\K-Bikpower\\ZUMOAPPNAME\\K_Bikpower.csproj": {
+              "projectPath": "D:\\University\\Year_3\\399\\K-Bikpower\\ZUMOAPPNAME\\K_Bikpower.csproj"
             }
           }
         }

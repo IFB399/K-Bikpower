@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using System.Collections.ObjectModel;
-using Windows.Media.Import;
+//using Windows.Media.Import;
 
 namespace K_Bikpower
 {

@@ -1,13 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="K_Bikpower.AddAsset">
+             x:Class="K_Bikpower.AddAsset"
+             BackgroundColor="#1B252D">
     <ContentPage.Content>
-        <ScrollView Padding="50">
-        <Frame CornerRadius="10" BackgroundColor="AliceBlue" HasShadow ="True">
-            <StackLayout Padding="50">
-
-                <Label Text="Substation Code" FontSize="Title" TextColor="Black"/>
+        <ScrollView Margin="50,10,50,10">
+            <Frame CornerRadius="0" BackgroundColor="#FAFAFA" HasShadow ="True" >
+            <StackLayout>
+                    
+                    <Label Text="Substation Code" FontSize="Title" TextColor="Black"/>
                     <Picker x:Name="Substation_Picker" Title="Select Substation" ItemsSource="{Binding Substation}" ItemDisplayBinding="{Binding Substation_Code}"/>
 
                 <!--drop down-->
@@ -76,7 +77,7 @@
                 <Entry  x:Name="Equipment_Class_Description_Entry" ClearButtonVisibility="WhileEditing" VerticalOptions="EndAndExpand" MaxLength="25" IsSpellCheckEnabled="True" IsTextPredictionEnabled="false"/>
 
 
-                <Button x:Name="AddOrUpdateButton"  Text="Add Asset" Clicked="Add_Asset_Clicked" VerticalOptions="EndAndExpand" CornerRadius="5" BorderColor="Black" BorderWidth="1"/>
+                    <Button x:Name="AddOrUpdateButton"  Text="Add Asset" Clicked="Add_Asset_Clicked" HorizontalOptions="Fill" VerticalOptions="Center" CornerRadius="0" Padding="5" BackgroundColor="#29A8E2" TextColor="White"/>
             </StackLayout>
         </Frame>
         </ScrollView>

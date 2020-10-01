@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jacqu\\Documents\\2018\\latest repo 3\\Droid\\K_Bikpower.Droid.csproj": {}
+    "D:\\University\\Year_3\\399\\K-Bikpower\\Droid\\K_Bikpower.Droid.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jacqu\\Documents\\2018\\latest repo 3\\Droid\\K_Bikpower.Droid.csproj": {
+    "D:\\University\\Year_3\\399\\K-Bikpower\\Droid\\K_Bikpower.Droid.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jacqu\\Documents\\2018\\latest repo 3\\Droid\\K_Bikpower.Droid.csproj",
+        "projectUniqueName": "D:\\University\\Year_3\\399\\K-Bikpower\\Droid\\K_Bikpower.Droid.csproj",
         "projectName": "K_Bikpower.Droid",
-        "projectPath": "C:\\Users\\jacqu\\Documents\\2018\\latest repo 3\\Droid\\K_Bikpower.Droid.csproj",
-        "packagesPath": "C:\\Users\\jacqu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jacqu\\Documents\\2018\\latest repo 3\\Droid\\obj\\",
+        "projectPath": "D:\\University\\Year_3\\399\\K-Bikpower\\Droid\\K_Bikpower.Droid.csproj",
+        "packagesPath": "C:\\Users\\maxna\\.nuget\\packages\\",
+        "outputPath": "D:\\University\\Year_3\\399\\K-Bikpower\\Droid\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
+          "D:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\jacqu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\maxna\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -32,8 +32,8 @@
         "frameworks": {
           "monoandroid90": {
             "projectReferences": {
-              "C:\\Users\\jacqu\\Documents\\2018\\latest repo 3\\ZUMOAPPNAME\\K_Bikpower.csproj": {
-                "projectPath": "C:\\Users\\jacqu\\Documents\\2018\\latest repo 3\\ZUMOAPPNAME\\K_Bikpower.csproj"
+              "D:\\University\\Year_3\\399\\K-Bikpower\\ZUMOAPPNAME\\K_Bikpower.csproj": {
+                "projectPath": "D:\\University\\Year_3\\399\\K-Bikpower\\ZUMOAPPNAME\\K_Bikpower.csproj"
               }
             }
           }
@@ -62,20 +62,21 @@
         }
       }
     },
-    "C:\\Users\\jacqu\\Documents\\2018\\latest repo 3\\ZUMOAPPNAME\\K_Bikpower.csproj": {
+    "D:\\University\\Year_3\\399\\K-Bikpower\\ZUMOAPPNAME\\K_Bikpower.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jacqu\\Documents\\2018\\latest repo 3\\ZUMOAPPNAME\\K_Bikpower.csproj",
+        "projectUniqueName": "D:\\University\\Year_3\\399\\K-Bikpower\\ZUMOAPPNAME\\K_Bikpower.csproj",
         "projectName": "K_Bikpower",
-        "projectPath": "C:\\Users\\jacqu\\Documents\\2018\\latest repo 3\\ZUMOAPPNAME\\K_Bikpower.csproj",
-        "packagesPath": "C:\\Users\\jacqu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jacqu\\Documents\\2018\\latest repo 3\\ZUMOAPPNAME\\obj\\",
+        "projectPath": "D:\\University\\Year_3\\399\\K-Bikpower\\ZUMOAPPNAME\\K_Bikpower.csproj",
+        "packagesPath": "C:\\Users\\maxna\\.nuget\\packages\\",
+        "outputPath": "D:\\University\\Year_3\\399\\K-Bikpower\\ZUMOAPPNAME\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
+          "D:\\Microsoft\\Xamarin\\NuGet\\",
+          "D:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\jacqu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\maxna\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -141,7 +142,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "D:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

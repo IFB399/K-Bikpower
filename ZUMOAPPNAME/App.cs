@@ -1,7 +1,7 @@
 ﻿using Microsoft.WindowsAzure.MobileServices;
 using System;
 using System.Threading.Tasks;
-using Windows.ApplicationModel.Activation;
+//using Windows.ApplicationModel.Activation;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
