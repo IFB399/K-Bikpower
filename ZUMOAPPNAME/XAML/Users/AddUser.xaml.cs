@@ -65,7 +65,7 @@ namespace K_Bikpower
             Lastname.Text = data.LastName;
             Email.Text = data.Email;
             //Username.Text = data.Username;
-            Auth.SelectedItem = data.Permission;
+            Auth.SelectedItem = data.Role;
         }
 
 
@@ -107,7 +107,7 @@ namespace K_Bikpower
                 //Username = Username.Text,
                 Salt = salt,
                 Password = hashedPassword,
-                Permission = Auth.SelectedItem.ToString()
+                Role = Auth.SelectedItem.ToString()
             };
             ObservableCollection<User> u = await user_manager.GetUser(Email.Text);
             User user = u.FirstOrDefault();
@@ -183,7 +183,7 @@ namespace K_Bikpower
                 //Username = Username.Text,
                 Password = hashedPassword,
                 Salt = salt,
-                Permission = Auth.SelectedItem.ToString()
+                Role = Auth.SelectedItem.ToString()
             };
                 await AddItem(todo);
                 await Navigation.PushAsync(new MainPage());

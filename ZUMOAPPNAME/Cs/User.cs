@@ -8,7 +8,7 @@ namespace K_Bikpower
     {
 		string id;
 		string email;
-		string permission;
+		string role;
 		string password;
 		string salt;
 		string firstName;
@@ -28,11 +28,11 @@ namespace K_Bikpower
 			set { email = value; }
 		}
 
-		[JsonProperty(PropertyName = "permission")]
-		public string Permission //must be unique
+		[JsonProperty(PropertyName = "role")]
+		public string Role //must be unique
 		{
-			get { return permission; }
-			set { permission = value; }
+			get { return role; }
+			set { role = value; }
 		}
 		[JsonProperty(PropertyName = "password")]
 		public string Password //must be unique

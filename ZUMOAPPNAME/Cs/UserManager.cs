@@ -123,7 +123,7 @@ namespace K_Bikpower
         public async Task GetUserAuth(string email)
         {
 
-            var items = await todoTable.Where(user => user.Email == email).Select(user => user.Permission).ToEnumerableAsync();
+            var items = await todoTable.Where(user => user.Email == email).Select(user => user.Role).ToEnumerableAsync();
             authenicationstring = items.First();
         }
 

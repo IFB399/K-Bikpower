@@ -7,31 +7,32 @@ namespace K_Bikpower
 	public class Asset
 	{
 		string id;
-		string substationCode;
+		string substationCode; //compulsory
 		string plantNumber;
-		int assetEQNO;
+		string assetEQNO; //INT
         string eqStatus;
-        string serialNumber;
+        string serialNumber; //compulsory
         string modifierCode;
-        int locationEQNO;
+        string locationEQNO; //compulsory, INT
         string componentCode;
-        DateTime date; //warranty date
-        int equipmentAge;
+        DateTime? warrantyDate; 
+        string yearManufactured; //INT
         string stockCode;
         string poNO;
-        int ratedVoltage;
-        int nominalVoltage;
-        string manufacturerName;
-        string manufacturerType; //was left out
+        string ratedVoltage; //compulsory, INT
+        string nominalVoltage; //compulsory, INT
+        string manufacturerName; //compulsory
+        string manufacturerType; //compulsory
         string specificationTitle;
         string specificationNO;
         string specificationItemNO;
-        DateTime lastInstallDate;
-        string equipmentClass;
-        string equipmentClassDescription;
-        string status;
+        DateTime? lastInstallDate; //compulsory
+        string equipmentClass; //compulsory
+        string equipmentClassDescription; //compulsory
+        string status; //compulsory
         string modifiedBy;
         string addedBy;
+        string currentlyIn;
 
         [JsonProperty(PropertyName = "id")]
 		public string Id
@@ -55,7 +56,7 @@ namespace K_Bikpower
 		}
 
 		[JsonProperty(PropertyName = "asset_eq_no")]
-		public int AssetEQNO
+		public string AssetEQNO
 		{
 			get { return assetEQNO; }
 			set { assetEQNO = value; }
@@ -85,7 +86,7 @@ namespace K_Bikpower
 
 
         [JsonProperty(PropertyName = "location_equipment_number")]
-        public int LocationEquipmentNumber
+        public string LocationEquipmentNumber
         {
             get { return locationEQNO; }
             set { locationEQNO = value; }
@@ -100,20 +101,20 @@ namespace K_Bikpower
         }
 
         
-        [JsonProperty(PropertyName = "date")]
-        public DateTime Date
+        [JsonProperty(PropertyName = "warranty_date")]
+        public DateTime? WarrantyDate
         {
-            get { return date; }
-            set { date = value; }
+            get { return warrantyDate; }
+            set { warrantyDate = value; }
         }
         
 
 
-        [JsonProperty(PropertyName = "equipment_age")]
-        public int EquipmentAge
+        [JsonProperty(PropertyName = "year_manufactured")]
+        public string YearManufactured
         {
-            get { return equipmentAge; }
-            set { equipmentAge = value; }
+            get { return yearManufactured; }
+            set { yearManufactured = value; }
         }
 
 
@@ -132,14 +133,14 @@ namespace K_Bikpower
         }
 
         [JsonProperty(PropertyName = "rated_volts")]
-        public int RatedVoltage
+        public string RatedVoltage
         {
             get { return ratedVoltage; }
             set { ratedVoltage = value; }
         }
 
         [JsonProperty(PropertyName = "nominal_volts")]
-        public int NominalVoltage
+        public string NominalVoltage
         {
             get { return nominalVoltage; }
             set { nominalVoltage = value; }
@@ -181,7 +182,7 @@ namespace K_Bikpower
         }
 
         [JsonProperty(PropertyName = "last_install_date")]
-        public DateTime LastInstallDate
+        public DateTime? LastInstallDate
         {
             get { return lastInstallDate; }
             set { lastInstallDate = value; }
@@ -220,6 +221,12 @@ namespace K_Bikpower
         {
             get { return modifiedBy; }
             set { modifiedBy = value; }
+        }
+        [JsonProperty(PropertyName = "currently_in")]
+        public string CurrentlyIn
+        {
+            get { return currentlyIn; }
+            set { currentlyIn = value; }
         }
 
         [Version]
