@@ -4,91 +4,96 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="K_Bikpower.Commission">
-    <ScrollView>
-        <Grid Margin="10">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
+             x:Class="K_Bikpower.Commission"
+             BackgroundColor="#1B252D">
+    <StackLayout Margin="50,50,50,30" >
+        <Frame CornerRadius="0" BackgroundColor="#F5F5F5">
+            <ScrollView>
+                <Grid Margin="10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
                 
-            </Grid.RowDefinitions>
-            <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="Center" Grid.Row="0">
-                <Label Text="Commission Form" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" FontSize="40"/>
-                <Label x:Name="dateLabel" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" FontSize="20"/>
-                <Button x:Name="ManageAssets_Button" Text="Manage Assets" Clicked="ManageAssets_Clicked"/>
-            </StackLayout>
+                    </Grid.RowDefinitions>
+                    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="Center" Grid.Row="0">
+                        <Label Text="Commission Form" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" FontSize="40"/>
+                        <Label x:Name="dateLabel" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" FontSize="20"/>
+                        <Button x:Name="ManageAssets_Button" Text="Manage Assets" Clicked="ManageAssets_Clicked"/>
+                    </StackLayout>
 
-            <StackLayout Grid.Row="1">
-                <Label Text="Date Commissioned:" FontSize="30"/>
-                <DatePicker x:Name="Date_Commissioned" FontSize="30"></DatePicker>
-            </StackLayout>
+                    <StackLayout Grid.Row="1">
+                        <Label Text="Date Commissioned:" FontSize="30"/>
+                        <DatePicker x:Name="Date_Commissioned" FontSize="30"></DatePicker>
+                    </StackLayout>
 
-            <StackLayout Grid.Row="2">
-                <Label Text="New Installation?" FontSize="30"/>
-                <StackLayout Orientation="Horizontal">
-                    <Label Text="Yes" VerticalOptions="Center"/>
-                    <CheckBox x:Name="InstallationYes" VerticalOptions="Center" CheckedChanged="InstallationYes_changed"/>
-                </StackLayout>
-                <StackLayout Orientation="Horizontal">
-                    <Label Text="No" VerticalOptions="Center"/>
-                    <CheckBox x:Name="InstallationNo" VerticalOptions="Center" CheckedChanged="InstallationNo_changed"/>
-                </StackLayout>
-            </StackLayout>
+                    <StackLayout Grid.Row="2">
+                        <Label Text="New Installation?" FontSize="30"/>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Yes" VerticalOptions="Center"/>
+                            <CheckBox x:Name="InstallationYes" VerticalOptions="Center" CheckedChanged="InstallationYes_changed"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="No" VerticalOptions="Center"/>
+                            <CheckBox x:Name="InstallationNo" VerticalOptions="Center" CheckedChanged="InstallationNo_changed"/>
+                        </StackLayout>
+                    </StackLayout>
 
-            <StackLayout Grid.Row="3">
-                <Label Text="Replacement Item?" FontSize="30"/>
-                <StackLayout Orientation="Horizontal">
-                    <Label Text="Yes" VerticalOptions="Center"/>
-                    <CheckBox x:Name="ReplacementYes" VerticalOptions="Center" CheckedChanged="ReplacementYes_changed"/>
-                </StackLayout>
-                <StackLayout Orientation="Horizontal">
-                    <Label Text="No" VerticalOptions="Center"/>
-                    <CheckBox x:Name="ReplacementNo" VerticalOptions="Center" CheckedChanged="ReplacementNo_changed"/>
-                </StackLayout>
-            </StackLayout>
+                    <StackLayout Grid.Row="3">
+                        <Label Text="Replacement Item?" FontSize="30"/>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Yes" VerticalOptions="Center"/>
+                            <CheckBox x:Name="ReplacementYes" VerticalOptions="Center" CheckedChanged="ReplacementYes_changed"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="No" VerticalOptions="Center"/>
+                            <CheckBox x:Name="ReplacementNo" VerticalOptions="Center" CheckedChanged="ReplacementNo_changed"/>
+                        </StackLayout>
+                    </StackLayout>
 
-            <StackLayout Grid.Row="4">
-                <Label Text="Region Name:" FontSize="30"/>
-                <Picker x:Name="Region_Picker">
-                    <Picker.ItemsSource>
-                        <x:Array Type="{x:Type x:String}">
-                            <x:String>Metro</x:String>
-                            <x:String>South Country</x:String>
-                            <x:String>North Country</x:String>
-                            <x:String>Pilbara</x:String>
-                            <x:String>Goldfields</x:String>
-                        </x:Array>
-                    </Picker.ItemsSource>
-                </Picker>
-            </StackLayout>
+                    <StackLayout Grid.Row="4">
+                        <Label Text="Region Name:" FontSize="30"/>
+                        <Picker x:Name="Region_Picker">
+                            <Picker.ItemsSource>
+                                <x:Array Type="{x:Type x:String}">
+                                    <x:String>Metro</x:String>
+                                    <x:String>South Country</x:String>
+                                    <x:String>North Country</x:String>
+                                    <x:String>Pilbara</x:String>
+                                    <x:String>Goldfields</x:String>
+                                </x:Array>
+                            </Picker.ItemsSource>
+                        </Picker>
+                    </StackLayout>
 
-            <StackLayout Grid.Row="5">
-                <Label Text="Location Name/Substation/Project No." FontSize="30"/>
-                <Entry x:Name="Location_Entry"/>
-            </StackLayout>
+                    <StackLayout Grid.Row="5">
+                        <Label Text="Location Name/Substation/Project No." FontSize="30"/>
+                        <Entry x:Name="Location_Entry"/>
+                    </StackLayout>
 
-            <StackLayout Grid.Row="6">
-                <Label Text="Commissioned Plant From:" FontSize="30"/>
+                    <StackLayout Grid.Row="6">
+                        <Label Text="Commissioned Plant From:" FontSize="30"/>
                 
-                <RadioButton x:Name="Project_Button" Text="Project" GroupName="MovedFrom"/>
-                <RadioButton x:Name="Spares_Button" Text="Spares" GroupName="MovedFrom"/>
-                <RadioButton x:Name="Workshop_Button" Text="Workshop" GroupName="MovedFrom"/>
-            </StackLayout>
+                        <RadioButton x:Name="Project_Button" Text="Project" GroupName="MovedFrom"/>
+                        <RadioButton x:Name="Spares_Button" Text="Spares" GroupName="MovedFrom"/>
+                        <RadioButton x:Name="Workshop_Button" Text="Workshop" GroupName="MovedFrom"/>
+                    </StackLayout>
 
-            <StackLayout Grid.Row="7">
-                <Label Text="Work Order No." FontSize="30"/>
-                <Entry x:Name="Work_OrderNo_Entry"/>
-            </StackLayout>
+                    <StackLayout Grid.Row="7">
+                        <Label Text="Work Order No." FontSize="30"/>
+                        <Entry x:Name="Work_OrderNo_Entry"/>
+                    </StackLayout>
 
-            <Button x:Name="SubmitButton" Grid.Row="8" Text="Submit" Clicked="Submit_Clicked" WidthRequest="100" HeightRequest="50" HorizontalOptions="End" VerticalOptions="Center"/>
-        </Grid>
-    </ScrollView>
+                    <Button x:Name="SubmitButton" Grid.Row="8" FontSize="Large" Text="Submit" Clicked="Submit_Clicked" TextColor="White" BackgroundColor="#29A8E2" HorizontalOptions="Center" VerticalOptions="Center"/>
+                </Grid>
+            </ScrollView>
+        </Frame>
+    </StackLayout>
 </ContentPage>
 

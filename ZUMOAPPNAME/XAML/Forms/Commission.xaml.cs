@@ -203,9 +203,39 @@ namespace K_Bikpower
         }
         async void Submit_Clicked(object sender, EventArgs e)
         {
-            if (globalAssets.Count() == 0 || globalAssets == null)
+            //VALIDATE INPUTS
+            int intValue;
+            bool condition1 = false;
+            bool condition2 = false;
+            bool condition3 = false; //fill all necessary fields
+            if (globalAssets.Count() == 0 || globalAssets == null) //must have at least one asset
             {
-                await DisplayAlert("Cannot Submit Form", "Please add at least one asset in the manage assets page", "Close");
+                condition1 = true;
+            }
+            if (!int.TryParse(Work_OrderNo_Entry.Text, out intValue)) //work order number must be an int
+            {
+                condition2 = true;
+            }
+            if ((!Project_Button.IsChecked && !Spares_Button.IsChecked && !Workshop_Button.IsChecked)
+                || string.IsNullOrEmpty(Location_Entry.Text) || (!InstallationYes.IsChecked && !InstallationNo.IsChecked)
+                || (!ReplacementNo.IsChecked && !ReplacementYes.IsChecked))
+            {
+                condition3 = true;
+            }
+            if (condition1 || condition2 || condition3)
+            {
+                if (condition1)
+                {
+                    await DisplayAlert("Cannot Submit Form", "Please add at least one asset in the manage assets page", "Close");
+                }
+                else if (condition3)
+                {
+                    await DisplayAlert("Error", "Please fill all required fields", "Close");
+                }
+                else
+                {
+                    await DisplayAlert("Error", "Please enter a valid work order number", "Close");
+                }
             }
             else
             {

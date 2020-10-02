@@ -4,69 +4,73 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="K_Bikpower.Decommission">
-    <ScrollView>
-        <Grid Margin="10">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-            </Grid.RowDefinitions>
-            <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="Center" Grid.Row="0">
-                <Label Text="Decommission Form" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" FontSize="40"/>
-                <Label x:Name="dateLabel" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" FontSize="20"/>
-                <Button x:Name="ManageAssets_Button" Text="Manage Assets" Clicked="ManageAssets_Clicked"/>
-            </StackLayout>
+             x:Class="K_Bikpower.Decommission"
+             BackgroundColor="#1B252D">
+    <StackLayout Margin="50,50,50,30">
+        <Label Text="Decommission Form" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" FontSize="40" TextColor="White"/>
+        <Frame CornerRadius="0" BackgroundColor="#F5F5F5">
+        <ScrollView>
+                <Grid Margin="10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="Center" Grid.Row="0">
+                        <Label x:Name="dateLabel" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" FontSize="20"/>
+                        <Button x:Name="ManageAssets_Button" Text="Manage Assets" Clicked="ManageAssets_Clicked"/>
+                    </StackLayout>
 
-            <StackLayout Grid.Row="1">
-                <Label Text="Date De-Commissioned:" FontSize="30"/>
-                <DatePicker x:Name="Date_Decommissioned" FontSize="30"></DatePicker>
-            </StackLayout>
+                    <StackLayout Grid.Row="1">
+                        <Label Text="Date De-Commissioned:" FontSize="30"/>
+                        <DatePicker x:Name="Date_Decommissioned" FontSize="30"></DatePicker>
+                    </StackLayout>
 
-            <StackLayout Grid.Row="2">
-                <Label Text="De-Commissioned Details:" FontSize="30"/>
-                <Entry x:Name="Decommissioned_Details_Entry" FontSize="30"/>
-            </StackLayout>
+                    <StackLayout Grid.Row="2">
+                        <Label Text="De-Commissioned Details:" FontSize="30"/>
+                        <Entry x:Name="Decommissioned_Details_Entry" />
+                    </StackLayout>
 
-            <StackLayout Grid.Row="3">
-                <Label Text="Region Name:" FontSize="30"/>
-                <Picker x:Name="Region_Picker">
-                    <Picker.ItemsSource>
-                        <x:Array Type="{x:Type x:String}">
-                            <x:String>Metro</x:String>
-                            <x:String>South Country</x:String>
-                            <x:String>North Country</x:String>
-                            <x:String>Pilbara</x:String>
-                            <x:String>Goldfields</x:String>
-                        </x:Array>
-                    </Picker.ItemsSource>
-                </Picker>
-            </StackLayout>
+                    <StackLayout Grid.Row="3">
+                        <Label Text="Region Name:" FontSize="30"/>
+                        <Picker x:Name="Region_Picker">
+                            <Picker.ItemsSource>
+                                <x:Array Type="{x:Type x:String}">
+                                    <x:String>Metro</x:String>
+                                    <x:String>South Country</x:String>
+                                    <x:String>North Country</x:String>
+                                    <x:String>Pilbara</x:String>
+                                    <x:String>Goldfields</x:String>
+                                </x:Array>
+                            </Picker.ItemsSource>
+                        </Picker>
+                    </StackLayout>
 
-            <StackLayout Grid.Row="4">
-                <Label Text="Location Name/Substation/Project No." FontSize="30"/>
-                <Entry x:Name="Location_Entry"/>
-            </StackLayout>
+                    <StackLayout Grid.Row="4">
+                        <Label Text="Location Name/Substation/Project No." FontSize="30"/>
+                        <Entry x:Name="Location_Entry"/>
+                    </StackLayout>
 
-            <StackLayout Grid.Row="5">
-                <Label Text="De-Commissioned Plant To:" FontSize="30"/>
-                <RadioButton x:Name="Project_Button" Text="Project" />
-                <RadioButton x:Name="Spares_Button" Text="Spares" />
-                <RadioButton x:Name="Workshop_Button" Text="Workshop" />
-                <RadioButton x:Name="Scrap_Button" Text="Scrap" />
-            </StackLayout>
+                    <StackLayout Grid.Row="5">
+                        <Label Text="De-Commissioned Plant To:" FontSize="30"/>
+                        <RadioButton x:Name="Project_Button" Text="Project" />
+                        <RadioButton x:Name="Spares_Button" Text="Spares" />
+                        <RadioButton x:Name="Workshop_Button" Text="Workshop" />
+                        <RadioButton x:Name="Scrap_Button" Text="Scrap" />
+                    </StackLayout>
 
-            <StackLayout Grid.Row="6">
-                <Label Text="Work Order No." FontSize="30"/>
-                <Entry x:Name="Work_OrderNo_Entry"/>
-            </StackLayout>
-
-            <Button x:Name="SubmitButton" Grid.Row="7" Text="Submit" Clicked="Submit_Clicked" WidthRequest="100" HeightRequest="50" HorizontalOptions="End" VerticalOptions="Center"/>
-        </Grid>
-    </ScrollView>
+                    <StackLayout Grid.Row="6">
+                        <Label Text="Work Order No." FontSize="30"/>
+                        <Entry x:Name="Work_OrderNo_Entry"/>
+                    </StackLayout>
+                    <Button x:Name="SubmitButton" Grid.Row="7" FontSize="Large" Text="Submit" Clicked="Submit_Clicked" TextColor="White" BackgroundColor="#29A8E2" HorizontalOptions="Center" VerticalOptions="Center"/>
+                </Grid>
+            </ScrollView>
+        </Frame>
+    </StackLayout>
 </ContentPage>

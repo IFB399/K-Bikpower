@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="K_Bikpower.ViewDecommissionForms"
-             BackgroundColor="#63d9ff">
+             BackgroundColor="#1B252D">
     <ScrollView>
         <StackLayout>
             <Label Text="Decommission Forms" FontSize="Large" HorizontalOptions="Center"/>

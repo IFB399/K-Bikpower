@@ -19,7 +19,7 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
     <LayoutDir>D:\University\Year_3\399\K-Bikpower\UWP\bin\x86\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>EDB6F2760089A094CED890E6C114959F406EBD800F029189988749B31A908CB1</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>4085BA9472212CB0DE3C62FF845CE32C3CCAEEC5676451EDD34043A4651CE562</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>43e3c925-1cf2-4e0e-92ff-74d3a13fcfa3_1.2.0.0_x86__g0he8h6n1r948</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>43e3c925-1cf2-4e0e-92ff-74d3a13fcfa3_g0he8h6n1r948!App</RegisteredUserModeAppID>
     <RegisteredPackageID>43e3c925-1cf2-4e0e-92ff-74d3a13fcfa3</RegisteredPackageID>
@@ -30,13 +30,13 @@
     <AppXManifest Include="D:\University\Year_3\399\K-Bikpower\UWP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-10-02T13:03:05.268</Modified>
+      <Modified>2020-10-02T08:11:39.611</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\University\Year_3\399\K-Bikpower\UWP\bin\x86\Debug\UWP.exe">
       <PackagePath>entrypoint\UWP.exe</PackagePath>
-      <Modified>2020-10-02T13:02:31.373</Modified>
+      <Modified>2020-10-02T08:10:47.758</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\maxna\.nuget\packages\microsoft.azure.mobile.client\4.1.2\lib\uap10.0\Microsoft.Azure.Mobile.Client.dll">
       <PackagePath>Microsoft.Azure.Mobile.Client.dll</PackagePath>
@@ -120,7 +120,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\University\Year_3\399\K-Bikpower\ZUMOAPPNAME\bin\Debug\netstandard2.0\K_Bikpower.dll">
       <PackagePath>K_Bikpower.dll</PackagePath>
-      <Modified>2020-10-02T13:00:43.108</Modified>
+      <Modified>2020-10-02T08:10:45.766</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Program Files %28x86%29\Microsoft Visual Studio\2019\Community\Common7\IDE\ReferenceAssemblies\Microsoft\Framework\Xamarin.iOS\v1.0\Facades\System.Drawing.Common.dll">
       <PackagePath>System.Drawing.Common.dll</PackagePath>
@@ -406,11 +406,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\University\Year_3\399\K-Bikpower\UWP\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2020-10-02T13:03:03.490</Modified>
+      <Modified>2020-10-02T08:11:37.508</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\University\Year_3\399\K-Bikpower\UWP\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2020-10-02T13:03:03.490</Modified>
+      <Modified>2020-10-02T08:11:37.508</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.18362.0\\redist\Debug\x86\ucrtbased.dll">
       <PackagePath>ucrtbased.dll</PackagePath>
@@ -426,11 +426,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\University\Year_3\399\K-Bikpower\UWP\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2020-10-02T13:00:53.075</Modified>
+      <Modified>2020-10-02T08:11:38.584</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\University\Year_3\399\K-Bikpower\UWP\bin\x86\Debug\Core\UWP.exe">
       <PackagePath>UWP.exe</PackagePath>
-      <Modified>2020-10-02T13:03:05.262</Modified>
+      <Modified>2020-10-02T08:11:39.606</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

@@ -29,6 +29,8 @@ namespace K_Bikpower
             decommission_manager = DecommissionManager.DefaultManager;
             user_manager = UserManager.DefaultManager;
 
+            //Debug.Text = user_manager.Authentication();
+
             decommission_form = submittedForm;
             if (assets != null)
             {
@@ -92,38 +94,58 @@ namespace K_Bikpower
 
         async void Approve_Clicked(object sender, EventArgs e)
         {
-            bool answer = await DisplayAlert("Confirm Approval", "Approve this form?", "Yes", "No");
-            if (answer == true)
+            string role = user_manager.Authentication();
+            if (role == "Chief Operating Officer" || role == "Regional Maintenance" || role == "Asset Strategy Manager"
+                || role == "Executive Manager Projects" || role == "Major Capital Projects Manager")
             {
-                //decommission_form.Status = "Approved by " + user_manager.ReturnUser();
-                decommission_form.ApprovedBy = user_manager.ReturnName();
-                decommission_form.Status = "Approved";
-                await UpdateForm(decommission_form);
-                //update asset form links?
-                await Navigation.PushAsync(new ViewDecommissionForms());
-                //change status of assets (only happends after approval)
-                foreach (Asset a in globalAssets)
+                bool answer = await DisplayAlert("Confirm Approval", "Approve this form?", "Yes", "No");
+                if (answer == true)
                 {
-                    a.Status = "Decommissioned";
-                    await UpdateAsset(a);
+                    //decommission_form.Status = "Approved by " + user_manager.ReturnUser();
+                    decommission_form.ApprovedBy = user_manager.ReturnName();
+                    decommission_form.Status = "Approved";
+                    await UpdateForm(decommission_form);
+                    //update asset form links?
+                    await Navigation.PushAsync(new ViewDecommissionForms());
+                    //change status of assets (only happends after approval)
+                    foreach (Asset a in globalAssets)
+                    {
+                        a.Status = "Decommissioned";
+                        await UpdateAsset(a);
+                    }
                 }
             }
+            else
+            {
+                await DisplayAlert("Error", "You do not have permission to approve this form", "Close");
+            }
+            
 
         }
         async void Reject_Clicked(object sender, EventArgs e)
         {
-            bool answer = await DisplayAlert("Confirm Rejection", "Reject this form?", "Yes", "No");
-            if (answer == true)
+            string role = user_manager.Authentication();
+            if (role == "Chief Operating Officer" || role == "Regional Maintenance" || role == "Asset Strategy Manager"
+                || role == "Executive Manager Projects" || role == "Major Capital Projects Manager")
             {
-                decommission_form.RejectedBy = user_manager.ReturnName();
-                decommission_form.Status = "Rejected";
-                await UpdateForm(decommission_form);
-                await Navigation.PushAsync(new ViewDecommissionForms());
+                bool answer = await DisplayAlert("Confirm Rejection", "Reject this form?", "Yes", "No");
+                if (answer == true)
+                {
+                    decommission_form.RejectedBy = user_manager.ReturnName();
+                    decommission_form.Status = "Rejected";
+                    await UpdateForm(decommission_form);
+                    await Navigation.PushAsync(new ViewDecommissionForms());
+                }
+            }
+            else
+            {
+                await DisplayAlert("Error", "You do not have permission to reject this form", "Close");
             }
         }
         async void Edit_Clicked(object sender, EventArgs e)
         {
             //SHOULD ONLY BE POSSIBLE IF NOT APPROVED
+            //can only be done by person who submitted or someone who is able to approve/reject?
             await Navigation.PushAsync(new Decommission(decommission_form, globalAssets));
         }
         async void Exit_Clicked(object sender, EventArgs e)
