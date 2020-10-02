@@ -21,7 +21,7 @@
                         <RowDefinition Height="*" />
                         <RowDefinition Height="*" />
                         <RowDefinition Height="*" />
-                    </Grid.RowDefinitions>
+                    </Grid.RowDefinitions> 
 
                     <BoxView x:Name="BoxView"  Grid.Row="1" Color="#29A8E2" CornerRadius="0"></BoxView>
                     <Expander  x:Name="AssetExpander" Grid.Row="1" HorizontalOptions="Center">
