@@ -255,3 +255,39 @@ C:\Users\jacqu\Documents\2018\latest repo 3\ZUMOAPPNAME\obj\Debug\netstandard2.0
 C:\Users\Brenton Reddish\Desktop\IFB398\kbik\ZUMOAPPNAME\obj\Debug\netstandard2.0\XAML\Forms\ApproveCommission.xaml.g.cs
 C:\Users\Brenton Reddish\Desktop\IFB398\kbik\ZUMOAPPNAME\obj\Debug\netstandard2.0\XAML\Forms\FormPreviewAsset.xaml.g.cs
 C:\Users\jacqu\Documents\2018\latest repo 3\ZUMOAPPNAME\obj\Debug\netstandard2.0\K_Bikpower.csprojAssemblyReference.cache
+D:\University\Year_3\399\K-Bikpower\ZUMOAPPNAME\bin\Debug\netstandard2.0\K_Bikpower.deps.json
+D:\University\Year_3\399\K-Bikpower\ZUMOAPPNAME\bin\Debug\netstandard2.0\K_Bikpower.dll
+D:\University\Year_3\399\K-Bikpower\ZUMOAPPNAME\bin\Debug\netstandard2.0\K_Bikpower.pdb
+D:\University\Year_3\399\K-Bikpower\ZUMOAPPNAME\bin\Debug\netstandard2.0\System.Drawing.Common.dll
+D:\University\Year_3\399\K-Bikpower\ZUMOAPPNAME\obj\Debug\netstandard2.0\K_Bikpower.csprojAssemblyReference.cache
+D:\University\Year_3\399\K-Bikpower\ZUMOAPPNAME\obj\Debug\netstandard2.0\MasterPage.xaml.g.cs
+D:\University\Year_3\399\K-Bikpower\ZUMOAPPNAME\obj\Debug\netstandard2.0\XAML\Assets\AddAsset.xaml.g.cs
+D:\University\Year_3\399\K-Bikpower\ZUMOAPPNAME\obj\Debug\netstandard2.0\XAML\Assets\AssetList.xaml.g.cs
+D:\University\Year_3\399\K-Bikpower\ZUMOAPPNAME\obj\Debug\netstandard2.0\XAML\Assets\CustomViewCell.xaml.g.cs
+D:\University\Year_3\399\K-Bikpower\ZUMOAPPNAME\obj\Debug\netstandard2.0\XAML\Assets\Preview_Asset.xaml.g.cs
+D:\University\Year_3\399\K-Bikpower\ZUMOAPPNAME\obj\Debug\netstandard2.0\XAML\Forms\ApproveCommission.xaml.g.cs
+D:\University\Year_3\399\K-Bikpower\ZUMOAPPNAME\obj\Debug\netstandard2.0\XAML\Forms\ApproveDecommission.xaml.g.cs
+D:\University\Year_3\399\K-Bikpower\ZUMOAPPNAME\obj\Debug\netstandard2.0\XAML\Forms\Commission.xaml.g.cs
+D:\University\Year_3\399\K-Bikpower\ZUMOAPPNAME\obj\Debug\netstandard2.0\XAML\Forms\Decommission.xaml.g.cs
+D:\University\Year_3\399\K-Bikpower\ZUMOAPPNAME\obj\Debug\netstandard2.0\XAML\Forms\Documents.xaml.g.cs
+D:\University\Year_3\399\K-Bikpower\ZUMOAPPNAME\obj\Debug\netstandard2.0\XAML\Forms\FormPreviewAsset.xaml.g.cs
+D:\University\Year_3\399\K-Bikpower\ZUMOAPPNAME\obj\Debug\netstandard2.0\XAML\Forms\GeneralDocuments.xaml.g.cs
+D:\University\Year_3\399\K-Bikpower\ZUMOAPPNAME\obj\Debug\netstandard2.0\XAML\Forms\ManageFormAssets.xaml.g.cs
+D:\University\Year_3\399\K-Bikpower\ZUMOAPPNAME\obj\Debug\netstandard2.0\XAML\Forms\ViewCommissionForms.xaml.g.cs
+D:\University\Year_3\399\K-Bikpower\ZUMOAPPNAME\obj\Debug\netstandard2.0\XAML\Forms\ViewDecommissionForms.xaml.g.cs
+D:\University\Year_3\399\K-Bikpower\ZUMOAPPNAME\obj\Debug\netstandard2.0\XAML\Login.xaml.g.cs
+D:\University\Year_3\399\K-Bikpower\ZUMOAPPNAME\obj\Debug\netstandard2.0\XAML\main.xaml.g.cs
+D:\University\Year_3\399\K-Bikpower\ZUMOAPPNAME\obj\Debug\netstandard2.0\XAML\MainPage.xaml.g.cs
+D:\University\Year_3\399\K-Bikpower\ZUMOAPPNAME\obj\Debug\netstandard2.0\XAML\ScanQR.xaml.g.cs
+D:\University\Year_3\399\K-Bikpower\ZUMOAPPNAME\obj\Debug\netstandard2.0\XAML\Substations\Add_Sub.xaml.g.cs
+D:\University\Year_3\399\K-Bikpower\ZUMOAPPNAME\obj\Debug\netstandard2.0\XAML\Substations\ViewSubstations.xaml.g.cs
+D:\University\Year_3\399\K-Bikpower\ZUMOAPPNAME\obj\Debug\netstandard2.0\XAML\Users\AddUser.xaml.g.cs
+D:\University\Year_3\399\K-Bikpower\ZUMOAPPNAME\obj\Debug\netstandard2.0\XAML\Users\PreivewUser.xaml.g.cs
+D:\University\Year_3\399\K-Bikpower\ZUMOAPPNAME\obj\Debug\netstandard2.0\XAML\Users\UsersPage.xaml.g.cs
+D:\University\Year_3\399\K-Bikpower\ZUMOAPPNAME\obj\Debug\netstandard2.0\K_Bikpower.AssemblyInfoInputs.cache
+D:\University\Year_3\399\K-Bikpower\ZUMOAPPNAME\obj\Debug\netstandard2.0\K_Bikpower.AssemblyInfo.cs
+D:\University\Year_3\399\K-Bikpower\ZUMOAPPNAME\obj\Debug\netstandard2.0\K_Bikpower.csproj.CoreCompileInputs.cache
+D:\University\Year_3\399\K-Bikpower\ZUMOAPPNAME\obj\Debug\netstandard2.0\XamlC.stamp
+D:\University\Year_3\399\K-Bikpower\ZUMOAPPNAME\obj\Debug\netstandard2.0\K_Bikpower.csproj.CopyComplete
+D:\University\Year_3\399\K-Bikpower\ZUMOAPPNAME\obj\Debug\netstandard2.0\K_Bikpower.dll
+D:\University\Year_3\399\K-Bikpower\ZUMOAPPNAME\obj\Debug\netstandard2.0\K_Bikpower.pdb

@@ -748,6 +748,5 @@ D:\University\Year_3\399\K-Bikpower\UWP\obj\x86\Debug\ProjectArchitectures.txt
 D:\University\Year_3\399\K-Bikpower\UWP\obj\x86\Debug\.winmd_cache\$Microsoft.Graphics.Canvas.winmd_636160355180000000.json
 D:\University\Year_3\399\K-Bikpower\UWP\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_636884950160000000.json
 D:\University\Year_3\399\K-Bikpower\UWP\bin\x86\Debug\Core\AppxManifest.xml
-D:\University\Year_3\399\K-Bikpower\UWP\bin\x86\Debug\Core\UWPShim.exe
 D:\University\Year_3\399\K-Bikpower\UWP\bin\x86\Debug\K_Bikpower.UWP.build.appxrecipe
 D:\University\Year_3\399\K-Bikpower\UWP\bin\x86\Debug\Core\UWP.exe

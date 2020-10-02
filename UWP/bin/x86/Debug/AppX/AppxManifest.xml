@@ -33,6 +33,9 @@
           <uap:Rotation Preference="landscape" />
         </uap:InitialRotationPreference>
       </uap:VisualElements>
+      <!--<uap:ApplicationContentUriRules>
+        <uap:Rule Type="include" Match="" WindowsRuntimeAccess="none" /> 
+      </uap:ApplicationContentUriRules> -->
       <Extensions>
         <uap:Extension Category="windows.protocol">
           <uap:Protocol Name="k-bikpower">
