@@ -22,8 +22,28 @@
             <Label x:Name="Authlabel" Text="Authorisation" FontSize="Title" TextColor="Black"/>
             <Picker x:Name="Auth" SelectedIndex="{Binding Authenication}" HorizontalOptions="FillAndExpand">
                 <Picker.Items>
-                    <x:String>User</x:String>
                     <x:String>Administrator</x:String>
+                    <x:String>Asset Strategy Engineer</x:String>
+                    <x:String>Asset Strategy Manager</x:String>
+                    <x:String>Brownfield Projects</x:String>
+                    <x:String>CEO</x:String>
+                    <x:String>Chief Operating Officer</x:String>
+                    <x:String>Control Centre</x:String>
+                    <x:String>Engineering and Design</x:String>
+                    <x:String>Executive Manager Asset Management</x:String>
+                    <x:String>Executive Manager Projects</x:String>
+                    <x:String>Field Inspectors</x:String>
+                    <x:String>Greenfield Projects</x:String>
+                    <x:String>Maintenance Teams</x:String>
+                    <x:String>Major Capital Projects Manager</x:String>
+                    <x:String>Minor Projects</x:String>
+                    <x:String>Network Planning</x:String>
+                    <x:String>Project Manager</x:String>
+                    <x:String>Regional Maintenance</x:String>
+                    <x:String>Schedulers</x:String>
+                    <x:String>Standards Group</x:String>
+                    <x:String>User</x:String>
+                    <x:String>Works Planning</x:String>
                 </Picker.Items>
             </Picker>
 

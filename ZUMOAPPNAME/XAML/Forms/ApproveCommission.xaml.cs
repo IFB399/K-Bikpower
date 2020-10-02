@@ -88,32 +88,50 @@ namespace K_Bikpower
 
         async void Approve_Clicked(object sender, EventArgs e)
         {
-            bool answer = await DisplayAlert("Confirm Approval", "Approve this form?", "Yes", "No");
-            if (answer == true)
+            string role = user_manager.Authentication();
+            if (role == "Chief Operating Officer" || role == "Regional Maintenance" || role == "Asset Strategy Manager"
+                || role == "Executive Manager Projects" || role == "Major Capital Projects Manager")
             {
-                //decommission_form.Status = "Approved by " + user_manager.ReturnUser();
-                commission_form.ApprovedBy = user_manager.ReturnName();
-                commission_form.Status = "Approved";
-                await UpdateForm(commission_form);
-                //update asset form links?
-                await Navigation.PushAsync(new ViewCommissionForms());
-                //change status of assets (only happends after approval)
-                foreach (Asset a in globalAssets)
+                bool answer = await DisplayAlert("Confirm Approval", "Approve this form?", "Yes", "No");
+                if (answer == true)
                 {
-                    a.Status = "Commissioned";
-                    await UpdateAsset(a);
+                    //decommission_form.Status = "Approved by " + user_manager.ReturnUser();
+                    commission_form.ApprovedBy = user_manager.ReturnName();
+                    commission_form.Status = "Approved";
+                    await UpdateForm(commission_form);
+                    //update asset form links?
+                    await Navigation.PushAsync(new ViewCommissionForms());
+                    //change status of assets (only happends after approval)
+                    foreach (Asset a in globalAssets)
+                    {
+                        a.Status = "Commissioned";
+                        await UpdateAsset(a);
+                    }
                 }
+            }
+            else
+            {
+                await DisplayAlert("Error", "You do not have permission to approve this form", "Close");
             }
         }
         async void Reject_Clicked(object sender, EventArgs e)
         {
-            bool answer = await DisplayAlert("Confirm Rejection", "Reject this form?", "Yes", "No");
-            if (answer == true)
+            string role = user_manager.Authentication();
+            if (role == "Chief Operating Officer" || role == "Regional Maintenance" || role == "Asset Strategy Manager"
+                || role == "Executive Manager Projects" || role == "Major Capital Projects Manager")
             {
-                commission_form.RejectedBy = user_manager.ReturnName();
-                commission_form.Status = "Rejected";
-                await UpdateForm(commission_form);
-                await Navigation.PushAsync(new ViewCommissionForms());
+                bool answer = await DisplayAlert("Confirm Rejection", "Reject this form?", "Yes", "No");
+                if (answer == true)
+                {
+                    commission_form.RejectedBy = user_manager.ReturnName();
+                    commission_form.Status = "Rejected";
+                    await UpdateForm(commission_form);
+                    await Navigation.PushAsync(new ViewCommissionForms());
+                }
+            }
+            else
+            {
+                await DisplayAlert("Error", "You do not have permission to reject this form", "Close");
             }
         }
         async void Edit_Clicked(object sender, EventArgs e)
