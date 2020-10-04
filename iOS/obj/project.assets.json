@@ -322,7 +322,7 @@
           "Microsoft.Azure.Mobile.Client": "4.1.2",
           "Microsoft.Azure.Mobile.Client.SQLiteStore": "4.1.2",
           "Xamarin.Essentials": "1.5.3.2",
-          "Xamarin.Forms": "4.8.0.1364",
+          "Xamarin.Forms": "4.8.0.1269",
           "ZXing.Net.Mobile": "2.4.1",
           "ZXing.Net.Mobile.Forms": "2.4.1"
         },
@@ -655,7 +655,7 @@
           "Microsoft.Azure.Mobile.Client": "4.1.2",
           "Microsoft.Azure.Mobile.Client.SQLiteStore": "4.1.2",
           "Xamarin.Essentials": "1.5.3.2",
-          "Xamarin.Forms": "4.8.0.1364",
+          "Xamarin.Forms": "4.8.0.1269",
           "ZXing.Net.Mobile": "2.4.1",
           "ZXing.Net.Mobile.Forms": "2.4.1"
         },
@@ -988,7 +988,7 @@
           "Microsoft.Azure.Mobile.Client": "4.1.2",
           "Microsoft.Azure.Mobile.Client.SQLiteStore": "4.1.2",
           "Xamarin.Essentials": "1.5.3.2",
-          "Xamarin.Forms": "4.8.0.1364",
+          "Xamarin.Forms": "4.8.0.1269",
           "ZXing.Net.Mobile": "2.4.1",
           "ZXing.Net.Mobile.Forms": "2.4.1"
         },
@@ -1321,7 +1321,7 @@
           "Microsoft.Azure.Mobile.Client": "4.1.2",
           "Microsoft.Azure.Mobile.Client.SQLiteStore": "4.1.2",
           "Xamarin.Essentials": "1.5.3.2",
-          "Xamarin.Forms": "4.8.0.1364",
+          "Xamarin.Forms": "4.8.0.1269",
           "ZXing.Net.Mobile": "2.4.1",
           "ZXing.Net.Mobile.Forms": "2.4.1"
         },
@@ -2087,20 +2087,5 @@
         "#import": []
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1605",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Detected package downgrade: Xamarin.Forms from 4.8.0.1364 to 4.8.0.1269. Reference the package directly from the project to select a different version. \r\n K_Bikpower.iOS -> K_Bikpower -> Xamarin.Forms (>= 4.8.0.1364) \r\n K_Bikpower.iOS -> Xamarin.Forms (>= 4.8.0.1269)",
-      "libraryId": "Xamarin.Forms",
-      "targetGraphs": [
-        "Xamarin.iOS,Version=v1.0",
-        "Xamarin.iOS,Version=v1.0/win",
-        "Xamarin.iOS,Version=v1.0/win-x64",
-        "Xamarin.iOS,Version=v1.0/win-x86"
-      ]
-    }
-  ]
+  }
 }

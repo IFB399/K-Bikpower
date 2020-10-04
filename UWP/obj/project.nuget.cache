@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "QJtyuVHI6J/ZwIHRHnDnHtCE43xLRZJBFXLIb0dKplT2cAYTQTfh0iyHbGJ0RU713IxGL1aAL12rL88MX2SGTw==",
+  "dgSpecHash": "bZnOAxMVapyYkGCU6Q50eSwGGObJmtSWl9cKZfWTB3ljloBZX2keTUMu8KR8mCIwv+UNG9pANGw1hEcG+5UO1g==",
   "success": true,
   "projectFilePath": "D:\\University\\Year_3\\399\\K-Bikpower\\UWP\\K_Bikpower.UWP.csproj",
   "expectedPackageFiles": [
@@ -87,22 +87,5 @@
     "C:\\Users\\maxna\\.nuget\\packages\\zxing.net.mobile\\2.4.1\\zxing.net.mobile.2.4.1.nupkg.sha512",
     "C:\\Users\\maxna\\.nuget\\packages\\zxing.net.mobile.forms\\2.4.1\\zxing.net.mobile.forms.2.4.1.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1605",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Detected package downgrade: Xamarin.Forms from 4.8.0.1364 to 4.8.0.1269. Reference the package directly from the project to select a different version. \r\n K_Bikpower.UWP -> K_Bikpower -> Xamarin.Forms (>= 4.8.0.1364) \r\n K_Bikpower.UWP -> Xamarin.Forms (>= 4.8.0.1269)",
-      "libraryId": "Xamarin.Forms",
-      "targetGraphs": [
-        "UAP,Version=v10.0.16299",
-        "UAP,Version=v10.0.16299/win10-arm",
-        "UAP,Version=v10.0.16299/win10-arm-aot",
-        "UAP,Version=v10.0.16299/win10-x64",
-        "UAP,Version=v10.0.16299/win10-x64-aot",
-        "UAP,Version=v10.0.16299/win10-x86",
-        "UAP,Version=v10.0.16299/win10-x86-aot"
-      ]
-    }
-  ]
+  "logs": []
 }

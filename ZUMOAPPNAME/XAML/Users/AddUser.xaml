@@ -4,58 +4,90 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="K_Bikpower.AddUser">
+             x:Class="K_Bikpower.AddUser"
+             BackgroundColor="#1B252D">
+    
     <ContentPage.Content>
-        <StackLayout>
-            <Label x:Name="Firstnamelabel" Text="Firstname:" FontSize="Title" TextColor="Black"/>
-            <Entry  x:Name="Firstname" ClearButtonVisibility="WhileEditing" VerticalOptions="EndAndExpand" MaxLength="25" IsSpellCheckEnabled="True" IsTextPredictionEnabled="false"/>
+        <StackLayout Margin="50,50,50,30">
+            <Label Text="Users" FontSize="Large" HorizontalOptions="Center" TextColor="White"/>
+            <Frame CornerRadius="0" BackgroundColor="#F5F5F5" HasShadow ="False">
+                <StackLayout>
+                    <Grid RowDefinitions="*"
+                              
+                              ColumnDefinitions="*"
+                              ColumnSpacing="15">
 
-            <Label x:Name="LastnameLabel" Text="Lastname:" FontSize="Title" TextColor="Black"/>
-            <Entry  x:Name="Lastname" ClearButtonVisibility="WhileEditing" VerticalOptions="EndAndExpand" MaxLength="25" IsSpellCheckEnabled="True" IsTextPredictionEnabled="false"/>
+                        <Label x:Name="Firstnamelabel" Text="Firstname:" FontSize="Title" TextColor="Black" Grid.Row="0"/>
+                        <Entry  x:Name="Firstname" ClearButtonVisibility="WhileEditing" VerticalOptions="EndAndExpand" MaxLength="25" IsSpellCheckEnabled="True" IsTextPredictionEnabled="false" Grid.Row="1"/>
 
-            <Label x:Name="Emaillabel" Text="Email:" FontSize="Title" TextColor="Black"/>
-            <Entry  x:Name="Email" ClearButtonVisibility="WhileEditing" VerticalOptions="EndAndExpand" MaxLength="25" IsSpellCheckEnabled="True" IsTextPredictionEnabled="false"/>
+                        <Label x:Name="LastnameLabel" Text="Lastname:" FontSize="Title" TextColor="Black" Grid.Row="2"/>
+                        <Entry  x:Name="Lastname" ClearButtonVisibility="WhileEditing" VerticalOptions="EndAndExpand" MaxLength="25" IsSpellCheckEnabled="True" IsTextPredictionEnabled="false" Grid.Row="3"/>
 
-            <Label x:Name="Temp_PAsswordLabel" Text="Temporary Password" FontSize="Title" TextColor="Black"/>
-            <Entry  x:Name="Temp_PAssword" ClearButtonVisibility="WhileEditing" VerticalOptions="EndAndExpand" MaxLength="25" IsSpellCheckEnabled="True" IsTextPredictionEnabled="false"/>
+                        <Label x:Name="Emaillabel" Text="Email:" FontSize="Title" TextColor="Black" Grid.Row="4"/>
+                        <Entry  x:Name="Email" ClearButtonVisibility="WhileEditing" VerticalOptions="EndAndExpand" MaxLength="25" IsSpellCheckEnabled="True" IsTextPredictionEnabled="false" Grid.Row="5"/>
 
-            <Label x:Name="Authlabel" Text="Authorisation" FontSize="Title" TextColor="Black"/>
-            <Picker x:Name="Auth" SelectedIndex="{Binding Authenication}" HorizontalOptions="FillAndExpand">
-                <Picker.Items>
-                    <x:String>Administrator</x:String>
-                    <x:String>Asset Strategy Engineer</x:String>
-                    <x:String>Asset Strategy Manager</x:String>
-                    <x:String>Brownfield Projects</x:String>
-                    <x:String>CEO</x:String>
-                    <x:String>Chief Operating Officer</x:String>
-                    <x:String>Control Centre</x:String>
-                    <x:String>Engineering and Design</x:String>
-                    <x:String>Executive Manager Asset Management</x:String>
-                    <x:String>Executive Manager Projects</x:String>
-                    <x:String>Field Inspectors</x:String>
-                    <x:String>Greenfield Projects</x:String>
-                    <x:String>Maintenance Teams</x:String>
-                    <x:String>Major Capital Projects Manager</x:String>
-                    <x:String>Minor Projects</x:String>
-                    <x:String>Network Planning</x:String>
-                    <x:String>Project Manager</x:String>
-                    <x:String>Regional Maintenance</x:String>
-                    <x:String>Schedulers</x:String>
-                    <x:String>Standards Group</x:String>
-                    <x:String>User</x:String>
-                    <x:String>Works Planning</x:String>
-                </Picker.Items>
-            </Picker>
+                        <Label x:Name="Temp_PAsswordLabel" Text="Temporary Password" FontSize="Title" TextColor="Black" Grid.Row="6"/>
+                        <Entry  x:Name="Temp_PAssword" ClearButtonVisibility="WhileEditing" VerticalOptions="EndAndExpand" MaxLength="25" IsSpellCheckEnabled="True" IsTextPredictionEnabled="false" Grid.Row="7"/>
 
-            <Button x:Name="AddOrUpdateButton" Clicked="Add_User_Clicked" Text="Add User"/>
+                        <Label x:Name="Authlabel" Text="Authorisation" FontSize="Title" TextColor="Black" Grid.Row="8"/>
+                        <Picker x:Name="Auth" SelectedIndex="{Binding Authenication}" HorizontalOptions="FillAndExpand" Grid.Row="9">
+                            <Picker.Items>
+                                <x:String>Administrator</x:String>
+                                <x:String>Asset Strategy Engineer</x:String>
+                                <x:String>Asset Strategy Manager</x:String>
+                                <x:String>Brownfield Projects</x:String>
+                                <x:String>CEO</x:String>
+                                <x:String>Chief Operating Officer</x:String>
+                                <x:String>Control Centre</x:String>
+                                <x:String>Engineering and Design</x:String>
+                                <x:String>Executive Manager Asset Management</x:String>
+                                <x:String>Executive Manager Projects</x:String>
+                                <x:String>Field Inspectors</x:String>
+                                <x:String>Greenfield Projects</x:String>
+                                <x:String>Maintenance Teams</x:String>
+                                <x:String>Major Capital Projects Manager</x:String>
+                                <x:String>Minor Projects</x:String>
+                                <x:String>Network Planning</x:String>
+                                <x:String>Project Manager</x:String>
+                                <x:String>Regional Maintenance</x:String>
+                                <x:String>Schedulers</x:String>
+                                <x:String>Standards Group</x:String>
+                                <x:String>User</x:String>
+                                <x:String>Works Planning</x:String>
+                            </Picker.Items>
+                        </Picker>
 
-            <Label x:Name ="Oldpass" Text="Enter Old Password" FontSize="Title" TextColor="Black" IsVisible="false"/>
-            <Entry  x:Name="OldPaaassword" ClearButtonVisibility="WhileEditing" VerticalOptions="EndAndExpand" MaxLength="25" IsSpellCheckEnabled="True" IsTextPredictionEnabled="false" IsVisible="false"/>
-            <Button x:Name="Next" Clicked="Next_Clicked"  Text="Next" IsVisible="false"/>
+                        <StackLayout Orientation="Horizontal"  HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="10">
+                            <Grid RowDefinitions="50"
+                              RowSpacing="8"
+                              ColumnDefinitions="150"
+                              ColumnSpacing="8" Grid.Row="17">
+                                <Button x:Name="AddOrUpdateButton" Clicked="Add_User_Clicked" Text="Add User"  TextColor="White" BackgroundColor="#29A8E2"/>
+                            </Grid>
+                        </StackLayout>
 
-            <Label x:Name ="Newpass" Text="Enter Old Password" FontSize="Title" TextColor="Black" IsVisible="false"/>
-            <Entry  x:Name="NewPaaassword" ClearButtonVisibility="WhileEditing" VerticalOptions="EndAndExpand" MaxLength="25" IsSpellCheckEnabled="True" IsTextPredictionEnabled="false" IsVisible="false"/>
-            <Button x:Name="Changepass" Clicked="Changepass_Clicked"  Text="Change Pasword" IsVisible="false"/>
+                                                <Label x:Name ="Oldpass" Text="Enter Old Password" FontSize="Title" TextColor="Black" IsVisible="false" Grid.Row="0"/>
+                        <Entry  x:Name="OldPaaassword" ClearButtonVisibility="WhileEditing" VerticalOptions="EndAndExpand" MaxLength="25" IsSpellCheckEnabled="True" IsTextPredictionEnabled="false" IsVisible="false" Grid.Row="1"/>
+                        <!--<Button x:Name="Next" Clicked="Next_Clicked"  Text="Next" IsVisible="false" Grid.Row="2" TextColor="White" BackgroundColor="#29A8E2"/> -->
+
+                        <Label x:Name ="Newpass" Text="Enter New Password" FontSize="Title" TextColor="Black" IsVisible="false" Grid.Row="0"/>
+                        <Entry  x:Name="NewPaaassword" ClearButtonVisibility="WhileEditing" VerticalOptions="EndAndExpand" MaxLength="25" IsSpellCheckEnabled="True" IsTextPredictionEnabled="false" IsVisible="false" Grid.Row="1"/>
+                        <!--<Button x:Name="Changepass" Clicked="Changepass_Clicked"  Text="Change Pasword" IsVisible="false" Grid.Row="2"  TextColor="White" BackgroundColor="#29A8E2"/>-->
+
+                        <StackLayout Orientation="Horizontal"  HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="2">
+                            <Grid RowDefinitions="50"
+                              RowSpacing="8"
+                              ColumnDefinitions="150"
+                              ColumnSpacing="8" Grid.Row="17">
+                                <Button x:Name="Next" Clicked="Next_Clicked"  Text="Next" IsVisible="false" TextColor="White" BackgroundColor="#29A8E2"/>
+                                <Button x:Name="Changepass" Clicked="Changepass_Clicked"  Text="Change Pasword" IsVisible="false" TextColor="White" BackgroundColor="#29A8E2"/>
+                            </Grid>
+                        </StackLayout>
+
+                        
+                    </Grid>
+                </StackLayout>
+            </Frame>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

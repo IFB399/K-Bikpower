@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "6w0++zU3le6Zu3/RN+7j0Ac9NJcpgaf7B/xMQcw5eu54i6RDIsZjbJiHm3I5Cziez39/v+JX9S1ovqIryz8n/w==",
+  "dgSpecHash": "1jXgAVdVKwZPB+1tbvNYmZNv+ONOHUufbJnLcPmUgztaWNEQ31yAFkk153nRoapjceErdJ+AoqcXUO8n2yE9qg==",
   "success": true,
   "projectFilePath": "D:\\University\\Year_3\\399\\K-Bikpower\\Droid\\K_Bikpower.Droid.csproj",
   "expectedPackageFiles": [
@@ -61,16 +61,5 @@
     "C:\\Users\\maxna\\.nuget\\packages\\zxing.net.mobile\\2.4.1\\zxing.net.mobile.2.4.1.nupkg.sha512",
     "C:\\Users\\maxna\\.nuget\\packages\\zxing.net.mobile.forms\\2.4.1\\zxing.net.mobile.forms.2.4.1.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1605",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Detected package downgrade: Xamarin.Forms from 4.8.0.1364 to 4.8.0.1269. Reference the package directly from the project to select a different version. \r\n K_Bikpower.Droid -> K_Bikpower -> Xamarin.Forms (>= 4.8.0.1364) \r\n K_Bikpower.Droid -> Xamarin.Forms (>= 4.8.0.1269)",
-      "libraryId": "Xamarin.Forms",
-      "targetGraphs": [
-        "MonoAndroid,Version=v9.0"
-      ]
-    }
-  ]
+  "logs": []
 }
