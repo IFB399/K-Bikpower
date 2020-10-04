@@ -3424,7 +3424,6 @@ C:\Users\brent\source\repos\K-Bikpower\Droid\obj\Debug\90\android\src\crc643f469
 C:\Users\brent\source\repos\K-Bikpower\Droid\obj\Debug\90\android\src\crc643f46942d9dd1fff9\DataChangeObserver.java
 C:\Users\brent\source\repos\K-Bikpower\Droid\obj\Debug\90\android\src\crc643f46942d9dd1fff9\DatePickerRenderer.java
 C:\Users\brent\source\repos\K-Bikpower\Droid\obj\Debug\90\android\src\crc643f46942d9dd1fff9\DatePickerRendererBase_1.java
-C:\Users\brent\source\repos\K-Bikpower\Droid\obj\Debug\90\android\src\crc643f46942d9dd1fff9\DragAndDropGestureHandler.java
 C:\Users\brent\source\repos\K-Bikpower\Droid\obj\Debug\90\android\src\crc643f46942d9dd1fff9\EdgeSnapHelper.java
 C:\Users\brent\source\repos\K-Bikpower\Droid\obj\Debug\90\android\src\crc643f46942d9dd1fff9\EditorEditText.java
 C:\Users\brent\source\repos\K-Bikpower\Droid\obj\Debug\90\android\src\crc643f46942d9dd1fff9\EditorRenderer.java
@@ -3460,8 +3459,6 @@ C:\Users\brent\source\repos\K-Bikpower\Droid\obj\Debug\90\android\src\crc643f469
 C:\Users\brent\source\repos\K-Bikpower\Droid\obj\Debug\90\android\src\crc643f46942d9dd1fff9\GenericGlobalLayoutListener.java
 C:\Users\brent\source\repos\K-Bikpower\Droid\obj\Debug\90\android\src\crc643f46942d9dd1fff9\GenericMenuClickListener.java
 C:\Users\brent\source\repos\K-Bikpower\Droid\obj\Debug\90\android\src\crc643f46942d9dd1fff9\GestureManager_TapAndPanGestureDetector.java
-C:\Users\brent\source\repos\K-Bikpower\Droid\obj\Debug\90\android\src\crc643f46942d9dd1fff9\GradientStrokeDrawable.java
-C:\Users\brent\source\repos\K-Bikpower\Droid\obj\Debug\90\android\src\crc643f46942d9dd1fff9\GradientStrokeDrawable_GradientShaderFactory.java
 C:\Users\brent\source\repos\K-Bikpower\Droid\obj\Debug\90\android\src\crc643f46942d9dd1fff9\GridLayoutSpanSizeLookup.java
 C:\Users\brent\source\repos\K-Bikpower\Droid\obj\Debug\90\android\src\crc643f46942d9dd1fff9\GroupableItemsViewAdapter_2.java
 C:\Users\brent\source\repos\K-Bikpower\Droid\obj\Debug\90\android\src\crc643f46942d9dd1fff9\GroupableItemsViewRenderer_3.java

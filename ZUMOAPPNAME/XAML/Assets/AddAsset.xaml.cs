@@ -16,6 +16,8 @@ namespace K_Bikpower
         AssetManager manager;
         UserManager user_manager;
         SubstationManager Subs;
+        DateTime? Warranty = new DateTime(1900, 1, 18);
+        DateTime? NoInstallasset = new DateTime(1900, 1, 18);
         public string Ids;
         bool update = false;
         //var value;
@@ -52,7 +54,7 @@ namespace K_Bikpower
             Modifier_Code_Entry.Text = data.ModifierCode;
             Location_Equipment_Number_Entry.Text = data.LocationEquipmentNumber;
             Component_Code_Entry.Text = data.ComponentCode;
-            //WarrantyDate_Picker.Date = data.WarrantyDate; // change dumb dumb. 
+            WarrantyDate_Picker.Date = (DateTime)data.WarrantyDate; // change dumb dumb. 
             Equipment_Age_Entry.Text = data.YearManufactured;
             Stock_Code_Entry.Text = data.StockCode;
             Purchase_Order_Number_Entry.Text = data.PurchaseOrderNO;
@@ -63,7 +65,7 @@ namespace K_Bikpower
             Specification_Title_Entry.Text = data.SpecificationTitle;
             Specification_Number_Entry.Text = data.SpecificationNO;
             Specification_Item_Number_Entry.Text = data.SpecificationItemNO;
-            //LastInstallDate_Picker.Date = data.LastInstallDate;
+            LastInstallDate_Picker.Date = (DateTime)data.LastInstallDate;
             Equipment_Class_Entry.Text = data.EquipmentClass;
             Equipment_Class_Description_Entry.Text = data.EquipmentClassDescription;
         }
@@ -87,6 +89,16 @@ namespace K_Bikpower
             {
                 selected = Substation_Picker.Items[Substation_Picker.SelectedIndex].ToString();
             }
+            
+            if (Warranty != null)
+            {
+                Warranty = WarrantyDate_Picker.Date.ToLocalTime();
+            }
+
+            if (NoInstallasset != null) 
+            {
+                NoInstallasset = LastInstallDate_Picker.Date.ToLocalTime();
+            }
             //else { value = Substation_Picker.SelectedItem; }
             //DateTime? date = null;
             Asset todo = new Asset
@@ -100,7 +112,7 @@ namespace K_Bikpower
                 ModifierCode = Modifier_Code_Entry.Text,
                 LocationEquipmentNumber = Location_Equipment_Number_Entry.Text,
                 ComponentCode = Component_Code_Entry.Text,
-                WarrantyDate = WarrantyDate_Picker.Date.ToLocalTime(), // change dumb dumb. 
+                WarrantyDate = Warranty,
                 YearManufactured = Equipment_Age_Entry.Text,
                 StockCode = Stock_Code_Entry.Text,
                 PurchaseOrderNO = Purchase_Order_Number_Entry.Text,
@@ -111,7 +123,7 @@ namespace K_Bikpower
                 SpecificationTitle = Specification_Title_Entry.Text,
                 SpecificationNO = Specification_Number_Entry.Text,
                 SpecificationItemNO = Specification_Item_Number_Entry.Text,
-                LastInstallDate = LastInstallDate_Picker.Date.ToLocalTime(),
+                LastInstallDate = NoInstallasset,
                 EquipmentClass = Equipment_Class_Entry.Text,
                 EquipmentClassDescription = Equipment_Class_Description_Entry.Text,
             };
@@ -131,5 +143,15 @@ namespace K_Bikpower
             await Navigation.PushAsync(new AssetList());
         }
 
+        private void NoWarranty_CheckedChanged(object sender, CheckedChangedEventArgs e)
+        {
+            Warranty = null;
+            
+        }
+
+        private void NoInstall_CheckedChanged(object sender, CheckedChangedEventArgs e)
+        {
+            NoInstallasset = null;
+        }
     }
 }

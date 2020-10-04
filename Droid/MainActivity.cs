@@ -34,6 +34,7 @@ namespace K_Bikpower.Droid
 		{
 			base.OnCreate (bundle);
 			Registrar.Registered.Register(typeof(Xamarin.Forms.CheckBox), typeof(Xamarin.Forms.Platform.Android.CheckBoxRenderer));
+			Registrar.Registered.Register(typeof(Xamarin.Forms.RadioButton), typeof(Xamarin.Forms.Platform.Android.RadioButtonRenderer));
 			// Initialize Azure Mobile Apps
 			CurrentPlatform.Init();
 			Xamarin.Essentials.Platform.Init(Application);

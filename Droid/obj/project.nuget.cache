@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "12MyD2cb9YAQs79jeZ9pR44yp8OMOalQn8ZnfP9G3OzmncmzJVDSxyYx1z2Cxfl8c4t81riYz0qt9M/Hv8CSrg==",
+  "dgSpecHash": "n2aikmW9/+eBS4fC9qR2SKSJTTGSld7PncEJhNg/i14+t28OtRy2wOEhVfcg+bc4pAHA3StdIcFcOXiIFn+ogQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\brent\\source\\repos\\K-Bikpower\\Droid\\K_Bikpower.Droid.csproj",
   "expectedPackageFiles": [
@@ -57,20 +57,9 @@
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.android.support.versionedparcelable\\28.0.0.3\\xamarin.android.support.versionedparcelable.28.0.0.3.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.android.support.viewpager\\28.0.0.3\\xamarin.android.support.viewpager.28.0.0.3.nupkg.sha512",
     "C:\\Users\\brent\\.nuget\\packages\\xamarin.essentials\\1.5.3.2\\xamarin.essentials.1.5.3.2.nupkg.sha512",
-    "C:\\Users\\brent\\.nuget\\packages\\xamarin.forms\\4.8.0.1269\\xamarin.forms.4.8.0.1269.nupkg.sha512",
+    "C:\\Users\\brent\\.nuget\\packages\\xamarin.forms\\4.7.0.1351\\xamarin.forms.4.7.0.1351.nupkg.sha512",
     "C:\\Users\\brent\\.nuget\\packages\\zxing.net.mobile\\2.4.1\\zxing.net.mobile.2.4.1.nupkg.sha512",
     "C:\\Users\\brent\\.nuget\\packages\\zxing.net.mobile.forms\\2.4.1\\zxing.net.mobile.forms.2.4.1.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1605",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Detected package downgrade: Xamarin.Forms from 4.8.0.1451 to 4.8.0.1269. Reference the package directly from the project to select a different version. \r\n K_Bikpower.Droid -> K_Bikpower -> Xamarin.Forms (>= 4.8.0.1451) \r\n K_Bikpower.Droid -> Xamarin.Forms (>= 4.8.0.1269)",
-      "libraryId": "Xamarin.Forms",
-      "targetGraphs": [
-        "MonoAndroid,Version=v9.0"
-      ]
-    }
-  ]
+  "logs": []
 }

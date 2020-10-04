@@ -294,3 +294,4 @@ C:\Users\brent\source\repos\K-Bikpower\ZUMOAPPNAME\obj\Debug\netstandard2.0\Xaml
 C:\Users\brent\source\repos\K-Bikpower\ZUMOAPPNAME\obj\Debug\netstandard2.0\K_Bikpower.csproj.CopyComplete
 C:\Users\brent\source\repos\K-Bikpower\ZUMOAPPNAME\obj\Debug\netstandard2.0\K_Bikpower.dll
 C:\Users\brent\source\repos\K-Bikpower\ZUMOAPPNAME\obj\Debug\netstandard2.0\K_Bikpower.pdb
+C:\Users\brent\source\repos\K-Bikpower\ZUMOAPPNAME\obj\Debug\netstandard2.0\K_Bikpower.csprojAssemblyReference.cache

@@ -27,7 +27,6 @@ paths;C:\Users\brent\source\repos\K-Bikpower\Droid\obj\Debug\90\lp\46\jl\res\xml
 resources;C:\Users\brent\source\repos\K-Bikpower\Droid\obj\Debug\90\lp\2\jl\res\values\strings.xml
 resources;C:\Users\brent\source\repos\K-Bikpower\Droid\obj\Debug\90\lp\3\jl\res\values\strings.xml
 resources;C:\Users\brent\source\repos\K-Bikpower\Droid\obj\Debug\90\lp\47\jl\res\values\attrs.xml
-resources;C:\Users\brent\source\repos\K-Bikpower\Droid\obj\Debug\90\lp\47\jl\res\values\strings.xml
 resources;C:\Users\brent\source\repos\K-Bikpower\Droid\obj\Debug\90\lp\47\jl\res\values\styles.xml
 resources;C:\Users\brent\source\repos\K-Bikpower\Droid\obj\Debug\90\lp\49\jl\res\values\strings.xml
 resources;obj\Debug\90\res\values\style.xml
@@ -39,7 +38,6 @@ set;C:\Users\brent\source\repos\K-Bikpower\Droid\obj\Debug\90\lp\47\jl\res\anim\
 set;C:\Users\brent\source\repos\K-Bikpower\Droid\obj\Debug\90\lp\47\jl\res\anim\exittoright.xml
 string;C:\Users\brent\source\repos\K-Bikpower\Droid\obj\Debug\90\lp\2\jl\res\values\strings.xml
 string;C:\Users\brent\source\repos\K-Bikpower\Droid\obj\Debug\90\lp\3\jl\res\values\strings.xml
-string;C:\Users\brent\source\repos\K-Bikpower\Droid\obj\Debug\90\lp\47\jl\res\values\strings.xml
 string;C:\Users\brent\source\repos\K-Bikpower\Droid\obj\Debug\90\lp\49\jl\res\values\strings.xml
 style;C:\Users\brent\source\repos\K-Bikpower\Droid\obj\Debug\90\lp\47\jl\res\values\styles.xml
 style;obj\Debug\90\res\values\style.xml
