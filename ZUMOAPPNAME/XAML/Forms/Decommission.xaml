@@ -58,10 +58,10 @@
 
                     <StackLayout Grid.Row="5">
                         <Label Text="De-Commissioned Plant To:" FontSize="30"/>
-                        <RadioButton x:Name="Project_Button" Text="Project" />
-                        <RadioButton x:Name="Spares_Button" Text="Spares" />
-                        <RadioButton x:Name="Workshop_Button" Text="Workshop" />
-                        <RadioButton x:Name="Scrap_Button" Text="Scrap" />
+                        <RadioButton x:Name="Project_Button" Text="Project" TextColor="Black" />
+                        <RadioButton x:Name="Spares_Button" Text="Spares" TextColor="Black"/>
+                        <RadioButton x:Name="Workshop_Button" Text="Workshop" TextColor="Black"/>
+                        <RadioButton x:Name="Scrap_Button" Text="Scrap" TextColor="Black" />
                     </StackLayout>
 
                     <StackLayout Grid.Row="6">

@@ -932,7 +932,7 @@
           "lib/netstandard2.0/Xamarin.Essentials.dll": {}
         }
       },
-      "Xamarin.Forms/4.8.0.1269": {
+      "Xamarin.Forms/4.7.0.1351": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Xamarin.Forms.Core.dll": {},
@@ -4028,10 +4028,10 @@
         "xamarin.essentials.nuspec"
       ]
     },
-    "Xamarin.Forms/4.8.0.1269": {
-      "sha512": "3UFTlfJvF9l8HB+gWVmYUEVRSPU+c3H0G/h09RVG8/P5i/QRiDBg/YHEGfPR3HNuWlJ9S9TgZjrFruTUS1ZYiQ==",
+    "Xamarin.Forms/4.7.0.1351": {
+      "sha512": "JdhRaNGFZIkbKC1t/fdI0+iJKO0bZx603hWEu15N3ffUkkRji3EQzMvyv6MZggW6cDR88gIsk0NRkLlLF3wMFg==",
       "type": "package",
-      "path": "xamarin.forms/4.8.0.1269",
+      "path": "xamarin.forms/4.7.0.1351",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -4338,7 +4338,7 @@
         "lib/uap10.0.16299/Xamarin.Forms.Xaml.dll",
         "lib/uap10.0.16299/Xamarin.Forms.Xaml.pdb",
         "lib/uap10.0.16299/Xamarin.Forms.Xaml.xml",
-        "xamarin.forms.4.8.0.1269.nupkg.sha512",
+        "xamarin.forms.4.7.0.1351.nupkg.sha512",
         "xamarin.forms.nuspec"
       ]
     },
@@ -4393,31 +4393,29 @@
       "Microsoft.Azure.Mobile.Client.SQLiteStore >= 4.1.2",
       "NETStandard.Library >= 2.0.3",
       "Xamarin.Essentials >= 1.5.3.2",
-      "Xamarin.Forms >= 4.8.0.1269",
+      "Xamarin.Forms >= 4.7.0.1351",
       "ZXing.Net.Mobile >= 2.4.1",
       "ZXing.Net.Mobile.Forms >= 2.4.1"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\maxna\\.nuget\\packages\\": {},
-    "D:\\Microsoft\\Xamarin\\NuGet\\": {},
-    "D:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\brent\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\University\\Year_3\\399\\K-Bikpower\\ZUMOAPPNAME\\K_Bikpower.csproj",
+      "projectUniqueName": "C:\\Users\\brent\\source\\repos\\K-Bikpower\\ZUMOAPPNAME\\K_Bikpower.csproj",
       "projectName": "K_Bikpower",
-      "projectPath": "D:\\University\\Year_3\\399\\K-Bikpower\\ZUMOAPPNAME\\K_Bikpower.csproj",
-      "packagesPath": "C:\\Users\\maxna\\.nuget\\packages\\",
-      "outputPath": "D:\\University\\Year_3\\399\\K-Bikpower\\ZUMOAPPNAME\\obj\\",
+      "projectPath": "C:\\Users\\brent\\source\\repos\\K-Bikpower\\ZUMOAPPNAME\\K_Bikpower.csproj",
+      "packagesPath": "C:\\Users\\brent\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\brent\\source\\repos\\K-Bikpower\\ZUMOAPPNAME\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "D:\\Microsoft\\Xamarin\\NuGet\\",
-        "D:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\maxna\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\brent\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -4462,7 +4460,7 @@
           },
           "Xamarin.Forms": {
             "target": "Package",
-            "version": "[4.8.0.1269, )"
+            "version": "[4.7.0.1351, )"
           },
           "ZXing.Net.Mobile": {
             "target": "Package",
@@ -4483,7 +4481,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "D:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
       }
     }
   }
