@@ -2024,24 +2024,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\brent\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\maxna\\.nuget\\packages\\": {},
+    "D:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\brent\\source\\repos\\K-Bikpower\\iOS\\K_Bikpower.iOS.csproj",
+      "projectUniqueName": "D:\\University\\Year_3\\399\\K-Bikpower\\iOS\\K_Bikpower.iOS.csproj",
       "projectName": "K_Bikpower.iOS",
-      "projectPath": "C:\\Users\\brent\\source\\repos\\K-Bikpower\\iOS\\K_Bikpower.iOS.csproj",
-      "packagesPath": "C:\\Users\\brent\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\brent\\source\\repos\\K-Bikpower\\iOS\\obj\\",
+      "projectPath": "D:\\University\\Year_3\\399\\K-Bikpower\\iOS\\K_Bikpower.iOS.csproj",
+      "packagesPath": "C:\\Users\\maxna\\.nuget\\packages\\",
+      "outputPath": "D:\\University\\Year_3\\399\\K-Bikpower\\iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\"
+        "D:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\brent\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\maxna\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -2055,8 +2055,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "C:\\Users\\brent\\source\\repos\\K-Bikpower\\ZUMOAPPNAME\\K_Bikpower.csproj": {
-              "projectPath": "C:\\Users\\brent\\source\\repos\\K-Bikpower\\ZUMOAPPNAME\\K_Bikpower.csproj"
+            "D:\\University\\Year_3\\399\\K-Bikpower\\ZUMOAPPNAME\\K_Bikpower.csproj": {
+              "projectPath": "D:\\University\\Year_3\\399\\K-Bikpower\\ZUMOAPPNAME\\K_Bikpower.csproj"
             }
           }
         }
