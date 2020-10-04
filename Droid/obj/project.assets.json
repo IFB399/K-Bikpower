@@ -1004,7 +1004,7 @@
           "Microsoft.Azure.Mobile.Client": "4.1.2",
           "Microsoft.Azure.Mobile.Client.SQLiteStore": "4.1.2",
           "Xamarin.Essentials": "1.5.3.2",
-          "Xamarin.Forms": "4.8.0.1364",
+          "Xamarin.Forms": "4.8.0.1451",
           "ZXing.Net.Mobile": "2.4.1",
           "ZXing.Net.Mobile.Forms": "2.4.1"
         },
@@ -2555,28 +2555,29 @@
       "Microsoft.Azure.Mobile.Client >= 4.1.2",
       "System.Threading.Tasks >= 4.3.0",
       "Xamarin.Android.Support.v4 >= 28.0.0.3",
+      "Xamarin.Android.Support.v7.AppCompat >= 28.0.0.3",
       "Xamarin.Forms >= 4.8.0.1269"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\maxna\\.nuget\\packages\\": {},
-    "D:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\brent\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\University\\Year_3\\399\\K-Bikpower\\Droid\\K_Bikpower.Droid.csproj",
+      "projectUniqueName": "C:\\Users\\brent\\source\\repos\\K-Bikpower\\Droid\\K_Bikpower.Droid.csproj",
       "projectName": "K_Bikpower.Droid",
-      "projectPath": "D:\\University\\Year_3\\399\\K-Bikpower\\Droid\\K_Bikpower.Droid.csproj",
-      "packagesPath": "C:\\Users\\maxna\\.nuget\\packages\\",
-      "outputPath": "D:\\University\\Year_3\\399\\K-Bikpower\\Droid\\obj\\",
+      "projectPath": "C:\\Users\\brent\\source\\repos\\K-Bikpower\\Droid\\K_Bikpower.Droid.csproj",
+      "packagesPath": "C:\\Users\\brent\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\brent\\source\\repos\\K-Bikpower\\Droid\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
-        "D:\\Microsoft\\Xamarin\\NuGet\\"
+        "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\maxna\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\brent\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -2590,8 +2591,8 @@
       "frameworks": {
         "monoandroid90": {
           "projectReferences": {
-            "D:\\University\\Year_3\\399\\K-Bikpower\\ZUMOAPPNAME\\K_Bikpower.csproj": {
-              "projectPath": "D:\\University\\Year_3\\399\\K-Bikpower\\ZUMOAPPNAME\\K_Bikpower.csproj"
+            "C:\\Users\\brent\\source\\repos\\K-Bikpower\\ZUMOAPPNAME\\K_Bikpower.csproj": {
+              "projectPath": "C:\\Users\\brent\\source\\repos\\K-Bikpower\\ZUMOAPPNAME\\K_Bikpower.csproj"
             }
           }
         }
@@ -2612,6 +2613,10 @@
             "target": "Package",
             "version": "[28.0.0.3, )"
           },
+          "Xamarin.Android.Support.v7.AppCompat": {
+            "target": "Package",
+            "version": "[28.0.0.3, )"
+          },
           "Xamarin.Forms": {
             "target": "Package",
             "version": "[4.8.0.1269, )"
@@ -2625,7 +2630,7 @@
       "code": "NU1605",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Detected package downgrade: Xamarin.Forms from 4.8.0.1364 to 4.8.0.1269. Reference the package directly from the project to select a different version. \r\n K_Bikpower.Droid -> K_Bikpower -> Xamarin.Forms (>= 4.8.0.1364) \r\n K_Bikpower.Droid -> Xamarin.Forms (>= 4.8.0.1269)",
+      "message": "Detected package downgrade: Xamarin.Forms from 4.8.0.1451 to 4.8.0.1269. Reference the package directly from the project to select a different version. \r\n K_Bikpower.Droid -> K_Bikpower -> Xamarin.Forms (>= 4.8.0.1451) \r\n K_Bikpower.Droid -> Xamarin.Forms (>= 4.8.0.1269)",
       "libraryId": "Xamarin.Forms",
       "targetGraphs": [
         "MonoAndroid,Version=v9.0"

@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\University\\Year_3\\399\\K-Bikpower\\Droid\\K_Bikpower.Droid.csproj": {}
+    "C:\\Users\\brent\\source\\repos\\K-Bikpower\\Droid\\K_Bikpower.Droid.csproj": {}
   },
   "projects": {
-    "D:\\University\\Year_3\\399\\K-Bikpower\\Droid\\K_Bikpower.Droid.csproj": {
+    "C:\\Users\\brent\\source\\repos\\K-Bikpower\\Droid\\K_Bikpower.Droid.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\University\\Year_3\\399\\K-Bikpower\\Droid\\K_Bikpower.Droid.csproj",
+        "projectUniqueName": "C:\\Users\\brent\\source\\repos\\K-Bikpower\\Droid\\K_Bikpower.Droid.csproj",
         "projectName": "K_Bikpower.Droid",
-        "projectPath": "D:\\University\\Year_3\\399\\K-Bikpower\\Droid\\K_Bikpower.Droid.csproj",
-        "packagesPath": "C:\\Users\\maxna\\.nuget\\packages\\",
-        "outputPath": "D:\\University\\Year_3\\399\\K-Bikpower\\Droid\\obj\\",
+        "projectPath": "C:\\Users\\brent\\source\\repos\\K-Bikpower\\Droid\\K_Bikpower.Droid.csproj",
+        "packagesPath": "C:\\Users\\brent\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\brent\\source\\repos\\K-Bikpower\\Droid\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
-          "D:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\maxna\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\brent\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -32,8 +32,8 @@
         "frameworks": {
           "monoandroid90": {
             "projectReferences": {
-              "D:\\University\\Year_3\\399\\K-Bikpower\\ZUMOAPPNAME\\K_Bikpower.csproj": {
-                "projectPath": "D:\\University\\Year_3\\399\\K-Bikpower\\ZUMOAPPNAME\\K_Bikpower.csproj"
+              "C:\\Users\\brent\\source\\repos\\K-Bikpower\\ZUMOAPPNAME\\K_Bikpower.csproj": {
+                "projectPath": "C:\\Users\\brent\\source\\repos\\K-Bikpower\\ZUMOAPPNAME\\K_Bikpower.csproj"
               }
             }
           }
@@ -54,6 +54,10 @@
               "target": "Package",
               "version": "[28.0.0.3, )"
             },
+            "Xamarin.Android.Support.v7.AppCompat": {
+              "target": "Package",
+              "version": "[28.0.0.3, )"
+            },
             "Xamarin.Forms": {
               "target": "Package",
               "version": "[4.8.0.1269, )"
@@ -62,21 +66,20 @@
         }
       }
     },
-    "D:\\University\\Year_3\\399\\K-Bikpower\\ZUMOAPPNAME\\K_Bikpower.csproj": {
+    "C:\\Users\\brent\\source\\repos\\K-Bikpower\\ZUMOAPPNAME\\K_Bikpower.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\University\\Year_3\\399\\K-Bikpower\\ZUMOAPPNAME\\K_Bikpower.csproj",
+        "projectUniqueName": "C:\\Users\\brent\\source\\repos\\K-Bikpower\\ZUMOAPPNAME\\K_Bikpower.csproj",
         "projectName": "K_Bikpower",
-        "projectPath": "D:\\University\\Year_3\\399\\K-Bikpower\\ZUMOAPPNAME\\K_Bikpower.csproj",
-        "packagesPath": "C:\\Users\\maxna\\.nuget\\packages\\",
-        "outputPath": "D:\\University\\Year_3\\399\\K-Bikpower\\ZUMOAPPNAME\\obj\\",
+        "projectPath": "C:\\Users\\brent\\source\\repos\\K-Bikpower\\ZUMOAPPNAME\\K_Bikpower.csproj",
+        "packagesPath": "C:\\Users\\brent\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\brent\\source\\repos\\K-Bikpower\\ZUMOAPPNAME\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "D:\\Microsoft\\Xamarin\\NuGet\\",
-          "D:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\maxna\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\brent\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -121,7 +124,7 @@
             },
             "Xamarin.Forms": {
               "target": "Package",
-              "version": "[4.8.0.1364, )"
+              "version": "[4.8.0.1451, )"
             },
             "ZXing.Net.Mobile": {
               "target": "Package",
@@ -142,7 +145,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "D:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.xamarin.sample.K_Bikpower" android:installLocation="internalOnly">
-  <uses-sdk android:minSdkVersion="16" android:targetSdkVersion="28" />
+  <uses-sdk android:minSdkVersion="28" android:targetSdkVersion="28" />
   <uses-permission android:name="android.permission.CAMERA" />
   <uses-permission android:name="android.permission.FLASHLIGHT" />
   <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -14,7 +14,7 @@
         <category android:name="android.intent.category.BROWSABLE" />
       </intent-filter>
     </activity>
-    <activity android:configChanges="orientation|screenSize" android:icon="@drawable/homeicon" android:label="K_Bikpower.Droid" android:theme="@android:style/Theme.Holo.Light" android:name="crc64772ed7bc9e555b3b.MainActivity">
+    <activity android:configChanges="orientation|screenSize" android:icon="@drawable/homeicon" android:label="K_Bikpower.Droid" android:theme="@style/MainTheme" android:name="crc64772ed7bc9e555b3b.MainActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />

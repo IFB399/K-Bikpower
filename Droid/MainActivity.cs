@@ -15,22 +15,25 @@ using Xamarin.Forms.Platform.Android;
 using System.Threading.Tasks;
 using Android;
 
+using Xamarin.Forms.Internals;
+
 namespace K_Bikpower.Droid
 {
+
 	[Activity (Label = "K_Bikpower.Droid",
 		Icon = "@drawable/homeicon",
 		MainLauncher = true,
 		ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation,
-		Theme = "@android:style/Theme.Holo.Light")]
+		Theme = "@style/MainTheme")]
 	public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsApplicationActivity
 	{
-        // Define an authenticated user.
-
+		// Define an authenticated user.
+		
         
         protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
-
+			Registrar.Registered.Register(typeof(Xamarin.Forms.CheckBox), typeof(Xamarin.Forms.Platform.Android.CheckBoxRenderer));
 			// Initialize Azure Mobile Apps
 			CurrentPlatform.Init();
 			Xamarin.Essentials.Platform.Init(Application);
