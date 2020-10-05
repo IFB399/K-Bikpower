@@ -99,6 +99,73 @@ namespace K_Bikpower
             {
                 NoInstallasset = LastInstallDate_Picker.Date.ToLocalTime();
             }
+            if (String.IsNullOrWhiteSpace(Serial_Number_Entry.Text))
+            {
+                await DisplayAlert("Alert", "Please enter a Serial Number", "OK");
+                return;
+            }
+            if (String.IsNullOrWhiteSpace(Location_Equipment_Number_Entry.Text))
+            {
+                await DisplayAlert("Alert", "Please enter a Location Equipment number", "OK");
+                return;
+            }
+            if (String.IsNullOrWhiteSpace(Rated_Voltage_Entry.Text))
+            {
+                await DisplayAlert("Alert", "Please enter a Rated Voltage", "OK");
+                return;
+            }
+            if (String.IsNullOrWhiteSpace(Nominal_Voltage_Entry.Text))
+            {
+                await DisplayAlert("Alert", "Please enter a Nominal Voltage", "OK");
+                return;
+            }
+            if (String.IsNullOrWhiteSpace(Manufacturer_Name_Entry.Text))
+            {
+                await DisplayAlert("Alert", "Please enter a Manufacturer Name", "OK");
+                return;
+            }
+            if (String.IsNullOrWhiteSpace(Manufacturer_Type_Entry.Text))
+            {
+                await DisplayAlert("Alert", "Please enter a Manufacturer Type", "OK");
+                return;
+            }
+            if (String.IsNullOrWhiteSpace(Equipment_Class_Entry.Text))
+            {
+                await DisplayAlert("Alert", "Please enter a Equipment class", "OK");
+                return;
+            }
+
+            if (String.IsNullOrWhiteSpace(Equipment_Class_Description_Entry.Text))
+            {
+                await DisplayAlert("Alert", "Please enter a  Equipment class description", "OK");
+                return;
+            }
+            int i = 0;
+            if (int.TryParse(Asset_Equipment_Number_Entry.Text,out i) == false)
+            {
+                await DisplayAlert("Alert", "Please enter a vaild int for Asset Equipment Number", "OK");
+                return;
+            }
+
+            if (int.TryParse(Equipment_Age_Entry.Text, out i) == false)
+            {
+                await DisplayAlert("Alert", "Please enter a vaild int for Equipment Age", "OK");
+                return;
+            }
+
+            if (int.TryParse(Rated_Voltage_Entry.Text, out i) == false)
+            {
+                await DisplayAlert("Alert", "Please enter a vaild int for Rated Voltage", "OK");
+                return;
+            }
+
+            if (int.TryParse(Nominal_Voltage_Entry.Text, out i) == false)
+            {
+                await DisplayAlert("Alert", "Please enter a vaild int for Nominal Voltage", "OK");
+                return;
+            }
+
+
             //else { value = Substation_Picker.SelectedItem; }
             //DateTime? date = null;
             Asset todo = new Asset

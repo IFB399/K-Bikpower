@@ -7,27 +7,27 @@ namespace K_Bikpower
 	public class Asset
 	{
 		string id;
-		string substationCode; //compulsory
+		string substationCode; //compulsory done
 		string plantNumber;
-		string assetEQNO; //INT
+		string assetEQNO; //INT done
         string eqStatus;
-        string serialNumber; //compulsory
+        string serialNumber; //compulsory done
         string modifierCode;
-        string locationEQNO; //compulsory, INT
+        string locationEQNO; //compulsory done, INT done
         string componentCode;
         DateTime? warrantyDate; 
-        string yearManufactured; //INT
+        string yearManufactured; //INT done
         string stockCode;
         string poNO;
-        string ratedVoltage; //compulsory, INT
-        string nominalVoltage; //compulsory, INT
-        string manufacturerName; //compulsory
-        string manufacturerType; //compulsory
+        string ratedVoltage; //compulsory, INT done
+        string nominalVoltage; //compulsory, INT done
+        string manufacturerName; //compulsory done 
+        string manufacturerType; //compulsory done
         string specificationTitle;
         string specificationNO;
         string specificationItemNO;
         DateTime? lastInstallDate; //compulsory
-        string equipmentClass; //compulsory
+        string equipmentClass; //compulsory 
         string equipmentClassDescription; //compulsory
         string status; //compulsory
         string modifiedBy;
