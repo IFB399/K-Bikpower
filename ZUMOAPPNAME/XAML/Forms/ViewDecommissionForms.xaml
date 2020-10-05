@@ -30,7 +30,8 @@
                                         <RowDefinition Height="*" />
                                         <RowDefinition Height="*" />
                                         <RowDefinition Height="*" />
-                                    </Grid.RowDefinitions>
+                                        <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
                                     <Label Grid.Row="0" Grid.Column="0" Text="Status"/>
                             <Picker x:Name="Status_Picker" Grid.Row="0" Grid.Column="1">
                                 <Picker.Items>
@@ -40,11 +41,19 @@
                                 </Picker.Items>
                             </Picker>
                             <Button Clicked="Clear_Status_Clicked" Text="X" Grid.Row="0" Grid.Column="2"/>
-                                    <Label Text="Submitted By" Grid.Row="1" Grid.Column="0"/>
-                                    <Picker x:Name="SubmittedBy_Picker" Grid.Row="1" Grid.Column="1"/>
-                                    <Button Clicked="Clear_SubmittedBy_Clicked" Text="X" Grid.Row="1" Grid.Column="2"/>
-                                    <Label x:Name="assetLabel" IsVisible="False" Grid.Row="2"/>
-                                <StackLayout Orientation="Horizontal" Grid.Row="3" Grid.ColumnSpan="3">
+                            <Label Text="Submitted By" Grid.Row="1" Grid.Column="0"/>
+                            <Picker x:Name="SubmittedBy_Picker" Grid.Row="1" Grid.Column="1"/>
+                            <Button Clicked="Clear_SubmittedBy_Clicked" Text="X" Grid.Row="1" Grid.Column="2"/>
+                        <Label Text="Sort By (Descending)" Grid.Row="2" Grid.Column="0"/>
+                        <Picker x:Name="SortBy_Picker" Grid.Row="2" Grid.Column="1">
+                            <Picker.Items>
+                                <x:String>Date Last Modified</x:String>
+                                <x:String>Date Decommissioned</x:String>
+                                <x:String>Date Submitted</x:String>
+                            </Picker.Items>
+                        </Picker>
+                        <Label x:Name="assetLabel" IsVisible="False" Grid.Row="3"/>
+                                <StackLayout Orientation="Horizontal" Grid.Row="4" Grid.ColumnSpan="4">
                                         <Button Text="Apply Filters" Clicked="Apply_Filters_Clicked" BackgroundColor="White" CornerRadius="0" FontSize="Medium" TextColor="Black"/>
                                         <Button Text="Clear Filters" Clicked="Clear_Filters_Clicked" BackgroundColor="White" CornerRadius="0" FontSize="Medium" TextColor="Black"/>
                                     </StackLayout>

@@ -14,10 +14,8 @@
                 <StackLayout Spacing="10" Padding="50">
  
                     <StackLayout Orientation="Horizontal">
-                         <Button x:Name="AddButton"  Text="Add Asset To Form" Clicked="Add_Asset_Clicked"/>
-                         <Button Text="Go Back" Clicked="Go_Back_Clicked"/>
+                        <Button x:Name="AddButton"  Text="Add Asset To Form" Clicked="Add_Asset_Clicked"/>
                     </StackLayout>
-
 
                     <Label Text="Status" FontSize="Title" TextColor="Black" />
                     <Frame CornerRadius="0" BorderColor="Black" HasShadow="True" >

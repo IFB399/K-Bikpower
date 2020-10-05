@@ -75,7 +75,7 @@ namespace K_Bikpower
             get { return todoTable is Microsoft.WindowsAzure.MobileServices.Sync.IMobileServiceSyncTable<DecommissionData>; }
         }
 
-        public async Task<ObservableCollection<DecommissionData>> GetDFormsAsync(bool syncItems = false, string submittedBy = null, string status = null, ObservableCollection<string> formIds = null)
+        public async Task<ObservableCollection<DecommissionData>> GetDFormsAsync(bool syncItems = false, string submittedBy = null, string status = null, string sortBy = "Date Last Modified", ObservableCollection<string> formIds = null)
         {
             try
             {
@@ -98,24 +98,21 @@ namespace K_Bikpower
                 if (status != null)
                 {
                     items = items.Where(asset => asset.Status == status);
-                    /*
-                    if (status == "Rejected")
-                    {
-                        items = items.Where(asset => asset.Status.Contains("Rejected")); 
-                    }
-                    else if (status == "Approved" )
-                    {
-                        items = items.Where(asset => asset.Status.Contains("Approved"));
-                    }
-                    else
-                    {
-                        items = items.Where(asset => asset.Status == status);
-                    }
-                    */
                 }
-                
 
-                return new ObservableCollection<DecommissionData>(items.OrderByDescending(item => item.DateDecommissioned));
+                if (sortBy == "Date Decommissioned")
+                {
+                    return new ObservableCollection<DecommissionData>(items.OrderByDescending(item => item.DateDecommissioned));
+                }
+                else if (sortBy == "Date Submitted")//sort by date submitted
+                {
+                    return new ObservableCollection<DecommissionData>(items.OrderByDescending(item => item.SubmittedOn));
+                }
+                else //date last modified
+                {
+                    return new ObservableCollection<DecommissionData>(items.OrderByDescending(item => item.LastModifiedOn));
+                }
+                //return new ObservableCollection<DecommissionData>(items.OrderByDescending(item => item.DateDecommissioned));
             }
             catch (MobileServiceInvalidOperationException msioe)
             {

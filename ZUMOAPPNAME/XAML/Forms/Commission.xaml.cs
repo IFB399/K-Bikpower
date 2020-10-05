@@ -229,8 +229,8 @@ namespace K_Bikpower
                 {
                     form.SubmittedBy = user_manager.ReturnName(); //add submitted by name
                     form.Status = "Submitted"; //make status of form submitted
-                    form.SubmittedOn = DateTime.UtcNow;
-                    form.LastModifiedOn = DateTime.UtcNow;
+                    form.SubmittedOn = DateTime.UtcNow.ToLocalTime(); 
+                    form.LastModifiedOn = DateTime.UtcNow.ToLocalTime(); 
                     await AddItem(form); //add form to database
                     if (globalAssets != null)
                     {
@@ -249,7 +249,8 @@ namespace K_Bikpower
                 }
                 else //existing form is being updated
                 {
-                    //change a modified by field?
+                    //update last modified on
+                    commissionForm.LastModifiedOn = DateTime.UtcNow.ToLocalTime(); 
                     //delete old links
                     ObservableCollection<AssetFormLink> afls = await afl_manager.GetLinksByFormAsync(commissionForm.Id, "Commission");
                     foreach (AssetFormLink afl in afls)
