@@ -336,7 +336,6 @@ C:\Users\Brenton Reddish\Source\Repos\K-Bikpower\ZUMOAPPNAME\bin\Debug\netstanda
 C:\Users\Brenton Reddish\Source\Repos\K-Bikpower\ZUMOAPPNAME\bin\Debug\netstandard2.0\K_Bikpower.pdb
 C:\Users\Brenton Reddish\Source\Repos\K-Bikpower\ZUMOAPPNAME\bin\Debug\netstandard2.0\System.Drawing.Common.dll
 C:\Users\Brenton Reddish\Source\Repos\K-Bikpower\ZUMOAPPNAME\bin\Debug\netstandard2.0\Windows.Foundation.UniversalApiContract.winmd
-C:\Users\Brenton Reddish\Source\Repos\K-Bikpower\ZUMOAPPNAME\obj\Debug\netstandard2.0\K_Bikpower.csprojAssemblyReference.cache
 C:\Users\Brenton Reddish\Source\Repos\K-Bikpower\ZUMOAPPNAME\obj\Debug\netstandard2.0\MasterPage.xaml.g.cs
 C:\Users\Brenton Reddish\Source\Repos\K-Bikpower\ZUMOAPPNAME\obj\Debug\netstandard2.0\XAML\Assets\AddAsset.xaml.g.cs
 C:\Users\Brenton Reddish\Source\Repos\K-Bikpower\ZUMOAPPNAME\obj\Debug\netstandard2.0\XAML\Assets\AssetList.xaml.g.cs
@@ -369,3 +368,4 @@ C:\Users\Brenton Reddish\Source\Repos\K-Bikpower\ZUMOAPPNAME\obj\Debug\netstanda
 C:\Users\Brenton Reddish\Source\Repos\K-Bikpower\ZUMOAPPNAME\obj\Debug\netstandard2.0\K_Bikpower.dll
 C:\Users\Brenton Reddish\Source\Repos\K-Bikpower\ZUMOAPPNAME\obj\Debug\netstandard2.0\K_Bikpower.pdb
 C:\Users\jacqu\Documents\2017 (first year)\latest repo 4\ZUMOAPPNAME\obj\Debug\netstandard2.0\K_Bikpower.csprojAssemblyReference.cache
+C:\Users\Brenton Reddish\Source\Repos\K-Bikpower\ZUMOAPPNAME\obj\Debug\netstandard2.0\K_Bikpower.csprojAssemblyReference.cache

@@ -54,7 +54,6 @@ namespace K_Bikpower
             Firstname.Text = data.FirstName;
             Lastname.Text = data.LastName;
             Email.Text = data.Email;
-            //Username.Text = data.Username;
             Auth.Text = data.Role;
         }
 
@@ -66,6 +65,7 @@ namespace K_Bikpower
         private async void DeleteButton_Clicked(object sender, EventArgs e)
         {
             await user_manager.DeleteUserAsync(popuserData);
+            await Navigation.PushAsync(new UsersPage());
         }
     }
 }

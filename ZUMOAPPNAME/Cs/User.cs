@@ -22,26 +22,26 @@ namespace K_Bikpower
 		}
 
 		[JsonProperty(PropertyName = "email")]
-		public string Email //must be unique
+		public string Email 
 		{
 			get { return email; }
 			set { email = value; }
 		}
 
 		[JsonProperty(PropertyName = "role")]
-		public string Role //must be unique
+		public string Role
 		{
 			get { return role; }
 			set { role = value; }
 		}
 		[JsonProperty(PropertyName = "password")]
-		public string Password //must be unique
+		public string Password
 		{
 			get { return password; }
 			set { password = value; }
 		}
 		[JsonProperty(PropertyName = "salt")]
-		public string Salt //must be unique
+		public string Salt
 		{
 			get { return salt; }
 			set { salt = value; }

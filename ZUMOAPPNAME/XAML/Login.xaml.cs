@@ -11,22 +11,11 @@ using System.Collections.ObjectModel;
 
 namespace K_Bikpower
 {
-    /*public interface IAuthenticate
-    {
-        Task<bool> Authenticate();
-    }*/
+
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Login : ContentPage
     {
 
-        /*public static IAuthenticate Authenticator { get; private set; }
-
-        public static void Init(IAuthenticate authenticator)
-        {
-            Authenticator = authenticator;
-        }*/
-
-        //bool authenticated = false;
         UserManager manager;
         public Login()
         {
@@ -56,7 +45,6 @@ namespace K_Bikpower
 
             ObservableCollection<User> userList = await manager.GetUser(email);
             User u = userList.FirstOrDefault();
-            //User u = await manager.GetUser(username);
             if (u == null)
             {
                 await DisplayAlert("Incorrect", "User not identified", "Close");
@@ -78,16 +66,6 @@ namespace K_Bikpower
                     await DisplayAlert("Incorrect", "Incorrect username or password", "Close");
                 }
             }
-
-            /*
-            if (App.Authenticator != null)
-                authenticated = await App.Authenticator.Authenticate();
-
-            // Set syncItems to true to synchronize the data on startup when offline is enabled.
-            if (authenticated == true)
-                await Navigation.PushAsync(new MainPage());
-            */
-
         }
 
     }

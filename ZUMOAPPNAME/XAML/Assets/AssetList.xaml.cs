@@ -69,7 +69,7 @@ namespace K_Bikpower
             }
             if (SubstationPicker.SelectedIndex == -1 && EquipmentClassPicker.SelectedIndex == -1 && ManufacturerPicker.SelectedIndex == -1)
             {
-                FilterLabel.Text = "Filters"; //will improve later
+                FilterLabel.Text = "Filters"; 
             }
             else
             {
@@ -88,7 +88,7 @@ namespace K_Bikpower
             string manufacturerName = (string)ManufacturerPicker.SelectedItem;
             if (SubstationPicker.SelectedIndex == -1 && EquipmentClassPicker.SelectedIndex == -1 && ManufacturerPicker.SelectedIndex == -1)
             {
-                FilterLabel.Text = "Filters"; //will improve later
+                FilterLabel.Text = "Filters";
             }
             else
             {
@@ -173,20 +173,15 @@ namespace K_Bikpower
                     }
                     else
                     {
-                        //assetList.Add(todo);
-                        //await Navigation.PushAsync(new ManageFormAssets(c, assetList, prevPage));
+
                         await Navigation.PushAsync(new FormPreviewAsset(todo, 2,savedData, assetList));
                     }
 
                 }
 
             }
-
-            // prevents background getting highlighted
             todoList.SelectedItem = null;
         }
-
-        // http://developer.xamarin.com/guides/cross-platform/xamarin-forms/working-with/listview/#pulltorefresh
         public async void OnRefresh(object sender, EventArgs e)
         {
             var list = (ListView)sender;

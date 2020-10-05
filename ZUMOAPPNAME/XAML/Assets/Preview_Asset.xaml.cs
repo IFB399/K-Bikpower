@@ -31,12 +31,10 @@ namespace K_Bikpower
             AddedBy_label.Text = details.AddedBy;
             Substation_Code_label.Text = details.SubstationCode;
             Plant_Number_label.Text = details.PlantNumber;
-            //int AssentEQNO = details.AssetEQNO;
             Asset_EQ_NO_label.Text = details.AssetEQNO;
             EQ_Status_label.Text = details.EQStatus;
             Serial_Number_label.Text = details.SerialNumber;
             Modifier_code_label.Text = details.ModifierCode;
-            //int Loceqnum = details.LocationEquipmentNumber;
             Location_Equipment_Number_label.Text = details.LocationEquipmentNumber;
             Component_Code_label.Text = details.ComponentCode;
             if (details.WarrantyDate != null)
@@ -44,13 +42,11 @@ namespace K_Bikpower
                 WarrantyDate_Picker.Date = (DateTime)details.WarrantyDate;
             }
             else { WarrantyDate_Picker.IsVisible = false; }
-            //int EQUage = details.EquipmentAge;
+
             Equipement_age_label.Text = details.YearManufactured;
             Stock_Code_label.Text = details.StockCode;
             PO_NO_label.Text = details.PurchaseOrderNO;
-            //int RatedVolts = details.RatedVoltage;
             Rated_Voltage_label.Text = details.RatedVoltage;
-            //int NomVolts = details.NominalVoltage;
             Nominal_Voltage_label.Text = details.NominalVoltage;
             Manufacture_Name_label.Text = details.ManufacturerName;
             Specifiaction_title_label.Text = details.SpecificationTitle;
@@ -97,8 +93,6 @@ namespace K_Bikpower
 
         private void Button_Clicked_2(object sender, EventArgs e)
         {
-            //string QRId = assetdata.Id;
-            
            string returned = DependencyService.Get<IQRSave>().SaveQrImage().ToString();
            // await DisplayAlert("Alert", "You have been alerted", "OK");
         }

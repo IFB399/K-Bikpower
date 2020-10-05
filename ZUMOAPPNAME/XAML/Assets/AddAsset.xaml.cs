@@ -54,7 +54,7 @@ namespace K_Bikpower
             Modifier_Code_Entry.Text = data.ModifierCode;
             Location_Equipment_Number_Entry.Text = data.LocationEquipmentNumber;
             Component_Code_Entry.Text = data.ComponentCode;
-            WarrantyDate_Picker.Date = (DateTime)data.WarrantyDate; // change dumb dumb. 
+            WarrantyDate_Picker.Date = (DateTime)data.WarrantyDate; 
             Equipment_Age_Entry.Text = data.YearManufactured;
             Stock_Code_Entry.Text = data.StockCode;
             Purchase_Order_Number_Entry.Text = data.PurchaseOrderNO;
@@ -73,12 +73,13 @@ namespace K_Bikpower
         async Task AddItem(Asset item)
         {
             await manager.SaveTaskAsync(item);
-            //toDo.ItemsSource = await manager.GetTodoItemsAsync();
+           
         }
          
         async void Add_Asset_Clicked(object sender, EventArgs e)
         {
             string selected = null;
+           
             if (Substation_Picker.SelectedIndex == -1)
             {
                 //selected = "null";
@@ -99,8 +100,74 @@ namespace K_Bikpower
             {
                 NoInstallasset = LastInstallDate_Picker.Date.ToLocalTime();
             }
-            //else { value = Substation_Picker.SelectedItem; }
-            //DateTime? date = null;
+            if (String.IsNullOrWhiteSpace(Serial_Number_Entry.Text))
+            {
+                await DisplayAlert("Alert", "Please enter a Serial Number", "OK");
+                return;
+            }
+            if (String.IsNullOrWhiteSpace(Location_Equipment_Number_Entry.Text))
+            {
+                await DisplayAlert("Alert", "Please enter a Location Equipment number", "OK");
+                return;
+            }
+            if (String.IsNullOrWhiteSpace(Rated_Voltage_Entry.Text))
+            {
+                await DisplayAlert("Alert", "Please enter a Rated Voltage", "OK");
+                return;
+            }
+            if (String.IsNullOrWhiteSpace(Nominal_Voltage_Entry.Text))
+            {
+                await DisplayAlert("Alert", "Please enter a Nominal Voltage", "OK");
+                return;
+            }
+            if (String.IsNullOrWhiteSpace(Manufacturer_Name_Entry.Text))
+            {
+                await DisplayAlert("Alert", "Please enter a Manufacturer Name", "OK");
+                return;
+            }
+            if (String.IsNullOrWhiteSpace(Manufacturer_Type_Entry.Text))
+            {
+                await DisplayAlert("Alert", "Please enter a Manufacturer Type", "OK");
+                return;
+            }
+            if (String.IsNullOrWhiteSpace(Equipment_Class_Entry.Text))
+            {
+                await DisplayAlert("Alert", "Please enter a Equipment class", "OK");
+                return;
+            }
+
+            if (String.IsNullOrWhiteSpace(Equipment_Class_Description_Entry.Text))
+            {
+                await DisplayAlert("Alert", "Please enter a  Equipment class description", "OK");
+                return;
+            }
+            int i = 0;
+            if (int.TryParse(Asset_Equipment_Number_Entry.Text,out i) == false)
+            {
+                await DisplayAlert("Alert", "Please enter a vaild int for Asset Equipment Number", "OK");
+                return;
+            }
+
+            if (int.TryParse(Equipment_Age_Entry.Text, out i) == false)
+            {
+                await DisplayAlert("Alert", "Please enter a vaild int for Equipment Age", "OK");
+                return;
+            }
+
+            if (int.TryParse(Rated_Voltage_Entry.Text, out i) == false)
+            {
+                await DisplayAlert("Alert", "Please enter a vaild int for Rated Voltage", "OK");
+                return;
+            }
+
+            if (int.TryParse(Nominal_Voltage_Entry.Text, out i) == false)
+            {
+                await DisplayAlert("Alert", "Please enter a vaild int for Nominal Voltage", "OK");
+                return;
+            }
+
+
+
             Asset todo = new Asset
             {
                 Id = Ids,
@@ -134,8 +201,8 @@ namespace K_Bikpower
             }
             else
             {
-                todo.Status = AssetData.Status; //don't change status
-                todo.AddedBy = AssetData.AddedBy; //don't change added by
+                todo.Status = AssetData.Status; 
+                todo.AddedBy = AssetData.AddedBy; 
                 todo.ModifiedBy = user_manager.ReturnName();
             }
 

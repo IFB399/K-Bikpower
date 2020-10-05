@@ -77,7 +77,6 @@ namespace K_Bikpower.Droid
                     return null;
                 }
             }
-            string text2 = "im not allowed to write swear words cause i will forget to remove them :(";
             try { SaveQRAsImage(text); }
             catch (Exception ex)
             {

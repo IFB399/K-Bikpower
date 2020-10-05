@@ -28,11 +28,6 @@ namespace K_Bikpower
             {
                 framecolour.BackgroundColor = Xamarin.Forms.Color.FromHex("#77A262");
             }
-
-            /*if (Subcode.Text == "null" ) not needed now.
-            {
-                Subcode.Text = null;
-            }*/
         }
     }
 }

@@ -50,7 +50,6 @@ namespace UWP
         {
            
             Guid BitmapEncoderGuid = BitmapEncoder.JpegEncoderId;
-            //var file = await Windows.Storage. CreateFileAsync(FileName, CreationCollisionOption.GenerateUniqueName);
             FileSavePicker savePicker = new FileSavePicker();
             savePicker.SuggestedStartLocation = PickerLocationId.DocumentsLibrary;
             // Dropdown of file types the user can save the file as

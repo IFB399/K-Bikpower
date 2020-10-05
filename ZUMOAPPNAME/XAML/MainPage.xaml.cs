@@ -19,7 +19,6 @@ namespace K_Bikpower
             userauth = UserManager.DefaultManager;
             Authentication = userauth.Authentication();
             InitializeComponent();
-            //WelcomeLabel.Text = "Welcome " + userauth.ReturnUser();
             if (Authentication != "Administrator")
             {
                 Users.IsVisible = false;
