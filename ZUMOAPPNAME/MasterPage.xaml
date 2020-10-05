@@ -5,7 +5,7 @@
 			 x:Class="K_Bikpower.MasterPage"
 			 Padding="0,40,0,0"
 			 IconImageSource="hamburger.png"
-			 Title="K-Bikpower Asset Manager">
+			 Title="Asset Manager">
     <StackLayout>
         <ListView x:Name="listView" x:FieldModifier="public">
             <ListView.ItemsSource>

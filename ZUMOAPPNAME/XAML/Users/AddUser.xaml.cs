@@ -183,7 +183,7 @@ namespace K_Bikpower
                 //Username = Username.Text,
                 Password = hashedPassword,
                 Salt = salt,
-                Role = Auth.SelectedItem.ToString()
+                
             };
                 await AddItem(todo);
                 await Navigation.PushAsync(new MainPage());

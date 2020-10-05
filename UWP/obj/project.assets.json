@@ -805,10 +805,10 @@
           "lib/uap10.0.16299/Xamarin.Essentials.dll": {}
         }
       },
-      "Xamarin.Forms/4.8.0.1269": {
+      "Xamarin.Forms/4.7.0.1351": {
         "type": "package",
         "dependencies": {
-          "Microsoft.NETCore.UniversalWindowsPlatform": "6.2.10",
+          "Microsoft.NETCore.UniversalWindowsPlatform": "6.0.15",
           "Microsoft.UI.Xaml": "2.4.2",
           "Win2D.uwp": "1.20.0"
         },
@@ -864,7 +864,7 @@
           "Microsoft.Azure.Mobile.Client": "4.1.2",
           "Microsoft.Azure.Mobile.Client.SQLiteStore": "4.1.2",
           "Xamarin.Essentials": "1.5.3.2",
-          "Xamarin.Forms": "4.8.0.1364",
+          "Xamarin.Forms": "4.7.0.1351",
           "ZXing.Net.Mobile": "2.4.1",
           "ZXing.Net.Mobile.Forms": "2.4.1"
         },
@@ -1950,10 +1950,10 @@
           "lib/uap10.0.16299/Xamarin.Essentials.dll": {}
         }
       },
-      "Xamarin.Forms/4.8.0.1269": {
+      "Xamarin.Forms/4.7.0.1351": {
         "type": "package",
         "dependencies": {
-          "Microsoft.NETCore.UniversalWindowsPlatform": "6.2.10",
+          "Microsoft.NETCore.UniversalWindowsPlatform": "6.0.15",
           "Microsoft.UI.Xaml": "2.4.2",
           "Win2D.uwp": "1.20.0"
         },
@@ -2009,7 +2009,7 @@
           "Microsoft.Azure.Mobile.Client": "4.1.2",
           "Microsoft.Azure.Mobile.Client.SQLiteStore": "4.1.2",
           "Xamarin.Essentials": "1.5.3.2",
-          "Xamarin.Forms": "4.8.0.1364",
+          "Xamarin.Forms": "4.7.0.1351",
           "ZXing.Net.Mobile": "2.4.1",
           "ZXing.Net.Mobile.Forms": "2.4.1"
         },
@@ -3151,10 +3151,10 @@
           "lib/uap10.0.16299/Xamarin.Essentials.dll": {}
         }
       },
-      "Xamarin.Forms/4.8.0.1269": {
+      "Xamarin.Forms/4.7.0.1351": {
         "type": "package",
         "dependencies": {
-          "Microsoft.NETCore.UniversalWindowsPlatform": "6.2.10",
+          "Microsoft.NETCore.UniversalWindowsPlatform": "6.0.15",
           "Microsoft.UI.Xaml": "2.4.2",
           "Win2D.uwp": "1.20.0"
         },
@@ -3210,7 +3210,7 @@
           "Microsoft.Azure.Mobile.Client": "4.1.2",
           "Microsoft.Azure.Mobile.Client.SQLiteStore": "4.1.2",
           "Xamarin.Essentials": "1.5.3.2",
-          "Xamarin.Forms": "4.8.0.1364",
+          "Xamarin.Forms": "4.7.0.1351",
           "ZXing.Net.Mobile": "2.4.1",
           "ZXing.Net.Mobile.Forms": "2.4.1"
         },
@@ -4296,10 +4296,10 @@
           "lib/uap10.0.16299/Xamarin.Essentials.dll": {}
         }
       },
-      "Xamarin.Forms/4.8.0.1269": {
+      "Xamarin.Forms/4.7.0.1351": {
         "type": "package",
         "dependencies": {
-          "Microsoft.NETCore.UniversalWindowsPlatform": "6.2.10",
+          "Microsoft.NETCore.UniversalWindowsPlatform": "6.0.15",
           "Microsoft.UI.Xaml": "2.4.2",
           "Win2D.uwp": "1.20.0"
         },
@@ -4355,7 +4355,7 @@
           "Microsoft.Azure.Mobile.Client": "4.1.2",
           "Microsoft.Azure.Mobile.Client.SQLiteStore": "4.1.2",
           "Xamarin.Essentials": "1.5.3.2",
-          "Xamarin.Forms": "4.8.0.1364",
+          "Xamarin.Forms": "4.7.0.1351",
           "ZXing.Net.Mobile": "2.4.1",
           "ZXing.Net.Mobile.Forms": "2.4.1"
         },
@@ -5497,10 +5497,10 @@
           "lib/uap10.0.16299/Xamarin.Essentials.dll": {}
         }
       },
-      "Xamarin.Forms/4.8.0.1269": {
+      "Xamarin.Forms/4.7.0.1351": {
         "type": "package",
         "dependencies": {
-          "Microsoft.NETCore.UniversalWindowsPlatform": "6.2.10",
+          "Microsoft.NETCore.UniversalWindowsPlatform": "6.0.15",
           "Microsoft.UI.Xaml": "2.4.2",
           "Win2D.uwp": "1.20.0"
         },
@@ -5556,7 +5556,7 @@
           "Microsoft.Azure.Mobile.Client": "4.1.2",
           "Microsoft.Azure.Mobile.Client.SQLiteStore": "4.1.2",
           "Xamarin.Essentials": "1.5.3.2",
-          "Xamarin.Forms": "4.8.0.1364",
+          "Xamarin.Forms": "4.7.0.1351",
           "ZXing.Net.Mobile": "2.4.1",
           "ZXing.Net.Mobile.Forms": "2.4.1"
         },
@@ -6642,10 +6642,10 @@
           "lib/uap10.0.16299/Xamarin.Essentials.dll": {}
         }
       },
-      "Xamarin.Forms/4.8.0.1269": {
+      "Xamarin.Forms/4.7.0.1351": {
         "type": "package",
         "dependencies": {
-          "Microsoft.NETCore.UniversalWindowsPlatform": "6.2.10",
+          "Microsoft.NETCore.UniversalWindowsPlatform": "6.0.15",
           "Microsoft.UI.Xaml": "2.4.2",
           "Win2D.uwp": "1.20.0"
         },
@@ -6701,7 +6701,7 @@
           "Microsoft.Azure.Mobile.Client": "4.1.2",
           "Microsoft.Azure.Mobile.Client.SQLiteStore": "4.1.2",
           "Xamarin.Essentials": "1.5.3.2",
-          "Xamarin.Forms": "4.8.0.1364",
+          "Xamarin.Forms": "4.7.0.1351",
           "ZXing.Net.Mobile": "2.4.1",
           "ZXing.Net.Mobile.Forms": "2.4.1"
         },
@@ -7843,10 +7843,10 @@
           "lib/uap10.0.16299/Xamarin.Essentials.dll": {}
         }
       },
-      "Xamarin.Forms/4.8.0.1269": {
+      "Xamarin.Forms/4.7.0.1351": {
         "type": "package",
         "dependencies": {
-          "Microsoft.NETCore.UniversalWindowsPlatform": "6.2.10",
+          "Microsoft.NETCore.UniversalWindowsPlatform": "6.0.15",
           "Microsoft.UI.Xaml": "2.4.2",
           "Win2D.uwp": "1.20.0"
         },
@@ -7902,7 +7902,7 @@
           "Microsoft.Azure.Mobile.Client": "4.1.2",
           "Microsoft.Azure.Mobile.Client.SQLiteStore": "4.1.2",
           "Xamarin.Essentials": "1.5.3.2",
-          "Xamarin.Forms": "4.8.0.1364",
+          "Xamarin.Forms": "4.7.0.1351",
           "ZXing.Net.Mobile": "2.4.1",
           "ZXing.Net.Mobile.Forms": "2.4.1"
         },
@@ -14300,10 +14300,10 @@
         "xamarin.essentials.nuspec"
       ]
     },
-    "Xamarin.Forms/4.8.0.1269": {
-      "sha512": "3UFTlfJvF9l8HB+gWVmYUEVRSPU+c3H0G/h09RVG8/P5i/QRiDBg/YHEGfPR3HNuWlJ9S9TgZjrFruTUS1ZYiQ==",
+    "Xamarin.Forms/4.7.0.1351": {
+      "sha512": "JdhRaNGFZIkbKC1t/fdI0+iJKO0bZx603hWEu15N3ffUkkRji3EQzMvyv6MZggW6cDR88gIsk0NRkLlLF3wMFg==",
       "type": "package",
-      "path": "xamarin.forms/4.8.0.1269",
+      "path": "xamarin.forms/4.7.0.1351",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -14610,7 +14610,7 @@
         "lib/uap10.0.16299/Xamarin.Forms.Xaml.dll",
         "lib/uap10.0.16299/Xamarin.Forms.Xaml.pdb",
         "lib/uap10.0.16299/Xamarin.Forms.Xaml.xml",
-        "xamarin.forms.4.8.0.1269.nupkg.sha512",
+        "xamarin.forms.4.7.0.1351.nupkg.sha512",
         "xamarin.forms.nuspec"
       ]
     },
@@ -14669,7 +14669,7 @@
       "K_Bikpower >= 1.0.0",
       "Microsoft.Azure.Mobile.Client >= 4.1.2",
       "Microsoft.NETCore.UniversalWindowsPlatform >= 6.2.10",
-      "Xamarin.Forms >= 4.8.0.1269"
+      "Xamarin.Forms >= 4.7.0.1351"
     ]
   },
   "packageFolders": {
@@ -14726,7 +14726,7 @@
           },
           "Xamarin.Forms": {
             "target": "Package",
-            "version": "[4.8.0.1269, )"
+            "version": "[4.7.0.1351, )"
           }
         },
         "imports": [
@@ -14756,23 +14756,5 @@
         "#import": []
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1605",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Detected package downgrade: Xamarin.Forms from 4.8.0.1364 to 4.8.0.1269. Reference the package directly from the project to select a different version. \r\n K_Bikpower.UWP -> K_Bikpower -> Xamarin.Forms (>= 4.8.0.1364) \r\n K_Bikpower.UWP -> Xamarin.Forms (>= 4.8.0.1269)",
-      "libraryId": "Xamarin.Forms",
-      "targetGraphs": [
-        "UAP,Version=v10.0.16299",
-        "UAP,Version=v10.0.16299/win10-arm",
-        "UAP,Version=v10.0.16299/win10-arm-aot",
-        "UAP,Version=v10.0.16299/win10-x64",
-        "UAP,Version=v10.0.16299/win10-x64-aot",
-        "UAP,Version=v10.0.16299/win10-x86",
-        "UAP,Version=v10.0.16299/win10-x86-aot"
-      ]
-    }
-  ]
+  }
 }

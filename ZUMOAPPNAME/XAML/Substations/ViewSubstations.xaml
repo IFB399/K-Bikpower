@@ -8,6 +8,7 @@
               BackgroundColor="#1B252D">
     <ContentPage.Content>
         <StackLayout Margin="50,10,50,10">
+            <Label Text="Substations" FontSize="Large" HorizontalOptions="Center" TextColor="White"/>
             <Frame CornerRadius="0" BackgroundColor="#f5f5f5" HasShadow ="False">
 
                 <ListView x:Name="AssetsTable" HasUnevenRows="false" ItemTapped="ViewAssets">
@@ -46,8 +47,8 @@
                 </ListView>
 
             </Frame>
-            <StackLayout x:Name="buttonsPanel" Orientation="Horizontal">
-                <Button Text="Add Substation" Clicked="Button_Clicked" BackgroundColor="White" CornerRadius="0" FontSize="Medium" TextColor="Black"/>
+            <StackLayout x:Name="buttonsPanel" Orientation="Horizontal" HorizontalOptions="Center">
+                <Button Text="Add Substation" Clicked="Button_Clicked" BackgroundColor="White" CornerRadius="0" FontSize="Medium" TextColor="Black" />
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

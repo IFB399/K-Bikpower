@@ -88,11 +88,16 @@ namespace K_Bikpower
             await RefreshItems(true, syncItems: false);
             FilterLabel.Text = "Filters";
         }
-        private void Add_Form_Clicked(object sender, EventArgs e)
+        private async void Add_Form_Clicked(object sender, EventArgs e)
         {
-            //Debug.Text = "Clicked";
-            //Navigation.PushAsync(new Documents()); //new commission WON'T WORK FOR ANDROID
-            Navigation.PushAsync(new Commission());
+            try
+            {
+                await Navigation.PushAsync(new Commission());
+            }
+            catch (Exception b)
+            {
+                Console.WriteLine(b);
+            }
         }
         public async void OnRefresh(object sender, EventArgs e)
         {

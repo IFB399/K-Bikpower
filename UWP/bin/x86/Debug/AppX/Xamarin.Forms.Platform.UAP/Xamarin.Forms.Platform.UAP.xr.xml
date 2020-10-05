@@ -85,6 +85,7 @@
     <RootPropertyPathName Name="BackButtonVisibility" />
     <RootPropertyPathName Name="Command" />
     <RootPropertyPathName Name="CommandParameter" />
+    <RootPropertyPathName Name="Icon" />
     <RootPropertyPathName Name="IsSelected" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
@@ -638,6 +639,7 @@
       <RootProperty Name="Height" />
       <RootProperty Name="Visibility" />
       <RootProperty Name="Margin" />
+      <RootProperty Name="MaxHeight" />
     </RootType>
     <RootType FullName="Xamarin.Forms.Platform.UWP.PageControl">
       <RootProperty Name="ContentMargin" />
@@ -684,7 +686,6 @@
     <RootType FullName="Xamarin.Forms.Platform.UWP.BoolToVisibilityConverter">
       <RootProperty Name="FalseIsVisible" />
     </RootType>
-    <RootType FullName="Xamarin.Forms.Platform.UWP.BrushConverter" />
     <RootType FullName="Xamarin.Forms.Platform.UWP.PageToRenderedElementConverter" />
     <RootType FullName="Xamarin.Forms.Platform.UWP.ImageConverter" />
     <RootType FullName="Xamarin.Forms.Platform.UWP.ViewToRendererConverter" />

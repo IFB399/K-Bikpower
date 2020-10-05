@@ -39,7 +39,11 @@ namespace K_Bikpower
             //int Loceqnum = details.LocationEquipmentNumber;
             Location_Equipment_Number_label.Text = details.LocationEquipmentNumber;
             Component_Code_label.Text = details.ComponentCode;
-            //WarrantyDate_Picker.Date = details.WarrantyDate; FIX
+            if (details.WarrantyDate != null)
+            {
+                WarrantyDate_Picker.Date = (DateTime)details.WarrantyDate;
+            }
+            else { WarrantyDate_Picker.IsVisible = false; }
             //int EQUage = details.EquipmentAge;
             Equipement_age_label.Text = details.YearManufactured;
             Stock_Code_label.Text = details.StockCode;
@@ -52,7 +56,11 @@ namespace K_Bikpower
             Specifiaction_title_label.Text = details.SpecificationTitle;
             Specifiaction_NO_label.Text = details.SpecificationNO;
             Specifiaction_item_NO_label.Text = details.SpecificationItemNO;
-            //LastInstallDate_Picker.Date = details.LastInstallDate; FIX
+            if (details.LastInstallDate != null)
+            {
+                LastInstallDate_Picker.Date = (DateTime)details.LastInstallDate;
+            }
+            else { LastInstallDate_Picker.IsVisible = false; }
             Equipment_class_label.Text = details.EquipmentClass;
             Equipment_class_description_label.Text = details.EquipmentClassDescription;
         }

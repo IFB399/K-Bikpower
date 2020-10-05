@@ -6,6 +6,7 @@
              BackgroundColor="#1B252D">
     <ContentPage.Content>
         <StackLayout Margin="50,50,50,30">
+            <Label Text="Assets" FontSize="Large" HorizontalOptions="Center" TextColor="White"/>
             <Frame CornerRadius="0" BackgroundColor="#F5F5F5" HasShadow ="False">
                 <StackLayout>
                     <ActivityIndicator 
@@ -70,8 +71,8 @@
                     </ListView>
                 </StackLayout>
             </Frame>
-            <StackLayout x:Name="buttonsPanel" Orientation="Horizontal">
-                <Button Text="Add Asset" Clicked="Add_Asset_Clicked" BackgroundColor="White" CornerRadius="0" FontSize="Medium" TextColor="Black"/>
+            <StackLayout x:Name="buttonsPanel" Orientation="Horizontal" HorizontalOptions="Center">
+                <Button Text="Add Asset" Clicked="Add_Asset_Clicked" BackgroundColor="White" CornerRadius="0" FontSize="Medium" TextColor="Black" />
 
             </StackLayout>
 
