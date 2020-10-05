@@ -8,7 +8,7 @@
             <Frame CornerRadius="0" BackgroundColor="#FAFAFA" HasShadow ="True" >
             <StackLayout>
                     
-                    <Label Text="Substation Code" FontSize="Title" TextColor="Black"/>
+                    <Label Text="Substation Code*" FontSize="Title" TextColor="Black"/>
                     <Picker x:Name="Substation_Picker" Title="Select Substation" ItemsSource="{Binding Substation}" ItemDisplayBinding="{Binding Substation_Code}"/>
 
                 <!--drop down-->
@@ -22,13 +22,13 @@
                 <Label Text="Equipment Status" FontSize="Title" TextColor="Black"/>
                 <Entry  x:Name="Equipment_Status_Entry" ClearButtonVisibility="WhileEditing" VerticalOptions="EndAndExpand" MaxLength="25" IsSpellCheckEnabled="True" IsTextPredictionEnabled="false"/>
 
-                <Label Text="Serial Number" FontSize="Title" TextColor="Black"/>
+                <Label Text="Serial Number*" FontSize="Title" TextColor="Black"/>
                 <Entry  x:Name="Serial_Number_Entry" ClearButtonVisibility="WhileEditing" VerticalOptions="EndAndExpand" MaxLength="25" IsSpellCheckEnabled="True" IsTextPredictionEnabled="false"/>
 
                 <Label Text="Modifier Code" FontSize="Title" TextColor="Black"/>
                 <Entry  x:Name="Modifier_Code_Entry" ClearButtonVisibility="WhileEditing" VerticalOptions="EndAndExpand" MaxLength="25" IsSpellCheckEnabled="True" IsTextPredictionEnabled="false"/>
 
-                <Label Text="Location Equipment Number" FontSize="Title" TextColor="Black"/>
+                <Label Text="Location Equipment Number*" FontSize="Title" TextColor="Black"/>
                 <Entry  x:Name="Location_Equipment_Number_Entry" ClearButtonVisibility="WhileEditing" VerticalOptions="EndAndExpand" MaxLength="25" IsSpellCheckEnabled="True" IsTextPredictionEnabled="false"/>
 
                 <Label Text="Component Code" FontSize="Title" TextColor="Black"/>
@@ -42,7 +42,7 @@
                     </StackLayout>
                    
 
-                <Label Text="Year Manufactured" FontSize="Title" TextColor="Black"/>
+                <Label Text="Year Manufactured*" FontSize="Title" TextColor="Black"/>
                 <Entry  x:Name="Equipment_Age_Entry" ClearButtonVisibility="WhileEditing" VerticalOptions="EndAndExpand" MaxLength="25" IsSpellCheckEnabled="True" IsTextPredictionEnabled="false"/>
 
                 <Label Text="Stock Code" FontSize="Title" TextColor="Black"/>
@@ -51,16 +51,16 @@
                 <Label Text="Purchase Order Number" FontSize="Title" TextColor="Black"/>
                 <Entry  x:Name="Purchase_Order_Number_Entry" ClearButtonVisibility="WhileEditing" VerticalOptions="EndAndExpand" MaxLength="25" IsSpellCheckEnabled="True" IsTextPredictionEnabled="false"/>
 
-                <Label Text="Rated Voltage" FontSize="Title" TextColor="Black"/>
+                <Label Text="Rated Voltage*" FontSize="Title" TextColor="Black"/>
                 <Entry  x:Name="Rated_Voltage_Entry" ClearButtonVisibility="WhileEditing" VerticalOptions="EndAndExpand" MaxLength="25" IsSpellCheckEnabled="True" IsTextPredictionEnabled="false"/>
 
-                <Label Text="Nominal Voltage" FontSize="Title" TextColor="Black"/>
+                <Label Text="Nominal Voltage*" FontSize="Title" TextColor="Black"/>
                 <Entry  x:Name="Nominal_Voltage_Entry" ClearButtonVisibility="WhileEditing" VerticalOptions="EndAndExpand" MaxLength="25" IsSpellCheckEnabled="True" IsTextPredictionEnabled="false"/>
 
-                <Label Text="Manufacturer Name" FontSize="Title" TextColor="Black"/>
+                <Label Text="Manufacturer Name*" FontSize="Title" TextColor="Black"/>
                 <Entry  x:Name="Manufacturer_Name_Entry" ClearButtonVisibility="WhileEditing" VerticalOptions="EndAndExpand" MaxLength="25" IsSpellCheckEnabled="True" IsTextPredictionEnabled="false"/>
 
-                <Label Text="Manufacturer Type" FontSize="Title" TextColor="Black" />
+                <Label Text="Manufacturer Type*" FontSize="Title" TextColor="Black" />
                 <Entry  x:Name="Manufacturer_Type_Entry" ClearButtonVisibility="WhileEditing" VerticalOptions="EndAndExpand" MaxLength="25" IsSpellCheckEnabled="True" IsTextPredictionEnabled="false"/>
 
                 <Label Text="Specification Title" FontSize="Title" TextColor="Black"/>
@@ -72,7 +72,7 @@
                 <Label Text="Specification Item Number" FontSize="Title" TextColor="Black"/>
                 <Entry  x:Name="Specification_Item_Number_Entry" ClearButtonVisibility="WhileEditing" VerticalOptions="EndAndExpand" MaxLength="25" IsSpellCheckEnabled="True" IsTextPredictionEnabled="false"/>
 
-                    <Label Text="Last Installation Date" FontSize="Title" TextColor="Black"/>
+                    <Label Text="Last Installation Date*" FontSize="Title" TextColor="Black"/>
                     <DatePicker  x:Name="LastInstallDate_Picker"/>
                     <StackLayout Orientation="Horizontal">
                         <Label Text="No Install Date" FontSize="Title" TextColor="Black"/>
@@ -80,10 +80,10 @@
                     </StackLayout>
                     
 
-                    <Label Text="Equipment Class" FontSize="Title" TextColor="Black"/>
+                    <Label Text="Equipment Class*" FontSize="Title" TextColor="Black"/>
                 <Entry  x:Name="Equipment_Class_Entry" ClearButtonVisibility="WhileEditing" VerticalOptions="EndAndExpand" MaxLength="25" IsSpellCheckEnabled="True" IsTextPredictionEnabled="false"/>
 
-                <Label Text="Equipment Class Description" FontSize="Title" TextColor="Black"/>
+                <Label Text="Equipment Class Description*" FontSize="Title" TextColor="Black"/>
                 <Entry  x:Name="Equipment_Class_Description_Entry" ClearButtonVisibility="WhileEditing" VerticalOptions="EndAndExpand" MaxLength="25" IsSpellCheckEnabled="True" IsTextPredictionEnabled="false"/>
 
 

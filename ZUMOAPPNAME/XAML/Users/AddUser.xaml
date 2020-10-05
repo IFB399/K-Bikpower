@@ -9,7 +9,7 @@
     
     <ContentPage.Content>
         <StackLayout Margin="50,50,50,30">
-            <Label Text="Users" FontSize="Large" HorizontalOptions="Center" TextColor="White"/>
+            <Label Text="Add User" FontSize="Large" HorizontalOptions="Center" TextColor="White"/>
             <Frame CornerRadius="0" BackgroundColor="#F5F5F5" HasShadow ="False">
                 <StackLayout>
                     <Grid RowDefinitions="*"
@@ -43,6 +43,7 @@
                                 <x:String>Executive Manager Asset Management</x:String>
                                 <x:String>Executive Manager Projects</x:String>
                                 <x:String>Field Inspectors</x:String>
+                                <x:String>General User</x:String>
                                 <x:String>Greenfield Projects</x:String>
                                 <x:String>Maintenance Teams</x:String>
                                 <x:String>Major Capital Projects Manager</x:String>
@@ -52,7 +53,6 @@
                                 <x:String>Regional Maintenance</x:String>
                                 <x:String>Schedulers</x:String>
                                 <x:String>Standards Group</x:String>
-                                <x:String>User</x:String>
                                 <x:String>Works Planning</x:String>
                             </Picker.Items>
                         </Picker>
