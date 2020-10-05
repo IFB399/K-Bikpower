@@ -66,6 +66,7 @@ namespace K_Bikpower
         private async void DeleteButton_Clicked(object sender, EventArgs e)
         {
             await user_manager.DeleteUserAsync(popuserData);
+            await Navigation.PushAsync(new UsersPage());
         }
     }
 }
