@@ -150,6 +150,8 @@
                         <Button Text="Delete Asset" Grid.Column="1" Grid.Row="0" Clicked="Delete_Asset_Clicked"/>
                         <Button Text="Generate QR Code" Grid.Column="0" Grid.Row="1" Clicked="Button_Clicked_1"/>
                         <Button Text="Save QR Code" Grid.Column="1" Grid.Row="1" Clicked="Button_Clicked_2"/>
+                        <Button Text="View Commission Forms" Grid.Column="0" Grid.Row="2" Clicked="CForms_Clicked"/>
+                        <Button Text="View Decommission Forms" Grid.Column="1" Grid.Row="2" Clicked="DForms_Clicked"/>
                     </Grid>
                     
                 </StackLayout>
