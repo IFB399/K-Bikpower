@@ -7,29 +7,29 @@ namespace K_Bikpower
 	public class Asset
 	{
 		string id;
-		string substationCode; //compulsory done
+		string substationCode; 
 		string plantNumber;
-		string assetEQNO; //INT done
+		string assetEQNO; 
         string eqStatus;
-        string serialNumber; //compulsory done
+        string serialNumber; 
         string modifierCode;
-        string locationEQNO; //compulsory done, INT done
+        string locationEQNO; 
         string componentCode;
         DateTime? warrantyDate; 
-        string yearManufactured; //INT done
+        string yearManufactured; 
         string stockCode;
         string poNO;
-        string ratedVoltage; //compulsory, INT done
-        string nominalVoltage; //compulsory, INT done
-        string manufacturerName; //compulsory done 
-        string manufacturerType; //compulsory done
+        string ratedVoltage;
+        string nominalVoltage; 
+        string manufacturerName; 
+        string manufacturerType; 
         string specificationTitle;
         string specificationNO;
         string specificationItemNO;
-        DateTime? lastInstallDate; //compulsory
-        string equipmentClass; //compulsory 
-        string equipmentClassDescription; //compulsory
-        string status; //compulsory
+        DateTime? lastInstallDate; 
+        string equipmentClass; 
+        string equipmentClassDescription;
+        string status;
         string modifiedBy;
         string addedBy;
         string currentlyIn;
@@ -41,7 +41,7 @@ namespace K_Bikpower
 			set { id = value;}
 		}
 
-		[JsonProperty(PropertyName = "substation_code")] ///my version
+		[JsonProperty(PropertyName = "substation_code")] 
 		public string SubstationCode
 		{
 			get { return substationCode; }

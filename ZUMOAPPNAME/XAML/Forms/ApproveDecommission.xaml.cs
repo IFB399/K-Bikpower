@@ -28,9 +28,6 @@ namespace K_Bikpower
             asset_manager = AssetManager.DefaultManager;
             decommission_manager = DecommissionManager.DefaultManager;
             user_manager = UserManager.DefaultManager;
-
-            //Debug.Text = user_manager.Authentication();
-
             decommission_form = submittedForm;
             if (assets != null)
             {
@@ -102,7 +99,7 @@ namespace K_Bikpower
                 bool answer = await DisplayAlert("Confirm Approval", "Approve this form?", "Yes", "No");
                 if (answer == true)
                 {
-                    //decommission_form.Status = "Approved by " + user_manager.ReturnUser();
+                    
                     decommission_form.ApprovedBy = user_manager.ReturnName();
                     decommission_form.LastModifiedOn = DateTime.UtcNow.ToLocalTime();
                     decommission_form.Status = "Approved";
@@ -147,8 +144,7 @@ namespace K_Bikpower
         }
         async void Edit_Clicked(object sender, EventArgs e)
         {
-            //SHOULD ONLY BE POSSIBLE IF NOT APPROVED
-            //can only be done by person who submitted or someone who is able to approve/reject?
+            
             await Navigation.PushAsync(new Decommission(decommission_form, globalAssets));
         }
         async void Exit_Clicked(object sender, EventArgs e)

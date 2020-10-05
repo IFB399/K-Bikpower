@@ -33,7 +33,7 @@ namespace K_Bikpower
             {
                 globalAssets = assets;
             }
-            RetrieveAssets(submittedForm, assets); //will add assets to global assets
+            RetrieveAssets(submittedForm, assets);
             LoadForm(submittedForm);
             assetList.ItemsSource = globalAssets;
 
@@ -101,7 +101,6 @@ namespace K_Bikpower
                     commission_form.LastModifiedOn = DateTime.UtcNow.ToLocalTime();
                     commission_form.Status = "Approved";
                     await UpdateForm(commission_form);
-                    //update asset form links?
                     await Navigation.PushAsync(new ViewCommissionForms());
                     //change status of assets (only happends after approval)
                     foreach (Asset a in globalAssets)

@@ -66,7 +66,6 @@ namespace K_Bikpower
             Firstname.Text = data.FirstName;
             Lastname.Text = data.LastName;
             Email.Text = data.Email;
-            //Username.Text = data.Username;
             Auth.SelectedItem = data.Role;
         }
 
@@ -76,7 +75,6 @@ namespace K_Bikpower
         async Task AddItem(User item)
         {
             await user_manager.SaveTaskAsync(item);
-            //toDo.ItemsSource = await manager.GetTodoItemsAsync();
         }
 
         async void Add_User_Clicked(object sender, EventArgs e)
@@ -106,7 +104,6 @@ namespace K_Bikpower
                 FirstName = Firstname.Text,
                 LastName = Lastname.Text,
                 Email = Email.Text,
-                //Username = Username.Text,
                 Salt = salt,
                 Password = hashedPassword,
                 Role = Auth.SelectedItem.ToString()
@@ -182,7 +179,6 @@ namespace K_Bikpower
                 FirstName = Firstname.Text,
                 LastName = Lastname.Text,
                 Email = Email.Text,
-                //Username = Username.Text,
                 Password = hashedPassword,
                 Salt = salt,
                 Role = UserRole,

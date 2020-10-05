@@ -64,14 +64,13 @@ namespace K_Bikpower
             string sortBy = (string)SortBy_Picker.SelectedItem;
             if (SubmittedBy_Picker.SelectedIndex == -1 && Status_Picker.SelectedIndex == -1)
             {
-                FilterLabel.Text = "Filters"; //will improve later
+                FilterLabel.Text = "Filters"; 
             }
             else
             {
                 FilterLabel.Text = "Filters (active)";
             }
             await RefreshItems(true, syncItems: false, submittedBy, status, sortBy, asset);
-            //todoList.ItemsSource = await manager.GetTodoItemsAsync(false, substationCode, equipmentClass, manufacturerName);
         }
         private void Clear_Status_Clicked(object sender, EventArgs e)
         {

@@ -63,8 +63,6 @@ namespace K_Bikpower
                         else
                         {
                             _scanView.IsScanning = false; //stop scanning
-                            //assetList.Add(asset); //also send back asset just scanned
-                            //await Navigation.PushAsync(new ManageFormAssets(d, assetList, prevPage));
                             await Navigation.PushAsync(new FormPreviewAsset(asset, 1,savedData, assetList));
                         }
                     }
@@ -87,7 +85,7 @@ namespace K_Bikpower
                             //assetList.Add(asset); //also send back asset just scanned
                             //go to preview page actually
                             await Navigation.PushAsync(new FormPreviewAsset(asset, 1,savedData, assetList));
-                            //await Navigation.PushAsync(new ManageFormAssets(c, assetList, prevPage));
+
                         }
                     }
 
@@ -98,6 +96,3 @@ namespace K_Bikpower
         }
     }
 }
-
-
-//<zxing:ZXingDefaultOverlay x:Name="overlay" TopText="Hold your phone up to the barcode" BottomText="Scanning will happen automatically" ShowFlashButton="True" />

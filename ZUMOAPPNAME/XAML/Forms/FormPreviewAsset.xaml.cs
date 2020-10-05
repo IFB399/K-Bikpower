@@ -44,19 +44,7 @@ namespace K_Bikpower
         {
             assetList.Add(assetPreviewed); //add asset to list
             await Navigation.PushAsync(new ManageFormAssets(savedData, assetList)); //return to manage form assets page
-            //IN CASE I BROKE THIS:
-            /*
-            if (typeof(DecommissionData).IsInstanceOfType(savedData))
-            {
-                //DecommissionData d = (DecommissionData)savedData;
-                await Navigation.PushAsync(new ManageFormAssets(d, assetList, prevPage)); //return to manage form assets page
-            }
-            else //return to manage form assets page
-            {
-                //CommissionData c = (CommissionData)savedData;
-                await Navigation.PushAsync(new ManageFormAssets(c, assetList, prevPage));
-            }
-            */
+            
         }
         private void Go_Back()
         {
@@ -94,28 +82,23 @@ namespace K_Bikpower
             AddedBy_label.Text = details.AddedBy;
             Substation_Code_label.Text = details.SubstationCode;
             Plant_Number_label.Text = details.PlantNumber;
-            //int AssentEQNO = details.AssetEQNO;
+           
             Asset_EQ_NO_label.Text = details.AssetEQNO;
             EQ_Status_label.Text = details.EQStatus;
             Serial_Number_label.Text = details.SerialNumber;
             Modifier_code_label.Text = details.ModifierCode;
-            //int Loceqnum = details.LocationEquipmentNumber;
+           
             Location_Equipment_Number_label.Text = details.LocationEquipmentNumber;
-            Component_Code_label.Text = details.ComponentCode;
-            //WarrantyDate_Picker.Date = details.WarrantyDate; FIX
-            //int EQUage = details.EquipmentAge;
+            Component_Code_label.Text = details.ComponentCode;           
             Equipement_age_label.Text = details.YearManufactured;
             Stock_Code_label.Text = details.StockCode;
-            PO_NO_label.Text = details.PurchaseOrderNO;
-            //int RatedVolts = details.RatedVoltage;
-            Rated_Voltage_label.Text = details.RatedVoltage;
-            //int NomVolts = details.NominalVoltage;
+            PO_NO_label.Text = details.PurchaseOrderNO;           
+            Rated_Voltage_label.Text = details.RatedVoltage;            
             Nominal_Voltage_label.Text = details.NominalVoltage;
             Manufacture_Name_label.Text = details.ManufacturerName;
             Specifiaction_title_label.Text = details.SpecificationTitle;
             Specifiaction_NO_label.Text = details.SpecificationNO;
             Specifiaction_item_NO_label.Text = details.SpecificationItemNO;
-            //LastInstallDate_Picker.Date = details.LastInstallDate; FIX
             Equipment_class_label.Text = details.EquipmentClass;
             Equipment_class_description_label.Text = details.EquipmentClassDescription;
         }

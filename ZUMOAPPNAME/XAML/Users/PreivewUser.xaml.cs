@@ -54,7 +54,6 @@ namespace K_Bikpower
             Firstname.Text = data.FirstName;
             Lastname.Text = data.LastName;
             Email.Text = data.Email;
-            //Username.Text = data.Username;
             Auth.Text = data.Role;
         }
 

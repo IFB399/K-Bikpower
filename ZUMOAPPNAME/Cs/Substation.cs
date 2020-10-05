@@ -22,7 +22,7 @@ namespace K_Bikpower
             set { id = value; }
         }
 
-        [JsonProperty(PropertyName = "substation_Code")] //if the C isn't a capital substation uniqueness test won't work
+        [JsonProperty(PropertyName = "substation_Code")] 
         public string Substation_Code {
             get {return substation_code; }
             set { substation_code = value; }

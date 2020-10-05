@@ -88,7 +88,7 @@ namespace K_Bikpower
             }
 
             //SAVE NEW FORM
-            if (update == false) //used to be if decommissionForm == null but didnt work
+            if (update == false) 
             {
                 DecommissionData form = new DecommissionData
                 {
