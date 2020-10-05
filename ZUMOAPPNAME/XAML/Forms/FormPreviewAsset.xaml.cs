@@ -58,7 +58,7 @@ namespace K_Bikpower
             }
             */
         }
-        private void Go_Back_Clicked(object sender, EventArgs e)
+        private void Go_Back()
         {
             //return to correct page
             if (prevPageNumber == 1)
@@ -83,6 +83,10 @@ namespace K_Bikpower
                 DecommissionData d = (DecommissionData)savedData;
                 Navigation.PushAsync(new ApproveDecommission(d, assetList)); //go to approve decommission page
             }
+        }
+        private void Go_Back_Clicked(object sender, EventArgs e)
+        {
+            Go_Back();
         }
         private void PopulateDetails(Asset details)
         {
@@ -115,5 +119,22 @@ namespace K_Bikpower
             Equipment_class_label.Text = details.EquipmentClass;
             Equipment_class_description_label.Text = details.EquipmentClassDescription;
         }
+        
+        protected override bool OnBackButtonPressed()
+        {
+
+            if (Device.RuntimePlatform.Equals(Device.UWP) || Device.RuntimePlatform.Equals(Device.Android)) //android doesnt work
+            {
+                //return to correct page
+                Go_Back();
+                return true;
+            }
+            else
+            {
+                base.OnBackButtonPressed();
+                return false;
+            }
+        }
+        
     }
 }

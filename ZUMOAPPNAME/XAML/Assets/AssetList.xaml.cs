@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using System.Collections.ObjectModel;
 using System.Linq;
+using Xamarin.Forms.Markup;
 
 namespace K_Bikpower
 {
@@ -11,8 +12,8 @@ namespace K_Bikpower
         AssetManager manager;
         Object savedData;
         ObservableCollection<Asset> assetList = new ObservableCollection<Asset>();
-
-        public AssetList(Object o = null, ObservableCollection<Asset> assets = null)
+        string subCode = null;
+        public AssetList(Object o = null, ObservableCollection<Asset> assets = null, string substationCode = null)
         {
             InitializeComponent();
             manager = AssetManager.DefaultManager;
@@ -41,6 +42,11 @@ namespace K_Bikpower
             {
                 assetList = assets;
             }
+            if (substationCode != null)
+            {
+                subCode = substationCode;
+                AssetExpander.IsExpanded = true;
+            }
         }
 
         protected override async void OnAppearing()
@@ -48,9 +54,27 @@ namespace K_Bikpower
             base.OnAppearing();
             ManufacturerPicker.ItemsSource = await manager.GetManufacturerNames();
             SubstationPicker.ItemsSource = await manager.GetSubstationCodes();
+
             EquipmentClassPicker.ItemsSource = await manager.GetEquipmentClass();
             // Set syncItems to true in order to synchronize the data on startup when running in offline mode
-            await RefreshItems(true, syncItems: true);
+            
+            if (subCode != null)
+            {
+                SubstationPicker.SelectedItem = subCode;
+                await RefreshItems(true, syncItems: true, subCode);
+            }
+            else
+            {
+                await RefreshItems(true, syncItems: true);
+            }
+            if (SubstationPicker.SelectedIndex == -1 && EquipmentClassPicker.SelectedIndex == -1 && ManufacturerPicker.SelectedIndex == -1)
+            {
+                FilterLabel.Text = "Filters"; //will improve later
+            }
+            else
+            {
+                FilterLabel.Text = "Filters (active)";
+            }
         }
 
         public async void Add_Asset_Clicked(object sender, EventArgs e)

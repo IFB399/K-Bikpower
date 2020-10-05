@@ -80,9 +80,9 @@
                     <StackLayout Grid.Row="6">
                         <Label Text="Commissioned Plant From:" FontSize="30"/>
                 
-                        <RadioButton x:Name="Project_Button" Text="Project" GroupName="MovedFrom"/>
-                        <RadioButton x:Name="Spares_Button" Text="Spares" GroupName="MovedFrom"/>
-                        <RadioButton x:Name="Workshop_Button" Text="Workshop" GroupName="MovedFrom"/>
+                        <RadioButton x:Name="Project_Button" Text="Project"/>
+                        <RadioButton x:Name="Spares_Button" Text="Spares"/>
+                        <RadioButton x:Name="Workshop_Button" Text="Workshop"/>
                     </StackLayout>
 
                     <StackLayout Grid.Row="7">

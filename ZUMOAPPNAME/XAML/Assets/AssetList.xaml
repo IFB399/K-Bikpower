@@ -30,7 +30,7 @@
                                 <RowDefinition Height="*" />
                                 <RowDefinition Height="*" />
                             </Grid.RowDefinitions>
-                            <Label Grid.Row="0" Grid.Column="0" Text="Substation Code"/>
+                            <Label x:Name="Debug2"  Grid.Row="0" Grid.Column="0" Text="Substation Code"/>
                             <Picker x:Name="SubstationPicker" Grid.Row="0" Grid.Column="1"/>
                             <Button Clicked="Clear_Substation_Clicked" Text="X" Grid.Row="0" Grid.Column="2"/>
                             <Label Text="Equipment Class" Grid.Row="1" Grid.Column="0"/>

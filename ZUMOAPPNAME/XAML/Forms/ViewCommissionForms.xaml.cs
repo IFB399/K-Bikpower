@@ -90,6 +90,8 @@ namespace K_Bikpower
         }
         private void Add_Form_Clicked(object sender, EventArgs e)
         {
+            //Debug.Text = "Clicked";
+            //Navigation.PushAsync(new Documents()); //new commission WON'T WORK FOR ANDROID
             Navigation.PushAsync(new Commission());
         }
         public async void OnRefresh(object sender, EventArgs e)

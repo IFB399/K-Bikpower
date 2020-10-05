@@ -105,7 +105,13 @@ namespace K_Bikpower
             return null;
         }
 
-        
+        public async Task<List<string>> GetApproverEmails()
+        {
+            string[] roles = { "Chief Operating Officer", "Regional Maintenance", "Asset Strategy Manager", "Executive Manager Projects", "Major Capital Projects Manager" };
+            IEnumerable<string> items = await todoTable.Where(user => roles.Contains(user.Role)).Select(user => user.Email).ToEnumerableAsync();
+            items = items.Distinct();
+            return new List<string>(items);
+        }
         //public async Task<User> GetUser(string username)
         public async Task<ObservableCollection<User>> GetUser(string email)
         {
@@ -113,11 +119,7 @@ namespace K_Bikpower
             IEnumerable<User> items = await todoTable.Where(user => user.Email == email) //ideally just want to return a user not a collection?
                 .ToEnumerableAsync();
 
-            //User u = (User)await todoTable.Where(user => user.Username == username) //ideally just want to return a user not a collection?
-                //.ToEnumerableAsync();
-
             return new ObservableCollection<User>(items);
-            //return u;
         }
 
         public async Task GetUserAuth(string email)
