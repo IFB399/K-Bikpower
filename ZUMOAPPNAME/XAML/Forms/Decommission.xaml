@@ -52,16 +52,19 @@
                     </StackLayout>
 
                     <StackLayout Grid.Row="4">
-                        <Label Text="Location Name/Substation/Project No." FontSize="30"/>
-                        <Entry x:Name="Location_Entry"/>
+                        <Label Text="De-Commissioned Plant To:" FontSize="30"/>
+                        <StackLayout Orientation="Horizontal">
+                        <RadioButton x:Name="Project_Button" Text="Project" TextColor="Black" CheckedChanged="Project_Button_CheckedChanged" GroupName="a"/>
+                            <Entry x:Name="Project_Entry" IsVisible="False" IsEnabled="True" Placeholder="Project No." WidthRequest="200"/>
+                        </StackLayout>
+                        <RadioButton x:Name="Spares_Button" Text="Spares" TextColor="Black" CheckedChanged="Spares_Button_CheckedChanged" GroupName="a"/>
+                        <RadioButton x:Name="Workshop_Button" Text="Workshop" TextColor="Black" CheckedChanged="Workshop_Button_CheckedChanged" GroupName="a"/>
+                        <RadioButton x:Name="Scrap_Button" Text="Scrap" TextColor="Black" CheckedChanged="Scrap_Button_CheckedChanged" GroupName="a"/>
                     </StackLayout>
 
                     <StackLayout Grid.Row="5">
-                        <Label Text="De-Commissioned Plant To:" FontSize="30"/>
-                        <RadioButton x:Name="Project_Button" Text="Project" TextColor="Black" />
-                        <RadioButton x:Name="Spares_Button" Text="Spares" TextColor="Black"/>
-                        <RadioButton x:Name="Workshop_Button" Text="Workshop" TextColor="Black"/>
-                        <RadioButton x:Name="Scrap_Button" Text="Scrap" TextColor="Black" />
+                        <Label Text="Substation" FontSize="30"/>
+                        <Picker x:Name="Substation_Entry"/>
                     </StackLayout>
 
                     <StackLayout Grid.Row="6">

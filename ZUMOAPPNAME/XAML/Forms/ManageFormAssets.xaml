@@ -18,7 +18,7 @@
             <ListView x:Name="assetList" Grid.Row="1" ItemsSource="{Binding Assets}" ItemSelected="selectedAsset" HasUnevenRows="false">
                 <ListView.Header>
                     <Grid>
-                        <Label Grid.Column="0"  Text="Asset Equipment Number" HorizontalOptions="Center" FontAttributes="Bold"/>
+                        <Label Grid.Column="0"  Text="Serial Number" HorizontalOptions="Center" FontAttributes="Bold"/>
                         <Label Grid.Column="1" Text="Substation" HorizontalOptions="Center" FontAttributes="Bold"/>
                         <Label Grid.Column="2" Text="Manufacturer" HorizontalOptions="Center" FontAttributes="Bold"/>
                         <Label Grid.Column="3" Text="Equipment Class" HorizontalOptions="Center" FontAttributes="Bold"/>
@@ -28,7 +28,7 @@
                     <DataTemplate>
                         <ViewCell>
                             <Grid>
-                                <Label Grid.Column="0" Text="{Binding AssetEQNO}" HorizontalOptions="Center"/>
+                                <Label Grid.Column="0" Text="{Binding SerialNumber}" HorizontalOptions="Center"/>
                                 <Label Grid.Column="1" Text="{Binding SubstationCode}" HorizontalOptions="Center"/>
                                 <Label Grid.Column="2" Text="{Binding ManufacturerName}" HorizontalOptions="Center"/>
                                 <Label Grid.Column="3" Text="{Binding EquipmentClassDescription}" HorizontalOptions="Center"/>

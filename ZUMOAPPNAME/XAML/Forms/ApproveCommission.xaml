@@ -5,12 +5,11 @@
              BackgroundColor="#1B252D"
              Visual="Material">
     <StackLayout Margin="50, 50, 50, 30">
-        <Label Text="Commission Forms" TextColor="White" HorizontalOptions="Center" FontSize="Large"/>
+        <Label Text="Commission Form" TextColor="White" HorizontalOptions="Center" FontSize="Large"/>
         <ScrollView>
             <Frame CornerRadius="0" BackgroundColor="#F5F5F5" >
                 <Grid Margin="10" RowSpacing="20" >
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="*" />
                         <RowDefinition Height="Auto" />
                         <RowDefinition Height="*" />
                         <RowDefinition Height="*" />
@@ -19,13 +18,14 @@
                         <RowDefinition Height="*" />
                         <RowDefinition Height="*" />
                         <RowDefinition Height="*" />
+                        <RowDefinition Height="Auto" />
                         <RowDefinition Height="*" />
                         <RowDefinition Height="*" />
                         <RowDefinition Height="*" />
                     </Grid.RowDefinitions> 
 
-                    <BoxView x:Name="BoxView"  Grid.Row="1" Color="#29A8E2" CornerRadius="0"></BoxView>
-                    <Expander  x:Name="AssetExpander" Grid.Row="1" HorizontalOptions="Center">
+                    <BoxView x:Name="BoxView"  Grid.Row="0" Color="#29A8E2" CornerRadius="0"></BoxView>
+                    <Expander  x:Name="AssetExpander" Grid.Row="0" HorizontalOptions="Center">
                         <Expander.Header>
                             <Label x:Name="ExpanderLabel" Text="Assets" FontAttributes="Bold" FontSize="30" HorizontalOptions="Center"/>
                         </Expander.Header>
@@ -52,70 +52,83 @@
                         </ListView>
                     </Expander>
 
-                    <StackLayout Orientation="Vertical" Grid.Row="2">
-                        <Label Text="Submitted By" FontSize="30" FontAttributes="Bold"/>
-                        <Frame CornerRadius="0" BorderColor="Black" HasShadow="True" >
-                            <Label x:Name="SubmittedByLabel" FontSize="30"/>
-                        </Frame>
-                    </StackLayout>
-
-                    <StackLayout Orientation="Vertical" Grid.Row="3">
-                        <Label Text="Submitted On" FontSize="30" FontAttributes="Bold"/>
-                        <Frame CornerRadius="0" BorderColor="Black" HasShadow="True" >
-                            <Label x:Name="SubmittedOnLabel" FontSize="30"/>
-                        </Frame>
-                    </StackLayout>
-
-                    <StackLayout Orientation="Vertical" Grid.Row="4" >
+                    <StackLayout Orientation="Vertical" Grid.Row="1" >
                         <Label Text="Date Commissioned:" FontSize="30" FontAttributes="Bold"/>
                         <Frame CornerRadius="0" BorderColor="Black" HasShadow="True" >
                             <Label x:Name="DateCommissionedLabel" Text="insert date here" FontSize="30"/>
                         </Frame>
                     </StackLayout>
 
-                    <StackLayout Orientation="Vertical" Grid.Row="5">
+                    <StackLayout Orientation="Vertical" Grid.Row="2">
                         <Label Text="New Installation?" FontSize="30" FontAttributes="Bold"/>
                         <Frame CornerRadius="0" BorderColor="Black" HasShadow="True" >
                             <Label x:Name="InstallationLabel" Text="Yessssssss" FontSize="30"/>
                         </Frame>
                     </StackLayout>
 
-                    <StackLayout Orientation="Vertical" Grid.Row="6">
+                    <StackLayout Orientation="Vertical" Grid.Row="3">
                         <Label Text="Replacement Item?" FontSize="30" FontAttributes="Bold"/>
                         <Frame CornerRadius="0" BorderColor="Black" HasShadow="True" >
                             <Label x:Name="ReplacementLabel" Text="Nooooo" FontSize="30"/>
                         </Frame>
                     </StackLayout>
 
-                    <StackLayout Orientation="Vertical" Grid.Row="7">
+                    <StackLayout Orientation="Vertical" Grid.Row="4">
                         <Label Text="Region Name:" FontSize="30" FontAttributes="Bold"/>
                         <Frame CornerRadius="0" BorderColor="Black" HasShadow="True" >
                             <Label x:Name="RegionLabel" Text="insert region" FontSize="30"/>
                         </Frame>
                     </StackLayout>
 
-                    <StackLayout Orientation="Vertical" Grid.Row="8">
-                        <Label Text="Location Name/Substation/Project No." FontSize="30" FontAttributes="Bold"/>
+                    <StackLayout Orientation="Vertical" Grid.Row="5">
+                        <Label x:Name="LocationLabel1"  Text="Substation/Project No." FontSize="30" FontAttributes="Bold"/>
                         <Frame CornerRadius="0" BorderColor="Black" HasShadow="True" >
-                            <Label x:Name="LocationLabel" Text="insert location" FontSize="30"/>
+                            <Label x:Name="LocationLabel2" Text="insert location" FontSize="30"/>
                         </Frame>
                     </StackLayout>
 
-                    <StackLayout Orientation="Vertical" Grid.Row="9">
+                    <StackLayout Orientation="Vertical" Grid.Row="6">
                         <Label Text="Commissioned Plant From:" FontSize="30" FontAttributes="Bold"/>
                         <Frame CornerRadius="0" BorderColor="Black" HasShadow="True" >
                             <Label x:Name="MovedFromLabel" Text="somewheree" FontSize="30"/>
                         </Frame>
                     </StackLayout>
 
-                    <StackLayout Orientation="Vertical" Grid.Row="10">
+                    <StackLayout Orientation="Vertical" Grid.Row="7">
                         <Label Text="Work Order No." FontSize="30" FontAttributes="Bold"/>
                         <Frame CornerRadius="0" BorderColor="Black" HasShadow="True" >
                             <Label x:Name="WorkLabel" Text="999999" FontSize="30"/>
                         </Frame>
                     </StackLayout>
 
-                    <StackLayout Orientation="Horizontal"  HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="11">
+                    <StackLayout Orientation="Vertical" Grid.Row="8">
+                        <Label Text="Form Properties" FontSize="30" FontAttributes="Bold"/>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Status: "  FontSize="20" FontAttributes="Bold"/>
+                            <Label x:Name="StatusLabel" FontSize="20"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Submitted By: " FontSize="20" FontAttributes="Bold"/>
+                            <Label x:Name="SubmittedByLabel" FontSize="20"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Submitted On: " FontSize="20" FontAttributes="Bold"/>
+                            <Label x:Name="SubmittedOnLabel" FontSize="20"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Last Modified On: " FontSize="20" FontAttributes="Bold"/>
+                            <Label x:Name="ModifiedOnLabel" FontSize="20"/>
+                        </StackLayout>
+                        <StackLayout x:Name="OptionalStack" Orientation="Horizontal">
+                            <Label x:Name="ApproveOrRejectLabel1" FontSize="20" FontAttributes="Bold"/>
+                            <Label x:Name="ApproveOrRejectLabel2" FontSize="20"/>
+                        </StackLayout>
+
+                    </StackLayout>
+
+
+
+                    <StackLayout Orientation="Horizontal"  HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="9">
                         <Grid RowDefinitions="50,50,50"
                               RowSpacing="8"
                               ColumnDefinitions="150, 150"

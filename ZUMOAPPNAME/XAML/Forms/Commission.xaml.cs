@@ -18,9 +18,11 @@ namespace K_Bikpower
         AssetManager asset_manager;
         CommissionManager commission_manager;
         UserManager user_manager;
+        SubstationManager substation_manager;
 
         CommissionData commissionForm = null;
         bool update = false;
+        string subCode = null;
         ObservableCollection<Asset> globalAssets = new ObservableCollection<Asset>();
         public Commission(CommissionData savedForm = null, ObservableCollection<Asset> assets = null)
         {
@@ -30,6 +32,8 @@ namespace K_Bikpower
             asset_manager = AssetManager.DefaultManager;
             commission_manager = CommissionManager.DefaultManager;
             user_manager = UserManager.DefaultManager;
+            substation_manager = SubstationManager.DefaultManager;
+
             dateLabel.Text = DateTime.UtcNow.ToString("d");
             
             int count = 0;
@@ -42,6 +46,10 @@ namespace K_Bikpower
 
             if (savedForm != null)
             {
+                if (savedForm.MovedFrom != "Project")
+                {
+                    subCode = savedForm.Location; //used to populate sub picker
+                }
                 commissionForm = savedForm;
                 if (savedForm.Id != null) //form has already been submitted
                 {
@@ -49,6 +57,15 @@ namespace K_Bikpower
                     update = true;
                 }
                 LoadForm(savedForm);
+            }
+        }
+        protected override async void OnAppearing()
+        {
+            base.OnAppearing();
+            Substation_Entry.ItemsSource = await substation_manager.GetAllSubCodes();
+            if (subCode != null)
+            {
+                Substation_Entry.SelectedItem = subCode; //load substation code. Cannot be done in load function
             }
         }
         async Task AddItem(CommissionData item)
@@ -104,6 +121,21 @@ namespace K_Bikpower
             {
                 regionName = Region_Picker.SelectedItem.ToString();
             }
+
+            //SUBSTATION OR PROJECT NUMBER
+            string location = null;
+            if (Project_Button.IsChecked)
+            {
+                location = Project_Entry.Text; //check if valid first
+            }
+            else
+            {
+                if (Substation_Entry.SelectedIndex != -1)
+                {
+                    location = Substation_Entry.SelectedItem.ToString();
+                }
+            }
+
             //SAVE NEW FORM
             if (update == false) //used to be if commissionForm == null but didnt work
             {
@@ -113,7 +145,7 @@ namespace K_Bikpower
                     NewInstallation = installation,
                     Replacement = replacement,
                     RegionName = regionName,
-                    Location = Location_Entry.Text,
+                    Location = location,
                     MovedFrom = movedFrom,
                     WorkOrderNumber = Work_OrderNo_Entry.Text
                 };
@@ -126,7 +158,7 @@ namespace K_Bikpower
                 commissionForm.NewInstallation = installation;
                 commissionForm.Replacement = replacement;
                 commissionForm.RegionName = regionName;
-                commissionForm.Location = Location_Entry.Text;
+                commissionForm.Location = location;
                 commissionForm.MovedFrom = movedFrom;
                 commissionForm.WorkOrderNumber = Work_OrderNo_Entry.Text;
                 return null; //don't return a new form, just use the one that already exists
@@ -166,7 +198,15 @@ namespace K_Bikpower
             }
 
             //load location
-            Location_Entry.Text = form.Location;
+            //Location_Entry.Text = form.Location;
+            //Substation_Entry.ItemsSource = await substation_manager.GetAllSubCodes();
+            if (form.MovedFrom == "Project")
+            {
+                if (form.Location != null)
+                {
+                    Project_Entry.Text = form.Location;
+                }
+            }
 
             //load movedFrom
             if (form.MovedFrom == "Project")
@@ -190,9 +230,11 @@ namespace K_Bikpower
         {
             //VALIDATE INPUTS
             int intValue;
-            bool condition1 = false;
-            bool condition2 = false;
-            bool condition3 = false; //fill all necessary fields
+            bool condition1 = false; //must have at least one asset
+            bool condition2 = false; //work order number must be an int
+            bool condition3 = false; //moved to radio button must be selected
+            bool condition4 = false; //project number must be provided and be an integer
+            bool condition5 = false; //substation code must be provided (if it isnt project)
             if (globalAssets.Count() == 0 || globalAssets == null) //must have at least one asset
             {
                 condition1 = true;
@@ -201,13 +243,27 @@ namespace K_Bikpower
             {
                 condition2 = true;
             }
+            if (Project_Button.IsChecked)
+            {
+                if (!int.TryParse(Project_Entry.Text, out intValue)) //project number must be an int
+                {
+                    condition4 = true; //not sure if this works if there is nothing in text box
+                }
+            }
+            else
+            {
+                if (Substation_Entry.SelectedIndex == -1)
+                {
+                    condition5 = true; //substation must be provided
+                }
+            }
             if ((!Project_Button.IsChecked && !Spares_Button.IsChecked && !Workshop_Button.IsChecked)
-                || string.IsNullOrEmpty(Location_Entry.Text) || (!InstallationYes.IsChecked && !InstallationNo.IsChecked)
+                || (!InstallationYes.IsChecked && !InstallationNo.IsChecked)
                 || (!ReplacementNo.IsChecked && !ReplacementYes.IsChecked))
             {
                 condition3 = true;
             }
-            if (condition1 || condition2 || condition3)
+            if (condition1 || condition2 || condition3 || condition4 || condition5)
             {
                 if (condition1)
                 {
@@ -217,9 +273,17 @@ namespace K_Bikpower
                 {
                     await DisplayAlert("Error", "Please fill all required fields", "Close");
                 }
-                else
+                else if (condition2)
                 {
                     await DisplayAlert("Error", "Please enter a valid work order number", "Close");
+                }
+                else if (condition4)
+                {
+                    await DisplayAlert("Error", "Please enter a valid project number", "Close");
+                }
+                else
+                {
+                    await DisplayAlert("Error", "Please provide a substation", "Close");
                 }
             }
             else
@@ -321,6 +385,20 @@ namespace K_Bikpower
             if (ReplacementNo.IsChecked)
             {
                 ReplacementYes.IsChecked = false;
+            }
+        }
+
+        private void Project_Button_CheckedChanged(object sender, CheckedChangedEventArgs e)
+        {
+            if (Project_Button.IsChecked)
+            {
+                Project_Entry.IsVisible = true;
+                Substation_Entry.IsEnabled = false;
+            }
+            else
+            {
+                Project_Entry.IsVisible = false;
+                Substation_Entry.IsEnabled = true;
             }
         }
     }

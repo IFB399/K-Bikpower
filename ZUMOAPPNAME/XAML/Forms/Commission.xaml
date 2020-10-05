@@ -8,6 +8,7 @@
              BackgroundColor="#1B252D">
     <ContentPage.Content>
         <StackLayout Margin="50,50,50,30" >
+            <Label Text="Commission Form" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" FontSize="40" TextColor="White"/>
             <Frame  BackgroundColor="#F5F5F5">
                 <ScrollView>
                     <Grid Margin="10">
@@ -24,7 +25,6 @@
 
                         </Grid.RowDefinitions>
                         <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="Center" Grid.Row="0">
-                            <Label Text="Commission Form" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" FontSize="40"/>
                             <Label x:Name="dateLabel" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" FontSize="20"/>
                             <Button x:Name="ManageAssets_Button" Text="Manage Assets" Clicked="ManageAssets_Clicked"/>
                         </StackLayout>
@@ -74,16 +74,18 @@
                         </StackLayout>
 
                         <StackLayout Grid.Row="5">
-                            <Label Text="Location Name/Substation/Project No." FontSize="30"/>
-                            <Entry x:Name="Location_Entry"/>
+                            <Label Text="Commissioned Plant From:" FontSize="30"/>
+                            <StackLayout Orientation="Horizontal">
+                                <RadioButton x:Name="Project_Button" Text="Project" CheckedChanged="Project_Button_CheckedChanged" GroupName="MovedFrom"/>
+                                <Entry x:Name="Project_Entry" IsVisible="False" IsEnabled="True" Placeholder="Project No." WidthRequest="200"/>
+                            </StackLayout>
+                            <RadioButton x:Name="Spares_Button" Text="Spares" GroupName="MovedFrom"/>
+                            <RadioButton x:Name="Workshop_Button" Text="Workshop" GroupName="MovedFrom"/>
                         </StackLayout>
 
                         <StackLayout Grid.Row="6">
-                            <Label Text="Commissioned Plant From:" FontSize="30"/>
-
-                            <RadioButton x:Name="Project_Button" Text="Project" GroupName="MovedFrom"/>
-                            <RadioButton x:Name="Spares_Button" Text="Spares" GroupName="MovedFrom"/>
-                            <RadioButton x:Name="Workshop_Button" Text="Workshop" GroupName="MovedFrom"/>
+                            <Label Text="Substation" FontSize="30"/>
+                            <Picker x:Name="Substation_Entry"/>
                         </StackLayout>
 
                         <StackLayout Grid.Row="7">

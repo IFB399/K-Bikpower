@@ -167,6 +167,10 @@ namespace K_Bikpower
                     {
                         await DisplayAlert("Asset already commissioned", "Try decommissioning the asset first", "Close");
                     }
+                    else if (todo.CurrentlyIn == "Scrap") //cannot commission a scrapped asset
+                    {
+                        await DisplayAlert("Asset has been scrapped", "Cannot commission a scrapped asset", "Close");
+                    }
                     else
                     {
                         //assetList.Add(todo);

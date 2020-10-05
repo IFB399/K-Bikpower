@@ -18,8 +18,8 @@
                         RowSpacing="8"
                         HorizontalOptions="CenterAndExpand">
 
-                        <Button x:Name="commission_button" Text="Commission Form" Clicked="Commission_Clicked" FontSize="Title" BackgroundColor="#29A8E2" TextColor="White" CornerRadius="0" Grid.Row="2"/>
-                        <Button x:Name="decommission_Button" Text="Decommission Form" Clicked="Decommission_Clicked" FontSize="Title" BackgroundColor="#29A8E2" TextColor="White" CornerRadius="0" Grid.Row="3"/>
+                        <Button x:Name="commission_button" Text="Commission Forms" Clicked="Commission_Clicked" FontSize="Title" BackgroundColor="#29A8E2" TextColor="White" CornerRadius="0" Grid.Row="2"/>
+                        <Button x:Name="decommission_Button" Text="Decommission Forms" Clicked="Decommission_Clicked" FontSize="Title" BackgroundColor="#29A8E2" TextColor="White" CornerRadius="0" Grid.Row="3"/>
                     </Grid>
                 </Frame>
             </StackLayout>
