@@ -120,21 +120,5 @@ namespace K_Bikpower
             Equipment_class_description_label.Text = details.EquipmentClassDescription;
         }
         
-        protected override bool OnBackButtonPressed()
-        {
-
-            if (Device.RuntimePlatform.Equals(Device.UWP) || Device.RuntimePlatform.Equals(Device.Android)) //android doesnt work
-            {
-                //return to correct page
-                Go_Back();
-                return true;
-            }
-            else
-            {
-                base.OnBackButtonPressed();
-                return false;
-            }
-        }
-        
     }
 }

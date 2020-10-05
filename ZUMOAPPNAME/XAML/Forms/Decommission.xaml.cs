@@ -193,8 +193,8 @@ namespace K_Bikpower
                 {
                     form.SubmittedBy = user_manager.ReturnName();
                     form.Status = "Submitted";
-                    form.SubmittedOn = DateTime.UtcNow;
-                    form.LastModifiedOn = DateTime.UtcNow;
+                    form.SubmittedOn = DateTime.UtcNow.ToLocalTime(); 
+                    form.LastModifiedOn = DateTime.UtcNow.ToLocalTime(); 
                     await AddItem(form);
                     if (globalAssets != null)
                     {
@@ -213,7 +213,8 @@ namespace K_Bikpower
                 }
                 else
                 {
-                    //change a modified by field?
+                    //update last modified on
+                    decommissionForm.LastModifiedOn = DateTime.UtcNow.ToLocalTime();
                     //delete old links
                     ObservableCollection<AssetFormLink> afls = await afl_manager.GetLinksByFormAsync(decommissionForm.Id, "Decommission");
                     foreach (AssetFormLink afl in afls)
