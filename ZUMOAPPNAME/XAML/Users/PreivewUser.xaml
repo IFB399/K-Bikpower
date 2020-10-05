@@ -30,14 +30,10 @@
                     </Grid>
                     
                     <StackLayout Orientation="Horizontal"  HorizontalOptions="Center" VerticalOptions="Center">
-                        <Grid RowDefinitions="50,50"
-                              RowSpacing="8"
-                              ColumnDefinitions="150, 150"
-                              ColumnSpacing="8">
+                       
+                            <Button x:Name="UpdateButton" Clicked="UpdateButton_Clicked" Text="Edit Account"  TextColor="White" BackgroundColor="#29A8E2"/>
+                            <Button x:Name="DeleteButton" Clicked="DeleteButton_Clicked" Text="Delete User" IsVisible="false"  TextColor="White" BackgroundColor="#29A8E2"/>
 
-                            <Button x:Name="UpdateButton" Clicked="UpdateButton_Clicked" Text="Edit Account" Grid.Row="0" Grid.Column="0" TextColor="White" BackgroundColor="#29A8E2"/>
-                            <Button x:Name="DeleteButton" Clicked="DeleteButton_Clicked" Text="Delete User" IsVisible="false" Grid.Row="0" Grid.Column="1" TextColor="White" BackgroundColor="#29A8E2"/>
-                        </Grid>
                     </StackLayout>
 
                 </StackLayout>

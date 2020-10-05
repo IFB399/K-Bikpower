@@ -1,51 +1,51 @@
-@string/appbar_scrolling_view_behavior;C:\Users\jacqu\Documents\2017 (first year)\latest repo 4\Droid\obj\Debug\90\lp\47\jl\res\layout\flyoutcontent.xml
-@string/appbar_scrolling_view_behavior;C:\Users\jacqu\Documents\2017 (first year)\latest repo 4\Droid\obj\Debug\90\lp\47\jl\res\layout\rootlayout.xml
-alpha;C:\Users\jacqu\Documents\2017 (first year)\latest repo 4\Droid\obj\Debug\90\lp\47\jl\res\anim\enterfromleft.xml
-alpha;C:\Users\jacqu\Documents\2017 (first year)\latest repo 4\Droid\obj\Debug\90\lp\47\jl\res\anim\exittoleft.xml
-android.support.design.widget.AppBarLayout;C:\Users\jacqu\Documents\2017 (first year)\latest repo 4\Droid\obj\Debug\90\lp\47\jl\res\layout\flyoutcontent.xml
-android.support.design.widget.AppBarLayout;C:\Users\jacqu\Documents\2017 (first year)\latest repo 4\Droid\obj\Debug\90\lp\47\jl\res\layout\rootlayout.xml
-android.support.design.widget.AppBarLayout;C:\Users\jacqu\Documents\2017 (first year)\latest repo 4\Droid\obj\Debug\90\lp\47\jl\res\layout\shellcontent.xml
-android.support.design.widget.BottomNavigationView;C:\Users\jacqu\Documents\2017 (first year)\latest repo 4\Droid\obj\Debug\90\lp\47\jl\res\layout\bottomtablayout.xml
-android.support.design.widget.CoordinatorLayout;C:\Users\jacqu\Documents\2017 (first year)\latest repo 4\Droid\obj\Debug\90\lp\47\jl\res\layout\flyoutcontent.xml
-android.support.design.widget.CoordinatorLayout;C:\Users\jacqu\Documents\2017 (first year)\latest repo 4\Droid\obj\Debug\90\lp\47\jl\res\layout\rootlayout.xml
-android.support.design.widget.CoordinatorLayout;C:\Users\jacqu\Documents\2017 (first year)\latest repo 4\Droid\obj\Debug\90\lp\47\jl\res\layout\shellcontent.xml
-android.support.design.widget.TabLayout;C:\Users\jacqu\Documents\2017 (first year)\latest repo 4\Droid\obj\Debug\90\lp\47\jl\res\layout\rootlayout.xml
-android.support.v7.widget.RecyclerView;C:\Users\jacqu\Documents\2017 (first year)\latest repo 4\Droid\obj\Debug\90\lp\47\jl\res\layout\flyoutcontent.xml
-android.support.v7.widget.Toolbar;C:\Users\jacqu\Documents\2017 (first year)\latest repo 4\Droid\obj\Debug\90\lp\47\jl\res\layout\rootlayout.xml
-android.support.v7.widget.Toolbar;C:\Users\jacqu\Documents\2017 (first year)\latest repo 4\Droid\obj\Debug\90\lp\47\jl\res\layout\shellcontent.xml
-attr;C:\Users\jacqu\Documents\2017 (first year)\latest repo 4\Droid\obj\Debug\90\lp\47\jl\res\values\attrs.xml
-cache-path;C:\Users\jacqu\Documents\2017 (first year)\latest repo 4\Droid\obj\Debug\90\lp\46\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
-declare-styleable;C:\Users\jacqu\Documents\2017 (first year)\latest repo 4\Droid\obj\Debug\90\lp\47\jl\res\values\attrs.xml
-external-cache-path;C:\Users\jacqu\Documents\2017 (first year)\latest repo 4\Droid\obj\Debug\90\lp\46\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
-external-path;C:\Users\jacqu\Documents\2017 (first year)\latest repo 4\Droid\obj\Debug\90\lp\46\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
-FrameLayout;C:\Users\jacqu\Documents\2017 (first year)\latest repo 4\Droid\obj\Debug\90\lp\47\jl\res\layout\bottomtablayout.xml
-FrameLayout;C:\Users\jacqu\Documents\2017 (first year)\latest repo 4\Droid\obj\Debug\90\lp\50\jl\res\layout\zxingscanneractivitylayout.xml
-FrameLayout;C:\Users\jacqu\Documents\2017 (first year)\latest repo 4\Droid\obj\Debug\90\lp\50\jl\res\layout\zxingscannerfragmentlayout.xml
-item;C:\Users\jacqu\Documents\2017 (first year)\latest repo 4\Droid\obj\Debug\90\lp\47\jl\res\values\styles.xml
-LinearLayout;C:\Users\jacqu\Documents\2017 (first year)\latest repo 4\Droid\obj\Debug\90\lp\47\jl\res\layout\bottomtablayout.xml
-paths;C:\Users\jacqu\Documents\2017 (first year)\latest repo 4\Droid\obj\Debug\90\lp\46\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
-resources;C:\Users\jacqu\Documents\2017 (first year)\latest repo 4\Droid\obj\Debug\90\lp\2\jl\res\values\strings.xml
-resources;C:\Users\jacqu\Documents\2017 (first year)\latest repo 4\Droid\obj\Debug\90\lp\3\jl\res\values\strings.xml
-resources;C:\Users\jacqu\Documents\2017 (first year)\latest repo 4\Droid\obj\Debug\90\lp\47\jl\res\values\attrs.xml
-resources;C:\Users\jacqu\Documents\2017 (first year)\latest repo 4\Droid\obj\Debug\90\lp\47\jl\res\values\styles.xml
-resources;C:\Users\jacqu\Documents\2017 (first year)\latest repo 4\Droid\obj\Debug\90\lp\49\jl\res\values\strings.xml
+@string/appbar_scrolling_view_behavior;C:\Users\Brenton Reddish\Source\Repos\K-Bikpower\Droid\obj\Debug\90\lp\47\jl\res\layout\flyoutcontent.xml
+@string/appbar_scrolling_view_behavior;C:\Users\Brenton Reddish\Source\Repos\K-Bikpower\Droid\obj\Debug\90\lp\47\jl\res\layout\rootlayout.xml
+alpha;C:\Users\Brenton Reddish\Source\Repos\K-Bikpower\Droid\obj\Debug\90\lp\47\jl\res\anim\enterfromleft.xml
+alpha;C:\Users\Brenton Reddish\Source\Repos\K-Bikpower\Droid\obj\Debug\90\lp\47\jl\res\anim\exittoleft.xml
+android.support.design.widget.AppBarLayout;C:\Users\Brenton Reddish\Source\Repos\K-Bikpower\Droid\obj\Debug\90\lp\47\jl\res\layout\flyoutcontent.xml
+android.support.design.widget.AppBarLayout;C:\Users\Brenton Reddish\Source\Repos\K-Bikpower\Droid\obj\Debug\90\lp\47\jl\res\layout\rootlayout.xml
+android.support.design.widget.AppBarLayout;C:\Users\Brenton Reddish\Source\Repos\K-Bikpower\Droid\obj\Debug\90\lp\47\jl\res\layout\shellcontent.xml
+android.support.design.widget.BottomNavigationView;C:\Users\Brenton Reddish\Source\Repos\K-Bikpower\Droid\obj\Debug\90\lp\47\jl\res\layout\bottomtablayout.xml
+android.support.design.widget.CoordinatorLayout;C:\Users\Brenton Reddish\Source\Repos\K-Bikpower\Droid\obj\Debug\90\lp\47\jl\res\layout\flyoutcontent.xml
+android.support.design.widget.CoordinatorLayout;C:\Users\Brenton Reddish\Source\Repos\K-Bikpower\Droid\obj\Debug\90\lp\47\jl\res\layout\rootlayout.xml
+android.support.design.widget.CoordinatorLayout;C:\Users\Brenton Reddish\Source\Repos\K-Bikpower\Droid\obj\Debug\90\lp\47\jl\res\layout\shellcontent.xml
+android.support.design.widget.TabLayout;C:\Users\Brenton Reddish\Source\Repos\K-Bikpower\Droid\obj\Debug\90\lp\47\jl\res\layout\rootlayout.xml
+android.support.v7.widget.RecyclerView;C:\Users\Brenton Reddish\Source\Repos\K-Bikpower\Droid\obj\Debug\90\lp\47\jl\res\layout\flyoutcontent.xml
+android.support.v7.widget.Toolbar;C:\Users\Brenton Reddish\Source\Repos\K-Bikpower\Droid\obj\Debug\90\lp\47\jl\res\layout\rootlayout.xml
+android.support.v7.widget.Toolbar;C:\Users\Brenton Reddish\Source\Repos\K-Bikpower\Droid\obj\Debug\90\lp\47\jl\res\layout\shellcontent.xml
+attr;C:\Users\Brenton Reddish\Source\Repos\K-Bikpower\Droid\obj\Debug\90\lp\47\jl\res\values\attrs.xml
+cache-path;C:\Users\Brenton Reddish\Source\Repos\K-Bikpower\Droid\obj\Debug\90\lp\46\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+declare-styleable;C:\Users\Brenton Reddish\Source\Repos\K-Bikpower\Droid\obj\Debug\90\lp\47\jl\res\values\attrs.xml
+external-cache-path;C:\Users\Brenton Reddish\Source\Repos\K-Bikpower\Droid\obj\Debug\90\lp\46\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+external-path;C:\Users\Brenton Reddish\Source\Repos\K-Bikpower\Droid\obj\Debug\90\lp\46\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+FrameLayout;C:\Users\Brenton Reddish\Source\Repos\K-Bikpower\Droid\obj\Debug\90\lp\47\jl\res\layout\bottomtablayout.xml
+FrameLayout;C:\Users\Brenton Reddish\Source\Repos\K-Bikpower\Droid\obj\Debug\90\lp\50\jl\res\layout\zxingscanneractivitylayout.xml
+FrameLayout;C:\Users\Brenton Reddish\Source\Repos\K-Bikpower\Droid\obj\Debug\90\lp\50\jl\res\layout\zxingscannerfragmentlayout.xml
+item;C:\Users\Brenton Reddish\Source\Repos\K-Bikpower\Droid\obj\Debug\90\lp\47\jl\res\values\styles.xml
+LinearLayout;C:\Users\Brenton Reddish\Source\Repos\K-Bikpower\Droid\obj\Debug\90\lp\47\jl\res\layout\bottomtablayout.xml
+paths;C:\Users\Brenton Reddish\Source\Repos\K-Bikpower\Droid\obj\Debug\90\lp\46\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+resources;C:\Users\Brenton Reddish\Source\Repos\K-Bikpower\Droid\obj\Debug\90\lp\2\jl\res\values\strings.xml
+resources;C:\Users\Brenton Reddish\Source\Repos\K-Bikpower\Droid\obj\Debug\90\lp\3\jl\res\values\strings.xml
+resources;C:\Users\Brenton Reddish\Source\Repos\K-Bikpower\Droid\obj\Debug\90\lp\47\jl\res\values\attrs.xml
+resources;C:\Users\Brenton Reddish\Source\Repos\K-Bikpower\Droid\obj\Debug\90\lp\47\jl\res\values\styles.xml
+resources;C:\Users\Brenton Reddish\Source\Repos\K-Bikpower\Droid\obj\Debug\90\lp\49\jl\res\values\strings.xml
 resources;obj\Debug\90\res\values\style.xml
-set;C:\Users\jacqu\Documents\2017 (first year)\latest repo 4\Droid\obj\Debug\90\lp\2\jl\res\anim\slide_in_right.xml
-set;C:\Users\jacqu\Documents\2017 (first year)\latest repo 4\Droid\obj\Debug\90\lp\2\jl\res\anim\slide_out_left.xml
-set;C:\Users\jacqu\Documents\2017 (first year)\latest repo 4\Droid\obj\Debug\90\lp\47\jl\res\anim\enterfromleft.xml
-set;C:\Users\jacqu\Documents\2017 (first year)\latest repo 4\Droid\obj\Debug\90\lp\47\jl\res\anim\enterfromright.xml
-set;C:\Users\jacqu\Documents\2017 (first year)\latest repo 4\Droid\obj\Debug\90\lp\47\jl\res\anim\exittoleft.xml
-set;C:\Users\jacqu\Documents\2017 (first year)\latest repo 4\Droid\obj\Debug\90\lp\47\jl\res\anim\exittoright.xml
-string;C:\Users\jacqu\Documents\2017 (first year)\latest repo 4\Droid\obj\Debug\90\lp\2\jl\res\values\strings.xml
-string;C:\Users\jacqu\Documents\2017 (first year)\latest repo 4\Droid\obj\Debug\90\lp\3\jl\res\values\strings.xml
-string;C:\Users\jacqu\Documents\2017 (first year)\latest repo 4\Droid\obj\Debug\90\lp\49\jl\res\values\strings.xml
-style;C:\Users\jacqu\Documents\2017 (first year)\latest repo 4\Droid\obj\Debug\90\lp\47\jl\res\values\styles.xml
+set;C:\Users\Brenton Reddish\Source\Repos\K-Bikpower\Droid\obj\Debug\90\lp\2\jl\res\anim\slide_in_right.xml
+set;C:\Users\Brenton Reddish\Source\Repos\K-Bikpower\Droid\obj\Debug\90\lp\2\jl\res\anim\slide_out_left.xml
+set;C:\Users\Brenton Reddish\Source\Repos\K-Bikpower\Droid\obj\Debug\90\lp\47\jl\res\anim\enterfromleft.xml
+set;C:\Users\Brenton Reddish\Source\Repos\K-Bikpower\Droid\obj\Debug\90\lp\47\jl\res\anim\enterfromright.xml
+set;C:\Users\Brenton Reddish\Source\Repos\K-Bikpower\Droid\obj\Debug\90\lp\47\jl\res\anim\exittoleft.xml
+set;C:\Users\Brenton Reddish\Source\Repos\K-Bikpower\Droid\obj\Debug\90\lp\47\jl\res\anim\exittoright.xml
+string;C:\Users\Brenton Reddish\Source\Repos\K-Bikpower\Droid\obj\Debug\90\lp\2\jl\res\values\strings.xml
+string;C:\Users\Brenton Reddish\Source\Repos\K-Bikpower\Droid\obj\Debug\90\lp\3\jl\res\values\strings.xml
+string;C:\Users\Brenton Reddish\Source\Repos\K-Bikpower\Droid\obj\Debug\90\lp\49\jl\res\values\strings.xml
+style;C:\Users\Brenton Reddish\Source\Repos\K-Bikpower\Droid\obj\Debug\90\lp\47\jl\res\values\styles.xml
 style;obj\Debug\90\res\values\style.xml
-translate;C:\Users\jacqu\Documents\2017 (first year)\latest repo 4\Droid\obj\Debug\90\lp\2\jl\res\anim\slide_in_right.xml
-translate;C:\Users\jacqu\Documents\2017 (first year)\latest repo 4\Droid\obj\Debug\90\lp\2\jl\res\anim\slide_out_left.xml
-translate;C:\Users\jacqu\Documents\2017 (first year)\latest repo 4\Droid\obj\Debug\90\lp\47\jl\res\anim\enterfromleft.xml
-translate;C:\Users\jacqu\Documents\2017 (first year)\latest repo 4\Droid\obj\Debug\90\lp\47\jl\res\anim\enterfromright.xml
-translate;C:\Users\jacqu\Documents\2017 (first year)\latest repo 4\Droid\obj\Debug\90\lp\47\jl\res\anim\exittoleft.xml
-translate;C:\Users\jacqu\Documents\2017 (first year)\latest repo 4\Droid\obj\Debug\90\lp\47\jl\res\anim\exittoright.xml
-WebView;C:\Users\jacqu\Documents\2017 (first year)\latest repo 4\Droid\obj\Debug\90\lp\2\jl\res\layout\activity_webview.xml
-xamarin.forms.platform.android.appcompat.FormsViewPager;C:\Users\jacqu\Documents\2017 (first year)\latest repo 4\Droid\obj\Debug\90\lp\47\jl\res\layout\rootlayout.xml
+translate;C:\Users\Brenton Reddish\Source\Repos\K-Bikpower\Droid\obj\Debug\90\lp\2\jl\res\anim\slide_in_right.xml
+translate;C:\Users\Brenton Reddish\Source\Repos\K-Bikpower\Droid\obj\Debug\90\lp\2\jl\res\anim\slide_out_left.xml
+translate;C:\Users\Brenton Reddish\Source\Repos\K-Bikpower\Droid\obj\Debug\90\lp\47\jl\res\anim\enterfromleft.xml
+translate;C:\Users\Brenton Reddish\Source\Repos\K-Bikpower\Droid\obj\Debug\90\lp\47\jl\res\anim\enterfromright.xml
+translate;C:\Users\Brenton Reddish\Source\Repos\K-Bikpower\Droid\obj\Debug\90\lp\47\jl\res\anim\exittoleft.xml
+translate;C:\Users\Brenton Reddish\Source\Repos\K-Bikpower\Droid\obj\Debug\90\lp\47\jl\res\anim\exittoright.xml
+WebView;C:\Users\Brenton Reddish\Source\Repos\K-Bikpower\Droid\obj\Debug\90\lp\2\jl\res\layout\activity_webview.xml
+xamarin.forms.platform.android.appcompat.FormsViewPager;C:\Users\Brenton Reddish\Source\Repos\K-Bikpower\Droid\obj\Debug\90\lp\47\jl\res\layout\rootlayout.xml

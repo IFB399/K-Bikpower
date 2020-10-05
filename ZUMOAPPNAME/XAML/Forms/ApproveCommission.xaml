@@ -115,18 +115,18 @@
                         </Frame>
                     </StackLayout>
 
-                    <StackLayout Orientation="Horizontal"  HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="11">
-                        <Grid RowDefinitions="50,50,50"
-                              RowSpacing="8"
-                              ColumnDefinitions="150, 150"
-                              ColumnSpacing="8">
+                    <StackLayout Orientation="Vertical"  HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="11">
 
+                        <StackLayout Orientation="Horizontal"  HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="11">
                             <Button x:Name="EditButton" Text="Edit" Clicked="Edit_Clicked" WidthRequest="100" HeightRequest="50" Grid.Column="0" Grid.Row="0"/>
                             <Button x:Name="ApproveButton" Text="Approve" Clicked="Approve_Clicked" WidthRequest="100" HeightRequest="50" Grid.Column="1" Grid.Row="0"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal"  HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="11">
                             <Button x:Name="RejectButton" Text="Reject" Clicked="Reject_Clicked" WidthRequest="100" HeightRequest="50" Grid.Column="0" Grid.Row="1"/>
                             <Button x:Name="DeleteButton"  Text="Delete Form" Clicked="Delete_Clicked" WidthRequest="100" HeightRequest="50" Grid.Column="1" Grid.Row="1"/>
-                            <Button Text="Exit" Clicked="Exit_Clicked" WidthRequest="100" HeightRequest="50" Grid.Column="0" Grid.Row="2"/>
-                        </Grid>
+                        </StackLayout>
+                        <Button Text="Exit" Clicked="Exit_Clicked" WidthRequest="100" HeightRequest="50" Grid.Column="0" Grid.Row="2"/>
+
                     </StackLayout>
                 </Grid>
             </Frame>
