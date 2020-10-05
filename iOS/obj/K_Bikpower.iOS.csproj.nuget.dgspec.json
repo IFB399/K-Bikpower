@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Brenton Reddish\\Source\\Repos\\K-Bikpower\\iOS\\K_Bikpower.iOS.csproj": {}
+    "C:\\Users\\jacqu\\Documents\\2017 (first year)\\latest repo 4\\iOS\\K_Bikpower.iOS.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Brenton Reddish\\Source\\Repos\\K-Bikpower\\iOS\\K_Bikpower.iOS.csproj": {
+    "C:\\Users\\jacqu\\Documents\\2017 (first year)\\latest repo 4\\iOS\\K_Bikpower.iOS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Brenton Reddish\\Source\\Repos\\K-Bikpower\\iOS\\K_Bikpower.iOS.csproj",
+        "projectUniqueName": "C:\\Users\\jacqu\\Documents\\2017 (first year)\\latest repo 4\\iOS\\K_Bikpower.iOS.csproj",
         "projectName": "K_Bikpower.iOS",
-        "projectPath": "C:\\Users\\Brenton Reddish\\Source\\Repos\\K-Bikpower\\iOS\\K_Bikpower.iOS.csproj",
-        "packagesPath": "C:\\Users\\Brenton Reddish\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Brenton Reddish\\Source\\Repos\\K-Bikpower\\iOS\\obj\\",
+        "projectPath": "C:\\Users\\jacqu\\Documents\\2017 (first year)\\latest repo 4\\iOS\\K_Bikpower.iOS.csproj",
+        "packagesPath": "C:\\Users\\jacqu\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jacqu\\Documents\\2017 (first year)\\latest repo 4\\iOS\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\Brenton Reddish\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\jacqu\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -32,8 +32,8 @@
         "frameworks": {
           "xamarinios10": {
             "projectReferences": {
-              "C:\\Users\\Brenton Reddish\\Source\\Repos\\K-Bikpower\\ZUMOAPPNAME\\K_Bikpower.csproj": {
-                "projectPath": "C:\\Users\\Brenton Reddish\\Source\\Repos\\K-Bikpower\\ZUMOAPPNAME\\K_Bikpower.csproj"
+              "C:\\Users\\jacqu\\Documents\\2017 (first year)\\latest repo 4\\ZUMOAPPNAME\\K_Bikpower.csproj": {
+                "projectPath": "C:\\Users\\jacqu\\Documents\\2017 (first year)\\latest repo 4\\ZUMOAPPNAME\\K_Bikpower.csproj"
               }
             }
           }
@@ -65,21 +65,20 @@
         }
       }
     },
-    "C:\\Users\\Brenton Reddish\\Source\\Repos\\K-Bikpower\\ZUMOAPPNAME\\K_Bikpower.csproj": {
+    "C:\\Users\\jacqu\\Documents\\2017 (first year)\\latest repo 4\\ZUMOAPPNAME\\K_Bikpower.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Brenton Reddish\\Source\\Repos\\K-Bikpower\\ZUMOAPPNAME\\K_Bikpower.csproj",
+        "projectUniqueName": "C:\\Users\\jacqu\\Documents\\2017 (first year)\\latest repo 4\\ZUMOAPPNAME\\K_Bikpower.csproj",
         "projectName": "K_Bikpower",
-        "projectPath": "C:\\Users\\Brenton Reddish\\Source\\Repos\\K-Bikpower\\ZUMOAPPNAME\\K_Bikpower.csproj",
-        "packagesPath": "C:\\Users\\Brenton Reddish\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Brenton Reddish\\Source\\Repos\\K-Bikpower\\ZUMOAPPNAME\\obj\\",
+        "projectPath": "C:\\Users\\jacqu\\Documents\\2017 (first year)\\latest repo 4\\ZUMOAPPNAME\\K_Bikpower.csproj",
+        "packagesPath": "C:\\Users\\jacqu\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jacqu\\Documents\\2017 (first year)\\latest repo 4\\ZUMOAPPNAME\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\Brenton Reddish\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\jacqu\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],

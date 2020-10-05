@@ -84,11 +84,12 @@ namespace K_Bikpower
         }
         private async void Clear_Filters_Clicked(object sender, EventArgs e)
         {
+            string sortByType = (string)SortBy_Picker.SelectedItem;
             asset = null;
             assetLabel.IsVisible = false;
             SubmittedBy_Picker.SelectedIndex = -1;
             Status_Picker.SelectedIndex = -1;
-            await RefreshItems(true, syncItems: false);
+            await RefreshItems(true, syncItems: false, sortBy: sortByType);
             FilterLabel.Text = "Filters";
         }
         private void Add_Form_Clicked(object sender, EventArgs e)
