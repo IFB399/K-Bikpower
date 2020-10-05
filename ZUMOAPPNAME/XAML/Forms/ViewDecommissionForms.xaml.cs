@@ -25,7 +25,7 @@ namespace K_Bikpower
             SortBy_Picker.SelectedItem = "Date Last Modified";
             if (a != null)
             {
-                assetLabel.Text = "Asset Equipment Number: " + a.AssetEQNO;
+                assetLabel.Text = "Asset Serial Number: " + a.SerialNumber;
                 assetLabel.IsVisible = true;
             }
             if (Device.RuntimePlatform == Device.UWP)
