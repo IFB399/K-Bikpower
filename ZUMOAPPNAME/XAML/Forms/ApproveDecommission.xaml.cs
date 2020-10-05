@@ -83,6 +83,7 @@ namespace K_Bikpower
         private void LoadForm(DecommissionData form)
         {
             SubmittedByLabel.Text = form.SubmittedBy;
+            SubmittedOnLabel.Text = form.SubmittedOn.ToString("d");
             DateDecommissionedLabel.Text = form.DateDecommissioned.ToString("d");
             DetailsLabel.Text = form.Details;
             RegionLabel.Text = form.RegionName;
@@ -103,6 +104,7 @@ namespace K_Bikpower
                 {
                     //decommission_form.Status = "Approved by " + user_manager.ReturnUser();
                     decommission_form.ApprovedBy = user_manager.ReturnName();
+                    decommission_form.LastModifiedOn = DateTime.UtcNow.ToLocalTime();
                     decommission_form.Status = "Approved";
                     await UpdateForm(decommission_form);
                     //update asset form links?
@@ -132,6 +134,7 @@ namespace K_Bikpower
                 if (answer == true)
                 {
                     decommission_form.RejectedBy = user_manager.ReturnName();
+                    decommission_form.LastModifiedOn = DateTime.UtcNow.ToLocalTime();
                     decommission_form.Status = "Rejected";
                     await UpdateForm(decommission_form);
                     await Navigation.PushAsync(new ViewDecommissionForms());
@@ -169,9 +172,18 @@ namespace K_Bikpower
 
 
         }
+        protected override async void OnAppearing()
+        {
+            base.OnAppearing();
+            if (this.assetList.SelectedItem != null) //make sure asset isnt selected
+            {
+                this.assetList.SelectedItem = null;
+            }
+        }
         private async void selectedAsset(object sender, EventArgs e)
         {
-            //number 5?
+            if (((ListView)sender).SelectedItem == null)
+                return;
             await Navigation.PushAsync(new FormPreviewAsset((Asset)assetList.SelectedItem, 5, decommission_form, globalAssets));
         }
     }

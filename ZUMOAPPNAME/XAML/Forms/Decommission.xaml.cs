@@ -86,14 +86,7 @@ namespace K_Bikpower
             {
                 regionName = Region_Picker.SelectedItem.ToString();
             }
-            /*
-            //WORK ORDER NUMBER
-            int workOrderNumber = -1; //will have to change later, maybe store work order number as a string in the database
-            if (String.IsNullOrEmpty(Work_OrderNo_Entry.Text) == false)
-            {
-                workOrderNumber = Int32.Parse(Work_OrderNo_Entry.Text); //will break if an int is not given
-            }
-            */
+
             //SAVE NEW FORM
             if (update == false) //used to be if decommissionForm == null but didnt work
             {
@@ -154,13 +147,6 @@ namespace K_Bikpower
             {
                 Workshop_Button.IsChecked = true;
             }
-            /*
-            //load work order number
-            if (form.WorkOrderNumber != -1)
-            {
-                Work_OrderNo_Entry.Text = form.WorkOrderNumber.ToString();
-            }
-            */
             Work_OrderNo_Entry.Text = form.WorkOrderNumber;
         }
 
@@ -207,8 +193,8 @@ namespace K_Bikpower
                 {
                     form.SubmittedBy = user_manager.ReturnName();
                     form.Status = "Submitted";
-                    form.SubmittedOn = DateTime.UtcNow;
-                    form.LastModifiedOn = DateTime.UtcNow;
+                    form.SubmittedOn = DateTime.UtcNow.ToLocalTime(); 
+                    form.LastModifiedOn = DateTime.UtcNow.ToLocalTime(); 
                     await AddItem(form);
                     if (globalAssets != null)
                     {
@@ -227,7 +213,8 @@ namespace K_Bikpower
                 }
                 else
                 {
-                    //change a modified by field?
+                    //update last modified on
+                    decommissionForm.LastModifiedOn = DateTime.UtcNow.ToLocalTime();
                     //delete old links
                     ObservableCollection<AssetFormLink> afls = await afl_manager.GetLinksByFormAsync(decommissionForm.Id, "Decommission");
                     foreach (AssetFormLink afl in afls)

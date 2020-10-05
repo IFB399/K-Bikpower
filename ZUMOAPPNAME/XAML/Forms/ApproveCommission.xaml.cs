@@ -77,6 +77,7 @@ namespace K_Bikpower
         private void LoadForm(CommissionData form)
         {
             SubmittedByLabel.Text = form.SubmittedBy;
+            SubmittedOnLabel.Text = form.SubmittedOn.ToString("d");
             DateCommissionedLabel.Text = form.DateCommissioned.ToString("d");
             InstallationLabel.Text = form.NewInstallation;
             ReplacementLabel.Text = form.Replacement;
@@ -97,6 +98,7 @@ namespace K_Bikpower
                 {
                     //decommission_form.Status = "Approved by " + user_manager.ReturnUser();
                     commission_form.ApprovedBy = user_manager.ReturnName();
+                    commission_form.LastModifiedOn = DateTime.UtcNow.ToLocalTime();
                     commission_form.Status = "Approved";
                     await UpdateForm(commission_form);
                     //update asset form links?
@@ -124,6 +126,7 @@ namespace K_Bikpower
                 if (answer == true)
                 {
                     commission_form.RejectedBy = user_manager.ReturnName();
+                    commission_form.LastModifiedOn = DateTime.UtcNow.ToLocalTime();
                     commission_form.Status = "Rejected";
                     await UpdateForm(commission_form);
                     await Navigation.PushAsync(new ViewCommissionForms());
@@ -158,8 +161,18 @@ namespace K_Bikpower
                 await Navigation.PushAsync(new ViewCommissionForms());
             }
         }
-        private async void selectedAsset(object sender, EventArgs e)
+        protected override async void OnAppearing()
         {
+            base.OnAppearing();
+            if (this.assetList.SelectedItem != null) //make sure asset isnt selected
+            {
+                this.assetList.SelectedItem = null;
+            }
+        }
+        private async void selectedAsset(object sender, EventArgs e) //item selected
+        {
+            if (((ListView)sender).SelectedItem == null)
+                return;
             await Navigation.PushAsync(new FormPreviewAsset((Asset)assetList.SelectedItem, 4, commission_form, globalAssets));
         }
     }

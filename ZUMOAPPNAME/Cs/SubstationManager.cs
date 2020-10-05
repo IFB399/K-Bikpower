@@ -100,7 +100,34 @@ namespace K_Bikpower
             }
             return null;
         }
+        public async Task<ObservableCollection<Substation>> GetSubstationByCode(string subCode)
+        {
+            try
+            {
+#if OFFLINE_SYNC_ENABLED
+                if (syncItems)
+                {
+                    await this.SyncAsync();
+                }
+#endif
+                IEnumerable<Substation> items = await todoTable.Where(sub => sub.Substation_Code == subCode).ToEnumerableAsync();
 
+                return new ObservableCollection<Substation>(items);
+            }
+            catch (MobileServiceInvalidOperationException msioe)
+            {
+                Debug.WriteLine("Invalid sync operation: {0}", new[] { msioe.Message });
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine("Sync error: {0}", new[] { e.Message });
+            }
+            return null;
+        }
+        public async Task DeleteSubstationAsync(Substation s)
+        {
+            await todoTable.DeleteAsync(s);
+        }
         public async Task SaveTaskAsync(Substation item)
         {
             try

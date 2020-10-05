@@ -15,6 +15,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.WindowsAzure.MobileServices;
+using Microsoft.WindowsAzure.MobileServices.Query;
 
 #if OFFLINE_SYNC_ENABLED
 using Microsoft.WindowsAzure.MobileServices.SQLiteStore;
@@ -75,7 +76,7 @@ namespace K_Bikpower
             get { return todoTable is Microsoft.WindowsAzure.MobileServices.Sync.IMobileServiceSyncTable<CommissionData>; }
         }
 
-        public async Task<ObservableCollection<CommissionData>> GetCFormsAsync(bool syncItems = false, string submittedBy = null, string status = null, ObservableCollection<string> formIds = null)
+        public async Task<ObservableCollection<CommissionData>> GetCFormsAsync(bool syncItems = false, string submittedBy = null, string status = null, string sortBy = "Date Last Modified", ObservableCollection<string> formIds = null)
         {
             try
             {
@@ -98,24 +99,31 @@ namespace K_Bikpower
                 if (status != null)
                 {
                     items = items.Where(asset => asset.Status == status);
-                    /*
-                    if (status == "Rejected")
-                    {
-                        items = items.Where(asset => asset.Status == "Rejected");
-                    }
-                    else if (status == "Approved")
-                    {
-                        items = items.Where(asset => asset.Status == "Approved");
-                    }
-                    else
-                    {
-                        items = items.Where(asset => asset.Status == status);
-                    }
-                    */
                 }
+                /*
+                if (sortBy == "Date Last Modified")
+                {
+                    items.OrderByDescending(item => item.LastModifiedOn);
+                }
+                */
+                if (sortBy == "Date Commissioned")
+                {
+                    //items.OrderByDescending(item => item.DateCommissioned);
+                    return new ObservableCollection<CommissionData>(items.OrderByDescending(item => item.DateCommissioned));
+                }
+                else if (sortBy == "Date Submitted")//sort by date submitted
+                {
+                    //items.OrderByDescending(item => item.SubmittedOn);
+                    return new ObservableCollection<CommissionData>(items.OrderByDescending(item => item.SubmittedOn));
+                }
+                else //date last modified
+                {
+                    return new ObservableCollection<CommissionData>(items.OrderByDescending(item => item.LastModifiedOn));
+                }
+                //return new ObservableCollection<CommissionData>(items);
 
 
-                return new ObservableCollection<CommissionData>(items.OrderByDescending(item => item.DateCommissioned));
+
             }
             catch (MobileServiceInvalidOperationException msioe)
             {

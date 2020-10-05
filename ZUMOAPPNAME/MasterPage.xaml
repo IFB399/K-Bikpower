@@ -10,10 +10,10 @@
         <ListView x:Name="listView" x:FieldModifier="public">
             <ListView.ItemsSource>
                 <x:Array Type="{x:Type local:MasterPageItem}">
-                    <local:MasterPageItem Title="DashBoard" IconSource="contacts.png" TargetType="{x:Type local:MainPage}" />
+                    <local:MasterPageItem Title="Home Page" IconSource="contacts.png" TargetType="{x:Type local:MainPage}" />
                     <local:MasterPageItem Title="Assets" IconSource="contacts.png" TargetType="{x:Type local:AssetList}" />
                     <local:MasterPageItem Title="Substations" IconSource="todo.png" TargetType="{x:Type local:ViewSubstations}" />
-                    <local:MasterPageItem Title="Qr Code Scanner" IconSource="reminders.png" TargetType="{x:Type local:ScanQR}" />
+                    <local:MasterPageItem Title="QR Code Scanner" IconSource="reminders.png" TargetType="{x:Type local:ScanQR}" />
                     <local:MasterPageItem Title="Documents" IconSource="reminders.png" TargetType="{x:Type local:Documents}" />
                 </x:Array>
             </ListView.ItemsSource>

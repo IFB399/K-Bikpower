@@ -55,6 +55,7 @@ namespace K_Bikpower
             Lastname.Text = data.LastName;
             Email.Text = data.Email;
             //Username.Text = data.Username;
+            Auth.Text = data.Role;
         }
 
         private void UpdateButton_Clicked(object sender, EventArgs e)
@@ -65,6 +66,7 @@ namespace K_Bikpower
         private async void DeleteButton_Clicked(object sender, EventArgs e)
         {
             await user_manager.DeleteUserAsync(popuserData);
+            await Navigation.PushAsync(new UsersPage());
         }
     }
 }

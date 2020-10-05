@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\University\\Year_3\\399\\K-Bikpower\\iOS\\K_Bikpower.iOS.csproj": {}
+    "C:\\Users\\Brenton Reddish\\Source\\Repos\\K-Bikpower\\iOS\\K_Bikpower.iOS.csproj": {}
   },
   "projects": {
-    "D:\\University\\Year_3\\399\\K-Bikpower\\iOS\\K_Bikpower.iOS.csproj": {
+    "C:\\Users\\Brenton Reddish\\Source\\Repos\\K-Bikpower\\iOS\\K_Bikpower.iOS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\University\\Year_3\\399\\K-Bikpower\\iOS\\K_Bikpower.iOS.csproj",
+        "projectUniqueName": "C:\\Users\\Brenton Reddish\\Source\\Repos\\K-Bikpower\\iOS\\K_Bikpower.iOS.csproj",
         "projectName": "K_Bikpower.iOS",
-        "projectPath": "D:\\University\\Year_3\\399\\K-Bikpower\\iOS\\K_Bikpower.iOS.csproj",
-        "packagesPath": "C:\\Users\\maxna\\.nuget\\packages\\",
-        "outputPath": "D:\\University\\Year_3\\399\\K-Bikpower\\iOS\\obj\\",
+        "projectPath": "C:\\Users\\Brenton Reddish\\Source\\Repos\\K-Bikpower\\iOS\\K_Bikpower.iOS.csproj",
+        "packagesPath": "C:\\Users\\Brenton Reddish\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Brenton Reddish\\Source\\Repos\\K-Bikpower\\iOS\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
-          "D:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\maxna\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Brenton Reddish\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -32,8 +32,8 @@
         "frameworks": {
           "xamarinios10": {
             "projectReferences": {
-              "D:\\University\\Year_3\\399\\K-Bikpower\\ZUMOAPPNAME\\K_Bikpower.csproj": {
-                "projectPath": "D:\\University\\Year_3\\399\\K-Bikpower\\ZUMOAPPNAME\\K_Bikpower.csproj"
+              "C:\\Users\\Brenton Reddish\\Source\\Repos\\K-Bikpower\\ZUMOAPPNAME\\K_Bikpower.csproj": {
+                "projectPath": "C:\\Users\\Brenton Reddish\\Source\\Repos\\K-Bikpower\\ZUMOAPPNAME\\K_Bikpower.csproj"
               }
             }
           }
@@ -65,21 +65,21 @@
         }
       }
     },
-    "D:\\University\\Year_3\\399\\K-Bikpower\\ZUMOAPPNAME\\K_Bikpower.csproj": {
+    "C:\\Users\\Brenton Reddish\\Source\\Repos\\K-Bikpower\\ZUMOAPPNAME\\K_Bikpower.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\University\\Year_3\\399\\K-Bikpower\\ZUMOAPPNAME\\K_Bikpower.csproj",
+        "projectUniqueName": "C:\\Users\\Brenton Reddish\\Source\\Repos\\K-Bikpower\\ZUMOAPPNAME\\K_Bikpower.csproj",
         "projectName": "K_Bikpower",
-        "projectPath": "D:\\University\\Year_3\\399\\K-Bikpower\\ZUMOAPPNAME\\K_Bikpower.csproj",
-        "packagesPath": "C:\\Users\\maxna\\.nuget\\packages\\",
-        "outputPath": "D:\\University\\Year_3\\399\\K-Bikpower\\ZUMOAPPNAME\\obj\\",
+        "projectPath": "C:\\Users\\Brenton Reddish\\Source\\Repos\\K-Bikpower\\ZUMOAPPNAME\\K_Bikpower.csproj",
+        "packagesPath": "C:\\Users\\Brenton Reddish\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Brenton Reddish\\Source\\Repos\\K-Bikpower\\ZUMOAPPNAME\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "D:\\Microsoft\\Xamarin\\NuGet\\",
-          "D:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\maxna\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Brenton Reddish\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -145,7 +145,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "D:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

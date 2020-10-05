@@ -56,14 +56,14 @@
                     <StackLayout Orientation="Vertical" Grid.Row="2">
                         <Label Text="Submitted By" FontSize="30" FontAttributes="Bold"/>
                         <Frame CornerRadius="0" BorderColor="Black" HasShadow="True" >
-                            <Label x:Name="SubmittedByLabel"  Text="insert user" FontSize="30"/>
+                            <Label x:Name="SubmittedByLabel" FontSize="30"/>
                         </Frame>
                     </StackLayout>
 
                     <StackLayout Orientation="Vertical" Grid.Row="3">
                         <Label Text="Submitted On" FontSize="30" FontAttributes="Bold"/>
                         <Frame CornerRadius="0" BorderColor="Black" HasShadow="True" >
-                            <Label x:Name="SubmittedOnLabel" Text="insert date" FontSize="30"/>
+                            <Label x:Name="SubmittedOnLabel" FontSize="30"/>
                         </Frame>
                     </StackLayout>
 

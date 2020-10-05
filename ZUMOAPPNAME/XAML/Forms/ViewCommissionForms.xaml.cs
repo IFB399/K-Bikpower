@@ -22,9 +22,10 @@ namespace K_Bikpower
             manager = CommissionManager.DefaultManager;
             afl_manager = AssetFormLinkManager.DefaultManager;
             asset = a;
+            SortBy_Picker.SelectedItem = "Date Last Modified";
             if (a != null)
             {
-                assetLabel.Text = "Asset Equipment Number: " + a.AssetEQNO;
+                assetLabel.Text = "Asset Serial Number: " + a.SerialNumber; 
                 assetLabel.IsVisible = true;
             }
             if (Device.RuntimePlatform == Device.UWP)
@@ -51,6 +52,7 @@ namespace K_Bikpower
         protected override async void OnAppearing()
         {
             base.OnAppearing();
+            SortBy_Picker.SelectedItem = "Date Last Modified";
             // Set syncItems to true in order to synchronize the data on startup when running in offline mode
             SubmittedBy_Picker.ItemsSource = await manager.GetSubmittedByNames();
             await RefreshItems(true, syncItems: true, a: asset);
@@ -59,7 +61,7 @@ namespace K_Bikpower
         {
             string submittedBy = (string)SubmittedBy_Picker.SelectedItem;
             string status = (string)Status_Picker.SelectedItem;
-
+            string sortBy = (string)SortBy_Picker.SelectedItem;
             if (SubmittedBy_Picker.SelectedIndex == -1 && Status_Picker.SelectedIndex == -1)
             {
                 FilterLabel.Text = "Filters"; //will improve later
@@ -68,7 +70,7 @@ namespace K_Bikpower
             {
                 FilterLabel.Text = "Filters (active)";
             }
-            await RefreshItems(true, syncItems: false, submittedBy, status, asset);
+            await RefreshItems(true, syncItems: false, submittedBy, status, sortBy, asset);
             //todoList.ItemsSource = await manager.GetTodoItemsAsync(false, substationCode, equipmentClass, manufacturerName);
         }
         private void Clear_Status_Clicked(object sender, EventArgs e)
@@ -81,11 +83,12 @@ namespace K_Bikpower
         }
         private async void Clear_Filters_Clicked(object sender, EventArgs e)
         {
+            string sortByType = (string)SortBy_Picker.SelectedItem;
             asset = null;
             assetLabel.IsVisible = false;
             SubmittedBy_Picker.SelectedIndex = -1;
             Status_Picker.SelectedIndex = -1;
-            await RefreshItems(true, syncItems: false);
+            await RefreshItems(true, syncItems: false, sortBy: sortByType);
             FilterLabel.Text = "Filters";
         }
         private async void Add_Form_Clicked(object sender, EventArgs e)
@@ -132,7 +135,7 @@ namespace K_Bikpower
             await RefreshItems(true, false);
         }
 
-        private async Task RefreshItems(bool showActivityIndicator, bool syncItems, string submittedBy = null, string status = null, Asset a = null)
+        private async Task RefreshItems(bool showActivityIndicator, bool syncItems, string submittedBy = null, string status = null, string sortBy = "Date Last Modified", Asset a = null)
         {
             ObservableCollection<string> formIds = null;
             if (a != null)
@@ -141,7 +144,7 @@ namespace K_Bikpower
             }
             using (var scope = new ActivityIndicatorScope(syncIndicator, showActivityIndicator))
             {
-                formList.ItemsSource = await manager.GetCFormsAsync(syncItems, submittedBy, status, formIds);
+                formList.ItemsSource = await manager.GetCFormsAsync(syncItems, submittedBy, status, sortBy, formIds);
             }
         }
         public async void OnSelected(object sender, SelectedItemChangedEventArgs e)

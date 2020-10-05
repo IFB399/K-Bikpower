@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using System.Collections.ObjectModel;
 
 namespace K_Bikpower
 {
@@ -14,10 +15,12 @@ namespace K_Bikpower
     {
         Substation SubData;
         SubstationManager manager;
+        UserManager user_manager; //WILL REMOVE LATER
         public Add_Sub(Substation data)
         {
             InitializeComponent();
             manager = SubstationManager.DefaultManager;
+            user_manager = UserManager.DefaultManager;
             if (data != null)
             {
                 SubData = data;
@@ -40,17 +43,51 @@ namespace K_Bikpower
         {
             if (addsubbutton.Text == "Add Substation")
             {
-                var sub = new Substation
-                {
-                    Substation_Code = Substation_Code_Entry.Text,
-                    Substation_Name = Substation_Name_Entry.Text,
-                    Area = Substation_Area_Entry.Text
-                };
-                await AddItem(sub);
+                bool condition1 = false; //substation code must be filled
+                bool condition2 = false; //substation code must be unique
 
+                if (string.IsNullOrEmpty(Substation_Code_Entry.Text))
+                {
+                    condition1 = true;
+                }
+                else //only check uniqueness if actually filled
+                {   
+                    ObservableCollection<Substation> s = await manager.GetSubstationByCode(Substation_Code_Entry.Text);
+                    
+                    
+                    if (s.Any()) //already existing substation was found
+                    {
+                        condition2 = true;
+                    }
+                    
+                }
+                if (condition1 || condition2)
+                {
+                    if (condition1)
+                    {
+                        await DisplayAlert("Error", "Please provide a substation code", "Close");
+                    }
+                    else
+                    {
+                        string sentence = "Substation with code " + Substation_Code_Entry.Text + " already exists";
+                        await DisplayAlert("Error", sentence, "Close");
+                    }
+                }
+                else
+                {
+                    var sub = new Substation
+                    {
+                        Substation_Code = Substation_Code_Entry.Text,
+                        Substation_Name = Substation_Name_Entry.Text,
+                        Area = Substation_Area_Entry.Text
+                    };
+                    await AddItem(sub);
+                    await Navigation.PushAsync(new ViewSubstations());
+                }
             }
-            else 
+            else
             {
+                //HAVEN'T DONE UPDATE SUBSTATION YET
                 var sub = new Substation
                 {
                     Substation_Code = Substation_Code_Entry.Text,
@@ -60,8 +97,9 @@ namespace K_Bikpower
                 };
                 await AddItem(sub);
             }
-            await Navigation.PushAsync(new ViewSubstations());
+            //await Navigation.PushAsync(new ViewSubstations());
 
         }
+
     }
 }

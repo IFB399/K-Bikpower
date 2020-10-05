@@ -4399,25 +4399,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\maxna\\.nuget\\packages\\": {},
-    "D:\\Microsoft\\Xamarin\\NuGet\\": {},
-    "D:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Brenton Reddish\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\University\\Year_3\\399\\K-Bikpower\\ZUMOAPPNAME\\K_Bikpower.csproj",
+      "projectUniqueName": "C:\\Users\\Brenton Reddish\\Source\\Repos\\K-Bikpower\\ZUMOAPPNAME\\K_Bikpower.csproj",
       "projectName": "K_Bikpower",
-      "projectPath": "D:\\University\\Year_3\\399\\K-Bikpower\\ZUMOAPPNAME\\K_Bikpower.csproj",
-      "packagesPath": "C:\\Users\\maxna\\.nuget\\packages\\",
-      "outputPath": "D:\\University\\Year_3\\399\\K-Bikpower\\ZUMOAPPNAME\\obj\\",
+      "projectPath": "C:\\Users\\Brenton Reddish\\Source\\Repos\\K-Bikpower\\ZUMOAPPNAME\\K_Bikpower.csproj",
+      "packagesPath": "C:\\Users\\Brenton Reddish\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Brenton Reddish\\Source\\Repos\\K-Bikpower\\ZUMOAPPNAME\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "D:\\Microsoft\\Xamarin\\NuGet\\",
-        "D:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Microsoft\\Xamarin\\NuGet\\",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\maxna\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Brenton Reddish\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -4483,7 +4483,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "D:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
       }
     }
   }

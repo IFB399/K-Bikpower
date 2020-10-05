@@ -37,7 +37,7 @@ namespace K_Bikpower
                     IsPresented = false;
                     return;
                 }
-                if (item.Title == "Qr Code Scanner")
+                if (item.Title == "QR Code Scanner")
                 {
                     Detail = new NavigationPage(new ScanQR());
                     masterPage.listView.SelectedItem = null;

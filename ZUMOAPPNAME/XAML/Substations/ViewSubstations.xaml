@@ -11,7 +11,7 @@
             <Label Text="Substations" FontSize="Large" HorizontalOptions="Center" TextColor="White"/>
             <Frame CornerRadius="0" BackgroundColor="#f5f5f5" HasShadow ="False">
 
-                <ListView x:Name="AssetsTable" HasUnevenRows="false" ItemTapped="ViewAssets" >
+                <ListView x:Name="AssetsTable" HasUnevenRows="false" ItemTapped="ViewAssets">
                     <ListView.Header >
                         <Grid Margin="0,0,0,10">
                             <Grid.ColumnDefinitions>

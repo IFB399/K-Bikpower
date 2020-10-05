@@ -17,6 +17,7 @@ namespace K_Bikpower
         User popuserData;
         UserManager user_manager;
         public string Ids;
+        public string UserRole;
         public AddUser(User Userdata, string random)
         {
             InitializeComponent();
@@ -50,6 +51,7 @@ namespace K_Bikpower
                 OldPaaassword.IsVisible = true;
                 Oldpass.IsVisible = true;
                 Next.IsVisible = true;
+                UserRole = Userdata.Role;
             }
 
 
@@ -183,7 +185,8 @@ namespace K_Bikpower
                 //Username = Username.Text,
                 Password = hashedPassword,
                 Salt = salt,
-                
+                Role = UserRole,
+
             };
                 await AddItem(todo);
                 await Navigation.PushAsync(new MainPage());

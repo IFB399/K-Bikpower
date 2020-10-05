@@ -6,17 +6,20 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using System.Collections.ObjectModel;
 
 namespace K_Bikpower
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ViewSubstations : ContentPage
     {
+        AssetManager asset_manager;
         SubstationManager Subs;
         public ViewSubstations()
         {
             InitializeComponent();
             Subs = SubstationManager.DefaultManager;
+            asset_manager = AssetManager.DefaultManager;
             if (Device.RuntimePlatform == Device.UWP)
             {
                 var refreshButton = new Button
@@ -83,16 +86,31 @@ namespace K_Bikpower
             Navigation.PushAsync(new Add_Sub(null));
         }
 
-        private void ViewAssets(object sender, ItemTappedEventArgs e)
+        private async void ViewAssets(object sender, ItemTappedEventArgs e) //on selected
         {
+            
             var detail = e.Item as Substation;
             string details = detail.Substation_Code;
             if (details != null)
             {
-
+                ObservableCollection<string> codes = await asset_manager.GetSubstationCodes();
+                if (codes.Contains(detail.Substation_Code))
+                {
+                    await Navigation.PushAsync(new AssetList(substationCode: detail.Substation_Code));
+                }
+                else
+                {
+                    await DisplayAlert("No Assets to View", "There are no assets currently at this substation", "Close");
+                }
                 //var Assets =  App.Database.GetSubAssetsAsync(details);
-                Navigation.PushAsync(new AssetList()); //NEEDS FIXING
+
+ 
             }
+            /*
+            //DELETE CODE (TEMPORARY)
+            var detail = e.Item as Substation;
+            await Subs.DeleteSubstationAsync(detail);
+            */
         }
         private async Task RefreshItems(bool showActivityIndicator, bool syncItems)
         {

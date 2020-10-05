@@ -86,7 +86,6 @@ namespace K_Bikpower
         private void CForms_Clicked(object sender, EventArgs e)
         {
             Navigation.PushAsync(new ViewCommissionForms(assetdata));
-            //to be completed
         }
         private void Button_Clicked_1(object sender, EventArgs e)
         {
