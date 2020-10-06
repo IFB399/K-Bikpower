@@ -59,7 +59,14 @@
                         <Entry x:Name="Work_OrderNo_Entry"/>
                     </StackLayout>
 
+                    <StackLayout Orientation="Horizontal">
+                        <Label x:Name="EmailLabel" Text="Alert Approvers by Email" VerticalOptions="Center" IsVisible="False"/>
+                        <CheckBox x:Name="EmailCheck" VerticalOptions="Center" IsVisible="False"/>
+                    </StackLayout>
+
                     <Button x:Name="SubmitButton" FontSize="Large" Text="Submit" Clicked="Submit_Clicked" TextColor="White" BackgroundColor="#29A8E2" HorizontalOptions="Center" VerticalOptions="Center"/>
+                
+                
                 </StackLayout>
 
             </ScrollView>

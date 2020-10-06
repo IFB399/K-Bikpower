@@ -25,7 +25,9 @@ namespace K_Bikpower
                     var refreshButton = new Button
                     {
                         Text = "Refresh",
-                        HeightRequest = 30
+                        HeightRequest = 30,
+                        BackgroundColor = Xamarin.Forms.Color.White,
+                        FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Button))
                     };
                     refreshButton.Clicked += OnRefreshItems;
                     refreshButton.BackgroundColor = Xamarin.Forms.Color.White;
@@ -35,7 +37,9 @@ namespace K_Bikpower
                         var syncButton = new Button
                         {
                             Text = "Sync items",
-                            HeightRequest = 30
+                            HeightRequest = 30,
+                            BackgroundColor = Xamarin.Forms.Color.White,
+                            FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Button))
                         };
                         syncButton.Clicked += OnSyncItems;
                         syncButton.BackgroundColor = Xamarin.Forms.Color.White;

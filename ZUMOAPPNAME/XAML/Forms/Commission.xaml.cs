@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Xamarin.Essentials;
 
 namespace K_Bikpower
 { 
@@ -39,6 +40,11 @@ namespace K_Bikpower
             {
                 globalAssets = assets;
                 count = assets.Count();
+            }
+            if (Device.RuntimePlatform == Device.UWP)
+            {
+                EmailCheck.IsVisible = true; //windows only feature for now
+                EmailLabel.IsVisible = true;
             }
             ManageAssets_Button.Text = "Manage Assets (" + count.ToString() + ")";
 
@@ -290,25 +296,45 @@ namespace K_Bikpower
                 CommissionData form = SaveData(); //returns null or a new form
                 if (form != null) //form is being submitted for the first time
                 {
-                    form.SubmittedBy = user_manager.ReturnName(); //add submitted by name
-                    form.Status = "Submitted"; //make status of form submitted
-                    form.SubmittedOn = DateTime.UtcNow.ToLocalTime(); 
-                    form.LastModifiedOn = DateTime.UtcNow.ToLocalTime(); 
-                    await AddItem(form); //add form to database
-                    if (globalAssets != null)
+                    bool answer = await DisplayAlert("Confirm Submission", "Submit this form?", "Yes", "No");
+                    if (answer == true)
                     {
-                        foreach (Asset a in globalAssets)
+                        form.SubmittedBy = user_manager.ReturnName(); //add submitted by name
+                        form.Status = "Submitted"; //make status of form submitted
+                        form.SubmittedOn = DateTime.UtcNow.ToLocalTime();
+                        form.LastModifiedOn = DateTime.UtcNow.ToLocalTime();
+                        await AddItem(form); //add form to database
+                        if (EmailCheck.IsChecked)
                         {
-                            //to ensure assets of this form can be retrieved
-                            AssetFormLink afl = new AssetFormLink
+                            //SEND EMAIL!
+                            string subject = "WARP TECH Approval Required";
+                            string body = form.SubmittedBy + " has submitted a commission form that is awaiting approval";
+                            List<string> recipients = await user_manager.GetApproverEmails();
+                            try
                             {
-                                FormId = form.Id,
-                                AssetId = a.Id,
-                                FormType = "Commission"
-                            };
-                            await AddLink(afl); //add a link to database 
+                                await SendEmail(subject, body, recipients);
+                            }
+                            catch
+                            {
+                                await DisplayAlert("Error", "Email failed", "Close");
+                            }
+                        }
+                        if (globalAssets != null)
+                        {
+                            foreach (Asset a in globalAssets)
+                            {
+                                //to ensure assets of this form can be retrieved
+                                AssetFormLink afl = new AssetFormLink
+                                {
+                                    FormId = form.Id,
+                                    AssetId = a.Id,
+                                    FormType = "Commission"
+                                };
+                                await AddLink(afl); //add a link to database 
+                            }
                         }
                     }
+
                 }
                 else //existing form is being updated
                 {
@@ -399,6 +425,17 @@ namespace K_Bikpower
                 Project_Entry.IsVisible = false;
                 Substation_Entry.IsEnabled = true;
             }
+        }
+        public async Task SendEmail(string subject, string body, List<string> recipients)
+        {
+            var message = new EmailMessage
+            {
+                Subject = subject,
+                Body = body,
+                To = recipients,
+            };
+            await Email.ComposeAsync(message);
+
         }
     }
 }

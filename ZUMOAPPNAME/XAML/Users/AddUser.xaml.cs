@@ -29,7 +29,10 @@ namespace K_Bikpower
                 popuserData = Userdata;
                 PopulateDetails(popuserData);
                 Ids = Userdata.Id;
-
+            }
+            else
+            {
+                Auth.SelectedItem = "General User";
             }
             if (random != null) 
             {
@@ -59,7 +62,7 @@ namespace K_Bikpower
         protected override async void OnAppearing()
         {
             base.OnAppearing();
-            Auth.SelectedItem = "General User";
+
         }
         private void PopulateDetails(User data)
         {

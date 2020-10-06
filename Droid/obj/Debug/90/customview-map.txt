@@ -27,6 +27,7 @@ paths;C:\Users\jacqu\Documents\2017 (first year)\latest repo 4\Droid\obj\Debug\9
 resources;C:\Users\jacqu\Documents\2017 (first year)\latest repo 4\Droid\obj\Debug\90\lp\2\jl\res\values\strings.xml
 resources;C:\Users\jacqu\Documents\2017 (first year)\latest repo 4\Droid\obj\Debug\90\lp\3\jl\res\values\strings.xml
 resources;C:\Users\jacqu\Documents\2017 (first year)\latest repo 4\Droid\obj\Debug\90\lp\47\jl\res\values\attrs.xml
+resources;C:\Users\jacqu\Documents\2017 (first year)\latest repo 4\Droid\obj\Debug\90\lp\47\jl\res\values\strings.xml
 resources;C:\Users\jacqu\Documents\2017 (first year)\latest repo 4\Droid\obj\Debug\90\lp\47\jl\res\values\styles.xml
 resources;C:\Users\jacqu\Documents\2017 (first year)\latest repo 4\Droid\obj\Debug\90\lp\49\jl\res\values\strings.xml
 resources;obj\Debug\90\res\values\style.xml
@@ -38,6 +39,7 @@ set;C:\Users\jacqu\Documents\2017 (first year)\latest repo 4\Droid\obj\Debug\90\
 set;C:\Users\jacqu\Documents\2017 (first year)\latest repo 4\Droid\obj\Debug\90\lp\47\jl\res\anim\exittoright.xml
 string;C:\Users\jacqu\Documents\2017 (first year)\latest repo 4\Droid\obj\Debug\90\lp\2\jl\res\values\strings.xml
 string;C:\Users\jacqu\Documents\2017 (first year)\latest repo 4\Droid\obj\Debug\90\lp\3\jl\res\values\strings.xml
+string;C:\Users\jacqu\Documents\2017 (first year)\latest repo 4\Droid\obj\Debug\90\lp\47\jl\res\values\strings.xml
 string;C:\Users\jacqu\Documents\2017 (first year)\latest repo 4\Droid\obj\Debug\90\lp\49\jl\res\values\strings.xml
 style;C:\Users\jacqu\Documents\2017 (first year)\latest repo 4\Droid\obj\Debug\90\lp\47\jl\res\values\styles.xml
 style;obj\Debug\90\res\values\style.xml

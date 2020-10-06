@@ -39,15 +39,22 @@ namespace K_Bikpower.Droid
 			CurrentPlatform.Init();
 			Xamarin.Essentials.Platform.Init(Application);
 			ZXing.Net.Mobile.Forms.Android.Platform.Init();
+
 			// Initialize Xamarin Forms
 			Forms.Init (this, bundle);
+
+			Xamarin.Essentials.Platform.Init(this, bundle); // add this line to your code, it may also be called: bundle
+
 			// Load the main application
 			CheckAppPermissions();
             LoadApplication (new App ());
 		}
 		public override void OnRequestPermissionsResult(int requestCode, string[] permissions, Permission[] grantResults)
 		{
+			Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+			base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
 			global::ZXing.Net.Mobile.Android.PermissionsHandler.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+
 		}
 		private void CheckAppPermissions()
 		{
