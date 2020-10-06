@@ -20,8 +20,7 @@ namespace K_Bikpower
             InitializeComponent();
             Subs = SubstationManager.DefaultManager;
             asset_manager = AssetManager.DefaultManager;
-            if (Device.RuntimePlatform == Device.UWP)
-            {
+
                 var refreshButton = new Button
                 {
                     Text = "Refresh",
@@ -44,7 +43,7 @@ namespace K_Bikpower
                     buttonsPanel.Children.Add(syncButton);
                 }
             }
-        }
+        
 
 
         protected override async void OnAppearing()

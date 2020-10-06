@@ -4464,7 +4464,6 @@ C:\Users\jacqu\Documents\2017 (first year)\latest repo 4\Droid\obj\Debug\90\andr
 C:\Users\jacqu\Documents\2017 (first year)\latest repo 4\Droid\obj\Debug\90\android\src\crc643f46942d9dd1fff9\DataChangeObserver.java
 C:\Users\jacqu\Documents\2017 (first year)\latest repo 4\Droid\obj\Debug\90\android\src\crc643f46942d9dd1fff9\DatePickerRenderer.java
 C:\Users\jacqu\Documents\2017 (first year)\latest repo 4\Droid\obj\Debug\90\android\src\crc643f46942d9dd1fff9\DatePickerRendererBase_1.java
-C:\Users\jacqu\Documents\2017 (first year)\latest repo 4\Droid\obj\Debug\90\android\src\crc643f46942d9dd1fff9\DragAndDropGestureHandler.java
 C:\Users\jacqu\Documents\2017 (first year)\latest repo 4\Droid\obj\Debug\90\android\src\crc643f46942d9dd1fff9\EdgeSnapHelper.java
 C:\Users\jacqu\Documents\2017 (first year)\latest repo 4\Droid\obj\Debug\90\android\src\crc643f46942d9dd1fff9\EditorEditText.java
 C:\Users\jacqu\Documents\2017 (first year)\latest repo 4\Droid\obj\Debug\90\android\src\crc643f46942d9dd1fff9\EditorRenderer.java
@@ -4500,8 +4499,6 @@ C:\Users\jacqu\Documents\2017 (first year)\latest repo 4\Droid\obj\Debug\90\andr
 C:\Users\jacqu\Documents\2017 (first year)\latest repo 4\Droid\obj\Debug\90\android\src\crc643f46942d9dd1fff9\GenericGlobalLayoutListener.java
 C:\Users\jacqu\Documents\2017 (first year)\latest repo 4\Droid\obj\Debug\90\android\src\crc643f46942d9dd1fff9\GenericMenuClickListener.java
 C:\Users\jacqu\Documents\2017 (first year)\latest repo 4\Droid\obj\Debug\90\android\src\crc643f46942d9dd1fff9\GestureManager_TapAndPanGestureDetector.java
-C:\Users\jacqu\Documents\2017 (first year)\latest repo 4\Droid\obj\Debug\90\android\src\crc643f46942d9dd1fff9\GradientStrokeDrawable.java
-C:\Users\jacqu\Documents\2017 (first year)\latest repo 4\Droid\obj\Debug\90\android\src\crc643f46942d9dd1fff9\GradientStrokeDrawable_GradientShaderFactory.java
 C:\Users\jacqu\Documents\2017 (first year)\latest repo 4\Droid\obj\Debug\90\android\src\crc643f46942d9dd1fff9\GridLayoutSpanSizeLookup.java
 C:\Users\jacqu\Documents\2017 (first year)\latest repo 4\Droid\obj\Debug\90\android\src\crc643f46942d9dd1fff9\GroupableItemsViewAdapter_2.java
 C:\Users\jacqu\Documents\2017 (first year)\latest repo 4\Droid\obj\Debug\90\android\src\crc643f46942d9dd1fff9\GroupableItemsViewRenderer_3.java
@@ -4737,3 +4734,4 @@ C:\Users\jacqu\Documents\2017 (first year)\latest repo 4\Droid\obj\Debug\90\stam
 C:\Users\jacqu\Documents\2017 (first year)\latest repo 4\Droid\obj\Debug\90\stamp\_GenerateJavaStubs.stamp
 C:\Users\jacqu\Documents\2017 (first year)\latest repo 4\Droid\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\jacqu\Documents\2017 (first year)\latest repo 4\Droid\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
+C:\Users\jacqu\Documents\2017 (first year)\latest repo 4\Droid\obj\Debug\90\XamlC.stamp

@@ -67,7 +67,7 @@
                 </Expander>
 
 
-                <ListView x:Name="formList" HasUnevenRows="false" IsPullToRefreshEnabled="true" ItemSelected="OnSelected">
+                <ListView x:Name="formList" HasUnevenRows="false" IsPullToRefreshEnabled="false" ItemSelected="OnSelected">
                                 <ListView.Header>
                                     <Grid Margin="0,0,0,10">
                                         <Grid.ColumnDefinitions>

@@ -10,21 +10,26 @@
         <StackLayout Margin="50,10,50,10">
             <Label Text="Substations" FontSize="Large" HorizontalOptions="Center" TextColor="White"/>
             <Frame CornerRadius="0" BackgroundColor="#f5f5f5" HasShadow ="False">
-
-                <ListView x:Name="AssetsTable" HasUnevenRows="false" ItemTapped="ViewAssets">
+                <StackLayout>
+                    <ActivityIndicator 
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       IsVisible="False"
+                       IsEnabled="True"
+                       x:Name="syncIndicator"/>
+                    <ListView x:Name="AssetsTable" HasUnevenRows="false" IsPullToRefreshEnabled="false" ItemTapped="ViewAssets">
                     <ListView.Header >
-                        <Grid Margin="0,0,0,10">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="*"/>
-                            </Grid.ColumnDefinitions>
-                            <Label Text= "Code" FontSize="Small" FontAttributes="Bold"  Grid.Column="0" HorizontalOptions="Center"/>
-                            <Label Text= "Name" FontSize="Small" FontAttributes="Bold"  Grid.Column="1" HorizontalOptions="Center"/>
-                            <Label Text= "Area" FontSize="Small" FontAttributes="Bold"  Grid.Column="2" HorizontalOptions="Center"/>
-                            <ActivityIndicator Grid.RowSpan="2" HorizontalOptions="Center" VerticalOptions="Center" IsVisible="False" IsEnabled="True" x:Name="syncIndicator"/>
-                        </Grid>
-                    </ListView.Header>
+                            <Grid Margin="0,0,0,10">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Text= "Code" FontSize="Small" FontAttributes="Bold"  Grid.Column="0" HorizontalOptions="Center"/>
+                                <Label Text= "Name" FontSize="Small" FontAttributes="Bold"  Grid.Column="1" HorizontalOptions="Center"/>
+                                <Label Text= "Area" FontSize="Small" FontAttributes="Bold"  Grid.Column="2" HorizontalOptions="Center"/>
+                            </Grid>
+                        </ListView.Header>
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
@@ -45,11 +50,12 @@
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
-
+                </StackLayout>
             </Frame>
             <StackLayout x:Name="buttonsPanel" Orientation="Horizontal" HorizontalOptions="Center">
                 <Button Text="Add Substation" Clicked="Button_Clicked" BackgroundColor="White" CornerRadius="0" FontSize="Medium" TextColor="Black" />
             </StackLayout>
         </StackLayout>
+
     </ContentPage.Content>
 </ContentPage>

@@ -20,8 +20,7 @@ namespace K_Bikpower
                 InitializeComponent();
              manager = UserManager.DefaultManager;
             
-            if (Device.RuntimePlatform == Device.UWP)
-                {
+
                     var refreshButton = new Button
                     {
                         Text = "Refresh",
@@ -45,7 +44,7 @@ namespace K_Bikpower
                         syncButton.BackgroundColor = Xamarin.Forms.Color.White;
                         buttonsPanel.Children.Add(syncButton);
                     }
-                }
+                
             }
 
         protected override async void OnAppearing()

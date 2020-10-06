@@ -35,8 +35,6 @@ namespace K_Bikpower
                 assetLabel.MinimumHeightRequest = 0; //to avoid taking up space
                 assetLabel2.MinimumHeightRequest = 0; //to avoid taking up space
             }
-            if (Device.RuntimePlatform == Device.UWP)
-            {
                 var refreshButton = new Button
                 {
                     Text = "Refresh",
@@ -58,7 +56,7 @@ namespace K_Bikpower
                     syncButton.Clicked += OnSyncItems;
                     buttonsPanel.Children.Add(syncButton);
                 }
-            }
+            
         }
         protected override async void OnAppearing()
         {
