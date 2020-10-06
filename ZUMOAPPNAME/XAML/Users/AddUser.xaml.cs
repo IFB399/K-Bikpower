@@ -99,6 +99,11 @@ namespace K_Bikpower
                await DisplayAlert("Alert", "Please enter an email address", "OK");
                 return;
             }
+            if (String.IsNullOrWhiteSpace(Temp_PAssword.Text) && AddOrUpdateButton.Text != "Update User")
+            {
+                await DisplayAlert("Alert", "Please enter a password", "OK"); //don't have to if its an update
+                return;
+            }
             string salt = GenerateSalt();
             string hashedPassword = HashPassword(Temp_PAssword.Text, salt);
             User todo = new User
@@ -107,21 +112,31 @@ namespace K_Bikpower
                 FirstName = Firstname.Text,
                 LastName = Lastname.Text,
                 Email = Email.Text,
-                Salt = salt,
-                Password = hashedPassword,
                 Role = Auth.SelectedItem.ToString()
             };
             ObservableCollection<User> u = await user_manager.GetUser(Email.Text);
             User user = u.FirstOrDefault();
             if (AddOrUpdateButton.Text == "Update User")
             {
+                if (!String.IsNullOrWhiteSpace(Temp_PAssword.Text))
+                {
+                    todo.Password = hashedPassword; //don't update password if empty
+                    todo.Salt = salt;
+                }
+                else
+                {
+                    todo.Password = popuserData.Password; //keep the same password and salt if empty
+                    todo.Salt = popuserData.Salt;
+                }
                 await AddItem(todo);
                 await Navigation.PushAsync(new UsersPage());
                 return;
             }
             
-            if (user == null)
+            else if (user == null) //add user
             {
+                todo.Password = hashedPassword; 
+                todo.Salt = salt;
                 await AddItem(todo);
                 await Navigation.PushAsync(new UsersPage());
             }

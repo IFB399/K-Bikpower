@@ -6,6 +6,9 @@
         <StackLayout>
 
             <StackLayout>
+                <Label Text="Manage Form Assets" FontSize="Large" FontAttributes="Bold" HorizontalOptions="Center"/>
+                <Label Margin="20" HorizontalOptions="Center" HorizontalTextAlignment="Center"
+                       Text="Add assets to the form by scanning their QR codes (Scan button) or selecting them in the assets table (Add By Table button). Select an asset in the table below to view more details or remove it from the form. Once complete, click done."/>
                 <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
                     <Button x:Name="ScanButton" Text="Scan" Clicked="Scan_Asset_Clicked" WidthRequest="150"/>
                     <Button x:Name="AddButton" Text="Add by Table" Clicked="Add_Clicked" WidthRequest="150"/>
