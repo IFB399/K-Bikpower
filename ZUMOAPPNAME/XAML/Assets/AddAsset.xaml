@@ -74,10 +74,7 @@
 
                     <Label Text="Last Installation Date" FontSize="Title" TextColor="Black"/>
                     <DatePicker  x:Name="LastInstallDate_Picker"/>
-                    <StackLayout Orientation="Horizontal">
-                        <Label Text="No Install Date" FontSize="Title" TextColor="Black"/>
-                        <CheckBox x:Name="NoInstall" VerticalOptions="Center" CheckedChanged="NoInstall_CheckedChanged"/>
-                    </StackLayout>
+                    
                     
 
                     <Label Text="Equipment Class" FontSize="Title" TextColor="Black"/>

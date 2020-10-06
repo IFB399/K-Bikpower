@@ -17,7 +17,6 @@ namespace K_Bikpower
         UserManager user_manager;
         SubstationManager Subs;
         DateTime? Warranty = new DateTime(1900, 1, 18);
-        DateTime? NoInstallasset = new DateTime(1900, 1, 18);
         public string Ids;
         bool update = false;
         //var value;
@@ -96,10 +95,6 @@ namespace K_Bikpower
                 Warranty = WarrantyDate_Picker.Date.ToLocalTime();
             }
 
-            if (NoInstallasset != null) 
-            {
-                NoInstallasset = LastInstallDate_Picker.Date.ToLocalTime();
-            }
             if (String.IsNullOrWhiteSpace(Serial_Number_Entry.Text))
             {
                 await DisplayAlert("Alert", "Please enter a Serial Number", "OK");
@@ -190,8 +185,8 @@ namespace K_Bikpower
                 SpecificationTitle = Specification_Title_Entry.Text,
                 SpecificationNO = Specification_Number_Entry.Text,
                 SpecificationItemNO = Specification_Item_Number_Entry.Text,
-                LastInstallDate = NoInstallasset,
-                EquipmentClass = Equipment_Class_Entry.Text,
+                LastInstallDate = LastInstallDate_Picker.Date.ToLocalTime(),
+            EquipmentClass = Equipment_Class_Entry.Text,
                 EquipmentClassDescription = Equipment_Class_Description_Entry.Text,
             };
             if (update == false) //a brand new asset is being added
@@ -214,11 +209,6 @@ namespace K_Bikpower
         {
             Warranty = null;
             
-        }
-
-        private void NoInstall_CheckedChanged(object sender, CheckedChangedEventArgs e)
-        {
-            NoInstallasset = null;
         }
     }
 }
