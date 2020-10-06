@@ -8,8 +8,8 @@
             <Frame CornerRadius="0" BackgroundColor="#FAFAFA" HasShadow ="True" >
             <StackLayout>
                     
-                    <Label Text="Substation Code*" FontSize="Title" TextColor="Black"/>
-                    <Picker x:Name="Substation_Picker" Title="Select Substation" ItemsSource="{Binding Substation}" ItemDisplayBinding="{Binding Substation_Code}"/>
+                <Label Text="Substation Code*" FontSize="Title" TextColor="Black"/>
+                <Picker x:Name="Substation_Picker" Title="Select Substation" ItemsSource="{Binding Substation}" ItemDisplayBinding="{Binding Substation_Code}"/>
 
                 <!--drop down-->
                 <Label Text="Plant Number" FontSize="Title" TextColor="Black"/>

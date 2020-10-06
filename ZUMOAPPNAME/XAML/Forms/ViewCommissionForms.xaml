@@ -7,10 +7,7 @@
         <StackLayout Margin="50, 50, 50, 30">
             <Label x:Name="Debug"  Text="Commission Forms" FontSize="Large" HorizontalOptions="Center" TextColor="White"/>
             <Frame CornerRadius ="0" BackgroundColor="#F5F5F5">
-                <StackLayout>
-                <StackLayout x:Name="buttonsPanel" Orientation="Horizontal" HorizontalOptions="Center">
-                    <Button Text="Add Form" Clicked="Add_Form_Clicked" BackgroundColor="White" CornerRadius="0" FontSize="Medium" TextColor="Black"/>
-                </StackLayout>
+            <StackLayout>
                 <ActivityIndicator 
                            HorizontalOptions="Center"
                            VerticalOptions="Center"
@@ -107,8 +104,10 @@
 
                 </StackLayout>
             </Frame>
-
+        <StackLayout x:Name="buttonsPanel" Orientation="Horizontal" HorizontalOptions="Center">
+            <Button Text="Add Form" Clicked="Add_Form_Clicked" BackgroundColor="White" CornerRadius="0" FontSize="Medium" TextColor="Black"/>
         </StackLayout>
+    </StackLayout>
         
 
 </ContentPage>

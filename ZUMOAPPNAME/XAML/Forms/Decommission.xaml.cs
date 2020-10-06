@@ -33,7 +33,6 @@ namespace K_Bikpower
             user_manager = UserManager.DefaultManager;
             substation_manager = SubstationManager.DefaultManager;
 
-            dateLabel.Text = DateTime.UtcNow.ToString("d");
             int count = 0;
             if (assets != null)
             {

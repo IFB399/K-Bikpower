@@ -19,6 +19,7 @@ namespace K_Bikpower
         UserManager user_manager;
         ObservableCollection<Asset> globalAssets = new ObservableCollection<Asset>();
         CommissionData commission_form;
+        string[] roles = { "Chief Operating Officer", "Regional Maintenance", "Asset Strategy Manager", "Executive Manager Projects", "Major Capital Projects Manager" };
 
         public ApproveCommission(CommissionData submittedForm, ObservableCollection<Asset> assets = null)
         {
@@ -184,8 +185,17 @@ namespace K_Bikpower
         }
         async void Edit_Clicked(object sender, EventArgs e)
         {
-            //SHOULD ONLY BE POSSIBLE IF NOT APPROVED
-            await Navigation.PushAsync(new Commission(commission_form, globalAssets));
+            string name = user_manager.ReturnName();
+            string auth = user_manager.Authentication();
+            if (commission_form.SubmittedBy == name || roles.Contains(auth))
+            {
+                await Navigation.PushAsync(new Commission(commission_form, globalAssets));
+            }
+            else
+            {
+                await DisplayAlert("Error", "You do not have permission to edit this form", "Close");
+            }
+                
         }
         async void Exit_Clicked(object sender, EventArgs e)
         {
@@ -193,18 +203,28 @@ namespace K_Bikpower
         }
         async void Delete_Clicked(object sender, EventArgs e)
         {
-            bool answer = await DisplayAlert("Confirm Deletion", "Delete this form?", "Yes", "No");
-            if (answer == true)
+            string name = user_manager.ReturnName();
+            string auth = user_manager.Authentication();
+            if (commission_form.SubmittedBy == name || roles.Contains(auth))
             {
-                //delete form and afls
-                ObservableCollection<AssetFormLink> afls = await afl_manager.GetLinksByFormAsync(commission_form.Id, "Commission");
-                foreach (AssetFormLink afl in afls)
+                bool answer = await DisplayAlert("Confirm Deletion", "Delete this form?", "Yes", "No");
+                if (answer == true)
                 {
-                    await afl_manager.DeleteLinkAsync(afl); //delete all the links
+                    //delete form and afls
+                    ObservableCollection<AssetFormLink> afls = await afl_manager.GetLinksByFormAsync(commission_form.Id, "Commission");
+                    foreach (AssetFormLink afl in afls)
+                    {
+                        await afl_manager.DeleteLinkAsync(afl); //delete all the links
+                    }
+                    await commission_manager.DeleteFormAsync(commission_form);
+                    await Navigation.PushAsync(new ViewCommissionForms());
                 }
-                await commission_manager.DeleteFormAsync(commission_form);
-                await Navigation.PushAsync(new ViewCommissionForms());
             }
+            else
+            {
+                await DisplayAlert("Error", "You do not have permission to delete this form", "Close");
+            } 
+
         }
         protected override void OnAppearing()
         {

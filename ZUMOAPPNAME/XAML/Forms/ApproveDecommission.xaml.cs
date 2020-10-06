@@ -196,9 +196,19 @@ namespace K_Bikpower
         }
         async void Edit_Clicked(object sender, EventArgs e)
         {
-            //SHOULD ONLY BE POSSIBLE IF NOT APPROVED
-            //can only be done by person who submitted or someone who is able to approve/reject?
-            await Navigation.PushAsync(new Decommission(decommission_form, globalAssets));
+            //get user name and authentication
+            string[] roles = { "Chief Operating Officer", "Regional Maintenance", "Asset Strategy Manager", "Executive Manager Projects", "Major Capital Projects Manager" };
+            string name = user_manager.ReturnName();
+            string auth = user_manager.Authentication();
+
+            if (decommission_form.SubmittedBy == name || roles.Contains(auth))
+            {
+                await Navigation.PushAsync(new Decommission(decommission_form, globalAssets));
+            }
+            else
+            {
+                await DisplayAlert("Error", "You do not have permission to edit this form", "Close");
+            }
         }
         async void Exit_Clicked(object sender, EventArgs e)
         {
@@ -206,20 +216,30 @@ namespace K_Bikpower
         }
         async void Delete_Clicked(object sender, EventArgs e)
         {
-            bool answer = await DisplayAlert("Confirm Deletion", "Delete this form?", "Yes", "No");
-            if (answer == true)
+            //get user name and authentication
+            string[] roles = { "Chief Operating Officer", "Regional Maintenance", "Asset Strategy Manager", "Executive Manager Projects", "Major Capital Projects Manager" };
+            string name = user_manager.ReturnName();
+            string auth = user_manager.Authentication();
+
+            if (decommission_form.SubmittedBy == name || roles.Contains(auth))
             {
-                //delete form and afls
-                ObservableCollection<AssetFormLink> afls = await afl_manager.GetLinksByFormAsync(decommission_form.Id, "Decommission");
-                foreach (AssetFormLink afl in afls)
+                bool answer = await DisplayAlert("Confirm Deletion", "Delete this form?", "Yes", "No");
+                if (answer == true)
                 {
-                    await afl_manager.DeleteLinkAsync(afl); //delete all the links
+                    //delete form and afls
+                    ObservableCollection<AssetFormLink> afls = await afl_manager.GetLinksByFormAsync(decommission_form.Id, "Decommission");
+                    foreach (AssetFormLink afl in afls)
+                    {
+                        await afl_manager.DeleteLinkAsync(afl); //delete all the links
+                    }
+                    await decommission_manager.DeleteFormAsync(decommission_form);
+                    await Navigation.PushAsync(new ViewDecommissionForms());
                 }
-                await decommission_manager.DeleteFormAsync(decommission_form);
-                await Navigation.PushAsync(new ViewDecommissionForms());
             }
-
-
+            else
+            {
+                await DisplayAlert("Error", "You do not have permission to delete this form", "Close");
+            }
         }
         protected override void OnAppearing()
         {

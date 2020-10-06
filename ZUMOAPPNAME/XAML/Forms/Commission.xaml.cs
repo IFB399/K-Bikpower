@@ -33,8 +33,6 @@ namespace K_Bikpower
             commission_manager = CommissionManager.DefaultManager;
             user_manager = UserManager.DefaultManager;
             substation_manager = SubstationManager.DefaultManager;
-
-            dateLabel.Text = DateTime.UtcNow.ToString("d");
             
             int count = 0;
             if (assets != null)
