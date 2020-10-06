@@ -81,7 +81,7 @@
                 </StackLayout>
             </Frame>
             <StackLayout x:Name="buttonsPanel" Orientation="Horizontal" HorizontalOptions="Center">
-                <Button Text="Add Asset" Clicked="Add_Asset_Clicked" BackgroundColor="White" CornerRadius="0" FontSize="Medium" TextColor="Black" />
+                <Button x:Name="AddButton" Text="Add Asset" Clicked="Add_Asset_Clicked" BackgroundColor="White" CornerRadius="0" FontSize="Medium" TextColor="Black" />
 
             </StackLayout>
 
