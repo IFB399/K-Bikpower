@@ -47,8 +47,9 @@ namespace K_Bikpower
 
         private void Signed_OUT_Clicked(object sender, EventArgs e)
         {
-
-            Navigation.PushAsync(new Login()); //if its not the final page change to navigation page
+            Navigation.PopModalAsync();
+            Application.Current.MainPage = new Login();
+            //Navigation.PushAsync(new Login()); //if its not the final page change to navigation page
         }
 
         private void Users_Clicked(object sender, EventArgs e)
