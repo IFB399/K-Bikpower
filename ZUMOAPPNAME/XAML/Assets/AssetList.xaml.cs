@@ -48,7 +48,8 @@ namespace K_Bikpower
             if (substationCode != null)
             {
                 subCode = substationCode;
-                AssetExpander.IsExpanded = true;
+                FilterExpander.IsExpanded = true;
+                Indicator.RotateTo(90);
             }
         }
 
@@ -79,7 +80,17 @@ namespace K_Bikpower
                 FilterLabel.Text = "Filters (active)";
             }
         }
-
+        public void Expander_Tapped(object sender, EventArgs e)
+        {
+            if (FilterExpander.IsExpanded == true)
+            {
+                Indicator.RotateTo(90); //downwards
+            }
+            else
+            {
+                Indicator.RotateTo(270); //upwards
+            }
+        }
         public async void Add_Asset_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new AddAsset(null));

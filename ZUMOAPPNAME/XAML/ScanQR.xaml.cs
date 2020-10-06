@@ -46,6 +46,7 @@ namespace K_Bikpower
                     {
                         _scanView.IsScanning = false;
                         await Navigation.PushAsync(new Preview_Asset(asset));
+                        Navigation.RemovePage(this); //to prevent crashing
                     }
                     else if (typeof(DecommissionData).IsInstanceOfType(savedData))
                     {
@@ -64,6 +65,7 @@ namespace K_Bikpower
                         {
                             _scanView.IsScanning = false; //stop scanning
                             await Navigation.PushAsync(new FormPreviewAsset(asset, 1,savedData, assetList));
+                            Navigation.RemovePage(this); //to prevent crashing
                         }
                     }
                     else //of type commission TO BE COMPLETED
@@ -89,7 +91,7 @@ namespace K_Bikpower
                             //assetList.Add(asset); //also send back asset just scanned
                             //go to preview page actually
                             await Navigation.PushAsync(new FormPreviewAsset(asset, 1,savedData, assetList));
-
+                            Navigation.RemovePage(this); //to prevent crashing
                         }
                     }
 

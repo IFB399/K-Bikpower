@@ -88,7 +88,7 @@ namespace K_Bikpower
                 IEnumerable<Substation> items = await todoTable
                     .ToEnumerableAsync();
 
-                return new ObservableCollection<Substation>(items);
+                return new ObservableCollection<Substation>(items.OrderBy(sub => sub.Substation_Code));
             }
             catch (MobileServiceInvalidOperationException msioe)
             {
