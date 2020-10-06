@@ -15,6 +15,7 @@ namespace K_Bikpower
         public Preview_Asset(Asset details)
         {
             InitializeComponent();
+
             asset_manager = AssetManager.DefaultManager;
             if (details != null)
             {

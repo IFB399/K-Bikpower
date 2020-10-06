@@ -18,7 +18,7 @@
                         <Expander.Header>
                         <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
                             <Label x:Name="FilterLabel" Text="Filters  " FontSize="30" HorizontalOptions="Center"/>
-                            <Label x:Name ="Indicator" Text=">" FontSize="Large" HorizontalOptions="Center" Rotation="270" VerticalOptions="Center"/>
+                            <Label x:Name ="Indicator" Text=">" FontSize="30" HorizontalOptions="Center" Rotation="270" VerticalOptions="Center"/>
                         </StackLayout>
                     </Expander.Header>
                         <Grid RowSpacing="10" ColumnSpacing="10" HorizontalOptions="Center">

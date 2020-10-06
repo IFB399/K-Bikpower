@@ -8,13 +8,8 @@ using Xamarin.Forms.Xaml;
 [assembly:XamlCompilation(XamlCompilationOptions.Compile)]
 namespace K_Bikpower
 {
-
-	
 	public class App : Application
 	{
-
-
-		
 		public App ()
 		{
 			Device.SetFlags(new string[] { "Expander_Experimental", "RadioButton_Experimental" });

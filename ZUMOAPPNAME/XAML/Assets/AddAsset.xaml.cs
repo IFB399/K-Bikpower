@@ -177,13 +177,6 @@ namespace K_Bikpower
                 return;
             }
 
-
-
-
-
-
-
-
             Asset todo = new Asset
             {
                 Id = Ids,
@@ -238,10 +231,11 @@ namespace K_Bikpower
                 WarrantyDate_Picker.IsEnabled = true;
             }
         }
-
+        /*
         private void NoInstall_CheckedChanged(object sender, CheckedChangedEventArgs e)
         {
             NoInstallasset = null;
         }
+        */
     }
 }

@@ -15,34 +15,43 @@
                        IsVisible="False"
                        IsEnabled="True"
                        x:Name="syncIndicator"/>
-                    <Expander  x:Name="AssetExpander" HorizontalOptions="CenterAndExpand" MinimumHeightRequest="500">
+                    
+                    <Expander  x:Name="FilterExpander" HorizontalOptions="Center" MinimumHeightRequest="260" Tapped="Expander_Tapped">
                         <Expander.Header>
-                            <Label x:Name="FilterLabel" Text="Filters" FontAttributes="Bold" FontSize="30" HorizontalOptions="Center"/>
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                                <Label x:Name="FilterLabel" Text="Filters  " FontSize="30" HorizontalOptions="Center"/>
+                                <Label x:Name ="Indicator" Text=">" FontSize="30" HorizontalOptions="Center" Rotation="270" VerticalOptions="Center"/>
+                            </StackLayout>
                         </Expander.Header>
-                        <Grid RowSpacing="10" ColumnSpacing="10" HorizontalOptions="CenterAndExpand">
+                        <Grid RowSpacing="10" ColumnSpacing="10" HorizontalOptions="Center">
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="2*" />
-                                <ColumnDefinition Width="2*" />
-                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
                             </Grid.ColumnDefinitions>
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="*" />
                                 <RowDefinition Height="*" />
                                 <RowDefinition Height="*" />
                                 <RowDefinition Height="*" />
+                                <RowDefinition Height="Auto" />
                             </Grid.RowDefinitions>
-                            <Label x:Name="Debug2"  Grid.Row="0" Grid.Column="0" Text="Substation Code"/>
-                            <Picker x:Name="SubstationPicker" Grid.Row="0" Grid.Column="1"/>
+                            
+                            <Label  Grid.Row="0" Grid.Column="0" Text="Substation Code" FontSize="15" VerticalOptions="Center"/>
+                            <Picker x:Name="SubstationPicker" Grid.Row="0" Grid.Column="1" WidthRequest="150"/>
                             <Button Clicked="Clear_Substation_Clicked" Text="X" Grid.Row="0" Grid.Column="2"/>
-                            <Label Text="Equipment Class" Grid.Row="1" Grid.Column="0"/>
-                            <Picker x:Name="EquipmentClassPicker" Grid.Row="1" Grid.Column="1"/>
+                            
+                            <Label Text="Equipment Class" Grid.Row="1" Grid.Column="0"  FontSize="15" VerticalOptions="Center"/>
+                            <Picker x:Name="EquipmentClassPicker" Grid.Row="1" Grid.Column="1" WidthRequest="150"/>
                             <Button Clicked="Clear_EC_Clicked" Text="X" Grid.Row="1" Grid.Column="2"/>
-                            <Label x:Name="Debug" Text="Manufacturer" Grid.Row="2" Grid.Column="0"/>
-                            <Picker x:Name="ManufacturerPicker" Grid.Row="2" Grid.Column="1"/>
+                            
+                            <Label x:Name="Debug" Text="Manufacturer" Grid.Row="2" Grid.Column="0" FontSize="15" VerticalOptions="Center"/>
+                            <Picker x:Name="ManufacturerPicker" Grid.Row="2" Grid.Column="1" WidthRequest="150"/>
                             <Button Clicked="Clear_Manufacturer_Clicked" Text="X" Grid.Row="2" Grid.Column="2"/>
-                            <StackLayout Orientation="Horizontal" Grid.Row="3" Grid.ColumnSpan="3">
-                                <Button Text="Apply Filters" Clicked="Apply_Filters_Clicked" BackgroundColor="White" CornerRadius="0" FontSize="Medium" TextColor="Black"/>
-                                <Button Text="Clear Filters" Clicked="Clear_Filters_Clicked" BackgroundColor="White" CornerRadius="0" FontSize="Medium" TextColor="Black"/>
+                            
+                            <StackLayout Orientation="Horizontal" Grid.Row="3" Grid.ColumnSpan="3" HorizontalOptions="Center">
+                                <Button Text="Apply Filters" Clicked="Apply_Filters_Clicked" BackgroundColor="White" CornerRadius="0" FontSize="Medium" TextColor="Black" VerticalOptions="Center"/>
+                                <Button Text="Clear Filters" Clicked="Clear_Filters_Clicked" BackgroundColor="White" CornerRadius="0" FontSize="Medium" TextColor="Black" VerticalOptions="Center"/>
                             </StackLayout>
                         </Grid>
                     </Expander>

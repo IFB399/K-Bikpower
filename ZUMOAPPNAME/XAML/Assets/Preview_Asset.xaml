@@ -34,7 +34,7 @@
                             <Label x:Name="Plant_Number_label" TextColor="Black" />
                         </Frame>
 
-                        <Label Text=" Asset Equipment Number" FontSize="Title" TextColor="Black"/>
+                        <Label Text="Asset Equipment Number" FontSize="Title" TextColor="Black"/>
 
                         <Frame CornerRadius="0" BorderColor="Black" HasShadow="True" >
                             <Label x:Name="Asset_EQ_NO_label" TextColor="Black" />
