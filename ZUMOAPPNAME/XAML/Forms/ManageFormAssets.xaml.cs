@@ -25,6 +25,14 @@ namespace K_Bikpower
             globalAssets = assets;
             assetList.ItemsSource = assets;
         }
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            if (this.assetList.SelectedItem != null) //make sure asset isnt selected
+            {
+                this.assetList.SelectedItem = null;
+            }
+        }
         private void removeAsset_Clicked(object sender, EventArgs e)
         {
             globalAssets.Remove((Asset)assetList.SelectedItem);
@@ -38,6 +46,8 @@ namespace K_Bikpower
         }
         private void selectedAsset(object sender, EventArgs e)
         {
+            if (((ListView)sender).SelectedItem == null)
+                return;
             removeAsset.IsEnabled = true;
             AssetDetailsButton.IsEnabled = true;
         }

@@ -28,6 +28,9 @@ namespace K_Bikpower
             asset_manager = AssetManager.DefaultManager;
             decommission_manager = DecommissionManager.DefaultManager;
             user_manager = UserManager.DefaultManager;
+
+            //Debug.Text = user_manager.Authentication();
+
             decommission_form = submittedForm;
             if (assets != null)
             {
@@ -79,15 +82,42 @@ namespace K_Bikpower
         }
         private void LoadForm(DecommissionData form)
         {
-            SubmittedByLabel.Text = form.SubmittedBy;
-            SubmittedOnLabel.Text = form.SubmittedOn.ToString("d");
             DateDecommissionedLabel.Text = form.DateDecommissioned.ToString("d");
             DetailsLabel.Text = form.Details;
             RegionLabel.Text = form.RegionName;
-            LocationLabel.Text = form.Location;
+
+            if (form.MovedTo == "Project")
+            {
+                LocationLabel1.Text = "Project Number";
+            }
+            else
+            {
+                LocationLabel1.Text = "Substation Code";
+            }
+            LocationLabel2.Text = form.Location;
             MovedToLabel.Text = form.MovedTo;
             WorkLabel.Text = form.WorkOrderNumber.ToString();
-            
+
+            //form properties
+            StatusLabel.Text = form.Status;
+            SubmittedByLabel.Text = form.SubmittedBy;
+            SubmittedOnLabel.Text = form.SubmittedOn.ToString("g");
+            ModifiedOnLabel.Text = form.LastModifiedOn.ToString("g");
+            if (form.Status == "Approved")
+            {
+                ApproveOrRejectLabel1.Text = "Approved By: ";
+                ApproveOrRejectLabel2.Text = form.ApprovedBy;
+            }
+            else if (form.Status == "Rejected")
+            {
+                ApproveOrRejectLabel1.Text = "Rejected By: ";
+                ApproveOrRejectLabel2.Text = form.RejectedBy;
+            }
+            else
+            {
+                OptionalStack.IsVisible = false;
+                OptionalStack.HeightRequest = 0;
+            }
         }
 
         async void Approve_Clicked(object sender, EventArgs e)
@@ -96,23 +126,45 @@ namespace K_Bikpower
             if (role == "Chief Operating Officer" || role == "Regional Maintenance" || role == "Asset Strategy Manager"
                 || role == "Executive Manager Projects" || role == "Major Capital Projects Manager")
             {
-                bool answer = await DisplayAlert("Confirm Approval", "Approve this form?", "Yes", "No");
-                if (answer == true)
+                bool success = true;
+                foreach (Asset a in globalAssets)
                 {
-                    
-                    decommission_form.ApprovedBy = user_manager.ReturnName();
-                    decommission_form.LastModifiedOn = DateTime.UtcNow.ToLocalTime();
-                    decommission_form.Status = "Approved";
-                    await UpdateForm(decommission_form);
-                    //update asset form links?
-                    await Navigation.PushAsync(new ViewDecommissionForms());
-                    //change status of assets (only happends after approval)
-                    foreach (Asset a in globalAssets)
+                    if (a.Status == "Decommissioned")
                     {
-                        a.Status = "Decommissioned";
-                        await UpdateAsset(a);
+                        success = false;
                     }
                 }
+                if (success == false)
+                {
+                    await DisplayAlert("Error", "Please check assets. An asset in this form has already been decommissioned", "Close");
+                }
+                else
+                {
+                    bool answer = await DisplayAlert("Confirm Approval", "Approve this form?", "Yes", "No");
+                    if (answer == true)
+                    {
+                        //decommission_form.Status = "Approved by " + user_manager.ReturnUser();
+                        decommission_form.ApprovedBy = user_manager.ReturnName();
+                        decommission_form.LastModifiedOn = DateTime.UtcNow.ToLocalTime();
+                        decommission_form.Status = "Approved";
+                        await UpdateForm(decommission_form);
+                        //update asset form links?
+                        await Navigation.PushAsync(new ViewDecommissionForms());
+                        //change status of assets (only happends after approval)
+                        foreach (Asset a in globalAssets)
+                        {
+                            if (decommission_form.MovedTo == "Workshop" || decommission_form.MovedTo == "Spares")
+                            {
+                                //update substation code
+                                a.SubstationCode = decommission_form.Location;
+                            }
+                            a.Status = "Decommissioned";
+                            a.CurrentlyIn = decommission_form.MovedTo; //used to indicate if an asset is in scrap
+                            await UpdateAsset(a);
+                        }
+                    }
+                }
+
             }
             else
             {
@@ -144,8 +196,19 @@ namespace K_Bikpower
         }
         async void Edit_Clicked(object sender, EventArgs e)
         {
-            
-            await Navigation.PushAsync(new Decommission(decommission_form, globalAssets));
+            //get user name and authentication
+            string[] roles = { "Chief Operating Officer", "Regional Maintenance", "Asset Strategy Manager", "Executive Manager Projects", "Major Capital Projects Manager" };
+            string name = user_manager.ReturnName();
+            string auth = user_manager.Authentication();
+
+            if (decommission_form.SubmittedBy == name || roles.Contains(auth))
+            {
+                await Navigation.PushAsync(new Decommission(decommission_form, globalAssets));
+            }
+            else
+            {
+                await DisplayAlert("Error", "You do not have permission to edit this form", "Close");
+            }
         }
         async void Exit_Clicked(object sender, EventArgs e)
         {
@@ -153,22 +216,32 @@ namespace K_Bikpower
         }
         async void Delete_Clicked(object sender, EventArgs e)
         {
-            bool answer = await DisplayAlert("Confirm Deletion", "Delete this form?", "Yes", "No");
-            if (answer == true)
+            //get user name and authentication
+            string[] roles = { "Chief Operating Officer", "Regional Maintenance", "Asset Strategy Manager", "Executive Manager Projects", "Major Capital Projects Manager" };
+            string name = user_manager.ReturnName();
+            string auth = user_manager.Authentication();
+
+            if (decommission_form.SubmittedBy == name || roles.Contains(auth))
             {
-                //delete form and afls
-                ObservableCollection<AssetFormLink> afls = await afl_manager.GetLinksByFormAsync(decommission_form.Id, "Decommission");
-                foreach (AssetFormLink afl in afls)
+                bool answer = await DisplayAlert("Confirm Deletion", "Delete this form?", "Yes", "No");
+                if (answer == true)
                 {
-                    await afl_manager.DeleteLinkAsync(afl); //delete all the links
+                    //delete form and afls
+                    ObservableCollection<AssetFormLink> afls = await afl_manager.GetLinksByFormAsync(decommission_form.Id, "Decommission");
+                    foreach (AssetFormLink afl in afls)
+                    {
+                        await afl_manager.DeleteLinkAsync(afl); //delete all the links
+                    }
+                    await decommission_manager.DeleteFormAsync(decommission_form);
+                    await Navigation.PushAsync(new ViewDecommissionForms());
                 }
-                await decommission_manager.DeleteFormAsync(decommission_form);
-                await Navigation.PushAsync(new ViewDecommissionForms());
             }
-
-
+            else
+            {
+                await DisplayAlert("Error", "You do not have permission to delete this form", "Close");
+            }
         }
-        protected override async void OnAppearing()
+        protected override void OnAppearing()
         {
             base.OnAppearing();
             if (this.assetList.SelectedItem != null) //make sure asset isnt selected

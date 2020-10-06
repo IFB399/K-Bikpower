@@ -8,33 +8,19 @@
              BackgroundColor="#1B252D">
     <ContentPage.Content>
         <StackLayout Margin="50,50,50,30" >
+            <Label Text="Commission Form" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" FontSize="40" TextColor="White"/>
             <Frame  BackgroundColor="#F5F5F5">
                 <ScrollView>
-                    <Grid Margin="10">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="*" />
-                            <RowDefinition Height="*" />
-                            <RowDefinition Height="*" />
-                            <RowDefinition Height="*" />
-                            <RowDefinition Height="*" />
-                            <RowDefinition Height="*" />
-                            <RowDefinition Height="*" />
-                            <RowDefinition Height="*" />
-                            <RowDefinition Height="*" />
+                    <StackLayout Spacing="50">
 
-                        </Grid.RowDefinitions>
-                        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="Center" Grid.Row="0">
-                            <Label Text="Commission Form" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" FontSize="40"/>
-                            <Label x:Name="dateLabel" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" FontSize="20"/>
-                            <Button x:Name="ManageAssets_Button" Text="Manage Assets" Clicked="ManageAssets_Clicked"/>
-                        </StackLayout>
+                        <Button x:Name="ManageAssets_Button" Text="Manage Assets" Clicked="ManageAssets_Clicked" HorizontalOptions="Center" TextColor="White" BackgroundColor="#29A8E2" WidthRequest="200"/>
 
-                        <StackLayout Grid.Row="1">
+                        <StackLayout>
                             <Label Text="Date Commissioned:" FontSize="30"/>
-                            <DatePicker x:Name="Date_Commissioned" FontSize="30"></DatePicker>
+                            <DatePicker x:Name="Date_Commissioned" FontSize="30" HorizontalOptions="Center"></DatePicker>
                         </StackLayout>
 
-                        <StackLayout Grid.Row="2">
+                        <StackLayout>
                             <Label Text="New Installation?" FontSize="30"/>
                             <StackLayout Orientation="Horizontal">
                                 <Label Text="Yes" VerticalOptions="Center"/>
@@ -46,7 +32,7 @@
                             </StackLayout>
                         </StackLayout>
 
-                        <StackLayout Grid.Row="3">
+                        <StackLayout>
                             <Label Text="Replacement Item?" FontSize="30"/>
                             <StackLayout Orientation="Horizontal">
                                 <Label Text="Yes" VerticalOptions="Center"/>
@@ -58,7 +44,7 @@
                             </StackLayout>
                         </StackLayout>
 
-                        <StackLayout Grid.Row="4">
+                        <StackLayout>
                             <Label Text="Region Name:" FontSize="30"/>
                             <Picker x:Name="Region_Picker">
                                 <Picker.ItemsSource>
@@ -73,26 +59,28 @@
                             </Picker>
                         </StackLayout>
 
-                        <StackLayout Grid.Row="5">
-                            <Label Text="Location Name/Substation/Project No." FontSize="30"/>
-                            <Entry x:Name="Location_Entry"/>
-                        </StackLayout>
-
-                        <StackLayout Grid.Row="6">
+                        <StackLayout>
                             <Label Text="Commissioned Plant From:" FontSize="30"/>
-
-                            <RadioButton x:Name="Project_Button" Text="Project" GroupName="MovedFrom"/>
+                            <StackLayout Orientation="Horizontal">
+                                <RadioButton x:Name="Project_Button" Text="Project" CheckedChanged="Project_Button_CheckedChanged" GroupName="MovedFrom"/>
+                                <Entry x:Name="Project_Entry" IsVisible="False" IsEnabled="True" Placeholder="Project No." WidthRequest="200"/>
+                            </StackLayout>
                             <RadioButton x:Name="Spares_Button" Text="Spares" GroupName="MovedFrom"/>
                             <RadioButton x:Name="Workshop_Button" Text="Workshop" GroupName="MovedFrom"/>
                         </StackLayout>
 
-                        <StackLayout Grid.Row="7">
+                        <StackLayout>
+                            <Label Text="Substation" FontSize="30"/>
+                            <Picker x:Name="Substation_Entry"/>
+                        </StackLayout>
+
+                        <StackLayout>
                             <Label Text="Work Order No." FontSize="30"/>
                             <Entry x:Name="Work_OrderNo_Entry"/>
                         </StackLayout>
 
-                        <Button x:Name="SubmitButton" Grid.Row="8" FontSize="Large" Text="Submit" Clicked="Submit_Clicked" TextColor="White" BackgroundColor="#29A8E2" HorizontalOptions="Center" VerticalOptions="Center"/>
-                    </Grid>
+                        <Button x:Name="SubmitButton" FontSize="Large" Text="Submit" Clicked="Submit_Clicked" TextColor="White" BackgroundColor="#29A8E2" HorizontalOptions="Center" VerticalOptions="Center"/>
+                    </StackLayout>
                 </ScrollView>
             </Frame>
         </StackLayout>

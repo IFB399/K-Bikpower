@@ -25,8 +25,15 @@ namespace K_Bikpower
             SortBy_Picker.SelectedItem = "Date Last Modified";
             if (a != null)
             {
-                assetLabel.Text = "Asset Serial Number: " + a.SerialNumber;
+                assetLabel.Text = a.SerialNumber;
                 assetLabel.IsVisible = true;
+                assetLabel2.IsVisible = true;
+                FilterLabel.Text = "Filters (active)"; //technically an asset filter is applied
+            }
+            else
+            {
+                assetLabel.MinimumHeightRequest = 0; //to avoid taking up space
+                assetLabel2.MinimumHeightRequest = 0; //to avoid taking up space
             }
             if (Device.RuntimePlatform == Device.UWP)
             {
@@ -87,6 +94,7 @@ namespace K_Bikpower
             string sortByType = (string)SortBy_Picker.SelectedItem;
             asset = null;
             assetLabel.IsVisible = false;
+            assetLabel2.IsVisible = false;
             SubmittedBy_Picker.SelectedIndex = -1;
             Status_Picker.SelectedIndex = -1;
             await RefreshItems(true, syncItems: false, sortBy: sortByType);
@@ -146,7 +154,17 @@ namespace K_Bikpower
             DecommissionData d = e.SelectedItem as DecommissionData;
             await Navigation.PushAsync(new ApproveDecommission(d));
         }
-
+        public void Expander_Tapped(object sender, EventArgs e)
+        {
+            if (FilterExpander.IsExpanded == true)
+            {
+                Indicator.RotateTo(90); //downwards
+            }
+            else
+            {
+                Indicator.RotateTo(270); //upwards
+            }
+        }
         private class ActivityIndicatorScope : IDisposable
         {
             private bool showIndicator;

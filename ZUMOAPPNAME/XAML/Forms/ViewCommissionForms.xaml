@@ -7,33 +7,34 @@
         <StackLayout Margin="50, 50, 50, 30">
             <Label x:Name="Debug"  Text="Commission Forms" FontSize="Large" HorizontalOptions="Center" TextColor="White"/>
             <Frame CornerRadius ="0" BackgroundColor="#F5F5F5">
-                <StackLayout>
-                <StackLayout x:Name="buttonsPanel" Orientation="Horizontal" HorizontalOptions="Center">
-                    <Button Text="Add Form" Clicked="Add_Form_Clicked" BackgroundColor="White" CornerRadius="0" FontSize="Medium" TextColor="Black"/>
-                </StackLayout>
+            <StackLayout>
                 <ActivityIndicator 
                            HorizontalOptions="Center"
                            VerticalOptions="Center"
                            IsVisible="False"
                            IsEnabled="True"
                            x:Name="syncIndicator"/>
-                    <Expander  x:Name="FilterExpander" HorizontalOptions="CenterAndExpand" MinimumHeightRequest="500">
+                <Expander  x:Name="FilterExpander" HorizontalOptions="Center" MinimumHeightRequest="260" Tapped="Expander_Tapped">
                         <Expander.Header>
-                            <Label x:Name="FilterLabel" Text="Filters" FontAttributes="Bold" FontSize="30" HorizontalOptions="Center"/>
-                        </Expander.Header>
-                        <Grid RowSpacing="10" ColumnSpacing="10" HorizontalOptions="CenterAndExpand">
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                            <Label x:Name="FilterLabel" Text="Filters  " FontSize="30" HorizontalOptions="Center"/>
+                            <Label x:Name ="Indicator" Text=">" FontSize="Large" HorizontalOptions="Center" Rotation="270" VerticalOptions="Center"/>
+                        </StackLayout>
+                    </Expander.Header>
+                        <Grid RowSpacing="10" ColumnSpacing="10" HorizontalOptions="Center">
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="2*" />
-                                <ColumnDefinition Width="2*" />
-                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
                             </Grid.ColumnDefinitions>
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="*" />
                                 <RowDefinition Height="*" />
                                 <RowDefinition Height="*" />
+                                <RowDefinition Height="Auto" />
                                 <RowDefinition Height="*" />
                             </Grid.RowDefinitions>
-                            <Label Grid.Row="0" Grid.Column="0" Text="Status"/>
+                            <Label Grid.Row="0" Grid.Column="0" Text="Status" FontSize="15" VerticalOptions="Center"/>
                             <Picker x:Name="Status_Picker" Grid.Row="0" Grid.Column="1">
                                 <Picker.Items>
                                     <x:String>Submitted</x:String>
@@ -42,10 +43,10 @@
                                 </Picker.Items>
                             </Picker>
                             <Button Clicked="Clear_Status_Clicked" Text="X" Grid.Row="0" Grid.Column="2"/>
-                            <Label Text="Submitted By" Grid.Row="1" Grid.Column="0"/>
+                            <Label Text="Submitted By" Grid.Row="1" Grid.Column="0" FontSize="15" VerticalOptions="Center"/>
                             <Picker x:Name="SubmittedBy_Picker" Grid.Row="1" Grid.Column="1"/>
                             <Button Clicked="Clear_SubmittedBy_Clicked" Text="X" Grid.Row="1" Grid.Column="2"/>
-                            <Label Text="Sort By (Descending)" Grid.Row="2" Grid.Column="0"/>
+                            <Label Text="Sort By (Descending)" Grid.Row="2" Grid.Column="0" FontSize="15" VerticalOptions="Center"/>
                             <Picker x:Name="SortBy_Picker" Grid.Row="2" Grid.Column="1">
                             <Picker.Items>
                                 <x:String>Date Last Modified</x:String>
@@ -53,12 +54,12 @@
                                 <x:String>Date Submitted</x:String>
                             </Picker.Items>
                             </Picker>
-
-                        <Label x:Name="assetLabel" IsVisible="False" Grid.Row="3"/>
-                            <StackLayout Orientation="Horizontal" Grid.Row="4" Grid.ColumnSpan="3">
-                                <Button Text="Apply Filters" Clicked="Apply_Filters_Clicked" BackgroundColor="White" CornerRadius="10" FontSize="Medium" TextColor="Black"/>
-                                <Button Text="Clear Filters" Clicked="Clear_Filters_Clicked" BackgroundColor="White" CornerRadius="10" FontSize="Medium" TextColor="Black"/>
-                            </StackLayout>
+                        <Label x:Name="assetLabel2" IsVisible="False" Text="Asset Serial Number:" Grid.Row="3" Grid.Column="0"  FontSize="15" VerticalOptions="Center"/>
+                        <Label x:Name="assetLabel" IsVisible="False" Grid.Row="3" Grid.Column="1"  FontSize="15" VerticalOptions="Center"/>
+                        <StackLayout Orientation="Horizontal" Grid.Row="4" Grid.ColumnSpan="3" HorizontalOptions="Center">
+                            <Button Text="Apply Filters" Clicked="Apply_Filters_Clicked" BackgroundColor="White" FontSize="20" TextColor="Black" VerticalOptions="Center"/>
+                            <Button Text="Clear Filters" Clicked="Clear_Filters_Clicked" BackgroundColor="White" FontSize="20" TextColor="Black" VerticalOptions="Center"/>
+                        </StackLayout>
                         </Grid>
                     </Expander>
                     <ListView x:Name="formList" HasUnevenRows="false" IsPullToRefreshEnabled="true" ItemSelected="OnSelected">
@@ -107,8 +108,10 @@
 
                 </StackLayout>
             </Frame>
-
+        <StackLayout x:Name="buttonsPanel" Orientation="Horizontal" HorizontalOptions="Center">
+            <Button Text="Add Form" Clicked="Add_Form_Clicked" BackgroundColor="White" CornerRadius="0" FontSize="Medium" TextColor="Black"/>
         </StackLayout>
+    </StackLayout>
         
 
 </ContentPage>

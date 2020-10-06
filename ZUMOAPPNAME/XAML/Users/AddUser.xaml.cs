@@ -59,7 +59,7 @@ namespace K_Bikpower
         protected override async void OnAppearing()
         {
             base.OnAppearing();
-            Auth.SelectedIndex = 1;
+            Auth.SelectedItem = "General User";
         }
         private void PopulateDetails(User data)
         {

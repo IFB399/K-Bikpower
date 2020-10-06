@@ -17,6 +17,7 @@ namespace K_Bikpower
         UserManager user_manager;
         SubstationManager Subs;
         DateTime? Warranty = new DateTime(1900, 1, 18);
+        DateTime? NoInstallasset = new DateTime(1900, 1, 18);
         public string Ids;
         bool update = false;
         //var value;
@@ -82,7 +83,7 @@ namespace K_Bikpower
             if (Substation_Picker.SelectedIndex == -1)
             {
                 //selected = "null";
-                await DisplayAlert("Error", "Substation Code not selected", "Close");
+                await DisplayAlert("Alert", "Please select a substation code", "Close");
                 return;
             }
             if (Substation_Picker.SelectedIndex != -1)
@@ -95,16 +96,29 @@ namespace K_Bikpower
                 Warranty = WarrantyDate_Picker.Date.ToLocalTime();
             }
 
+            if (NoInstallasset != null) 
+            {
+                NoInstallasset = LastInstallDate_Picker.Date.ToLocalTime();
+            }
+            int i = 0;
+            if (int.TryParse(Asset_Equipment_Number_Entry.Text, out i) == false && !string.IsNullOrEmpty(Asset_Equipment_Number_Entry.Text))
+            {
+                //not a compulsory field
+                await DisplayAlert("Alert", "Please enter a valid integer for Asset Equipment Number or leave blank", "OK");
+                return;
+            }
             if (String.IsNullOrWhiteSpace(Serial_Number_Entry.Text))
             {
                 await DisplayAlert("Alert", "Please enter a Serial Number", "OK");
                 return;
             }
+            
             if (String.IsNullOrWhiteSpace(Location_Equipment_Number_Entry.Text))
             {
-                await DisplayAlert("Alert", "Please enter a Location Equipment number", "OK");
+                await DisplayAlert("Alert", "Please enter a Location Equipment Number", "OK");
                 return;
             }
+            /* the int check does this for us
             if (String.IsNullOrWhiteSpace(Rated_Voltage_Entry.Text))
             {
                 await DisplayAlert("Alert", "Please enter a Rated Voltage", "OK");
@@ -115,6 +129,32 @@ namespace K_Bikpower
                 await DisplayAlert("Alert", "Please enter a Nominal Voltage", "OK");
                 return;
             }
+            */
+            if (int.TryParse(Equipment_Age_Entry.Text, out i) == false)
+            {
+                await DisplayAlert("Alert", "Please enter a valid year for Year Manufactured", "OK");
+                return;
+            }
+            else
+            {
+                if (i <= 1900 || i >= 2020)
+                {
+                    await DisplayAlert("Alert", "Please enter a valid year for Year Manufactured", "OK");
+                    return;
+                }
+            }
+            if (int.TryParse(Rated_Voltage_Entry.Text, out i) == false)
+            {
+                await DisplayAlert("Alert", "Please enter a valid integer for Rated Voltage", "OK");
+                return;
+            }
+
+            if (int.TryParse(Nominal_Voltage_Entry.Text, out i) == false)
+            {
+                await DisplayAlert("Alert", "Please enter a valid integer for Nominal Voltage", "OK");
+                return;
+            }
+
             if (String.IsNullOrWhiteSpace(Manufacturer_Name_Entry.Text))
             {
                 await DisplayAlert("Alert", "Please enter a Manufacturer Name", "OK");
@@ -127,39 +167,20 @@ namespace K_Bikpower
             }
             if (String.IsNullOrWhiteSpace(Equipment_Class_Entry.Text))
             {
-                await DisplayAlert("Alert", "Please enter a Equipment class", "OK");
+                await DisplayAlert("Alert", "Please enter a Equipment Class", "OK");
                 return;
             }
 
             if (String.IsNullOrWhiteSpace(Equipment_Class_Description_Entry.Text))
             {
-                await DisplayAlert("Alert", "Please enter a  Equipment class description", "OK");
-                return;
-            }
-            int i = 0;
-            if (int.TryParse(Asset_Equipment_Number_Entry.Text,out i) == false)
-            {
-                await DisplayAlert("Alert", "Please enter a vaild int for Asset Equipment Number", "OK");
+                await DisplayAlert("Alert", "Please enter a Equipment Class Description", "OK");
                 return;
             }
 
-            if (int.TryParse(Equipment_Age_Entry.Text, out i) == false)
-            {
-                await DisplayAlert("Alert", "Please enter a vaild int for Equipment Age", "OK");
-                return;
-            }
 
-            if (int.TryParse(Rated_Voltage_Entry.Text, out i) == false)
-            {
-                await DisplayAlert("Alert", "Please enter a vaild int for Rated Voltage", "OK");
-                return;
-            }
 
-            if (int.TryParse(Nominal_Voltage_Entry.Text, out i) == false)
-            {
-                await DisplayAlert("Alert", "Please enter a vaild int for Nominal Voltage", "OK");
-                return;
-            }
+
+
 
 
 
@@ -185,8 +206,8 @@ namespace K_Bikpower
                 SpecificationTitle = Specification_Title_Entry.Text,
                 SpecificationNO = Specification_Number_Entry.Text,
                 SpecificationItemNO = Specification_Item_Number_Entry.Text,
-                LastInstallDate = LastInstallDate_Picker.Date.ToLocalTime(),
-            EquipmentClass = Equipment_Class_Entry.Text,
+                LastInstallDate = NoInstallasset,
+                EquipmentClass = Equipment_Class_Entry.Text,
                 EquipmentClassDescription = Equipment_Class_Description_Entry.Text,
             };
             if (update == false) //a brand new asset is being added
@@ -208,7 +229,19 @@ namespace K_Bikpower
         private void NoWarranty_CheckedChanged(object sender, CheckedChangedEventArgs e)
         {
             Warranty = null;
-            
+            if (NoWarranty.IsChecked)
+            {
+                WarrantyDate_Picker.IsEnabled = false;
+            }
+            else
+            {
+                WarrantyDate_Picker.IsEnabled = true;
+            }
+        }
+
+        private void NoInstall_CheckedChanged(object sender, CheckedChangedEventArgs e)
+        {
+            NoInstallasset = null;
         }
     }
 }
