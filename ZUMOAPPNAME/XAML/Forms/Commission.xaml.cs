@@ -65,6 +65,7 @@ namespace K_Bikpower
             {
                 Substation_Entry.SelectedItem = subCode; //load substation code. Cannot be done in load function
             }
+            
         }
         async Task AddItem(CommissionData item)
         {
