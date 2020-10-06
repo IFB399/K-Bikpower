@@ -79,6 +79,10 @@ namespace K_Bikpower
                             //don't stop scanning
                             await DisplayAlert("Asset already commissioned", "Try decommissioning the asset first", "Close");
                         }
+                        else if (asset.CurrentlyIn == "Scrap")
+                        {
+                            await DisplayAlert("Asset has been scrapped", "This asset cannot be commissioned", "Close");
+                        }
                         else
                         {
                             _scanView.IsScanning = false; //stop scanning
