@@ -29,6 +29,7 @@ namespace K_Bikpower
                 };
                 refreshButton.Clicked += OnRefreshItems;
                 buttonsPanel.Children.Add(refreshButton);
+                refreshButton.BackgroundColor = Xamarin.Forms.Color.White;
                 if (Subs.IsOfflineEnabled)
                 {
                     var syncButton = new Button
@@ -37,6 +38,7 @@ namespace K_Bikpower
                         HeightRequest = 30
                     };
                     syncButton.Clicked += OnSyncItems;
+                    syncButton.BackgroundColor = Xamarin.Forms.Color.White;
                     buttonsPanel.Children.Add(syncButton);
                 }
             }
