@@ -128,11 +128,6 @@ namespace K_Bikpower
 
         async void Next_Clicked(object sender, EventArgs e)
         {
-            if (String.IsNullOrWhiteSpace(OldPaaassword.Text))
-            {
-                await DisplayAlert("Alert", "Inncorrect Password", "OK");
-                return;
-            }
             if (CheckPassword(OldPaaassword.Text, popuserData.Password, popuserData.Salt) == true)
             {
                 OldPaaassword.IsVisible = false;
@@ -143,7 +138,9 @@ namespace K_Bikpower
                 Changepass.IsVisible = true;
             }
             else
-            { }
+            {
+                await DisplayAlert("Alert", "Incorrect Password", "Close");
+            }
             
         }
 
