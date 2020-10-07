@@ -81,7 +81,7 @@
                     </StackLayout>
 
                     <StackLayout Orientation="Vertical" Grid.Row="5">
-                        <Label x:Name="LocationLabel1"  Text="Substation/Project No." FontSize="30" FontAttributes="Bold"/>
+                        <Label x:Name="LocationLabel1"  Text="Substation Code:" FontSize="30" FontAttributes="Bold"/>
                         <Frame CornerRadius="0" BorderColor="Black" HasShadow="True" >
                             <Label x:Name="LocationLabel2" Text="insert location" FontSize="30"/>
                         </Frame>

@@ -110,7 +110,8 @@ namespace K_Bikpower
                     await this.SyncAsync();
                 }
 #endif
-                IEnumerable<string> items = await todoTable.Select(sub => sub.Substation_Code).ToEnumerableAsync();
+                IEnumerable<string> items = await todoTable.Where(sub => sub.Substation_Code != "WOR" && sub.Substation_Code != "SCR" && sub.Substation_Code != "SPR")
+                    .Select(sub => sub.Substation_Code).ToEnumerableAsync();
 
                 return new List<string>(items);
 

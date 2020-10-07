@@ -50,15 +50,15 @@ namespace K_Bikpower
 
             if (savedForm != null)
             {
-                if (savedForm.MovedFrom != "Project")
-                {
-                    subCode = savedForm.Location; //used to populate sub picker
-                }
+                subCode = savedForm.Location; //used to populate sub picker
+
                 commissionForm = savedForm;
                 if (savedForm.Id != null) //form has already been submitted
                 {
                     SubmitButton.Text = "Update Form";
                     update = true;
+                    EmailCheck.IsVisible = false; //don't show email feature if update is being made
+                    EmailLabel.IsVisible = false;
                 }
                 LoadForm(savedForm);
             }
@@ -85,17 +85,17 @@ namespace K_Bikpower
         {
             //MOVED FROM RADIO BUTTON
             string movedFrom = "";
-            if (Project_Button.IsChecked)
-            {
-                movedFrom = Project_Button.Text;
-            }
-            else if (Spares_Button.IsChecked)
+            if (Spares_Button.IsChecked)
             {
                 movedFrom = Spares_Button.Text;
             }
             else if (Workshop_Button.IsChecked)
             {
                 movedFrom = Workshop_Button.Text;
+            }
+            else if (Project_Button.IsChecked)
+            {
+                movedFrom = "Project " + Project_Entry.Text; //store the project number as well
             }
 
             //INSTALLATION CHECK BOX
@@ -127,19 +127,13 @@ namespace K_Bikpower
                 regionName = Region_Picker.SelectedItem.ToString();
             }
 
-            //SUBSTATION OR PROJECT NUMBER
+            //SUBSTATION 
             string location = null;
-            if (Project_Button.IsChecked)
+            if (Substation_Entry.SelectedIndex != -1)
             {
-                location = Project_Entry.Text; //check if valid first
+                location = Substation_Entry.SelectedItem.ToString();
             }
-            else
-            {
-                if (Substation_Entry.SelectedIndex != -1)
-                {
-                    location = Substation_Entry.SelectedItem.ToString();
-                }
-            }
+
 
             //SAVE NEW FORM
             if (update == false) //used to be if commissionForm == null but didnt work
@@ -202,29 +196,25 @@ namespace K_Bikpower
                 Region_Picker.SelectedItem = form.RegionName;
             }
 
-            //load location
-            //Location_Entry.Text = form.Location;
-            //Substation_Entry.ItemsSource = await substation_manager.GetAllSubCodes();
-            if (form.MovedFrom == "Project")
+            //load project number
+            if (form.MovedFrom != "Spares" && form.MovedFrom != "Workshop") //project is checked
             {
-                if (form.Location != null)
-                {
-                    Project_Entry.Text = form.Location;
-                }
+                Project_Entry.Text = string.Join(string.Empty, form.MovedFrom.Skip(8)); //populate project number without the workd project
             }
 
+
             //load movedFrom
-            if (form.MovedFrom == "Project")
-            {
-                Project_Button.IsChecked = true;
-            }
-            else if (form.MovedFrom == "Spares")
+            if (form.MovedFrom == "Spares")
             {
                 Spares_Button.IsChecked = true;
             }
             else if (form.MovedFrom == "Workshop")
             {
                 Workshop_Button.IsChecked = true;
+            }
+            else if (!string.IsNullOrEmpty(form.MovedFrom)) //project
+            {
+                Project_Button.IsChecked = true;
             }
 
             //load work order number
@@ -239,7 +229,7 @@ namespace K_Bikpower
             bool condition2 = false; //work order number must be an int
             bool condition3 = false; //moved to radio button must be selected
             bool condition4 = false; //project number must be provided and be an integer
-            bool condition5 = false; //substation code must be provided (if it isnt project)
+            bool condition5 = false; //substation code must be provided
             if (globalAssets.Count() == 0 || globalAssets == null) //must have at least one asset
             {
                 condition1 = true;
@@ -255,13 +245,12 @@ namespace K_Bikpower
                     condition4 = true; //not sure if this works if there is nothing in text box
                 }
             }
-            else
+
+            if (Substation_Entry.SelectedIndex == -1)
             {
-                if (Substation_Entry.SelectedIndex == -1)
-                {
-                    condition5 = true; //substation must be provided
-                }
+                condition5 = true; //substation must be provided
             }
+
             if ((!Project_Button.IsChecked && !Spares_Button.IsChecked && !Workshop_Button.IsChecked)
                 || (!InstallationYes.IsChecked && !InstallationNo.IsChecked)
                 || (!ReplacementNo.IsChecked && !ReplacementYes.IsChecked))
@@ -333,6 +322,7 @@ namespace K_Bikpower
                                 await AddLink(afl); //add a link to database 
                             }
                         }
+                        await Navigation.PushAsync(new ViewCommissionForms()); //return to view commission page
                     }
 
                 }
@@ -360,9 +350,10 @@ namespace K_Bikpower
                     }
 
                     await AddItem(commissionForm); //SHOULD UPDATE EXISTING FORM
+                    await Navigation.PushAsync(new ViewCommissionForms()); //return to view commission page
                 }
 
-                await Navigation.PushAsync(new ViewCommissionForms()); //return to view commission page
+
 
             }
         }
@@ -418,14 +409,10 @@ namespace K_Bikpower
             if (Project_Button.IsChecked)
             {
                 Project_Entry.IsVisible = true;
-                Substation_Entry.IsEnabled = false;
-                SubstationLabel.Text = "Substation";
             }
             else
             {
                 Project_Entry.IsVisible = false;
-                Substation_Entry.IsEnabled = true;
-                SubstationLabel.Text = "Substation*";
             }
         }
         public async Task SendEmail(string subject, string body, List<string> recipients)

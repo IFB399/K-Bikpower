@@ -70,8 +70,8 @@
                         </StackLayout>
 
                         <StackLayout>
-                            <Label x:Name="SubstationLabel" Text="Substation*" FontSize="30"/>
-                            <Picker x:Name="Substation_Entry"/>
+                            <Label x:Name="SubstationLabel" Text="Moved To Substation*" FontSize="30"/>
+                            <Picker x:Name="Substation_Entry" IsEnabled="True"/>
                         </StackLayout>
 
                         <StackLayout>

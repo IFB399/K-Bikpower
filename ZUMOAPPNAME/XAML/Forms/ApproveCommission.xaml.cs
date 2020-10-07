@@ -82,14 +82,6 @@ namespace K_Bikpower
             InstallationLabel.Text = form.NewInstallation;
             ReplacementLabel.Text = form.Replacement;
             RegionLabel.Text = form.RegionName;
-            if (form.MovedFrom == "Project")
-            {
-                LocationLabel1.Text = "Project Number";
-            }
-            else
-            {
-                LocationLabel1.Text = "Substation Code";
-            }
             LocationLabel2.Text = form.Location;
             MovedFromLabel.Text = form.MovedFrom;
             WorkLabel.Text = form.WorkOrderNumber.ToString();
@@ -151,6 +143,7 @@ namespace K_Bikpower
                         foreach (Asset a in globalAssets)
                         {
                             a.Status = "Commissioned";
+                            a.SubstationCode = commission_form.Location;
                             await UpdateAsset(a);
                         }
                     }

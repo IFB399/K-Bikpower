@@ -86,16 +86,8 @@ namespace K_Bikpower
             DetailsLabel.Text = form.Details;
             RegionLabel.Text = form.RegionName;
 
-            if (form.MovedTo == "Project")
-            {
-                LocationLabel1.Text = "Project Number";
-            }
-            else
-            {
-                LocationLabel1.Text = "Substation Code";
-            }
-            LocationLabel2.Text = form.Location;
-            MovedToLabel.Text = form.MovedTo;
+            LocationLabel2.Text = form.Location; //substation code
+            MovedToLabel.Text = form.MovedTo; //workshop, spares, scrap or project xxx
             WorkLabel.Text = form.WorkOrderNumber.ToString();
 
             //form properties
@@ -153,10 +145,22 @@ namespace K_Bikpower
                         //change status of assets (only happends after approval)
                         foreach (Asset a in globalAssets)
                         {
-                            if (decommission_form.MovedTo == "Workshop" || decommission_form.MovedTo == "Spares")
+                            if (decommission_form.MovedTo == "Workshop")
                             {
-                                //update substation code
-                                a.SubstationCode = decommission_form.Location;
+                                a.SubstationCode = "WOR";
+
+                            }
+                            else if (decommission_form.MovedTo == "Spares")
+                            {
+                                a.SubstationCode = "SPR";
+                            }
+                            else if (decommission_form.MovedTo == "Scrap")
+                            {
+                                a.SubstationCode = "SCR";
+                            }
+                            else //PROJECT
+                            {
+                                a.SubstationCode = decommission_form.Location; //take substation code that was selected in picker
                             }
                             a.Status = "Decommissioned";
                             a.CurrentlyIn = decommission_form.MovedTo; //used to indicate if an asset is in scrap
