@@ -17,7 +17,7 @@
                 <Expander  x:Name="FilterExpander" HorizontalOptions="Center" MinimumHeightRequest="260" Tapped="Expander_Tapped">
                         <Expander.Header>
                         <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-                            <Label x:Name="FilterLabel" Text="Filters  " FontSize="30" HorizontalOptions="Center"/>
+                            <Label x:Name="FilterLabel" Text="Filters" FontSize="30" HorizontalOptions="Center"/>
                             <Label x:Name ="Indicator" Text=">" FontSize="30" HorizontalOptions="Center" Rotation="270" VerticalOptions="Center"/>
                         </StackLayout>
                     </Expander.Header>
@@ -47,7 +47,7 @@
                             <Picker x:Name="SubmittedBy_Picker" Grid.Row="1" Grid.Column="1"/>
                             <Button Clicked="Clear_SubmittedBy_Clicked" Text="X" Grid.Row="1" Grid.Column="2"/>
                             <Label Text="Sort By (Descending)" Grid.Row="2" Grid.Column="0" FontSize="15" VerticalOptions="Center"/>
-                            <Picker x:Name="SortBy_Picker" Grid.Row="2" Grid.Column="1">
+                            <Picker x:Name="SortBy_Picker" SelectedIndexChanged="SortBy_Picker_SelectedIndexChanged" Grid.Row="2" Grid.Column="1">
                             <Picker.Items>
                                 <x:String>Date Last Modified</x:String>
                                 <x:String>Date Commissioned</x:String>
@@ -72,8 +72,8 @@
                                     <ColumnDefinition Width="*"/>
                                     <ColumnDefinition Width="*"/>
                                 </Grid.ColumnDefinitions>
-                                <Label Text= "Date" FontSize="Small" FontAttributes="Bold"  Grid.Column="0" HorizontalOptions="Center"/>
-                                <Label Text= "New Installation?" FontSize="Small" FontAttributes="Bold"  Grid.Column="1" HorizontalOptions="Center"/>
+                                <Label Text= "Date Commissioned" FontSize="Small" FontAttributes="Bold"  Grid.Column="0" HorizontalOptions="Center"/>
+                                <Label Text= "Work Order Number" FontSize="Small" FontAttributes="Bold"  Grid.Column="1" HorizontalOptions="Center"/>
                                 <Label Text= "Moved From" FontSize="Small" FontAttributes="Bold"  Grid.Column="2" HorizontalOptions="Center"/>
                                 <Label Text= "Submitted By" FontSize="Small" FontAttributes="Bold"  Grid.Column="3" HorizontalOptions="Center"/>
                                 <Label Text= "Status" FontSize="Small" FontAttributes="Bold"  Grid.Column="4" HorizontalOptions="Center"/>
@@ -94,7 +94,7 @@
                                                 <ColumnDefinition Width="*"/>
                                             </Grid.ColumnDefinitions>
                                             <Label Text="{Binding DateCommissioned,StringFormat='{0:MMMM dd, yyyy}'}" FontSize="Small" FontAttributes="Bold"  Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center"/>
-                                            <Label Text="{Binding NewInstallation,StringFormat='{0:F0}'}" FontSize="Small" FontAttributes="Bold"  Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center"/>
+                                            <Label Text="{Binding WorkOrderNumber,StringFormat='{0:F0}'}" FontSize="Small" FontAttributes="Bold"  Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center"/>
                                             <Label Text="{Binding MovedFrom,StringFormat='{0:F0}'}" FontSize="Small" FontAttributes="Bold"  Grid.Column="2" HorizontalOptions="Center" VerticalOptions="Center"/>
                                             <Label Text="{Binding SubmittedBy,StringFormat='{0:F0}'}" FontSize="Small" FontAttributes="Bold"  Grid.Column="3" HorizontalOptions="Center" VerticalOptions="Center"/>
                                             <Label Text="{Binding Status,StringFormat='{0:F0}'}" FontSize="Small" FontAttributes="Bold"  Grid.Column="4" HorizontalOptions="Center" VerticalOptions="Center"/>

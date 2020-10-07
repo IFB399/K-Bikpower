@@ -348,22 +348,13 @@ namespace K_Bikpower
             {
                 Project_Entry.IsVisible = true;
                 Substation_Entry.IsEnabled = false;
+                SubstationLabel.Text = "Substation";
             }
-        }
-        private void Spares_Button_CheckedChanged(object sender, CheckedChangedEventArgs e)
-        {
-            if (Spares_Button.IsChecked)
+            else if (!Scrap_Button.IsChecked)
             {
                 Project_Entry.IsVisible = false;
                 Substation_Entry.IsEnabled = true;
-            }
-        }
-        private void Workshop_Button_CheckedChanged(object sender, CheckedChangedEventArgs e)
-        {
-            if (Workshop_Button.IsChecked)
-            {
-                Project_Entry.IsVisible = false;
-                Substation_Entry.IsEnabled = true;
+                SubstationLabel.Text = "Substation*";
             }
         }
         private void Scrap_Button_CheckedChanged(object sender, CheckedChangedEventArgs e)
@@ -372,7 +363,12 @@ namespace K_Bikpower
             {
                 Project_Entry.IsVisible = false;
                 Substation_Entry.IsEnabled = false;
-
+                SubstationLabel.Text = "Substation";
+            }
+            else
+            {
+                Substation_Entry.IsEnabled = true;
+                SubstationLabel.Text = "Substation*";
             }
 
         }

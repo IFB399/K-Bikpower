@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Collections.Generic;
 using Xamarin.Forms.Markup;
 using System.Runtime.InteropServices.ComTypes;
 
@@ -96,7 +97,8 @@ namespace K_Bikpower
         {
             await Navigation.PushAsync(new AddAsset(null));
         }
-        public async void Apply_Filters_Clicked(object sender, EventArgs e)
+
+        public async void apply_filters()
         {
             string substationCode = (string)SubstationPicker.SelectedItem;
             string equipmentClass = (string)EquipmentClassPicker.SelectedItem;
@@ -110,6 +112,10 @@ namespace K_Bikpower
                 FilterLabel.Text = "Filters (active)";
             }
             await RefreshItems(true, syncItems: false, substationCode, equipmentClass, manufacturerName);
+        }
+        public void Apply_Filters_Clicked(object sender, EventArgs e)
+        {
+            apply_filters();
         }
         public async void Clear_Filters_Clicked(object sender, EventArgs e)
         {
@@ -225,12 +231,9 @@ namespace K_Bikpower
             await RefreshItems(true, true);
         }
 
-        public async void OnRefreshItems(object sender, EventArgs e)
+        public void OnRefreshItems(object sender, EventArgs e)
         {
-            string substationCode = (string)SubstationPicker.SelectedItem;
-            string equipmentClass = (string)EquipmentClassPicker.SelectedItem;
-            string manufacturerName = (string)ManufacturerPicker.SelectedItem;
-            await RefreshItems(true, false, substationCode, equipmentClass, manufacturerName);
+            apply_filters();
         }
 
         private async Task RefreshItems(bool showActivityIndicator, bool syncItems, string substation = null, string equipmentClass = null, string manufacturer = null)

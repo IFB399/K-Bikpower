@@ -19,7 +19,7 @@
                     <Expander  x:Name="FilterExpander" HorizontalOptions="Center" MinimumHeightRequest="260" Tapped="Expander_Tapped">
                         <Expander.Header>
                             <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-                                <Label x:Name="FilterLabel" Text="Filters  " FontSize="30" HorizontalOptions="Center"/>
+                                <Label x:Name="FilterLabel" Text="Filters" FontSize="30" HorizontalOptions="Center"/>
                                 <Label x:Name ="Indicator" Text=">" FontSize="30" HorizontalOptions="Center" Rotation="270" VerticalOptions="Center"/>
                             </StackLayout>
                         </Expander.Header>

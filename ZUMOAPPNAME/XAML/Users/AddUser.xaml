@@ -9,7 +9,7 @@
     
     <ContentPage.Content>
         <StackLayout Margin="50,50,50,30">
-            <Label Text="Add User" FontSize="Large" HorizontalOptions="Center" TextColor="White"/>
+            <Label x:Name="Title" Text="Add User" FontSize="Large" HorizontalOptions="Center" TextColor="White"/>
             <Frame CornerRadius="0" BackgroundColor="#F5F5F5" HasShadow ="False">
                 <StackLayout>
                     <Grid RowDefinitions="*"
@@ -17,19 +17,19 @@
                               ColumnDefinitions="*"
                               ColumnSpacing="15">
 
-                        <Label x:Name="Firstnamelabel" Text="Firstname:" FontSize="Title" TextColor="Black" Grid.Row="0"/>
+                        <Label x:Name="Firstnamelabel" Text="Firstname*" FontSize="Title" TextColor="Black" Grid.Row="0"/>
                         <Entry  x:Name="Firstname" ClearButtonVisibility="WhileEditing" VerticalOptions="EndAndExpand" MaxLength="25" IsSpellCheckEnabled="True" IsTextPredictionEnabled="false" Grid.Row="1"/>
 
-                        <Label x:Name="LastnameLabel" Text="Lastname:" FontSize="Title" TextColor="Black" Grid.Row="2"/>
+                        <Label x:Name="LastnameLabel" Text="Lastname*" FontSize="Title" TextColor="Black" Grid.Row="2"/>
                         <Entry  x:Name="Lastname" ClearButtonVisibility="WhileEditing" VerticalOptions="EndAndExpand" MaxLength="25" IsSpellCheckEnabled="True" IsTextPredictionEnabled="false" Grid.Row="3"/>
 
-                        <Label x:Name="Emaillabel" Text="Email:" FontSize="Title" TextColor="Black" Grid.Row="4"/>
+                        <Label x:Name="Emaillabel" Text="Email*" FontSize="Title" TextColor="Black" Grid.Row="4"/>
                         <Entry  x:Name="Email" ClearButtonVisibility="WhileEditing" VerticalOptions="EndAndExpand" MaxLength="25" IsSpellCheckEnabled="True" IsTextPredictionEnabled="false" Grid.Row="5"/>
 
-                        <Label x:Name="Temp_PAsswordLabel" Text="Temporary Password" FontSize="Title" TextColor="Black" Grid.Row="6"/>
+                        <Label x:Name="Temp_PAsswordLabel" Text="Temporary Password*" FontSize="Title" TextColor="Black" Grid.Row="6"/>
                         <Entry  x:Name="Temp_PAssword" ClearButtonVisibility="WhileEditing" VerticalOptions="EndAndExpand" MaxLength="25" IsSpellCheckEnabled="True" IsTextPredictionEnabled="false" Grid.Row="7"/>
 
-                        <Label x:Name="Authlabel" Text="Authorisation" FontSize="Title" TextColor="Black" Grid.Row="8"/>
+                        <Label x:Name="Authlabel" Text="Role*" FontSize="Title" TextColor="Black" Grid.Row="8"/>
                         <Picker x:Name="Auth" SelectedIndex="{Binding Authenication}" HorizontalOptions="FillAndExpand" Grid.Row="9">
                             <Picker.Items>
                                 <x:String>Administrator</x:String>

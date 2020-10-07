@@ -64,24 +64,19 @@ namespace K_Bikpower
             SortBy_Picker.SelectedItem = "Date Last Modified";
             // Set syncItems to true in order to synchronize the data on startup when running in offline mode
             SubmittedBy_Picker.ItemsSource = await manager.GetSubmittedByNames();
-            await RefreshItems(true, syncItems: true, a: asset);
-        }
-        public async void Apply_Filters_Clicked(object sender, EventArgs e)
-        {
-
-            string submittedBy = (string)SubmittedBy_Picker.SelectedItem;
-            string status = (string)Status_Picker.SelectedItem;
-            string sortBy = (string)SortBy_Picker.SelectedItem;
             if (SubmittedBy_Picker.SelectedIndex == -1 && Status_Picker.SelectedIndex == -1)
             {
-                FilterLabel.Text = "Filters"; 
+                FilterLabel.Text = "Filters";
             }
             else
             {
                 FilterLabel.Text = "Filters (active)";
             }
-            await RefreshItems(true, syncItems: false, submittedBy, status, sortBy, asset);
-           
+            await RefreshItems(true, syncItems: true, a: asset);
+        }
+        public void Apply_Filters_Clicked(object sender, EventArgs e)
+        {
+            apply_filters();
         }
         private void Clear_Status_Clicked(object sender, EventArgs e)
         {
@@ -134,15 +129,15 @@ namespace K_Bikpower
             await RefreshItems(true, true);
         }
 
-        public async void OnRefreshItems(object sender, EventArgs e)
+        public void OnRefreshItems(object sender, EventArgs e)
         {
-            await RefreshItems(true, false);
+            apply_filters();
         }
 
         private async Task RefreshItems(bool showActivityIndicator, bool syncItems, string submittedBy = null, string status = null, string sortBy = "Date Last Modified", Asset a = null)
         {
             ObservableCollection<string> formIds = null;
-            if (a != null)
+            if (a != null) //asset filter
             {
                 formIds = await afl_manager.GetFormIdsByAssetAsync(a.Id, "Decommission");
             }
@@ -203,6 +198,27 @@ namespace K_Bikpower
                 }
             }
 
+        }
+        private async void apply_filters()
+        {
+            //same as apply filters clicked
+            string submittedBy = (string)SubmittedBy_Picker.SelectedItem;
+            string status = (string)Status_Picker.SelectedItem;
+            string sortBy = (string)SortBy_Picker.SelectedItem; //might not need this
+            if (SubmittedBy_Picker.SelectedIndex == -1 && Status_Picker.SelectedIndex == -1)
+            {
+                FilterLabel.Text = "Filters";
+            }
+            else
+            {
+                FilterLabel.Text = "Filters (active)";
+            }
+            await RefreshItems(true, syncItems: false, submittedBy, status, sortBy, asset);
+        }
+
+        private void SortBy_Picker_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            apply_filters();
         }
     }
 }

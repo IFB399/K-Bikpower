@@ -26,6 +26,8 @@ namespace K_Bikpower
             if (Userdata != null)
             {
                 AddOrUpdateButton.Text = "Update User";
+                Title.Text = "Update User";
+                Temp_PAsswordLabel.Text = "Temporary Password"; //no asterisk if updating
                 popuserData = Userdata;
                 PopulateDetails(popuserData);
                 Ids = Userdata.Id;

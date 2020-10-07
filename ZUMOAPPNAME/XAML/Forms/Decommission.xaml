@@ -14,17 +14,17 @@
                     <Button x:Name="ManageAssets_Button" Text="Manage Assets" Clicked="ManageAssets_Clicked" HorizontalOptions="Center" TextColor="White" BackgroundColor="#29A8E2" WidthRequest="200"/>
 
                     <StackLayout>
-                        <Label Text="Date De-Commissioned:" FontSize="30"/>
+                        <Label Text="Date De-Commissioned*" FontSize="30"/>
                         <DatePicker x:Name="Date_Decommissioned" FontSize="30" HorizontalOptions="Center"></DatePicker>
                     </StackLayout>
                     
                     <StackLayout>
-                        <Label Text="De-Commissioned Details:" FontSize="30"/>
+                        <Label Text="De-Commissioned Details" FontSize="30"/>
                         <Entry x:Name="Decommissioned_Details_Entry" />
                     </StackLayout>
 
                     <StackLayout>
-                        <Label Text="Region Name:" FontSize="30"/>
+                        <Label Text="Region Name" FontSize="30"/>
                         <Picker x:Name="Region_Picker">
                             <Picker.ItemsSource>
                                 <x:Array Type="{x:Type x:String}">
@@ -39,23 +39,23 @@
                     </StackLayout>
 
                     <StackLayout>
-                        <Label Text="De-Commissioned Plant To:" FontSize="30"/>
+                        <Label Text="De-Commissioned Plant To*" FontSize="30"/>
                         <StackLayout Orientation="Horizontal">
                             <RadioButton x:Name="Project_Button" Text="Project" TextColor="Black" CheckedChanged="Project_Button_CheckedChanged" GroupName="a"/>
-                            <Entry x:Name="Project_Entry" IsVisible="False" IsEnabled="True" Placeholder="Project No." WidthRequest="200"/>
+                            <Entry x:Name="Project_Entry" IsVisible="False" IsEnabled="True" Placeholder="Project Number*" WidthRequest="200"/>
                         </StackLayout>
-                        <RadioButton x:Name="Spares_Button" Text="Spares" TextColor="Black" CheckedChanged="Spares_Button_CheckedChanged" GroupName="a"/>
-                        <RadioButton x:Name="Workshop_Button" Text="Workshop" TextColor="Black" CheckedChanged="Workshop_Button_CheckedChanged" GroupName="a"/>
+                        <RadioButton x:Name="Spares_Button" Text="Spares" TextColor="Black" GroupName="a"/>
+                        <RadioButton x:Name="Workshop_Button" Text="Workshop" TextColor="Black" GroupName="a"/>
                         <RadioButton x:Name="Scrap_Button" Text="Scrap" TextColor="Black" CheckedChanged="Scrap_Button_CheckedChanged" GroupName="a"/>
                     </StackLayout>
 
                     <StackLayout>
-                        <Label Text="Substation" FontSize="30"/>
+                        <Label x:Name="SubstationLabel"  Text="Substation*" FontSize="30"/>
                         <Picker x:Name="Substation_Entry"/>
                     </StackLayout>
 
                     <StackLayout>
-                        <Label Text="Work Order No." FontSize="30"/>
+                        <Label Text="Work Order Number*" FontSize="30"/>
                         <Entry x:Name="Work_OrderNo_Entry"/>
                     </StackLayout>
 

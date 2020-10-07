@@ -419,11 +419,13 @@ namespace K_Bikpower
             {
                 Project_Entry.IsVisible = true;
                 Substation_Entry.IsEnabled = false;
+                SubstationLabel.Text = "Substation";
             }
             else
             {
                 Project_Entry.IsVisible = false;
                 Substation_Entry.IsEnabled = true;
+                SubstationLabel.Text = "Substation*";
             }
         }
         public async Task SendEmail(string subject, string body, List<string> recipients)

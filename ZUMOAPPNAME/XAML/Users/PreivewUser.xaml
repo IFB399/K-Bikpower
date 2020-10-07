@@ -25,7 +25,7 @@
                         <Label Text="Email:" FontSize="Title" TextColor="Black" Grid.Row="2" Grid.Column="0" FontAttributes="Bold"/>
                         <Label  x:Name="Email" VerticalOptions="EndAndExpand" FontSize="Title" TextColor="Black" Grid.Row="2" Grid.Column="1"/>
 
-                        <Label Text="Authorisation" FontSize="Title" TextColor="Black" Grid.Row="3" Grid.Column="0" FontAttributes="Bold"/>
+                        <Label Text="Role" FontSize="Title" TextColor="Black" Grid.Row="3" Grid.Column="0" FontAttributes="Bold"/>
                         <Label x:Name="Auth" FontSize="Title" TextColor="Black" HorizontalOptions="FillAndExpand" Grid.Row="3" Grid.Column="1"/>
                     </Grid>
                     
