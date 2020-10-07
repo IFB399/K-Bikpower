@@ -64,8 +64,13 @@ namespace K_Bikpower
 
         private async void DeleteButton_Clicked(object sender, EventArgs e)
         {
-            await user_manager.DeleteUserAsync(popuserData);
-            await Navigation.PushAsync(new UsersPage());
+            bool answer = await DisplayAlert("Confirm Deletion", "Delete this user?", "Yes", "No");
+            if (answer == true)
+            {
+                await user_manager.DeleteUserAsync(popuserData);
+                await Navigation.PushAsync(new UsersPage());
+            }
+
         }
     }
 }

@@ -77,7 +77,7 @@
                                 <Label Text= "Moved From" FontSize="Small" FontAttributes="Bold"  Grid.Column="2" HorizontalOptions="Center"/>
                                 <Label Text= "Submitted By" FontSize="Small" FontAttributes="Bold"  Grid.Column="3" HorizontalOptions="Center"/>
                                 <Label Text= "Status" FontSize="Small" FontAttributes="Bold"  Grid.Column="4" HorizontalOptions="Center"/>
-                                <ActivityIndicator Grid.RowSpan="2" HorizontalOptions="Center" VerticalOptions="Center" IsVisible="False" IsEnabled="True"/>
+                        
                             </Grid>
                         </ListView.Header>
                         <ListView.ItemTemplate>
