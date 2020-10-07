@@ -1,1 +1,1 @@
-C:\Users\jacqu\Documents\2017 (first year)\latest repo 4\UWP\K_Bikpower.UWP.csproj;x86
+C:\Users\Brenton Reddish\Desktop\IFB398\New folder\UWP\K_Bikpower.UWP.csproj;x86

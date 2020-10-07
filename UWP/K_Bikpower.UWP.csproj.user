@@ -12,5 +12,9 @@
     <AppIconSource>C:\Users\Brenton Reddish\Desktop\IFB398\kbik\UWP\Assets\120035674_339056044006226_8303584661565132024_n.png</AppIconSource>
     <PackageLogoSource>C:\Users\Brenton Reddish\Desktop\IFB398\kbik\UWP\Assets\120035674_339056044006226_8303584661565132024_n.png</PackageLogoSource>
     <SplashScreenSource>C:\Users\Brenton Reddish\Desktop\IFB398\kbik\UWP\Assets\gif.gif</SplashScreenSource>
+    <UapAppxPackageBuildMode>SideloadOnly</UapAppxPackageBuildMode>
+    <AppxShowAllApps>False</AppxShowAllApps>
+    <AppxBuildConfigurationSelection>x86|x64|arm</AppxBuildConfigurationSelection>
+    <PackageOptionalProjectsInIdeBuilds>True</PackageOptionalProjectsInIdeBuilds>
   </PropertyGroup>
 </Project>
