@@ -2562,24 +2562,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\jacqu\\.nuget\\packages\\": {},
+    "C:\\Users\\brent\\.nuget\\packages\\": {},
     "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jacqu\\Documents\\2017 (first year)\\latest repo 4\\Droid\\K_Bikpower.Droid.csproj",
+      "projectUniqueName": "C:\\Users\\brent\\Desktop\\fun\\Droid\\K_Bikpower.Droid.csproj",
       "projectName": "K_Bikpower.Droid",
-      "projectPath": "C:\\Users\\jacqu\\Documents\\2017 (first year)\\latest repo 4\\Droid\\K_Bikpower.Droid.csproj",
-      "packagesPath": "C:\\Users\\jacqu\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jacqu\\Documents\\2017 (first year)\\latest repo 4\\Droid\\obj\\",
+      "projectPath": "C:\\Users\\brent\\Desktop\\fun\\Droid\\K_Bikpower.Droid.csproj",
+      "packagesPath": "C:\\Users\\brent\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\brent\\Desktop\\fun\\Droid\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\jacqu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\brent\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -2593,8 +2593,8 @@
       "frameworks": {
         "monoandroid90": {
           "projectReferences": {
-            "C:\\Users\\jacqu\\Documents\\2017 (first year)\\latest repo 4\\ZUMOAPPNAME\\K_Bikpower.csproj": {
-              "projectPath": "C:\\Users\\jacqu\\Documents\\2017 (first year)\\latest repo 4\\ZUMOAPPNAME\\K_Bikpower.csproj"
+            "C:\\Users\\brent\\Desktop\\fun\\ZUMOAPPNAME\\K_Bikpower.csproj": {
+              "projectPath": "C:\\Users\\brent\\Desktop\\fun\\ZUMOAPPNAME\\K_Bikpower.csproj"
             }
           }
         }
